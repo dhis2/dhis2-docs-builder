@@ -1,0 +1,12 @@
+docs/*
+!docs/resources/
+target/
+tmp/
+venv/
+mkdocs_gen.yml
+**/__pycache__/**
+**/*.backup
+.idea/
+.DS_Store
+src/commonmark/en/content/submodules/
+.vscode/

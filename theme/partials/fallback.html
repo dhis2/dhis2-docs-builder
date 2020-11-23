@@ -1,0 +1,6 @@
+{% if ns.ss.is_page %}
+    <option value="{{ ns.ss.url | url }}"><p>{{ sibling.title|replace("alt__","") }}</option>
+{% else %}
+    {% set ns.ss = ns.ss.children | first %}
+    {% include "partials/fallback.html" %}
+{% endif %}

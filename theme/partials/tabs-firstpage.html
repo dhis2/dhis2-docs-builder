@@ -1,0 +1,6 @@
+{% if (nav_sub.children | first).is_page %}
+<option value="{{ (nav_sub.children | first).url | url }}">{{ tab_alt_title }}</option>
+{% else %}
+  {% set nav_sub = (nav_sub.children | first) %}
+  {% include "partials/tabs-firstpage.html" %}
+{% endif %}
