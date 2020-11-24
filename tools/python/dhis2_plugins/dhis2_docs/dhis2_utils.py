@@ -200,7 +200,7 @@ class fetcher:
                     if not codebloc:
                         # check if the line matches "# <Title>"
                         # if so, treat as a new chapter
-                        found = re.search('^#{1,2}? (.+?)($|<!--.*$)', line.rstrip()).group(1)
+                        found = re.search('^# (.+?)($|<!--.*$)', line.rstrip()).group(1)
                         newname = helpers().slugify(found)
                         edit = ""
                         if newname:
