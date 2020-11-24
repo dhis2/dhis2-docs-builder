@@ -306,7 +306,6 @@ nav:
             - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.31)"
             - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.31)"
             - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.31)"
-            - Reporting functionality in the Beta Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.31)"
             - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.31)"
             - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.31)"
             - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.31)"
