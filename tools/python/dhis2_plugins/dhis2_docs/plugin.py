@@ -11,8 +11,9 @@ class Dhis2DocsPlugin(BasePlugin):
     def on_config(self, config):
         fetcher = dhis2_utils.fetcher()
         # fetcher.say_hello()
-        #print(config['nav'])
+        print("Fetching documents...")
         config['nav'] = fetcher.crawl_nav_list(config['nav'],'')
+        print("Done.")
 
 
         # update the Yaml file

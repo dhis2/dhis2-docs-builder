@@ -16,6 +16,8 @@ import unicodedata
 import uuid
 import shutil
 import os
+import io
+import mmap
 import sys
 import argparse
 import hashlib
@@ -38,12 +40,18 @@ class helpers:
         value = re.sub(r'[^\w\s-]', '', value).strip().lower()
         return re.sub(r'[-\s]+', '-', value)
 
+    def grep(self, pattern, file_path):
+        with io.open(file_path, "r", encoding="utf-8") as f:
+            return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
+
+
 class fetcher:
 
     # Initializing
     def __init__(self):
         # set up a temporary directory for github clones
         # id = uuid.uuid4().hex
+        self.h = helpers()
         self.root = "tmp/github" #/" + id
         os.makedirs(self.root, exist_ok=True)
 
@@ -69,12 +77,16 @@ class fetcher:
             branch_opt = '--branch ' + branch
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
 
-        if not os.path.isfile(destination):
-            os.makedirs(os.path.dirname(destination), exist_ok=True)
 
-        print("Copying file: " + tmpRoot + "/" + file_path + " to " + destination)
-            ## markdown pre-process instead of direct copy
-        self.markdown_preprocess(tmpRoot + "/" + file_path, destination)
+        # print("Copying file: " + tmpRoot + "/" + file_path + " to " + destination)
+        if self.h.grep(b'!INCLUDE', tmpRoot + "/" + file_path ):
+            # markdown pre-process instead of direct copy
+            self.markdown_preprocess(tmpRoot + "/" + file_path, destination)
+        else:
+            # do a direct copy, if the file is not already there
+            if not os.path.isfile(destination):
+                os.makedirs(os.path.dirname(destination), exist_ok=True)
+            shutil.copyfile(tmpRoot + "/" + file_path, destination)
 
 
     def markdown_preprocess(self,fromfile, tofile):
@@ -169,7 +181,7 @@ class fetcher:
         if path == '':
             delim = ''
         for k, n in nav.items():
-            p = path + delim + helpers().slugify(k.replace(self.alternate_prefix,''))
+            p = path + delim + self.h.slugify(k.replace(self.alternate_prefix,''))
             if type(n) == dict:
                 n = self.crawl_nav_dict(nav[k],p)
             else:
