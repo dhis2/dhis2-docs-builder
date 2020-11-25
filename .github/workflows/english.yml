@@ -1,0 +1,43 @@
+name: Build the core documentation - English original
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Install custom pre-processor
+      run: |
+        cd tools/python/markdown-pp-master
+        python3 setup.py develop
+        pip install MarkdownPP
+
+    - name: Install dhis2_plugins for mkdocs
+      run: |
+        cd tools/python/dhis2_plugins
+        python3 setup.py develop
+        pip install dhis2_plugins
+
+    - name: Install markdown hacks
+      run: |
+        # temporary hacks
+        cp tools/python/blockprocessors.py venv/lib/python3*/site-packages/markdown/
+        cp tools/python/attr_list.py venv/lib/python3*/site-packages/markdown/extensions/
+        cp tools/python/tables.py venv/lib/python3*/site-packages/markdown/extensions/
+
+    - name: Build the docs
+      run: |
+        mkdocs build
