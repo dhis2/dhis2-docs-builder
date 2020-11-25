@@ -9,10 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.x
+    - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.8'
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -35,9 +35,9 @@ jobs:
       run: |
         # temporary hacks
         python3 -m site
-        cp tools/python/blockprocessors.py venv/lib/python3*/site-packages/markdown/
-        cp tools/python/attr_list.py venv/lib/python3*/site-packages/markdown/extensions/
-        cp tools/python/tables.py venv/lib/python3*/site-packages/markdown/extensions/
+        cp tools/python/blockprocessors.py ${pythonLocation}/lib/python3.8/site-packages/markdown/
+        cp tools/python/attr_list.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
+        cp tools/python/tables.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
 
     - name: Build the docs
       run: |
