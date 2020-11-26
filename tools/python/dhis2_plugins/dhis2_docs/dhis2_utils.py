@@ -122,9 +122,7 @@ class fetcher:
         f.close()
 
         # fix references to __common__ images
-        print("tofile:", tofile)
         relative_dir = os.path.relpath('./',os.path.dirname(tofile))
-        print("relative_dir:",relative_dir)
         for line in fileinput.input([tofile], inplace=True):
             print(line.replace('__common__', relative_dir).replace('resources/images/../..',relative_dir), end='')
 
@@ -266,6 +264,7 @@ class fetcher:
 
                         if lastname:
                             chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
+                            os.makedirs(os.path.dirname(self.docs_dir + lastname), exist_ok=True)
                             lc = open(self.docs_dir + lastname,'w')
                             lc.write(lastchapter)
                             lc.close
@@ -276,7 +275,7 @@ class fetcher:
                             except KeyError:
                                 bmap.update({newname:[chk]})
 
-                        lastname = os.path.dirname(book)+'/'+newname + '.md'
+                        lastname = os.path.dirname(book)+'/' + os.path.basename(book).replace('.md','') + '/' + newname + '.md'
                         lastfound = found
 
                         if edit:
@@ -311,11 +310,12 @@ class fetcher:
 
                 if found == '':
                     # continue current chapter
-                    lastchapter += line
+                    lastchapter += re.sub(r'\]\(\s*([^)]*resources/images/)',r'](../\1',line)  #.replace('(resources/images/','(../resources/images/')
 
 
             if lastname:
                 chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
+                os.makedirs(os.path.dirname(self.docs_dir + lastname), exist_ok=True)
                 lc = open(self.docs_dir + lastname,'w')
                 lc.write(lastchapter)
                 lc.close
