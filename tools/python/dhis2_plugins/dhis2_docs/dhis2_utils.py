@@ -77,15 +77,14 @@ class fetcher:
             branch_opt = '--branch ' + branch
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
 
-
+        # ensure the directory exists
+        os.makedirs(os.path.dirname(destination), exist_ok=True)
         # print("Copying file: " + tmpRoot + "/" + file_path + " to " + destination)
         if self.h.grep(b'!INCLUDE', tmpRoot + "/" + file_path ):
             # markdown pre-process instead of direct copy
             self.markdown_preprocess(tmpRoot + "/" + file_path, destination)
         else:
-            # do a direct copy, if the file is not already there
-            if not os.path.isfile(destination):
-                os.makedirs(os.path.dirname(destination), exist_ok=True)
+            # do a direct copy
             shutil.copyfile(tmpRoot + "/" + file_path, destination)
 
 
