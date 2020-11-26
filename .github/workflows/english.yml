@@ -47,7 +47,7 @@ jobs:
         mkdocs build
 
     - name: Sync docs to S3
-      uses: jakejarvis/s3-sync-action@master
+      uses: dhis2/s3-sync-action@master
       #with:
       #  args: --delete
       env:
@@ -57,3 +57,4 @@ jobs:
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'target/en/.'
         DEST_DIR: 'en/'
+        AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
