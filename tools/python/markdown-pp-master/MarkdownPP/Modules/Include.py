@@ -40,12 +40,14 @@ class Include(Module):
     # matches title lines in Markdown files
     titlere = re.compile(r"^(:?#+.*|={4,}|-{4,})$")
 
+    baseimages = re.compile(r"resources/images/\.\./\.\./")
+
     # includes should happen before anything else
     priority = 0
     basedir = ""
 
     def transform(self, data):
-        
+
         transforms = []
         global CURRENT_BASE
         linenum = 0
@@ -78,7 +80,7 @@ class Include(Module):
 
         if pwd == "":
             pwd = self.basedir
-        
+
         git_repo = '___'.join(pwd.split('/')[1:2])
 
         # print("PP-includer",pwd)
@@ -134,7 +136,13 @@ class Include(Module):
                     if not image:
                         image = self.simpleimagepath.search(line)
                     if image:
-                        data[linenum] = line.replace("resources/images",dirname+"/resources/images/").replace('//','/')
+                        if dirname and dirname[-1:] != '/':
+                            dirname = dirname + "/"
+                        data[linenum] = line.replace("resources/images",dirname+"resources/images/").replace('//','/')
+                        if self.baseimages.search(line):
+                            # print("RES:",filename,'|',dirname,'|',line)
+                            # These images are trying to reference the base images
+                            data[linenum] = line.replace("resources/images/../../","__common__/resources/images/").replace('//','/')
                         # print(line)
 
                     if shift:

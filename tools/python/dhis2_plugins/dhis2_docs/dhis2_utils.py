@@ -21,6 +21,7 @@ import mmap
 import sys
 import argparse
 import hashlib
+import fileinput
 from git.repo.base import Repo
 import MarkdownPP
 
@@ -70,22 +71,34 @@ class fetcher:
 
         tmpRoot = self.root + '/' + github_repo + '/' + branch
         git_url = self.github_base + github_repo + ".git"
-        destination = self.docs_dir + local_path
 
         if not os.path.isdir(tmpRoot):
             os.makedirs(os.path.dirname(tmpRoot), exist_ok=True)
             branch_opt = '--branch ' + branch
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
 
-        # ensure the directory exists
+        self.include_file(tmpRoot + "/" + file_path, local_path)
+
+
+    def include_file(self, origin, local_path):
+
+        # ensure the destination directory exists
+        destination = self.docs_dir + local_path
         os.makedirs(os.path.dirname(destination), exist_ok=True)
-        # print("Copying file: " + tmpRoot + "/" + file_path + " to " + destination)
-        if self.h.grep(b'!INCLUDE', tmpRoot + "/" + file_path ):
+        # print("Copying file: " + origin + " to " + destination)
+        if self.h.grep(b'!INCLUDE', origin ):
             # markdown pre-process instead of direct copy
-            self.markdown_preprocess(tmpRoot + "/" + file_path, destination)
+            self.markdown_preprocess(origin, destination)
         else:
             # do a direct copy
-            shutil.copyfile(tmpRoot + "/" + file_path, destination)
+            shutil.copyfile(origin, destination)
+            # copy the images
+            f = open(destination, "r")
+            markdown = f.read()
+            #print(markdown)
+            self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
+            f.close()
+
 
 
     def markdown_preprocess(self,fromfile, tofile):
@@ -108,6 +121,13 @@ class fetcher:
         self.copy_markdown_images(os.path.dirname(fromfile), markdown, tofile)
         f.close()
 
+        # fix references to __common__ images
+        print("tofile:", tofile)
+        relative_dir = os.path.relpath('./',os.path.dirname(tofile))
+        print("relative_dir:",relative_dir)
+        for line in fileinput.input([tofile], inplace=True):
+            print(line.replace('__common__', relative_dir).replace('resources/images/../..',relative_dir), end='')
+
 
     def copy_markdown_images(self, basedir, markdown, dest):
         # root = os.path.dirname(os.path.dirname(self.page.url))
@@ -115,21 +135,23 @@ class fetcher:
 
         # paths = []
 
-        p = re.compile(".*\]\((.*\.[pPnNgGjJeE]{3,4})\)")
+        p = re.compile("!\[[^\]]*\]\((.*?)(?:\s+\"(.*[^\"])\"?)?\s*\)")
         it = p.finditer(markdown)
         for match in it:
             path = match.group(1)
 
-            destinationPath = os.path.realpath(os.path.dirname(dest)+'/'+path)
+            if path[0:10] != '__common__':
+                destinationPath = os.path.realpath(os.path.dirname(dest)+'/'+path)
 
-            if not os.path.isfile(destinationPath):
-                try:
-                    # print("Copying image: " + basedir + "/" + path + " to " + destinationPath)
-                    os.makedirs(os.path.dirname(destinationPath), exist_ok=True)
-                    shutil.copyfile(basedir + "/" + path, destinationPath)
-                except FileNotFoundError:
-                    print("Referenced image not found:",basedir + "/" + path)
-                    pass
+                if not os.path.isfile(destinationPath):
+                    try:
+                        # print("Copying image: " + basedir + "/" + path + " to " + destinationPath)
+                        os.makedirs(os.path.dirname(destinationPath), exist_ok=True)
+                        shutil.copyfile(basedir + "/" + path, destinationPath)
+                    except FileNotFoundError:
+                        print("Referenced image not found:",basedir + "/" + path)
+                        pass
+
 
 
     def fetch_file(self, file_def, path):
@@ -153,6 +175,24 @@ class fetcher:
                     new_nav = self.chapterise(new_nav)
             else:
                 print("Git file format not supported (must be .md):",git_file)
+
+
+        if file_def.split('(')[0] == "@file":
+            parts = file_def.split('(')[1].strip(' )').split(',')
+            local_file = parts[0].strip()
+            try:
+                decompose = parts[1].strip()
+            except:
+                decompose = 0
+                pass
+
+            # print(github_repo,git_file,git_branch)
+            if local_file.endswith('.md'):
+                self.include_file(local_file, new_nav)
+                if decompose:
+                    new_nav = self.chapterise(new_nav)
+            else:
+                print("File format not supported (must be .md):",local_file)
 
 
         return new_nav
