@@ -526,18 +526,6 @@ nav:
         Android App Implementation guidelines: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_implementation_guideline_INDEX.md, master, 1)"
         Android App Configuration guide: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_capture_app_INDEX.md, master, 1)"
         Mobile Device Management guides: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_MDM_INDEX.md, master, 1)"
-        User Stories:
-          - Improving surveillance of Visceral Leishmaniasis VL in Somalia: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)"
-          - DHIS2 in the Autonomous Region of Kurdistan, Iraq: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)"
-          - West Africa Regional Systems and DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)"
-          - Zambia Education Management System EMIS: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)"
-          - Rwanda HMIS powered by DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)"
-          - DHIS2 Tracker e-Registry in Palestine: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)"
-          - Tanzania Integrated Health Information Architecture:
-              - Overview: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)"
-              - Architecture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)"
-          - DHIS2 - a Management Information System at PSI: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)"
-          - Zambia WASH Mobile surveillance using DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)"
         Software Release Information:
           DHIS 2 core releases:
             alt__DHIS core version 2.35:
@@ -635,3 +623,15 @@ nav:
             - TB Aggregate System Design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/TB Aggregate System Design.md,2.35)"
             - TB Case Surveillance Program (Tracker): "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/V1.0_TB Case Surveillance System Design.md,2.35)"
             - TB case surveillance tracker installation guide: "@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)"
+      - alt__User Stories:
+        - Improving surveillance of Visceral Leishmaniasis VL in Somalia: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)"
+        - DHIS2 in the Autonomous Region of Kurdistan, Iraq: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)"
+        - West Africa Regional Systems and DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)"
+        - Zambia Education Management System EMIS: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)"
+        - Rwanda HMIS powered by DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)"
+        - DHIS2 Tracker e-Registry in Palestine: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)"
+        - Tanzania Integrated Health Information Architecture:
+            - Overview: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)"
+            - Architecture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)"
+        - DHIS2 - a Management Information System at PSI: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)"
+        - Zambia WASH Mobile surveillance using DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)"
