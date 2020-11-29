@@ -17,14 +17,14 @@
 
 
 
-  {% if (((nav_item.title|replace(alt_prefix,"")) != nav_item.title) and nav_item.parent.parent)  %} 
-    
+  {% if (((nav_item.title|replace(alt_prefix,"")) != nav_item.title) and nav_item.parent.parent)  %}
+
     {% if nav_item.active  %}
 
       {% set base = path %}
       {% for nav_item in nav_item.children %}
         {% set path = base + "-" + loop.index | string %}
-        
+
         {% include "partials/nav-item.html"  %}
       {% endfor %}
 
@@ -36,7 +36,7 @@
           {% set base = path %}
           {% for nav_item in nav_item.children %}
             {% set path = base + "-" + loop.index | string %}
-            
+
             {% include "partials/nav-item.html"  %}
           {% endfor %}
         {% endif %}
@@ -49,11 +49,8 @@
     {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
 
       <li class="{{ class }} md-nav__item--nested">
-        {% if nav_item.active %}
-          <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" checked>
-        {% else %}
-          <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}">
-        {% endif %}
+        {% set checked = "checked" if nav_item.active %}
+        <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
         <label class="md-nav__link" for="{{ path }}">
 
         {{ nav__title }}
