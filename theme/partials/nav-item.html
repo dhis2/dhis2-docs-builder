@@ -60,11 +60,11 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
     <label class="md-nav__link" for="{{ path }}">
       {{ nav__title }}
-      <!-- <span class="md-nav__icon md-icon"></span> -->
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="{{ nav_item.title }}" data-md-level="{{ level }}">
       <label class="md-nav__title {{ dhis2class }}" for="{{ path }}">
-        <!-- <span class="md-nav__icon md-icon"></span> -->
+        <span class="md-nav__icon md-icon"></span>
         {{ nav__title }}
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -97,7 +97,7 @@
     {% if toc | first is defined %}
       <label class="md-nav__link md-nav__link--active" for="__toc">
         {{ nav__title }}
-        <!-- <span class="md-nav__icon md-icon"></span> -->
+        <span class="md-nav__icon md-icon"></span>
       </label>
     {% endif %}
     <a href="{{ nav_item.url | url }}" class="md-nav__link md-nav__link--active">
