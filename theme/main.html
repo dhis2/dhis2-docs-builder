@@ -2,3 +2,10 @@
 {% block announce %}
     <strong>Shared header goes here</strong>
 {% endblock %}
+
+{% block content %}
+  <div class="md-content-alternates">
+    {% include "partials/alternates.html" %}
+  </div>
+  {{ super() }}
+{% endblock %}
