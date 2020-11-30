@@ -2,14 +2,7 @@
   This file was automatically generated - do not edit
 -#}
 
-<!-- DHIS2 -BEGIN
-the key addition here is the introduction of the "alt_prefix" and the logic
-to handle hiding of the alternate paths in the nav tree.
-Basic logic:
-- if the alternate is part of the current path, then display it and hide the other "alternates"
-- if the alternate is not part of current path, but no others are active, then display it if
-it is the first alternate.
--->
+<!-- DHIS2 -BEGIN -->
 {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
 {% if ( nav_item.title) %}
   {% set nav__title = nav_item.title|replace(alt_prefix,"") %}
