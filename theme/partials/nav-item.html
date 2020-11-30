@@ -1,22 +1,34 @@
 {#-
   This file was automatically generated - do not edit
 -#}
+
+<!-- DHIS2 -BEGIN
+the key addition here is the introduction of the "alt_prefix" and the logic
+to handle hiding of the alternate paths in the nav tree.
+Basic logic:
+- if the alternate is part of the current path, then display it and hide the other "alternates"
+- if the alternate is not part of current path, but no others are active, then display it if
+it is the first alternate.
+-->
 {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
-{% set class = "md-nav__item" %}
-{% if nav_item.active %}
-  {% set class = "md-nav__item md-nav__item--active" %}
-{% endif %}
 {% if ( nav_item.title) %}
   {% set nav__title = nav_item.title|replace(alt_prefix,"") %}
 {% endif %}
+{% set dhis2class = "" %}
 {% if nav_item.title == nav_item.parent.title %}
-  {% set class = "md-nav__item md-nav__item--hidden" %}
+  {% set dhis2class = "md-nav__item--hidden" %}
+{% endif %}
+<!-- DHIS2 -END -->
+
+{% set class = "md-nav__item" %}
+{% if nav_item.active %}
+  {% set class = "md-nav__item md-nav__item--active" %}
 {% endif %}
 
 {% if nav_item.children %}
 
 
-
+<!-- DHIS2 -BEGIN -->
   {% if (((nav_item.title|replace(alt_prefix,"")) != nav_item.title) and nav_item.parent.parent)  %}
 
     {% if nav_item.active  %}
@@ -35,7 +47,7 @@
         {% if nav_item == (nav_item.parent.children|first) %}
           {% set base = path %}
           {% for nav_item in nav_item.children %}
-            {% set path = base + "-" + loop.index | string %}
+            {% set path = base ~ "-" ~ loop.index %}
 
             {% include "partials/nav-item.html"  %}
           {% endfor %}
@@ -47,71 +59,76 @@
   {% else %}
 
     {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
+<!-- DHIS2 -END -->
 
-      <li class="{{ class }} md-nav__item--nested">
-        {% set checked = "checked" if nav_item.active %}
-        <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
-        <label class="md-nav__link" for="{{ path }}">
 
+  <li class="{{ class }} md-nav__item--nested {{ dhis2class }}">
+    {% set checked = "checked" if nav_item.active %}
+    <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
+    <label class="md-nav__link" for="{{ path }}">
+      {{ nav__title }}
+      <!-- <span class="md-nav__icon md-icon"></span> -->
+    </label>
+    <nav class="md-nav" aria-label="{{ nav_item.title }}" data-md-level="{{ level }}">
+      <label class="md-nav__title {{ dhis2class }}" for="{{ path }}">
+        <!-- <span class="md-nav__icon md-icon"></span> -->
         {{ nav__title }}
-
-          </label>
-          <nav class="md-nav" data-md-component="collapsible" data-md-level="{{ level }}">
-            <!-- <label class="md-nav__title" for="{{ path }}">
-              {{ nav__title }}
-            </label> -->
-            <ul class="md-nav__list" data-md-scrollfix>
-              {% set base = path %}
-              {% for nav_item in nav_item.children %}
-                {% set path = base + "-" + loop.index | string %}
-                {% set level = level + 1 %}
-                {% include "partials/nav-item.html"  %}
-              {% endfor %}
-            </ul>
-          </nav>
-        </li>
-
-    {% endif %}
-
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        {% set base = path %}
+        {% for nav_item in nav_item.children %}
+          {% set path = base ~ "-" ~ loop.index %}
+          {% set level = level + 1 %}
+          {% include "partials/nav-item.html"  %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </li>
+<!-- DHIS2 -BEGIN -->
+   {% endif %}
   {% endif %}
-
+<!-- DHIS2 -END -->
 
 {% elif nav_item == page %}
 
-
+<!-- DHIS2 -BEGIN -->
   {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
+<!-- DHIS2 -END -->
 
-    <li class="{{ class }}">
-      {% set toc_ = page.toc %}
-      <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      {% if toc_ | first is defined and "\x3ch1 id=" in page.content %}
-        {% set toc_ = (toc_ | first).children %}
-      {% endif %}
-      {% if toc_ | first is defined %}
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          {{ nav__title }}
-        </label>
-      {% endif %}
-      <a href="{{ nav_item.url | url }}" title="{{ nav_item.title | striptags }}" class="md-nav__link md-nav__link--active">
+  <li class="{{ class }} {{ dhis2class }}">
+    {% set toc = page.toc %}
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    {% if toc | first is defined and "\x3ch1 id=" in page.content %}
+      {% set toc = (toc | first).children %}
+    {% endif %}
+    {% if toc | first is defined %}
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         {{ nav__title }}
-      </a>
-      {% if toc_ | first is defined %}
-        {% include "partials/toc.html" %}
-      {% endif %}
-    </li>
+        <!-- <span class="md-nav__icon md-icon"></span> -->
+      </label>
+    {% endif %}
+    <a href="{{ nav_item.url | url }}" class="md-nav__link md-nav__link--active">
+      {{ nav__title }}
+    </a>
+    {% if toc | first is defined %}
+      {% include "partials/toc.html" %}
+    {% endif %}
+  </li>
+<!-- DHIS2 -BEGIN -->
   {% endif %}
-
+<!-- DHIS2 -END -->
 {% else %}
 
-
+<!-- DHIS2 -BEGIN -->
 {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
-
-    <li class="{{ class }}">
-      <a href="{{ nav_item.url | url }}" title="{{ nav_item.title | striptags }}" class="md-nav__link">
-        {{ nav__title   }}
-      </a>
-    </li>
+<!-- DHIS2 -END -->
+  <li class="{{ class }} {{ dhis2class }}">
+    <a href="{{ nav_item.url | url }}" class="md-nav__link">
+      {{ nav__title }}
+    </a>
+  </li>
+<!-- DHIS2 -BEGIN -->
   {% endif %}
-
+<!-- DHIS2 -END -->
 
 {% endif %}

@@ -1,31 +1,23 @@
 {#-
   This file was automatically generated - do not edit
 -#}
-<nav class="md-nav md-nav--primary" data-md-level="0">
-
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" title="{{ config.site_name }}" class="md-nav__button md-logo">
-      {% if config.theme.logo.icon %}
-        <i class="md-icon">{{ config.theme.logo.icon }}</i>
-      {% else %}
-        <img src="{{ config.theme.logo | url }}" width="48" height="48">
-      {% endif %}
+{% set site_url = config.site_url | default(nav.homepage.url, true) | url %}
+{% if not config.use_directory_urls and site_url[0] == site_url[-1] == "." %}
+  {% set site_url = site_url ~ "/index.html" %}
+{% endif %}
+<nav class="md-nav md-nav--primary" aria-label="{{ lang.t('nav.title') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ site_url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}">
+      {% include "partials/logo.html" %}
     </a>
     {{ config.site_name }}
   </label>
-
-
-
   {% if config.repo_url %}
     <div class="md-nav__source">
       {% include "partials/source.html" %}
     </div>
   {% endif %}
-
-
   <ul class="md-nav__list" data-md-scrollfix>
-
-    <!-- {% include "partials/lang_selector.html"  %} -->
     {% for nav_item in nav %}
       {% set path = "nav-" ~ loop.index %}
       {% set level = 1 %}
