@@ -466,8 +466,8 @@ nav:
           Malaria:
             - Malaria Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/MAL/Malaria Aggregate System Design.md, master)"
           Tuberculosis:
-            - TB Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/TB/TB Aggregate System Design.md,2.35)"
-            - TB Case Surveillance Program (Tracker): "@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,2.35)"
+            - TB Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/TB/TB Aggregate System Design.md,master)"
+            - TB Case Surveillance Program (Tracker): "@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,master)"
             - TB case surveillance tracker installation guide: "@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)"
       - alt__User Stories:
         - Improving surveillance of Visceral Leishmaniasis VL in Somalia: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)"
