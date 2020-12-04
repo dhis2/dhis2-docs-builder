@@ -45,6 +45,36 @@ class helpers:
         with io.open(file_path, "r", encoding="utf-8") as f:
             return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
 
+class lister:
+
+    def __init__(self):
+        self.h = helpers()
+
+    def crawl_page_list(self, nav):
+        pages = []
+        for nav_item in nav:
+            if type(nav_item) == dict:
+                #print(nav_item)
+                page = self.crawl_page_dict(nav_item)
+            else:
+                if type(nav_item) == list:
+                    page = self.crawl_page_list(nav_item)
+            pages = pages + page
+        return pages
+
+    def crawl_page_dict(self, nav):
+        pages=[]
+        for k, n in nav.items():
+            if type(n) == dict:
+                page = self.crawl_page_dict(nav[k])
+            else:
+                if type(n) == list:
+                    page = self.crawl_page_list(nav[k])
+                else:
+                    page = [n]
+            pages = pages + page
+
+        return pages
 
 class fetcher:
 
@@ -61,10 +91,9 @@ class fetcher:
         self.github_base = 'https://github.com/'
 
     # Calling destructor
-    def __del__(self):
-        # Delete all temporary files
-        #shutil.rmtree(self.root)
-        print("goodbye")
+    # def __del__(self):
+    #     # Delete all temporary files
+    #     shutil.rmtree(self.root)
 
 
     def include_git(self, github_repo, file_path, branch, local_path):
@@ -196,40 +225,50 @@ class fetcher:
         return new_nav
 
 
-    def crawl_nav_list(self, nav, path):
+    def crawl_nav_list(self, nav, path, v_map, v_tmp):
         x = []
         for nav_item in nav:
             if type(nav_item) == dict:
                 #print(nav_item)
-                nav_item = self.crawl_nav_dict(nav_item,path)
+                nav_item, v_map = self.crawl_nav_dict(nav_item,path, v_map, v_tmp)
             else:
                 if type(nav_item) == list:
-                    nav_item = self.crawl_nav_list(nav_item,path)
+                    nav_item, v_map = self.crawl_nav_list(nav_item,path, v_map, v_tmp)
                 else:
                     if nav_item[0] == '(':
+                        v_map[path] = v_tmp
                         nav_item = self.fetch_file(nav_item,path)
             x.append(nav_item)
-        return x
+        return x, v_map
 
 
-    def crawl_nav_dict(self, nav, path):
+    def crawl_nav_dict(self, nav, path, v_map, v_tmp):
         x={}
         delim = '/'
         if path == '':
             delim = ''
         for k, n in nav.items():
-            p = path + delim + self.h.slugify(k.replace(self.alternate_prefix,''))
+            no_pref = k.replace(self.alternate_prefix,'')
+            p = path + delim + self.h.slugify(no_pref)
+            tmp_v = v_tmp
+            if no_pref != k:
+                # this is an "alternate" - keep track of it
+                tmp_v = v_tmp + [no_pref]
+                # print("alternate", k , tmp_v)
             if type(n) == dict:
-                n = self.crawl_nav_dict(nav[k],p)
+                n, v_map = self.crawl_nav_dict(nav[k],p, v_map, tmp_v)
             else:
                 if type(n) == list:
-                    n = self.crawl_nav_list(nav[k],p)
+                    n, v_map = self.crawl_nav_list(nav[k],p, v_map, tmp_v)
                 else:
                     if n[0] == '@':
+                        v_map[p] = tmp_v
+                        # print(p,tmp_v)
                         n = self.fetch_file(nav[k],p)
             x[k] = n
 
-        return x
+        return x, v_map
+
 
 
     def chapterise(self, book, editpath=None):
