@@ -570,3 +570,29 @@ select:focus {
 .codehilite pre {
   white-space:pre-wrap;
 }
+
+
+article.md-search-result__article--document .v-tag{
+  display:inline-block;
+}
+
+.v-tag {
+  display:none;
+  
+}
+
+.v-tag {
+  border:1px solid #ccc;
+  border-radius: 3px;
+  height: 26px;
+  line-height: 16px;
+  padding: 5px;
+  position: relative;
+  float:right;
+  margin: 2px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  font-size:small;
+  font-weight:normal;
+  right:0px;
+}
