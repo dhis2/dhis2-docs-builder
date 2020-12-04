@@ -54,7 +54,6 @@ theme:
     favicon: 'resources/images/favicon.ico'
     features:
       - navigation.tabs
-      - navigation.instant
       - toc.integration
     alternates:
       alt_marker: 'alt__'
