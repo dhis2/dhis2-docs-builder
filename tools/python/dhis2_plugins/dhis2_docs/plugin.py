@@ -109,7 +109,7 @@ class Dhis2DocsPlugin(BasePlugin):
 
 
                     for v in versions:
-                        rec["title"] = rec["title"] + '<div class="v-tag">' + v + '</div>'
+                        rec["title"] = rec["title"] + '<v-tag>' + v + '</v-tag>'
 
                 except AttributeError:
                     # .html not found in the location
