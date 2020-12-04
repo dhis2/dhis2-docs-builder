@@ -113,20 +113,21 @@ class fetcher:
 
         # ensure the destination directory exists
         destination = self.docs_dir + local_path
-        os.makedirs(os.path.dirname(destination), exist_ok=True)
-        # print("Copying file: " + origin + " to " + destination)
-        if self.h.grep(b'!INCLUDE', origin ):
-            # markdown pre-process instead of direct copy
-            self.markdown_preprocess(origin, destination)
-        else:
-            # do a direct copy
-            shutil.copyfile(origin, destination)
-            # copy the images
-            f = open(destination, "r")
-            markdown = f.read()
-            #print(markdown)
-            self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
-            f.close()
+        if not os.path.isfile(destination):
+            os.makedirs(os.path.dirname(destination), exist_ok=True)
+            # print("Copying file: " + origin + " to " + destination)
+            if self.h.grep(b'!INCLUDE', origin ):
+                # markdown pre-process instead of direct copy
+                self.markdown_preprocess(origin, destination)
+            else:
+                # do a direct copy
+                shutil.copyfile(origin, destination)
+                # copy the images
+                f = open(destination, "r")
+                markdown = f.read()
+                #print(markdown)
+                self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
+                f.close()
 
 
 
@@ -221,7 +222,6 @@ class fetcher:
             else:
                 print("File format not supported (must be .md):",local_file)
 
-
         return new_nav
 
 
@@ -235,9 +235,10 @@ class fetcher:
                 if type(nav_item) == list:
                     nav_item, v_map = self.crawl_nav_list(nav_item,path, v_map, v_tmp)
                 else:
-                    if nav_item[0] == '(':
+                    if nav_item[0] == '@':
                         v_map[path] = v_tmp
                         nav_item = self.fetch_file(nav_item,path)
+
             x.append(nav_item)
         return x, v_map
 
@@ -265,7 +266,9 @@ class fetcher:
                         v_map[p] = tmp_v
                         # print(p,tmp_v)
                         n = self.fetch_file(nav[k],p)
-            x[k] = n
+
+            if k != "___Home":
+                x[k] = n
 
         return x, v_map
 
@@ -303,10 +306,12 @@ class fetcher:
 
                         if lastname:
                             chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
-                            os.makedirs(os.path.dirname(self.docs_dir + lastname), exist_ok=True)
-                            lc = open(self.docs_dir + lastname,'w')
-                            lc.write(lastchapter)
-                            lc.close
+                            chapter_file = self.docs_dir + lastname
+                            if not os.path.isfile(chapter_file):
+                                os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
+                                lc = open(chapter_file,'w')
+                                lc.write(lastchapter)
+                                lc.close
                             try:
                                 bmap[newname] += [chk]
                                 if newname == "tanzania-integrated-health-information-architecture":
@@ -354,11 +359,12 @@ class fetcher:
 
             if lastname:
                 chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
-                os.makedirs(os.path.dirname(self.docs_dir + lastname), exist_ok=True)
-                lc = open(self.docs_dir + lastname,'w')
-                lc.write(lastchapter)
-                lc.close
-
+                chapter_file = self.docs_dir + lastname
+                if not os.path.isfile(chapter_file):
+                    os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
+                    lc = open(chapter_file,'w')
+                    lc.write(lastchapter)
+                    lc.close
                 try:
                     bmap[newname] += [chk]
                 except KeyError:

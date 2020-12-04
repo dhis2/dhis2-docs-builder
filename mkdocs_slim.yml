@@ -36,7 +36,7 @@ extra:
         link: https://www.github.com/dhis2
         name: DHIS2 source code on GitHub
       - icon: fontawesome/brands/docker
-        link: https://hub.docker.com/repository/docker/dhis2
+        link: https://hub.docker.com/u/dhis2
         name: DHIS2 on Docker
       - icon: fontawesome/brands/twitter
         link: https://twitter.com/dhis_2
@@ -118,6 +118,7 @@ site_dir: ./target/en/
 
 
 nav:
+    - Home: '@github(Philip-Larsen-Donnelly/dhis2-markdown-docs, src/commonmark/en/content/index_new.md, master)'
     - Use:
         Use: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/index.md, master)"
         User guide:
@@ -213,11 +214,9 @@ nav:
         DHIS 2 Developer guide:
           alt__DHIS core version 2.35:
             - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.35)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.35)"
             - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.35)"
           alt__DHIS core version 2.34:
             - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.34)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.34)"
             - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.34)"
         DHIS 2 Javadocs: https://docs.dhis2.org/master/javadoc/
         DHIS 2 Android SDK Developer Guide: "@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)"
