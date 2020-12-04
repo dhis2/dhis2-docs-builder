@@ -1,11 +1,11 @@
-{% extends "base.html" %}
-{% block announce %}
-    <strong>Shared header goes here</strong>
-{% endblock %}
-
-{% block content %}
-  <div class="md-content-alternates">
-    {% include "partials/alternates.html" %}
-  </div>
-  {{ super() }}
-{% endblock %}
+{% extends "base.html" %} {% block announce %}
+<div class="domain-nav-container">
+  <a href="#" class="domain-nav-item">DHIS2.org</a>
+  <a href="#" class="domain-nav-item">Community</a>
+  <a href="#" class="domain-nav-item">Developers</a>
+</div>
+{% endblock %} {% block content %}
+<div class="md-content-alternates">
+  {% include "partials/alternates.html" %}
+</div>
+{{ super() }} {% endblock %}

@@ -14,630 +14,628 @@ use_directory_urls: false
 # docs_dir:
 
 extra:
-    dhis2_version: 'master'
-    dhis2_versions:
-        - 'master'
-        - '2.35'
-        - '2.34'
-        - '2.33'
-        - '2.32'
-        - '2.31'
-        - '2.30'
-        - '2.29'
-    dhis2_language: 'en'
-    dhis2_languages:
-        en: 'English'
-        fr: 'Français'
-        es_419: 'Español (latinoamerica)'
-        pt: 'Português'
-        cs: 'Czech'
-    social:
-      - icon: fontawesome/brands/github
-        link: https://www.github.com/dhis2
-        name: DHIS2 source code on GitHub
-      - icon: fontawesome/brands/docker
-        link: https://hub.docker.com/repository/docker/dhis2
-        name: DHIS2 on Docker
-      - icon: fontawesome/brands/twitter
-        link: https://twitter.com/dhis_2
-        name: DHIS2 on Twitter
-      - icon: fontawesome/brands/facebook
-        link: https://www.facebook.com/dhis2
-        name: DHIS2 on Facebook
-      - icon: fontawesome/brands/discourse
-        link: https://community.dhis2.org
-        name: DHIS2 Community
+  dhis2_version: 'master'
+  dhis2_versions:
+    - 'master'
+    - '2.35'
+    - '2.34'
+    - '2.33'
+    - '2.32'
+    - '2.31'
+    - '2.30'
+    - '2.29'
+  dhis2_language: 'en'
+  dhis2_languages:
+    en: 'English'
+    fr: 'Français'
+    es_419: 'Español (latinoamerica)'
+    pt: 'Português'
+    cs: 'Czech'
+  social:
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/dhis2
+      name: DHIS2 source code on GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/repository/docker/dhis2
+      name: DHIS2 on Docker
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dhis_2
+      name: DHIS2 on Twitter
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/dhis2
+      name: DHIS2 on Facebook
+    - icon: fontawesome/brands/discourse
+      link: https://community.dhis2.org
+      name: DHIS2 Community
 
 theme:
-    name: material
-    logo: 'resources/images/logo.svg'
-    favicon: 'resources/images/favicon.ico'
-    features:
-      - navigation.tabs
-      - navigation.instant
-      - toc.integration
-    alternates:
-      alt_marker: 'alt__'
-    custom_dir: 'theme'
-    palette:
-      primary: 'black'
-      accent: 'blue'
-    language: 'en'
+  name: material
+  logo: 'resources/images/logo.svg'
+  favicon: 'resources/images/favicon.ico'
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - toc.integration
+  alternates:
+    alt_marker: 'alt__'
+  custom_dir: 'theme'
+  palette:
+    primary: 'black'
+    accent: 'blue'
+  language: 'en'
+  font: false
 
 # our css
 extra_css:
-    - resources/css/mkdocs_dhis2.css
+  - resources/css/mkdocs_dhis2.css
 
 extra_javascript:
-    - resources/javascript/config.js
-    - https://polyfill.io/v3/polyfill.min.js?features=es6
-    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - resources/javascript/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-    - search
-    - edit_url
-    - dhis2_docs
-    - minify:
-        minify_html: true
+  - search
+  - edit_url
+  - dhis2_docs
+  - minify:
+      minify_html: true
 
 markdown_extensions:
-    - codehilite:
-        guess_lang: false
-    - markdown_captions
-    - toc:
-        permalink: true
-        toc_depth: 3
-    - attr_list
-    - def_list
-    - footnotes
-    - pymdownx.arithmatex
-    - pymdownx.betterem:
-        smart_enable: all
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.inlinehilite:
-        custom_inline:
-          - name: math
-            class: arithmatex
-            format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
-    - pymdownx.magiclink
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tilde
-    - pymdownx.tabbed
-    - pymdownx.tasklist:
-        custom_checkbox: true
-
-
+  - codehilite:
+      guess_lang: false
+  - markdown_captions
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 # output when building
 site_dir: ./target/en/
 
-
 nav:
-    - Use:
-        Use: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/index.md, master)"
-        User guide:
+  - Use:
+      Use: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/index.md, master)'
+      User guide:
+        alt__DHIS core version 2.35:
+          What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.35)'
+          Collecting data:
+            - Data Entry: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.35)'
+            - Data Quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.35)'
+          Tracking individual level data:
+            - Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.35)'
+            - Event Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.35)'
+            - Tracker Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.35)'
+          Approving data:
+            - Data Approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.35)'
+          Analysing data:
+            - Reports: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.35)'
+            - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.35)'
+            - Pivot Tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.35)'
+            - Maps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.35)'
+            - Dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.35)'
+            - Event Reports: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.35)'
+            - Event Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.35)'
+          Changing user settings:
+            - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.35)'
+            - User account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.35)'
+          Configuring the system:
+            - Metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.35)'
+            - Programs: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.35)'
+            - Users, Roles and Groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.35)'
+            - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.35)'
+            - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.35)'
+            - Maps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.35)'
+            - Report: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.35)'
+            - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.35)'
+          Maintaining the system:
+            - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.35)'
+            - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.35)'
+            - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.35)'
+            - Scheduling: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.35)'
+            - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.35)'
+            - Metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.35)'
+            - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.35)'
+          Understanding the data model:
+            - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.35)'
+            - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.35)'
+            - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.35)'
+          Additional information:
+            - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.35)'
+            - Demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)'
+            - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.35)'
+            - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.35)'
+            - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)'
+        alt__DHIS core version 2.34:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.34)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.34)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.34)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.34)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.34)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.34)'
+          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.34)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.34)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.34)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.34)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.34)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.34)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.34)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.34)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.34)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.34)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.34)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.34)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.34)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.34)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.34)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.34)'
+          - Scheduling: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.34)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.34)'
+          - Configure the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.34)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.34)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.34)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.34)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.34)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.34)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.34)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.34)'
+          - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.34)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.34)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.34)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.34)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.34)'
+        alt__DHIS core version 2.33:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.33)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.33)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.33)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.33)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.33)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.33)'
+          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.33)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.33)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.33)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.33)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.33)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.33)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.33)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.33)'
+          - Scheduling: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.33)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.33)'
+          - Reporting functionality in the Beta Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.33)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.33)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.33)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.33)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.33)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.33)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.33)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.33)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.33)'
+          - Configure the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.33)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.33)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.33)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.33)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.33)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.33)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.33)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.33)'
+          - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.33)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.33)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.33)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.33)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.33)'
+        alt__DHIS core version 2.32:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.32)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.32)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.32)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.32)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.32)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.32)'
+          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.32)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.32)'
+          - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.32)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.32)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.32)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.32)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.32)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.32)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.32)'
+          - Reporting functionality in the Beta Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.32)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.32)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.32)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.32)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.32)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.32)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.32)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.32)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.32)'
+          - Configure the GIS app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.32)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.32)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.32)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.32)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.32)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.32)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.32)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.32)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.32)'
+          - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.32)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.32)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.32)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.32)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.32)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.32)'
+        alt__DHIS core version 2.31:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.31)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.31)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.31)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.31)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.31)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.31)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.31)'
+          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.31)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.31)'
+          - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.31)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.31)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.31)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.31)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.31)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.31)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.31)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.31)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.31)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.31)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.31)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.31)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.31)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.31)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.31)'
+          - Configure the GIS app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.31)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.31)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.31)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.31)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.31)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.31)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.31)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.31)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.31)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.31)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.31)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.31)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.31)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.31)'
+        alt__DHIS core version 2.30:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.30)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.30)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.30)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.30)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.30)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.30)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.30)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.30)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-visualizer-app.md,2.30)'
+          - Using the GIS app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-gis-app.md,2.30)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.30)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.30)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.30)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.30)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.30)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.30)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.30)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.30)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.30)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.30)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.30)'
+          - Configure programs in the Programs/Attributes app:
+              legacy app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-programsattributes-app-legacy-app.md,2.30)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.30)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.30)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.30)'
+          - Configure the GIS app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.30)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.30)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.30)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.30)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.30)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.30)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.30)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.30)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.30)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.30)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.30)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.30)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.30)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.30)'
+        alt__DHIS core version master:
+          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md, master)'
+          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md, master)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md, master)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md, master)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md, master)'
+          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md, master)'
+          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md, master)'
+          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md, master)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md, master)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md, master)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md, master)'
+          - Using the Event Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md, master)'
+          - Using the Event Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md, master)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md, master)'
+          - Data approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md, master)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md, master)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md, master)'
+          - Manage users, user roles and user groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md, master)'
+          - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md, master)'
+          - Configure metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md, master)'
+          - Configure programs in the Maintenance app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md, master)'
+          - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md, master)'
+          - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md, master)'
+          - Scheduling: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md, master)'
+          - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md, master)'
+          - Configure the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md, master)'
+          - Configure report functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md, master)'
+          - Import/Export App: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md, master)'
+          - Configure metadata synchronizing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md, master)'
+          - Mobile: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md, master)'
+          - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md, master)'
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md, master)'
+          - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md, master)'
+          - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md, master)'
+          - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md, master)'
+          - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md, master)'
+          - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md, master)'
+          - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md, master)'
+          - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md, master)'
+          - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md, master)'
+      End User guide:
+        alt__DHIS core version 2.35:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.35)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.35)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.35)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.35)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.35)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.35)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.35)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.35)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.35)'
+        alt__DHIS core version 2.34:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.34)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.34)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.34)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.34)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.34)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.34)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.34)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.34)'
+        alt__DHIS core version 2.33:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.33)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.33)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.33)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.33)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.33)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.33)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.33)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.33)'
+        alt__DHIS core version 2.32:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.32)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.32)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.32)'
+          - Reporting functionality in the Beta Reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.32)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.32)'
+          - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.32)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.32)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.32)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.32)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.32)'
+        alt__DHIS core version 2.31:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.31)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.31)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.31)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.31)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.31)'
+          - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.31)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.31)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.31)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.31)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.31)'
+        alt__DHIS core version 2.30:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.30)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.30)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.30)'
+          - Using reporting functionality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.30)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.30)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-visualizer-app.md,2.30)'
+          - Using the GIS app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-gis-app.md,2.30)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.30)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.30)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.30)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.30)'
+        alt__DHIS core version master:
+          - About demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md, master)'
+          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md, master)'
+          - Control data quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md, master)'
+          - Reporting functionality in the reports app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md, master)'
+          - Analyze data in pivot tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md, master)'
+          - Using the Data Visualizer app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md, master)'
+          - Using the Maps app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md, master)'
+          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md, master)'
+          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md, master)'
+          - Set user account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md, master)'
+      Optional Apps:
+        Action Tracker App:
+          alt__App version 1.0: '@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master, 1)'
+        Bottleneck Analysis App:
+          alt__App version 1.2.2: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master, 1)'
+        Interactive Scorecard App:
+          alt__App version 0.1: '@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master, 1)'
+        WHO Data Quality Tool: '@github(pamod-dev/dhis2-doc-support,docs/en/dhis2_who_data_quality_tool_guide.md, master, 1)'
+  - Implement:
+      Implement: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/index.md, master)'
+      Implementer guide:
+        - A quick guide to DHIS2 implementation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+        - Conceptual Design Principles: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/conceptual-design-principles.md, master)'
+        - Setting Up a New Database: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/setting-up-a-new-database.md, master)'
+        - Deployment Strategies: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/deployment-strategies.md, master)'
+        - DHIS2 as Data Warehouse: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-data-warehouse.md, master)'
+        - Integration concepts: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/integration-concepts.md, master)'
+        - Guidelines for offline data entry using DHIS 2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/offline-data-entry.md, master)'
+        - Support: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/support.md, master)'
+        - Organisation Units: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/organisation-units.md, master)'
+        - Data Elements and Custom Dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-elements-and-custom-dimensions.md, master)'
+        - Data Sets and Forms: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-sets-and-forms.md, master)'
+        - Data Quality: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-quality.md, master)'
+        - Indicators: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/indicators.md, master)'
+        - Users and user roles: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/users-and-user-roles.md, master)'
+        - Data Analysis Tools Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-analysis-tools-overview.md, master)'
+        - DHIS2 as a platform: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-a-platform.md, master)'
+        - Localization of DHIS 2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/localization-of-dhis2.md, master)'
+        - DHIS2 Tools Guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-tools-guide.md, master)'
+        - DHIS 2 Documentation Guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)'
+        - Submitting quick document fixes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/common/submitting-a-doc-fix.md, master)'
+        - Using JIRA for DHIS2 issues: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/using-jira-for-dhis2-issues.md, master)'
+      Tracker Implementation guide: '@github(dhis2/dhis2-docs-implementation,dhis2_tracker_implementation_INDEX.md, master, 1)'
+      Android App Implementation guidelines: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_implementation_guideline_INDEX.md, master, 1)'
+      Android App Configuration guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_capture_app_INDEX.md, master, 1)'
+      Mobile Device Management guides: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_MDM_INDEX.md, master, 1)'
+      Software Release Information:
+        DHIS 2 core releases:
           alt__DHIS core version 2.35:
-            What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.35)"
-            Collecting data:
-              - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.35)"
-              - Data Quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.35)"
-            Tracking individual level data:
-              - Capture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.35)"
-              - Event Capture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.35)"
-              - Tracker Capture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.35)"
-            Approving data:
-              - Data Approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.35)"
-            Analysing data:
-              - Reports: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.35)"
-              - Data Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.35)"
-              - Pivot Tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.35)"
-              - Maps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.35)"
-              - Dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.35)"
-              - Event Reports: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.35)"
-              - Event Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.35)"
-            Changing user settings:
-              - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.35)"
-              - User account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.35)"
-            Configuring the system:
-              - Metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.35)"
-              - Programs: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.35)"
-              - Users, Roles and Groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.35)"
-              - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.35)"
-              - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.35)"
-              - Maps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.35)"
-              - Report: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.35)"
-              - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.35)"
-            Maintaining the system:
-              - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.35)"
-              - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.35)"
-              - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.35)"
-              - Scheduling: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.35)"
-              - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.35)"
-              - Metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.35)"
-              - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.35)"
-            Understanding the data model:
-              - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.35)"
-              - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.35)"
-              - Relationship model: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.35)"
-            Additional information:
-              - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.35)"
-              - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)"
-              - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.35)"
-              - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.35)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)"
+            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
+            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
           alt__DHIS core version 2.34:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.34)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.34)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.34)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.34)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.34)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.34)"
-            - Using the Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.34)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.34)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.34)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.34)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.34)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.34)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.34)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.34)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.34)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.34)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.34)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.34)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.34)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.34)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.34)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.34)"
-            - Scheduling: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.34)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.34)"
-            - Configure the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.34)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.34)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.34)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.34)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.34)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.34)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.34)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.34)"
-            - Relationship model: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.34)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.34)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.34)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.34)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.34)"
+            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.34/ReleaseNote-2.34.0.md, master)'
+            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.34/README.md, master)'
           alt__DHIS core version 2.33:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.33)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.33)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.33)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.33)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.33)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.33)"
-            - Using the Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.33)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.33)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.33)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.33)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.33)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.33)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.33)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.33)"
-            - Scheduling: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md,2.33)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.33)"
-            - Reporting functionality in the Beta Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.33)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.33)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.33)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.33)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.33)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.33)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.33)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.33)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.33)"
-            - Configure the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.33)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.33)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.33)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.33)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.33)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.33)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.33)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.33)"
-            - Relationship model: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.33)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.33)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.33)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.33)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.33)"
-          alt__DHIS core version 2.32:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.32)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.32)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.32)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.32)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.32)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.32)"
-            - Using the Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.32)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.32)"
-            - Data Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.32)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.32)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.32)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.32)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.32)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.32)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.32)"
-            - Reporting functionality in the Beta Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.32)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.32)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.32)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.32)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.32)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.32)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.32)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.32)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.32)"
-            - Configure the GIS app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.32)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.32)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.32)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.32)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.32)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.32)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.32)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.32)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.32)"
-            - Relationship model: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.32)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.32)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.32)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.32)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.32)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.32)"
-          alt__DHIS core version 2.31:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.31)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.31)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.31)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.31)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.31)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.31)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.31)"
-            - Using the Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.31)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.31)"
-            - Data Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.31)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.31)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.31)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.31)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.31)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.31)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.31)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.31)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.31)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.31)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.31)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.31)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.31)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.31)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.31)"
-            - Configure the GIS app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.31)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.31)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.31)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.31)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.31)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.31)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.31)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.31)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.31)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.31)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.31)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.31)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.31)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.31)"
-          alt__DHIS core version 2.30:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.30)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.30)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.30)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.30)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.30)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.30)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.30)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.30)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-visualizer-app.md,2.30)"
-            - Using the GIS app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-gis-app.md,2.30)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.30)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.30)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.30)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.30)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.30)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.30)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.30)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.30)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.30)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.30)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md,2.30)"
-            - Configure programs in the Programs/Attributes app:
-                legacy app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-programsattributes-app-legacy-app.md,2.30)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.30)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.30)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.30)"
-            - Configure the GIS app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.30)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.30)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md,2.30)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md,2.30)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md,2.30)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.30)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.30)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.30)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.30)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.30)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.30)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.30)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.30)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.30)"
-          alt__DHIS core version master:
-            - Getting started - help to navigate the user guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md, master)"
-            - What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md, master)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md, master)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md, master)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md, master)"
-            - Using the Event Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md, master)"
-            - Using the Tracker Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md, master)"
-            - Using the Capture app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md, master)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md, master)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md, master)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md, master)"
-            - Using the Event Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md, master)"
-            - Using the Event Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md, master)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md, master)"
-            - Data approval: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md, master)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md, master)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md, master)"
-            - Manage users, user roles and user groups: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md, master)"
-            - Visualize usage statistics: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md, master)"
-            - Configure metadata: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md, master)"
-            - Configure programs in the Maintenance app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-programs-in-the-maintenance-app.md, master)"
-            - About sharing of objects: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md, master)"
-            - Data Administration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md, master)"
-            - Scheduling: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/scheduling.md, master)"
-            - Datastore Manager: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md, master)"
-            - Configure the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md, master)"
-            - Configure report functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md, master)"
-            - Import/Export App: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/importexport-app.md, master)"
-            - Configure metadata synchronizing: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata-synchronizing.md, master)"
-            - Mobile: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/mobile.md, master)"
-            - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md, master)"
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md, master)"
-            - About data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md, master)"
-            - Additional data dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md, master)"
-            - Relationship model: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md, master)"
-            - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md, master)"
-            - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md, master)"
-            - User authorities: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md, master)"
-            - System settings: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md, master)"
-            - DHIS2 Glossary: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md, master)"
-        End User guide:
+            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.33/ReleaseNote-2.33.0.md, master)'
+            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.33/README.md, master)'
+        Android app releases:
           alt__DHIS core version 2.35:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.35)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.35)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.35)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.35)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.35)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.35)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.35)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.35)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.35)"
+            alt__Android app version 2.3.0:
+              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
           alt__DHIS core version 2.34:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.34)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.34)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.34)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.34)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.34)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.34)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.34)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.34)"
-          alt__DHIS core version 2.33:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.33)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.33)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.33)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.33)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.33)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.33)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.33)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.33)"
-          alt__DHIS core version 2.32:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.32)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.32)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.32)"
-            - Reporting functionality in the Beta Reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-beta-reporting-functionality.md,2.32)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.32)"
-            - Data Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.32)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.32)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.32)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.32)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.32)"
-          alt__DHIS core version 2.31:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.31)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.31)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.31)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.31)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.31)"
-            - Data Visualizer: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.31)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.31)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.31)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.31)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.31)"
-          alt__DHIS core version 2.30:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.30)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.30)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md,2.30)"
-            - Using reporting functionality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.30)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.30)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-visualizer-app.md,2.30)"
-            - Using the GIS app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-gis-app.md,2.30)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.30)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.30)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.30)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.30)"
-          alt__DHIS core version master:
-            - About demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md, master)"
-            - Using the Data Entry app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md, master)"
-            - Control data quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/control-data-quality.md, master)"
-            - Reporting functionality in the reports app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md, master)"
-            - Analyze data in pivot tables: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md, master)"
-            - Using the Data Visualizer app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md, master)"
-            - Using the Maps app: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md, master)"
-            - Managing dashboards: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md, master)"
-            - Messaging: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md, master)"
-            - Set user account preferences: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md, master)"
-        Optional Apps:
-          Action Tracker App:
-            alt__App version 1.0: "@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master, 1)"
-          Bottleneck Analysis App:
-            alt__App version 1.2.2: "@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master, 1)"
-          Interactive Scorecard App:
-            alt__App version 0.1: "@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master, 1)"
-          WHO Data Quality Tool: "@github(pamod-dev/dhis2-doc-support,docs/en/dhis2_who_data_quality_tool_guide.md, master, 1)"
-    - Implement:
-        Implement: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/index.md, master)"
-        Implementer guide:
-          - A quick guide to DHIS2 implementation: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/a-quick-guide-to-dhis2-implementation.md, master)"
-          - Conceptual Design Principles: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/conceptual-design-principles.md, master)"
-          - Setting Up a New Database: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/setting-up-a-new-database.md, master)"
-          - Deployment Strategies: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/deployment-strategies.md, master)"
-          - DHIS2 as Data Warehouse: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-data-warehouse.md, master)"
-          - Integration concepts: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/integration-concepts.md, master)"
-          - Guidelines for offline data entry using DHIS 2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/offline-data-entry.md, master)"
-          - Support: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/support.md, master)"
-          - Organisation Units: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/organisation-units.md, master)"
-          - Data Elements and Custom Dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-elements-and-custom-dimensions.md, master)"
-          - Data Sets and Forms: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-sets-and-forms.md, master)"
-          - Data Quality: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-quality.md, master)"
-          - Indicators: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/indicators.md, master)"
-          - Users and user roles: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/users-and-user-roles.md, master)"
-          - Data Analysis Tools Overview: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-analysis-tools-overview.md, master)"
-          - DHIS2 as a platform: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-a-platform.md, master)"
-          - Localization of DHIS 2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/localization-of-dhis2.md, master)"
-          - DHIS2 Tools Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-tools-guide.md, master)"
-          - DHIS 2 Documentation Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)"
-          - Submitting quick document fixes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/common/submitting-a-doc-fix.md, master)"
-          - Using JIRA for DHIS2 issues: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/using-jira-for-dhis2-issues.md, master)"
-        Tracker Implementation guide: "@github(dhis2/dhis2-docs-implementation,dhis2_tracker_implementation_INDEX.md, master, 1)"
-        Android App Implementation guidelines: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_implementation_guideline_INDEX.md, master, 1)"
-        Android App Configuration guide: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_capture_app_INDEX.md, master, 1)"
-        Mobile Device Management guides: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_MDM_INDEX.md, master, 1)"
-        Software Release Information:
-          DHIS 2 core releases:
-            alt__DHIS core version 2.35:
-              - Release Notes: "@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)"
-              - Upgrade Notes: "@github(dhis2/dhis2-releases,releases/2.35/README.md, master)"
-            alt__DHIS core version 2.34:
-              - Release Notes: "@github(dhis2/dhis2-releases,releases/2.34/ReleaseNote-2.34.0.md, master)"
-              - Upgrade Notes: "@github(dhis2/dhis2-releases,releases/2.34/README.md, master)"
-            alt__DHIS core version 2.33:
-              - Release Notes: "@github(dhis2/dhis2-releases,releases/2.33/ReleaseNote-2.33.0.md, master)"
-              - Upgrade Notes: "@github(dhis2/dhis2-releases,releases/2.33/README.md, master)"
-          Android app releases:
-            alt__DHIS core version 2.35:
-              alt__Android app version 2.3.0:
-                - Release Notes: "@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)"
-            alt__DHIS core version 2.34:
-              alt__Android app version 2.2.0:
-                - Release Notes: "@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)"
-              alt__Android app version 2.1.0:
-                - Release Notes: "@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)"
-    - Develop:
-        Develop: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/index.md, master)"
-        DHIS 2 Developer guide:
-          alt__DHIS core version 2.35:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.35)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.35)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.35)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.35)"
-          alt__DHIS core version 2.34:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.34)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.34)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.34)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.34)"
-          alt__DHIS core version 2.33:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.33)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.33)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.33)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.33)"
-          alt__DHIS core version 2.32:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.32)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.32)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.32)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.32)"
-          alt__DHIS core version 2.31:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.31)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.31)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.31)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.31)"
-          alt__DHIS core version 2.30:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.30)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.30)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.30)"
-            - DHIS2 Technical Architecture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-technical-architecture.md,2.30)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.30)"
-          alt__DHIS core version master:
-            - Web API: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, master)"
-            - Apps: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md, master)"
-            - Development Infrastructure: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md, master)"
-            - DHIS2 and R integration: "@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md, master)"
-        DHIS 2 Javadocs: https://docs.dhis2.org/master/javadoc/
-        DHIS 2 Android SDK Developer Guide: "@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)"
-    - Manage:
-        Manage: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/index.md, master)"
-        DHIS 2 System Administration guide:
-          alt__DHIS core version 2.35:
-            - Installation: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.35)"
-            - Monitoring: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.35)"
-            - Audit: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.35)"
-            - Using Gateways for SMS reporting: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.35)"
-          alt__DHIS core version 2.34:
-            - Installation: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.34)"
-            - Monitoring: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.34)"
-            - Audit: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.34)"
-            - Using Gateways for SMS reporting: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.34)"
-          alt__DHIS core version 2.33:
-            - Installation: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.33)"
-            - Using Gateways for SMS reporting: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.33)"
-          alt__DHIS core version master:
-            - Installation: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md, master)"
-            - Monitoring: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md, master)"
-            - Audit: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md, master)"
-            - Using Gateways for SMS reporting: "@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)"
-    - Topics:
+            alt__Android app version 2.2.0:
+              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
+            alt__Android app version 2.1.0:
+              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
+  - Develop:
+      Develop: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/index.md, master)'
+      DHIS 2 Developer guide:
+        alt__DHIS core version 2.35:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.35)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.35)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.35)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.35)'
+        alt__DHIS core version 2.34:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.34)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.34)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.34)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.34)'
+        alt__DHIS core version 2.33:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.33)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.33)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.33)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.33)'
+        alt__DHIS core version 2.32:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.32)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.32)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.32)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.32)'
+        alt__DHIS core version 2.31:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.31)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.31)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.31)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.31)'
+        alt__DHIS core version 2.30:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.30)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.30)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md,2.30)'
+          - DHIS2 Technical Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-technical-architecture.md,2.30)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.30)'
+        alt__DHIS core version master:
+          - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, master)'
+          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md, master)'
+          - Development Infrastructure: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/development-infrastructure.md, master)'
+          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md, master)'
+      DHIS 2 Javadocs: https://docs.dhis2.org/master/javadoc/
+      DHIS 2 Android SDK Developer Guide: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
+  - Manage:
+      Manage: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/index.md, master)'
+      DHIS 2 System Administration guide:
+        alt__DHIS core version 2.35:
+          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.35)'
+          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.35)'
+          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.35)'
+          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.35)'
+        alt__DHIS core version 2.34:
+          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.34)'
+          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.34)'
+          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.34)'
+          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.34)'
+        alt__DHIS core version 2.33:
+          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.33)'
+          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.33)'
+        alt__DHIS core version master:
+          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md, master)'
+          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md, master)'
+          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md, master)'
+          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)'
+  - Topics:
       - alt__Metadata:
           DHIS 2 WHO Digital Health Data Toolkit:
-            - About the WHO Digital Health Data Toolkit: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)"
-            - General design principles for WHO metadata packages: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)"
-            - Naming conventions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)"
-          COVID-19 Surveillance: "@github(dhis2/dhis2-covid19-doc,docs/en/dhis2_covid19_surveillance_INDEX.md, master, 1)"
+            - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
+            - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
+            - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
+          COVID-19 Surveillance: '@github(dhis2/dhis2-covid19-doc,docs/en/dhis2_covid19_surveillance_INDEX.md, master, 1)'
           Immunisation:
-            - Immunisation Aggregate System Design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/Immunisation Aggregate System Design.md, master)"
+            - Immunisation Aggregate System Design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/Immunisation Aggregate System Design.md, master)'
           Malaria:
-            - Malaria Aggregate System Design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/Malaria Aggregate System Design.md, master)"
+            - Malaria Aggregate System Design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/Malaria Aggregate System Design.md, master)'
           Tuberculosis:
-            - TB Aggregate System Design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/TB Aggregate System Design.md,2.35)"
-            - TB Case Surveillance Program (Tracker): "@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/V1.0_TB Case Surveillance System Design.md,2.35)"
-            - TB case surveillance tracker installation guide: "@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)"
+            - TB Aggregate System Design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/TB Aggregate System Design.md,2.35)'
+            - TB Case Surveillance Program (Tracker): '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/V1.0_TB Case Surveillance System Design.md,2.35)'
+            - TB case surveillance tracker installation guide: '@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)'
       - alt__User Stories:
-        - Improving surveillance of Visceral Leishmaniasis VL in Somalia: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)"
-        - DHIS2 in the Autonomous Region of Kurdistan, Iraq: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)"
-        - West Africa Regional Systems and DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)"
-        - Zambia Education Management System EMIS: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)"
-        - Rwanda HMIS powered by DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)"
-        - DHIS2 Tracker e-Registry in Palestine: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)"
-        - Tanzania Integrated Health Information Architecture:
-            - Overview: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)"
-            - Architecture: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)"
-        - DHIS2 - a Management Information System at PSI: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)"
-        - Zambia WASH Mobile surveillance using DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)"
+          - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
+          - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
+          - West Africa Regional Systems and DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)'
+          - Zambia Education Management System EMIS: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)'
+          - Rwanda HMIS powered by DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)'
+          - DHIS2 Tracker e-Registry in Palestine: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)'
+          - Tanzania Integrated Health Information Architecture:
+              - Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)'
+              - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
+          - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
+          - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
