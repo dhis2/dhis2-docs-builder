@@ -1,4 +1,5 @@
 from mkdocs.plugins import BasePlugin
+import mkdocs.structure.files
 from . import dhis2_utils
 
 class Dhis2DocsPlugin(BasePlugin):
@@ -13,11 +14,11 @@ class Dhis2DocsPlugin(BasePlugin):
         # fetcher.say_hello()
         print("Fetching documents...")
         version_map = {}
-        fetched = fetcher.crawl_nav_list(config['nav'],'',version_map)
+        fetched = fetcher.crawl_nav_list(config['nav'],'',version_map,[])
         config['nav'] = fetched[0]
         config['version_map'] = fetched[1]
 
-        print(dhis2_utils.json.dumps(config['version_map']))
+        # print(dhis2_utils.json.dumps(config['version_map']))
         print("Done.")
 
 
@@ -27,7 +28,22 @@ class Dhis2DocsPlugin(BasePlugin):
         ey.close()
 
         return config
-        
+
+
+    def on_files(self, files, config):
+        lister = dhis2_utils.lister()
+        nav_pages = lister.crawl_page_list(config['nav'])
+
+        out = []
+        for i in files:
+            if i.is_documentation_page() and (i.src_path not in nav_pages):
+                if i.src_path.split('/')[-1] != 'index.md':
+                    continue
+            out.append(i)
+
+        return mkdocs.structure.files.Files(out)
+
+
     def on_post_build(self, config):
         if not "search" in config["plugins"]:
             logger.debug(
@@ -74,7 +90,7 @@ class Dhis2DocsPlugin(BasePlugin):
                 #         included_records.append(rec)
                 #     else:
                 #         logger.info(f"exclude-search: {rec['location']}")
-                
+
                 # if '#' not in rec["location"]:
                 versions = []
 
@@ -84,8 +100,6 @@ class Dhis2DocsPlugin(BasePlugin):
                     loc = dhis2_utils.re.search('(.+?)\.html.*', rec["location"]).group(1)
 
                     locdir = dhis2_utils.os.path.dirname(loc)
-
-                    print("LOC: ", loc, locdir)
 
                     if loc in config['version_map']:
                         versions = config['version_map'][loc]
@@ -99,7 +113,7 @@ class Dhis2DocsPlugin(BasePlugin):
 
                 except AttributeError:
                     # .html not found in the location
-                    pass 
+                    pass
 
 
 
@@ -110,4 +124,3 @@ class Dhis2DocsPlugin(BasePlugin):
                 dhis2_utils.json.dump(search_index, f)
 
         return config
-
