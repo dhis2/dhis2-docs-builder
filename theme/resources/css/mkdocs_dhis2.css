@@ -577,15 +577,15 @@ select:focus {
 
   --fill-bg: #fff;
   --fill-bg-100: #f8f9fa;
-  --fill-bg-200: #d5dde5;
-  --fill-bg-300: #e8edf2;
+  --fill-bg-200: #e8edf2;
+  --fill-bg-300: #d5dde5;
   --fill-bg-900: #212934;
 
   --md-default-fg-color: #051841;
   --md-primary-fg-color: #012c6e;
 
   --md-primary-fg-color--dark: #90030c;
-  --md-default-bg-color: --fill-bg;
+  --md-default-bg-color: #fff;
 }
 * {
   --md-typeset-color: var(--text-base);
@@ -659,6 +659,12 @@ h6 {
   .md-content__inner::before {
     height: 0;
   }
+}
+
+/* Remove scrollbar hovering */
+.md-sidebar__scrollwrap:hover,
+.md-search__scrollwrap:hover {
+  scrollbar-color: unset;
 }
 
 /* Style the primary sidebar on desktop */
@@ -765,28 +771,76 @@ a.domain-nav-item:after {
   padding: 0 1.5rem 0 0.5rem;
 }
 
+/* Search results */
 
-article.md-search-result__article--document v-tag{
-  display:inline-block;
+.md-search-result__meta {
+  color: var(--text-muted);
+  background-color: var(--fill-bg);
+  border-bottom: 1px solid var(--fill-bg-300);
+}
+
+.md-search-result__title {
+  font-size: 0.75rem;
+  color: var(--text-base);
+}
+
+.md-search-result__link:not(:first-child) {
+  margin: 4px 0;
+}
+
+.md-search-result__link:not(:first-child)
+  article.md-search-result__article
+  .md-search-result__title,
+.md-search-result__link:not(:first-child)
+  article.md-search-result__article
+  .md-search-result__teaser {
+  border-left: 2px solid var(--fill-bg-300);
+  padding-left: 8px;
+  margin: 0;
+}
+
+.md-search-result__more summary {
+  color: var(--text-muted);
+  background: var(--fill-bg);
+}
+
+.md-search-result__more summary:focus,
+.md-search-result__more summary:hover {
+  background-color: var(--fill-bg);
+  color: var(--action-hover);
+  text-decoration: underline;
+}
+
+.md-search-result mark {
+  color: unset;
+  background-color: #ffdf39;
+  font-weight: 500;
+}
+
+.md-search-result__teaser mark {
+  text-decoration: unset;
+}
+
+article.md-search-result__article--document v-tag {
+  display: inline-block;
 }
 
 v-tag {
-  display:none;
-
+  display: none;
 }
 
 v-tag {
-  border:1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 3px;
   height: 26px;
   line-height: 16px;
   padding: 5px;
   position: relative;
-  float:right;
+  float: right;
   margin: 2px;
   text-decoration: none;
   -webkit-transition: color 0.2s;
-  font-size:small;
-  font-weight:normal;
-  right:0px;
+  font-size: small;
+  font-weight: normal;
+  right: 0px;
 }
