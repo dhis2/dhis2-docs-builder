@@ -509,46 +509,6 @@ caption {
   _content: '/ ';
 }
 
-.md-tabs__list select {
-  background-color: var(--grey900);
-  color: #bbb !important;
-  display: inline-block;
-  font: inherit;
-  font-size: 14px !important;
-  line-height: 1.5em;
-  text-align-last: right !important;
-}
-
-.md-tabs__list select:hover {
-  color: #eee !important;
-}
-
-select {
-  /* styling */
-  background-color: white;
-  border: 0px solid var(--grey400);
-  border-radius: 4px;
-  display: inline-block;
-  font: inherit;
-  _font-size: medium;
-  line-height: 1.5em;
-}
-
-__select {
-  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-}
-
-select:focus {
-  border-color: var(--grey500);
-  outline: 0;
-}
-
 /* change to the github icon to the official logo ¯\_(ツ)_/¯ */
 .md-source__icon svg {
   display: none;
@@ -881,4 +841,78 @@ v-tag {
 
 .md-search__input {
   font-size: 0.7rem;
+}
+
+/* Custom selects */
+/* .md-tabs__list select {
+  background-color: var(--grey900);
+  color: #bbb !important;
+  display: inline-block;
+  font: inherit;
+  font-size: 14px !important;
+  line-height: 1.5em;
+  text-align-last: right !important;
+} */
+
+/* .md-tabs__list select:hover {
+  color: #eee !important;
+} */
+
+/* select {
+  background-color: white;
+  border: 0px solid var(--grey400);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  _font-size: medium;
+  line-height: 1.5em;
+}
+
+__select {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  border-color: var(--grey500);
+  outline: 0;
+} */
+
+/* All credit to Select styling guidance here: https://www.filamentgroup.com/lab/select-css.html*/
+
+/* Implement styles */
+select {
+  padding: 0 1.5em 0 0;
+  box-sizing: border-box;
+  margin: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA4IDUiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMjEuNjQ2IDYuNjQ2LjcwOC43MDgtMy4zNTQgMy4zNTMtMy4zNTQtMy4zNTMuNzA4LS43MDggMi42NDYgMi42NDd6IiBmaWxsPSJpbmhlcml0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1IC02KSIvPjwvc3ZnPg=='),
+    linear-gradient(to bottom, transparent 0%, transparent 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  font-size: 0.62rem;
+}
+select::-ms-expand {
+  display: none;
+}
+select:hover {
+  cursor: pointer;
+}
+select:focus {
+  box-shadow: 0 0 1px 3px var(--action-hover);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  outline: none;
+}
+select option {
+  font-weight: normal;
 }
