@@ -227,10 +227,11 @@ article {
   color: var(--grey100) !important;
 }
 
-.md-search__inner {
+/* This breaks mobile searching. Not sure what it's purpose was in the first place, but removing unless there's a need. */
+/* .md-search__inner {
   width: 0px;
   margin-right: 40px;
-}
+} */
 
 .md-sidebar--secondaryDISABLE {
   margin-left: 70rem;
@@ -779,13 +780,31 @@ a.domain-nav-item:after {
   border-bottom: 1px solid var(--fill-bg-300);
 }
 
+.md-search-result__link:focus,
+.md-search-result__link:hover {
+  background-color: var(--fill-bg-100);
+}
+
+.md-search-result__link:focus .md-search-result__title,
+.md-search-result__link:hover .md-search-result__title {
+  text-decoration: underline;
+}
+
 .md-search-result__title {
   font-size: 0.75rem;
   color: var(--text-base);
 }
 
+.md-search-result__teaser {
+  color: var(--text-muted);
+}
+
+.md-search-result__more summary ~ * > * {
+  opacity: unset;
+}
+
 .md-search-result__link:not(:first-child) {
-  margin: 4px 0;
+  padding: 6px 0;
 }
 
 .md-search-result__link:not(:first-child)
@@ -821,6 +840,18 @@ a.domain-nav-item:after {
   text-decoration: unset;
 }
 
+.md-search-result__more .md-search-result__link {
+  margin-bottom: 12px;
+}
+
+.md-search-result__icon::after {
+  background-color: var(--text-muted);
+}
+
+.md-search__overlay {
+  background: rgba(33, 43, 54, 0.6);
+}
+
 article.md-search-result__article--document v-tag {
   display: inline-block;
 }
@@ -830,17 +861,13 @@ v-tag {
 }
 
 v-tag {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  height: 26px;
-  line-height: 16px;
-  padding: 5px;
+  background-color: var(--fill-bg-200);
+  color: var(--text-base);
+  border-radius: 4px;
+  padding: 4px 6px;
   position: relative;
   float: right;
-  margin: 2px;
+  margin: 0;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
-  font-size: small;
-  font-weight: normal;
-  right: 0px;
+  font-size: 0.6rem;
 }
