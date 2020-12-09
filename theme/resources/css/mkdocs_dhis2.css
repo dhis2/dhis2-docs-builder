@@ -628,6 +628,20 @@ h6 {
   scrollbar-color: unset;
 }
 
+/* Stop sidebars from squashing */
+.md-sidebar {
+  flex-shrink: 0;
+}
+
+/* prevent large preformatted text blocks from breaking layout */
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
 /* Style the primary sidebar on desktop */
 @media screen and (min-width: 76.1875rem) {
   .md-sidebar--primary .md-sidebar__scrollwrap {
@@ -844,44 +858,6 @@ v-tag {
 }
 
 /* Custom selects */
-/* .md-tabs__list select {
-  background-color: var(--grey900);
-  color: #bbb !important;
-  display: inline-block;
-  font: inherit;
-  font-size: 14px !important;
-  line-height: 1.5em;
-  text-align-last: right !important;
-} */
-
-/* .md-tabs__list select:hover {
-  color: #eee !important;
-} */
-
-/* select {
-  background-color: white;
-  border: 0px solid var(--grey400);
-  border-radius: 4px;
-  display: inline-block;
-  font: inherit;
-  _font-size: medium;
-  line-height: 1.5em;
-}
-
-__select {
-  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-}
-
-select:focus {
-  border-color: var(--grey500);
-  outline: 0;
-} */
 
 /* All credit to Select styling guidance here: https://www.filamentgroup.com/lab/select-css.html*/
 
