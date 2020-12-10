@@ -956,3 +956,26 @@ select option {
 .md-content__inner > :last-child {
   margin-bottom: 2rem;
 }
+
+/* Small screen specific styles */
+
+/* Small screen sidebar */
+@media screen and (max-width: 76.1875rem) {
+  .md-nav__source {
+    display: none;
+  }
+  .md-nav__item {
+    font-weight: 400;
+    color: var(--text-base);
+  }
+  .md-nav__item--active {
+    border-left: 4px solid var(--text-base);
+    background-color: var(--fill-bg-100);
+    color: var(--text-base);
+    font-weight: 500;
+  }
+  .md-nav--primary .md-nav__title {
+    color: var(--text-muted);
+    background-color: var(--fill-bg-200);
+  }
+}
