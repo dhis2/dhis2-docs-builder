@@ -586,6 +586,7 @@ h6 {
 /* Hack padding to align the alternate selector and give the appearance of a top bar */
 @media screen and (min-width: 76.1875rem) {
   .md-content-alternates {
+    padding-left: 0.8rem;
     margin: 0 -1.2rem;
     height: 36px;
     overflow: hidden;
@@ -958,9 +959,8 @@ select option {
 }
 
 /* Small screen specific styles */
-
-/* Small screen sidebar */
 @media screen and (max-width: 76.1875rem) {
+  /* Small screen sidebar */
   .md-nav__source {
     display: none;
   }
@@ -977,5 +977,25 @@ select option {
   .md-nav--primary .md-nav__title {
     color: var(--text-muted);
     background-color: var(--fill-bg-200);
+  }
+
+  /* alternates bar */
+  .md-content__inner {
+    padding-top: 0;
+  }
+  .md-content__inner::before {
+    height: 0;
+  }
+  .md-content-alternates {
+    padding-left: 0.8rem;
+    margin: 0 -1.2rem;
+    height: 36px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: var(--fill-bg-100);
+    border-bottom: 1px solid var(--fill-bg-300);
+    /* stick when scrolling */
+    position: sticky;
+    top: 2.4rem;
   }
 }
