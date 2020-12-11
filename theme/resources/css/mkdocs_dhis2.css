@@ -597,7 +597,7 @@ h6 {
     position: sticky;
     position: -webkit-sticky;
     top: 2.4rem;
-    z-index: 100;
+    z-index: 1;
   }
   .md-sidebar--secondary {
     padding-top: 0;
@@ -1014,5 +1014,6 @@ select option {
     position: sticky;
     position: -webkit-sticky;
     top: 2.4rem;
+    z-index: 1;
   }
 }
