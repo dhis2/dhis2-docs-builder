@@ -584,7 +584,7 @@ h6 {
 }
 
 /* Hack padding to align the alternate selector and give the appearance of a top bar */
-@media screen and (min-width: 76.1875rem) {
+@media screen and (min-width: 60rem) {
   .md-content-alternates {
     padding-left: 0.8rem;
     margin: 0 -1.2rem;
@@ -597,11 +597,14 @@ h6 {
     position: sticky;
     top: 2.4rem;
   }
+  .md-sidebar--secondary {
+    padding-top: 0;
+  }
   .md-sidebar--secondary .md-sidebar__scrollwrap {
     padding-top: 1.5rem;
   }
   .md-sidebar--secondary::before {
-    width: 100%;
+    width: 50vw;
     height: 36px;
     display: block;
     content: '';
