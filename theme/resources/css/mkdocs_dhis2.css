@@ -595,7 +595,9 @@ h6 {
     border-bottom: 1px solid var(--fill-bg-300);
     /* stick when scrolling */
     position: sticky;
+    position: -webkit-sticky;
     top: 2.4rem;
+    z-index: 100;
   }
   .md-sidebar--secondary {
     padding-top: 0;
@@ -1010,6 +1012,7 @@ select option {
     border-bottom: 1px solid var(--fill-bg-300);
     /* stick when scrolling */
     position: sticky;
+    position: -webkit-sticky;
     top: 2.4rem;
   }
 }
