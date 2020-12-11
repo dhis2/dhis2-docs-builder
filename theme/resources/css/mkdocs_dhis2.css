@@ -583,6 +583,14 @@ h6 {
   color: var(--action-hover);
 }
 
+a.headerlink {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.md-typeset :target > .headerlink, .md-typeset .headerlink:focus, .md-typeset .headerlink:hover {
+  color: var(--action-hover);
+}
+
 /* Hack padding to align the alternate selector and give the appearance of a top bar */
 @media screen and (min-width: 60rem) {
   .md-content-alternates {
