@@ -601,7 +601,7 @@ a.headerlink {
 }
 
 /* Hack padding to align the alternate selector and give the appearance of a top bar */
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 959px) {
   .md-content-alternates {
     padding-left: 0.8rem;
     margin: 0 -1.2rem;
@@ -633,7 +633,7 @@ a.headerlink {
 }
 
 /* Remove container padding and apply it to the inner content */
-@media screen and (min-width: 76.1875rem) {
+@media screen and (min-width: 1219px) {
   .md-sidebar {
     padding: 0 0;
   }
@@ -666,7 +666,7 @@ pre {
 }
 
 /* Style the primary sidebar on desktop */
-@media screen and (min-width: 76.1875rem) {
+@media screen and (min-width: 1219px) {
   .md-sidebar--primary .md-sidebar__scrollwrap {
     background: var(--fill-bg-100);
     border-right: 1px solid var(--fill-bg-300);
@@ -992,7 +992,7 @@ select option {
 }
 
 /* Small screen specific styles */
-@media screen and (max-width: 76.1875rem) {
+@media screen and (max-width: 1219px) {
   /* Small screen sidebar */
   .md-nav__source {
     display: none;
