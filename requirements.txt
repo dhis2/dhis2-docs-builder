@@ -18,6 +18,7 @@ ply==3.11
 pycparser==2.18
 pymdown-extensions==8.0
 Pyphen==0.9.5
+python-frontmatter==0.5.0
 python-slugify==1.2.6
 PyYAML==5.3.1
 requests==2.21.0

@@ -22,6 +22,7 @@ import sys
 import argparse
 import hashlib
 import fileinput
+import frontmatter
 from git.repo.base import Repo
 import MarkdownPP
 
@@ -106,10 +107,10 @@ class fetcher:
             branch_opt = '--branch ' + branch
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
 
-        self.include_file(tmpRoot + "/" + file_path, local_path)
+        self.include_file(tmpRoot + "/" + file_path, local_path, github_repo+'/blob/'+branch+'/'+file_path)
 
 
-    def include_file(self, origin, local_path):
+    def include_file(self, origin, local_path, edit_url=''):
 
         # ensure the destination directory exists
         destination = self.docs_dir + local_path
@@ -122,6 +123,11 @@ class fetcher:
             else:
                 # do a direct copy
                 shutil.copyfile(origin, destination)
+                if edit_url:
+                    post = frontmatter.load(destination)
+                    post['edit_url'] = 'https://github.com/'+edit_url
+                    with open(destination, 'w') as emd:
+                        print(frontmatter.dumps(post), file=emd)
                 # copy the images
                 f = open(destination, "r")
                 markdown = f.read()
