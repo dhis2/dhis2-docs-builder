@@ -529,6 +529,9 @@ caption {
 
 /* DEC2020 Changes */
 
+/* Load font from Open Source CDN, avoiding Google Fonts */
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css');
+
 :root {
   --text-base: #051841;
   --text-muted: #404b5a;
@@ -562,6 +565,10 @@ caption {
 
 .md-header {
   background-color: var(--fill-bg-900);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
 
 h1,
