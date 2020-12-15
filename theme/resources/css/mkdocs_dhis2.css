@@ -410,6 +410,14 @@ a.domain-nav-item:after {
   color: var(--action-hover);
 }
 
+/* adjust the padding for link-to-headers to account for the new alternate bar */
+.md-typeset h3[id]:target::before,
+.md-typeset h2[id]:target::before,
+.md-typeset h1[id]:target::before {
+  margin-top: -4.5rem;
+  padding-top: 4.5rem;
+}
+
 /*  */
 /* Version/Alternate selection bar */
 /*  */
