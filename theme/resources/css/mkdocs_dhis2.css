@@ -830,6 +830,10 @@ v-tag {
   display: flex;
 }
 
+.footer-nav-link-next {
+  margin-left: auto;
+}
+
 .footer-nav-link-previous svg {
   margin-right: 8px;
 }
