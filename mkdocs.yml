@@ -449,16 +449,11 @@ nav:
             - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, master)'
         Loading Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md, master)'
         Core Javadocs:
-          alt_DHIS core version 2.35:
-            - DHIS 2 Javadocs: https://docs.dhis2.org/2.35/javadoc/
-          alt_DHIS core version 2.34:
-            - DHIS 2 Javadocs: https://docs.dhis2.org/2.34/javadoc/
-          alt_DHIS core version 2.33:
-            - DHIS 2 Javadocs: https://docs.dhis2.org/2.33/javadoc/
-          alt_DHIS core version 2.32:
-            - DHIS 2 Javadocs: https://docs.dhis2.org/2.32/javadoc/
-          alt_DHIS core version master:
-            - DHIS 2 Javadocs: https://docs.dhis2.org/master/javadoc/
+          - DHIS 2.35 Javadocs: https://docs.dhis2.org/2.35/javadoc/
+          - DHIS 2.34 Javadocs: https://docs.dhis2.org/2.34/javadoc/
+          - DHIS 2.33 Javadocs: https://docs.dhis2.org/2.33/javadoc/
+          - DHIS 2.32 Javadocs: https://docs.dhis2.org/2.32/javadoc/
+          - DHIS master Javadocs: https://docs.dhis2.org/master/javadoc/
         Integrating with R: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md, master)'
         Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
     - Manage:
