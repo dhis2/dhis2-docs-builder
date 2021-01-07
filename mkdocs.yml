@@ -168,7 +168,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.35)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.35)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)"        
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)"
           alt__DHIS core version 2.34:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)"
@@ -216,7 +216,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.34)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.34)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)"                 
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)"
           alt__DHIS core version 2.33:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)"
@@ -264,7 +264,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.33)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.33)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)"                  
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)"
           alt__DHIS core version 2.32:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)"
@@ -393,11 +393,11 @@ nav:
           - DHIS 2 Documentation Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)"
           - Submitting quick document fixes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/common/submitting-a-doc-fix.md, master)"
           - Using JIRA for DHIS2 issues: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/using-jira-for-dhis2-issues.md, master)"
-        Implementing Tracker programs: 
-          - Target audience: "@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)"  
-          - Introduction: "@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)"  
-          - Is my project ready for Tracker?: "@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)"  
-          - Build your Tracker programs: "@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)"  
+        Implementing Tracker programs:
+          - Target audience: "@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)"
+          - Introduction: "@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)"
+          - Is my project ready for Tracker?: "@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)"
+          - Build your Tracker programs: "@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)"
         Implementing with Android:
           - Executive summary: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)"
           - Document Map: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)"
@@ -437,16 +437,26 @@ nav:
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/index.md, master)'
         Using the API:
-          alt__DHIS core version 2.35:
-            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.35)'
-          alt__DHIS core version 2.34:
-            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.34)'
-          alt__DHIS core version 2.33:
-            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.33)'
-          alt__DHIS core version 2.32:
-            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md,2.32)'
           alt__DHIS core version master:
-            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, master)'
+            - Introduction: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/overview.md, master)'
+            - Metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata.md, master)'
+            - Data: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data.md, master)'
+            - Data Validation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-validation.md, master)'
+            - Data Approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-approval.md, master)'
+            - Sharing: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/sharing.md, master)'
+            - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/audit.md, master)'
+            - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/messaging.md, master)'
+            - Visualizations: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/visualizations.md, master)'
+            - Analytics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/analytics.md, master)'
+            - Maintenance: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/maintenance.md, master)'
+            - I18n: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/i18n.md, master)'
+            - SMS: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/sms.md, master)'
+            - Users: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/users.md, master)'
+            - Settings and configuration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/settings-and-configuration.md, master)'
+            - Tracker: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/tracker.md, master)'
+            - Email: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/email.md, master)'
+            - Data Store: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-store.md, master)'
+            - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/apps.md, master)'
         Loading Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md, master)'
         Core Javadocs:
           - DHIS 2.35 Javadocs: https://docs.dhis2.org/2.35/javadoc/
