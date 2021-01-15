@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
-# Copyright © 2020 philld <philld@remspace>
+# Copyright © 2021 philld <philld@remspace>
 #
 # Distributed under terms of the MIT license.
 
@@ -25,6 +25,7 @@ import fileinput
 import frontmatter
 from git.repo.base import Repo
 import MarkdownPP
+from . import transifex
 
 
 class helpers:
@@ -80,7 +81,7 @@ class lister:
 class fetcher:
 
     # Initializing
-    def __init__(self):
+    def __init__(self,config):
         # set up a temporary directory for github clones
         # id = uuid.uuid4().hex
         self.h = helpers()
@@ -88,8 +89,20 @@ class fetcher:
         os.makedirs(self.root, exist_ok=True)
 
         self.docs_dir = 'docs/'
+        if 'docs_dir' in config and config['docs_dir'] != None:
+            self.docs_dir = config['docs_dir'] + '/'
         self.alternate_prefix = 'alt__'
         self.github_base = 'https://github.com/'
+
+        self.nav_strings = {}
+        self.tx_config = []
+        self.tx_project_slug = "docs-full-site"
+        self.theme_dir = config['theme'].dirs[0]
+        self.local_nav_source = self.theme_dir + '/i18n/navigation_en.json'
+        self.local_nav = self.theme_dir + '/i18n/navigation_'
+        self.tx = transifex.tx('docs-full-site')
+
+        self.nav_trans_strings = {}
 
     # Calling destructor
     # def __del__(self):
@@ -188,7 +201,7 @@ class fetcher:
 
 
 
-    def fetch_file(self, file_def, path):
+    def fetch_file(self, file_def, path, alternates):
         new_nav = path+'.md'
         # print(new_nav,file_def.split('(')[0])
         if file_def.split('(')[0] == "@github":
@@ -206,7 +219,9 @@ class fetcher:
             if git_file.endswith('.md'):
                 self.include_git(github_repo, git_file, git_branch, new_nav)
                 if decompose:
-                    new_nav = self.chapterise(new_nav)
+                    new_nav = self.chapterise(new_nav,alternates)
+                else:
+                    self.store_for_tx(new_nav,alternates)
             else:
                 print("Git file format not supported (must be .md):",git_file)
 
@@ -224,7 +239,9 @@ class fetcher:
             if local_file.endswith('.md'):
                 self.include_file(local_file, new_nav)
                 if decompose:
-                    new_nav = self.chapterise(new_nav)
+                    new_nav = self.chapterise(new_nav,alternates)
+                else:
+                    self.store_for_tx(new_nav,alternates)
             else:
                 print("File format not supported (must be .md):",local_file)
 
@@ -243,7 +260,7 @@ class fetcher:
                 else:
                     if nav_item[0] == '@':
                         v_map[path] = v_tmp
-                        nav_item = self.fetch_file(nav_item,path)
+                        nav_item = self.fetch_file(nav_item,path,v_tmp)
 
             x.append(nav_item)
         return x, v_map
@@ -262,6 +279,10 @@ class fetcher:
                 # this is an "alternate" - keep track of it
                 tmp_v = v_tmp + [no_pref]
                 # print("alternate", k , tmp_v)
+            else:
+                # this is not an alternate - add to translation source
+                self.nav_strings[k] = { "string": k , "context": path }
+
             if type(n) == dict:
                 n, v_map = self.crawl_nav_dict(nav[k],p, v_map, tmp_v)
             else:
@@ -271,16 +292,70 @@ class fetcher:
                     if n[0] == '@':
                         v_map[p] = tmp_v
                         # print(p,tmp_v)
-                        n = self.fetch_file(nav[k],p)
+                        n = self.fetch_file(nav[k],p,tmp_v)
 
             if k != "___Home":
-                x[k] = n
+                if k in self.nav_trans_strings:
+                    x[self.nav_trans_strings[k]['string']] = n
+                else:
+                    x[k] = n
 
         return x, v_map
 
 
+    def store_for_tx(self,file,alternates):
 
-    def chapterise(self, book, editpath=None):
+        tx_entry = {}
+        tx_path = "/".join(file.split('/')[0:-1])
+        tx_file = file.split('/')[-1]
+        tx_entry['resource_slug'] = tx_path.upper().replace('/','__')+'__'+tx_file.replace('.','-')
+        tx_entry['file_path'] = 'docs/'+tx_path+'/'+tx_file
+        tx_entry['categories'] = alternates
+        #self.docs_dir
+        self.tx_config.append(tx_entry)
+
+
+    def configure_translations(self, config):
+
+        nav_local = open(self.local_nav_source, 'w')
+        nav_local.write(json.dumps(self.nav_strings,indent=2))
+        nav_local.close()
+
+
+    def push_translations(self):
+
+
+        # can only push translations if the token was provided in env
+        if self.tx.tx_token:
+            self.tx.push(self.local_nav_source,'0__Navigation-Menu',['MENU'],'STRUCTURED_JSON')
+
+            for t in self.tx_config:
+                self.tx.push(t['file_path'],t['resource_slug'],t['categories'],'GITHUBMARKDOWN')
+        else:
+            print("No DHIS2_DOCS_TX_TOKEN. Translations will not be pushed to transifex.")
+
+
+    def pull_translations(self,language_code, set='docs'):
+
+        # can only retrieve translations if the token was provided in env
+        if self.tx.tx_token:
+            if set == 'nav':
+                local_nav = self.local_nav + language_code + '.json'
+                self.tx.pull(local_nav,'0__Navigation-Menu',language_code)
+                try:
+                    nav_local = open(local_nav, 'r')
+                    self.nav_trans_strings = json.load(nav_local)
+                    nav_local.close()
+                except:
+                    pass
+
+            if set == 'docs':
+                for t in self.tx_config:
+                    self.tx.pull(t['file_path'],t['resource_slug'],language_code)
+        else:
+            print("No DHIS2_DOCS_TX_TOKEN. Translations will not be pulled from transifex.")
+
+    def chapterise(self, book, alternates, editpath=None):
 
         bmap={}
         content = []
@@ -313,6 +388,7 @@ class fetcher:
                         if lastname:
                             chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
                             chapter_file = self.docs_dir + lastname
+                            self.store_for_tx(lastname,alternates)
                             if not os.path.isfile(chapter_file):
                                 os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
                                 lc = open(chapter_file,'w')
@@ -366,6 +442,7 @@ class fetcher:
             if lastname:
                 chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
                 chapter_file = self.docs_dir + lastname
+                self.store_for_tx(lastname,alternates)
                 if not os.path.isfile(chapter_file):
                     os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
                     lc = open(chapter_file,'w')

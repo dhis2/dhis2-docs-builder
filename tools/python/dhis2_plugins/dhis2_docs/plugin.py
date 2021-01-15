@@ -10,7 +10,19 @@ class Dhis2DocsPlugin(BasePlugin):
         return context
 
     def on_config(self, config):
-        fetcher = dhis2_utils.fetcher()
+
+        # set the language based on environment
+        lang = dhis2_utils.os.getenv('DHIS2_DOCS_LANGUAGE')
+        if lang == None:
+            lang = 'en'
+        config['site_url'] = config['site_url'].replace('/en','/'+lang)
+        config['site_dir'] = config['site_dir'].replace('/en','/'+lang)
+        #config['extra']['dhis2_language'] = config['extra']['dhis2_language'].replace('/en/','/'+lang+'/')
+        config['theme']['language'] = lang[0:2]
+
+        fetcher = dhis2_utils.fetcher(config)
+        if lang != 'en':
+            fetcher.pull_translations(lang,'nav')
         # fetcher.say_hello()
         print("Fetching documents...")
         version_map = {}
@@ -20,11 +32,20 @@ class Dhis2DocsPlugin(BasePlugin):
 
         # print(dhis2_utils.json.dumps(config['version_map']))
         print("Done.")
+        fetcher.configure_translations(config)
+
+        # Push English source files to transifex
+        if lang == 'en':
+            fetcher.push_translations()
+
+        # Pull translated versions of files from transifex if necessary
+        if lang != 'en':
+            fetcher.pull_translations(lang)
 
 
         # update the Yaml file
         ey = open("mkdocs_gen.yml",'w+')
-        ey.write(dhis2_utils.yaml.dump(config, sort_keys=False, default_flow_style=False, Dumper=dhis2_utils.yaml.Dumper))
+        ey.write(dhis2_utils.yaml.dump(config['nav'], sort_keys=False, default_flow_style=False, Dumper=dhis2_utils.yaml.Dumper))
         ey.close()
 
         return config

@@ -1,9 +1,9 @@
-name: Build the core documentation - English original
+name: Build the core documentation - Español (latinoamerica)
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '31 1 * * *'
 
 jobs:
   build:
@@ -55,7 +55,8 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'target/en/.'
-        DEST_DIR: 'en/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
+        SOURCE_DIR: 'target/es_419/.'
+        DEST_DIR: 'es_419/'
+        DHIS2_DOCS_LANGUAGE: 'es_419'
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
