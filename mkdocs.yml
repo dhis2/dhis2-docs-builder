@@ -3,7 +3,7 @@ site_description: Official documentation of the DHIS 2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
-copyright: 'Copyright &copy; 2008-2020 DHIS2 Team'
+copyright: 'Copyright &copy; 2008-2021 DHIS2 Team'
 google_analytics: ['UA-157707339-2', 'docs.dhis2.org']
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
@@ -14,17 +14,6 @@ use_directory_urls: false
 # docs_dir:
 
 extra:
-  dhis2_version: 'master'
-  dhis2_versions:
-    - 'master'
-    - '2.35'
-    - '2.34'
-    - '2.33'
-    - '2.32'
-    - '2.31'
-    - '2.30'
-    - '2.29'
-  dhis2_language: 'en'
   dhis2_languages:
     en: 'English'
     fr: 'Français'
@@ -168,7 +157,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.35)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.35)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)"        
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)"
           alt__DHIS core version 2.34:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)"
@@ -216,7 +205,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.34)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.34)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.34)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)"                 
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.34)"
           alt__DHIS core version 2.33:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.33)"
@@ -264,7 +253,7 @@ nav:
               - Demo server, live package and database design: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.33)"
               - DHIS2 Tutorials: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.33)"
               - DHIS2 Frequently Asked Questions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.33)"
-              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)"                  
+              - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.33)"
           alt__DHIS core version 2.32:
             Collecting data:
               - Data Entry: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.32)"
@@ -393,11 +382,11 @@ nav:
           - DHIS 2 Documentation Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)"
           - Submitting quick document fixes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/common/submitting-a-doc-fix.md, master)"
           - Using JIRA for DHIS2 issues: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/using-jira-for-dhis2-issues.md, master)"
-        Implementing Tracker programs: 
-          - Target audience: "@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)"  
-          - Introduction: "@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)"  
-          - Is my project ready for Tracker?: "@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)"  
-          - Build your Tracker programs: "@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)"  
+        Implementing Tracker programs:
+          - Target audience: "@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)"
+          - Introduction: "@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)"
+          - Is my project ready for Tracker?: "@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)"
+          - Build your Tracker programs: "@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)"
         Implementing with Android:
           - Executive summary: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)"
           - Document Map: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)"
