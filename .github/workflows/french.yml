@@ -45,6 +45,9 @@ jobs:
     - name: Build the docs
       run: |
         mkdocs build
+      env:
+        DHIS2_DOCS_LANGUAGE: 'fr'
+        DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
@@ -58,5 +61,3 @@ jobs:
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
         SOURCE_DIR: 'target/fr/.'
         DEST_DIR: 'fr/'
-        DHIS2_DOCS_LANGUAGE: 'fr'
-        DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
