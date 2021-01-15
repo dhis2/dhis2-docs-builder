@@ -4,13 +4,13 @@
 <select onChange="window.document.location.href=this.options[this.selectedIndex].value;">
     {% for key, value in config.extra.dhis2_languages.items() %}
       {% if key == config.theme.language %}
-        <option value="/{{ key }}/" title="{{ value }}"><p>{{ key | upper }}</option>
+        <option value="/{{ key }}/{{ page.url }}" title="{{ value }}"><p>{{ key | upper }}</option>
       {% endif %}
     {% endfor %}
 
     {% for key, value in config.extra.dhis2_languages.items() %}
       {% if key != config.theme.language %}
-        <option value="/{{ key }}/" title="{{ value }}"><p>{{ key | upper }}</option>
+        <option value="/{{ key }}/{{ page.url }}" title="{{ value }}"><p>{{ key | upper }}</option>
       {% endif %}
     {% endfor %}
 </select>
