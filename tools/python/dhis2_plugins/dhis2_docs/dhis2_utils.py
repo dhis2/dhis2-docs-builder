@@ -46,6 +46,15 @@ class helpers:
     def grep(self, pattern, file_path):
         with io.open(file_path, "r", encoding="utf-8") as f:
             return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
+            
+    def slugmatch(self, matchobj):
+
+        refslug = ' { #'+self.slugify(matchobj.group(2))+' } '
+        return matchobj.group(1)+matchobj.group(2)+refslug+matchobj.group(3)
+
+        def grep(self, pattern, file_path):
+            with io.open(file_path, "r", encoding="utf-8") as f:
+                return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
 
 class lister:
 
@@ -149,6 +158,9 @@ class fetcher:
                 f.close()
 
 
+            # convert <!--DHIS2-SECTION-ID:data_visualizer--> references to header attribute formats
+            self.fix_refs(destination)
+
 
     def markdown_preprocess(self,fromfile, tofile):
 
@@ -170,10 +182,31 @@ class fetcher:
         self.copy_markdown_images(os.path.dirname(fromfile), markdown, tofile)
         f.close()
 
+
         # fix references to __common__ images
         relative_dir = os.path.relpath('./',os.path.dirname(tofile))
         for line in fileinput.input([tofile], inplace=True):
             print(line.replace('__common__', relative_dir).replace('resources/images/../..',relative_dir), end='')
+
+    def fix_refs(self, tofile):
+
+        # read the file into a string
+        f = open(tofile, "r")
+        markdown = f.read()
+        f.close()
+
+        # convert the DHIS2-SECTION_ID comments to inline attribute list form { #section_id }
+        p = re.compile('(^#[^\n<{}]*)([^#]*?DHIS2-SECTION-ID\s*:\s*)(.*?)(\s*-->)',re.MULTILINE)
+        markdown = p.sub(r'\1 { #\3 } \2\3\4',markdown)
+
+        # Add an attribute list identifier to all sections that don't have one
+        q = re.compile('(^#+)([^\n{<]*)([^{#]*?$)',re.MULTILINE)
+        markdown = q.sub(self.h.slugmatch,markdown)
+
+        # write back to the file
+        ub = open(tofile,'w')
+        ub.write(markdown)
+        ub.close()
 
 
     def copy_markdown_images(self, basedir, markdown, dest):
