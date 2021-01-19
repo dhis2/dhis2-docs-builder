@@ -4,15 +4,15 @@
   {% if (((nav_item.title|replace("alt__","")) != nav_item.title) and nav_item.parent.parent)  %}
 
       {% if nav_item.active  %}
-        <div class="breadcrumb breadcrumb-select">  
-          <select onChange="window.document.location.href=this.options[this.selectedIndex].value;">
+        <div class="breadcrumb breadcrumb-select">
+          <select onChange="window.document.location.href=this.options[this.selectedIndex].value+window.location.hash;">
               <option selected disabled hidden>{{ nav_item.title|replace("alt__","") }}</option>
-         
+
         {% for sibling in nav_item.parent.children %}
           {% if not sibling.active  %}
           <!-- alternative selection -->
             {% set ns = namespace(ss=sibling) %}
-            
+
             {% set nic = nav_item.children %}
             <!-- recursively compare the page nav_item with the alternative to find the alternative url -->
             <!-- Ideally the alternative nav should be exaclty the same with the exception of the current nav_item -->
@@ -31,11 +31,11 @@
                         {{ inner_loop(nav_sub.children) }}
                       {% endif %}
                     {% endif %}
-                  
-                {% else %}  
-                  
+
+                {% else %}
+
                   {% include "partials/fallback.html" %}
-                    
+
 
                 {% endfor %}
               {% endif %}
@@ -50,7 +50,7 @@
       {% endif %}
     {% else %}
       {% if nav_item.parent and nav_item.children %}
-      <div class="breadcrumb breadcrumb-path">{{ nav_item.title }}</div> 
+      <div class="breadcrumb breadcrumb-path">{{ nav_item.title }}</div>
       {% endif%}
     {% endif %}
     {% if nav_item.children %}
