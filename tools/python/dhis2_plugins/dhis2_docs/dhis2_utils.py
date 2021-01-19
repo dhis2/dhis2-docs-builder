@@ -46,7 +46,7 @@ class helpers:
     def grep(self, pattern, file_path):
         with io.open(file_path, "r", encoding="utf-8") as f:
             return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
-            
+
     def slugmatch(self, matchobj):
 
         refslug = ' { #'+self.slugify(matchobj.group(2))+' } '
@@ -195,18 +195,24 @@ class fetcher:
         markdown = f.read()
         f.close()
 
-        # convert the DHIS2-SECTION_ID comments to inline attribute list form { #section_id }
-        p = re.compile('(^#[^\n<{}]*)([^#]*?DHIS2-SECTION-ID\s*:\s*)(.*?)(\s*-->)',re.MULTILINE)
-        markdown = p.sub(r'\1 { #\3 } \2\3\4',markdown)
-
-        # Add an attribute list identifier to all sections that don't have one
-        q = re.compile('(^#+)([^\n{<]*)([^{#]*?$)',re.MULTILINE)
-        markdown = q.sub(self.h.slugmatch,markdown)
+        md = self.ref_update(markdown)
 
         # write back to the file
         ub = open(tofile,'w')
-        ub.write(markdown)
+        ub.write(md)
         ub.close()
+
+    def ref_update(self,md):
+        # convert the DHIS2-SECTION_ID comments to inline attribute list form { #section_id }
+        p = re.compile('(^#[^\n<{}]*)([^#]*?DHIS2-SECTION-ID\s*:\s*)(.*?)(\s*-->)',re.MULTILINE)
+        markdown = p.sub(r'\1 { #\3 } \2\3\4',md)
+
+        # Add an attribute list identifier to all sections that don't have one
+        q = re.compile('(^#+)([^\n{<]*)([^{#]*?$)',re.MULTILINE)
+        md = q.sub(self.h.slugmatch,markdown)
+
+        return md
+
 
 
     def copy_markdown_images(self, basedir, markdown, dest):
@@ -405,7 +411,8 @@ class fetcher:
                     if not codebloc:
                         # check if the line matches "# <Title>"
                         # if so, treat as a new chapter
-                        found = re.search('^# (.+?)($|<!--.*$)', line.rstrip()).group(1)
+                        #found = re.search('^# (.+?)($|<!--.*$)', line.rstrip()).group(1)
+                        found = re.search('^# (.+?)($|<!--.*$|{.*$)', line.rstrip()).group(1)
                         newname = helpers().slugify(found)
                         edit = ""
                         if newname:
@@ -425,7 +432,7 @@ class fetcher:
                             if not os.path.isfile(chapter_file):
                                 os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
                                 lc = open(chapter_file,'w')
-                                lc.write(lastchapter)
+                                lc.write(self.ref_update(lastchapter))
                                 lc.close
                             try:
                                 bmap[newname] += [chk]
@@ -435,7 +442,7 @@ class fetcher:
                                 bmap.update({newname:[chk]})
 
                         lastname = os.path.dirname(book)+'/' + os.path.basename(book).replace('.md','') + '/' + newname + '.md'
-                        lastfound = found
+                        lastfound = re.sub(r'\s*{.*','',found)
 
                         if edit:
                             lastchapter = '---\nedit_url: '+edit+'\n---\n# '+found+'\n'
@@ -478,13 +485,17 @@ class fetcher:
                 self.store_for_tx(lastname,alternates)
                 if not os.path.isfile(chapter_file):
                     os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
+
                     lc = open(chapter_file,'w')
-                    lc.write(lastchapter)
+                    lc.write(self.ref_update(lastchapter))
                     lc.close
                 try:
                     bmap[newname] += [chk]
                 except KeyError:
                     bmap.update({newname:[chk]})
+
+        # delete the original file
+        os.remove(self.docs_dir + book)
 
         # return the array of pages
         return content
