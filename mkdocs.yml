@@ -19,8 +19,8 @@ extra:
     fr: 'Français'
     es_419: 'Español (latinoamerica)'
     pt: 'Português'
-    cs: 'Czech'
-    zh: 'Chinese'
+    cs: 'čeština'
+    zh: '中文'
   social:
     - icon: fontawesome/brands/github
       link: https://www.github.com/dhis2
