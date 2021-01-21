@@ -65,6 +65,18 @@ class Dhis2DocsPlugin(BasePlugin):
         return mkdocs.structure.files.Files(out)
 
 
+    def on_page_markdown(self, markdown, page, config, files):
+
+        # remove any remaining DHIS2-EDIT comments from markdown
+        md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown,dhis2_utils.re.MULTILINE)
+
+        if len(dhis2_utils.re.findall(r'^#\s+',md,dhis2_utils.re.MULTILINE)) > 1:
+            mark2 = md.replace('\n#','\n##')
+            return mark2
+
+        return md
+
+
     def on_post_build(self, config):
         if not "search" in config["plugins"]:
             logger.debug(
