@@ -1,17 +1,33 @@
-
-
-<div class="lang_select">
-<select onChange="window.document.location.href=this.options[this.selectedIndex].value+window.location.hash;">
-    {% for key, value in config.extra.dhis2_languages.items() %}
-      {% if key == config.theme.language %}
-        <option value="/{{ key }}/{{ page.url }}" title="{{ value }}"><p>{{ key | upper }}</option>
-      {% endif %}
-    {% endfor %}
-
-    {% for key, value in config.extra.dhis2_languages.items() %}
-      {% if key != config.theme.language %}
-        <option value="/{{ key }}/{{ page.url }}" title="{{ value }}"><p>{{ key | upper }}</option>
-      {% endif %}
-    {% endfor %}
-</select>
+<div class="language-selector-wrap">
+  <svg
+    height="22"
+    viewBox="0 0 22 22"
+    width="22"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g fill="none" fill-rule="evenodd">
+      <path d="m0 0h22v22h-22z" />
+      <path
+        d="m11 .5c-5.79898987 0-10.5 4.70101013-10.5 10.5 0 5.7989899 4.70101013 10.5 10.5 10.5 5.7989899 0 10.5-4.7010101 10.5-10.5 0-2.78477314-1.1062468-5.45548923-3.0753788-7.4246212-1.969132-1.96913198-4.6398481-3.0753788-7.4246212-3.0753788zm9 9.75h-4.5c-.0875484-2.76218539-.8031507-5.46813683-2.0925-7.9125 3.6385573.99529072 6.2703597 4.1540524 6.5925 7.9125zm-9 9.75c-.1673116.0112351-.3351884.0112351-.5025 0-1.55378573-2.4778596-2.41611774-5.3264037-2.4975-8.25h6c-.0746144 2.9214929-.9291315 5.7698833-2.475 8.25-.1747851.012265-.3502149.012265-.525 0zm-3-9.75c.07461441-2.92149292.92913152-5.7698833 2.475-8.25.3339491-.03752568.6710509-.03752568 1.005 0 1.5617072 2.47559712 2.4318553 5.32429651 2.52 8.25zm.57-7.9125c-1.2815282 2.44623382-1.98941018 5.15208704-2.07 7.9125h-4.5c.32214033-3.7584476 2.95394271-6.91720928 6.5925-7.9125zm-6.5325 9.4125h4.5c.07826923 2.7598228.78357795 5.4656435 2.0625 7.9125-3.62676287-1.0058796-6.24462927-4.1622785-6.5625-7.9125zm11.37 7.9125c1.2893493-2.4443632 2.0049516-5.1503146 2.0925-7.9125h4.5c-.3221403 3.7584476-2.9539427 6.9172093-6.5925 7.9125z"
+        fill="#fff"
+      />
+    </g>
+  </svg>
+  <select
+    class="language-selector"
+    onChange="window.document.location.href=this.options[this.selectedIndex].value+window.location.hash;"
+  >
+    {% for key, value in config.extra.dhis2_languages.items() %} {% if key ==
+    config.theme.language %}
+    <option value="/{{ key }}/{{ page.url }}" title="{{ value }}">
+      <p>{{ key | upper }}</p>
+    </option>
+    {% endif %} {% endfor %} {% for key, value in
+    config.extra.dhis2_languages.items() %} {% if key != config.theme.language
+    %}
+    <option value="/{{ key }}/{{ page.url }}" title="{{ value }}">
+      <p>{{ key | upper }}</p>
+    </option>
+    {% endif %} {% endfor %}
+  </select>
 </div>
