@@ -245,16 +245,20 @@ pre {
   margin-left: 0.6rem;
   background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA4IDUiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMjEuNjQ2IDYuNjQ2LjcwOC43MDgtMy4zNTQgMy4zNTMtMy4zNTQtMy4zNTMuNzA4LS43MDggMi42NDYgMi42NDd6IiBmaWxsPSIjZmZmZmZmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1IC02KSIvPjwvc3ZnPg==');
 }
-.md-header-nav select option {
+/* .md-header-nav select option {
     margin: 40px;
     background: rgb(0 0 0);
     color: var(--md-primary-bg-color);
 }
-
-.lang_select {
-  margin:auto;
+*/
+.language-selector-wrap {
+  align-self: center;
+  display: flex;
+  align-items: center;
 }
-
+.md-header-nav select.language-selector {
+  margin-left: 0.2rem;
+}
 
 .md-nav__item--hidden {
   display: none;
