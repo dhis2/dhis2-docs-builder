@@ -423,6 +423,12 @@ a.domain-nav-item:after {
 .md-typeset h3[id]:target::before,
 .md-typeset h2[id]:target::before,
 .md-typeset h1[id]:target::before {
+  margin-top: 0;
+  padding-top: 100px;
+}
+.md-typeset h3[id]::before,
+.md-typeset h2[id]::before,
+.md-typeset h1[id]::before {
   margin-top: -4.5rem;
   padding-top: 4.5rem;
 }
