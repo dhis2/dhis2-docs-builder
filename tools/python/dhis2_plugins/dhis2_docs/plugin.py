@@ -1,8 +1,16 @@
 from mkdocs.plugins import BasePlugin
+from mkdocs.config import config_options
 import mkdocs.structure.files
 from . import dhis2_utils
+from weasyprint import HTML
 
 class Dhis2DocsPlugin(BasePlugin):
+
+    config_scheme = (
+        ('make_pdfs', config_options.Type(bool, default=False)),
+        ('tx_project_slug', mkdocs.config.config_options.Type(str, default='docs-full-site'))
+    )
+
     def on_page_context(self, context, page, config, **kwargs):
         # page.edit_url = ""
         # if 'edit_url' in page.meta:
@@ -20,7 +28,7 @@ class Dhis2DocsPlugin(BasePlugin):
         #config['extra']['dhis2_language'] = config['extra']['dhis2_language'].replace('/en/','/'+lang+'/')
         config['theme']['language'] = lang[0:2]
 
-        fetcher = dhis2_utils.fetcher(config)
+        fetcher = dhis2_utils.fetcher(config,self.config['tx_project_slug'])
         if lang != 'en':
             fetcher.pull_translations(lang,'nav')
         # fetcher.say_hello()
@@ -30,7 +38,6 @@ class Dhis2DocsPlugin(BasePlugin):
         config['nav'] = fetched[0]
         config['version_map'] = fetched[1]
 
-        # print(dhis2_utils.json.dumps(config['version_map']))
         print("Done.")
         fetcher.configure_translations(config)
 
@@ -70,9 +77,9 @@ class Dhis2DocsPlugin(BasePlugin):
         # remove any remaining DHIS2-EDIT comments from markdown
         md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown,dhis2_utils.re.MULTILINE)
 
-        if len(dhis2_utils.re.findall(r'^#\s+',md,dhis2_utils.re.MULTILINE)) > 1:
-            mark2 = md.replace('\n#','\n##')
-            return mark2
+        # if len(dhis2_utils.re.findall(r'^#\s+',md,dhis2_utils.re.MULTILINE)) > 1:
+        #     mark2 = md.replace('\n#','\n##')
+        #     return mark2
 
         return md
 
@@ -155,5 +162,20 @@ class Dhis2DocsPlugin(BasePlugin):
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:
                 dhis2_utils.json.dump(search_index, f)
+
+
+        if self.config['make_pdfs']:
+            
+            for dirpath, dirnames, filenames in dhis2_utils.os.walk(config['site_dir']):
+                for filename in [f for f in filenames if f.endswith(".html")]:
+                    # don't convert files that are in the root (index files)
+                    if (dirpath != config['site_dir']):
+                        # print("TO PDF:",dhis2_utils.os.path.join(dirpath, filename))
+                        print("TO PDF-:",dirpath, filename)
+                        html_file = dhis2_utils.os.path.join(dirpath, filename)
+                        pdf_file = html_file.replace('.html','.pdf')
+                        HTML(html_file).write_pdf(pdf_file)
+
+
 
         return config

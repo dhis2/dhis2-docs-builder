@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+{% import "partials/language.html" as lang with context %}
+    {% block site_meta %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      {% if page and page.meta and page.meta.description %}
+        <meta name="description" content="{{ page.meta.description }}">
+      {% elif config.site_description %}
+        <meta name="description" content="{{ config.site_description }}">
+      {% endif %}
+      {% if page and page.meta and page.meta.keywords %}
+        <meta name="keywords" content="{{ page.meta.keywords }}">
+      {% elif config.site_keywords %}
+        <meta name="keywords" content="{{ config.site_keywords }}">
+      {% endif %}
+      {% if page.canonical_url %}
+        <link rel="canonical" href="{{ page.canonical_url }}">
+      {% endif %}
+      {% if page and page.meta and page.meta.author %}
+        <meta name="author" content="{{ page.meta.author }}">
+      {% elif config.site_author %}
+        <meta name="author" content="{{ config.site_author }}">
+      {% endif %}
+      <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-6.1.6">
+    {% endblock %}
+    {% block htmltitle %}
+      {% if page and page.meta and page.meta.title %}
+        <title>{{ page.meta.title }} - {{ config.site_name }}</title>
+      {% elif page and page.title and not page.is_homepage %}
+        <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+      {% else %}
+        <title>{{ config.site_name }}</title>
+      {% endif %}
+    {% endblock %}
+    {% block libs %}{% endblock %}
+    {% block fonts %}
+      {% if config.theme.font != false %}
+        {% set font = config.theme.font %}
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
+            font.text | replace(' ', '+') + ':300,400,400i,700%7C' +
+            font.code | replace(' ', '+')
+          }}&display=fallback">
+        <style>body,input{font-family:"{{ font.text }}",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      {% endif %}
+    {% endblock %}
+    {% if config.extra.manifest %}
+      <link rel="manifest" href="{{ config.extra.manifest | url }}" crossorigin="use-credentials">
+    {% endif %}
+    {% for path in config["extra_css"] %}
+      <link rel="stylesheet" href="{{ path | url }}">
+    {% endfor %}
+    {% block analytics %}
+      {% if config.google_analytics %}
+        {% include "partials/integrations/analytics.html" %}
+      {% endif %}
+    {% endblock %}
+
+
+
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+
+
+</head>
+<body>
+
+<div class="banner"></div>
+
+<div class="headerDiv">
+<header style="text-align:left;padding-left:0px;width:100%;">
+<h1 class="title">{{ page.title }}</h1>
+<h2 class="subtitle">
+{% for vm in config['version_map'] %}
+    {% if vm+'.html' in page.abs_url %}
+        {% for v in config['version_map'][vm] %}
+            <span>{{ v }}</span>
+        {% endfor %}   
+    {% endif %}
+{% endfor %}
+</h2>
+</header></div>
+
+
+<div class="productionDiv">
+  <p class="productionInfo">{{ config.site_author }}</p>
+  <!-- <p class="productionInfoSub"></p>
+  <p class="productionInfo"></p> -->
+</div>
+
+<div class="coverlogo"><img src="{{ config.theme.cover | url }}"/></div>
+
+
+
+<div id="pagebreak">
+
+<p class="subtitle">{{ config.copyright }}</p>
+<p class="author"></p>
+<!--
+ <p class="author">Copyright &copy; DHIS 2 Documentation team</p>
+-->
+{% set label = lang.t("source.revision.date") %}
+
+{% if page.meta.revision_date %}
+<p class="lastupdate"></p><p>{{ label }}: {{ page.meta.revision_date }}</p>
+{% endif %}
+<!-- <div class="revhistory">
+<table style="width:100%;" summary="Revision History">
+<tbody><tr><th align="left" colspan="2" valign="top"><b>Revision History</b></th></tr>
+<tr><td align="left">2.35@244334f</td><td align="left">2021-01-13 10:12:26 +0100</td></tr>
+</tbody></table>
+</div> -->
+
+<p class="warranty"></p><p><strong>Warranty:</strong> THIS DOCUMENT IS PROVIDED BY THE AUTHORS ‘’AS IS’’ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS MANUAL AND PRODUCTS MENTIONED HEREIN, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p><p></p>
+<p class="license"></p><p><strong>License:</strong> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the source of this documentation, and is available here online: <a class="uri" href="http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</a></p><p></p>
+
+<div id="pagebreak">
+
+{% set toc = page.toc %}
+{% if toc | first is defined %}
+<h1>{{ lang.t("toc.title") }}</h1>
+<nav id="TOC">
+    <ul class="md-nav__list" data-md-scrollfix>
+        {% for toc_item in toc %}
+        {% include "partials/toc-item.html" %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
+
+
+<div id="pagebreak">
+
+
+{{ page.content }}
+
+
+    
+</body>
+</html>

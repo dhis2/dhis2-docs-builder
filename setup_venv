@@ -1,10 +1,10 @@
-python3 -m venv --without-pip venv
-source venv/bin/activate
-curl https://bootstrap.pypa.io/get-pip.py | python
-deactivate
+#python3 -m venv --without-pip venv
+#source venv/bin/activate
+#curl https://bootstrap.pypa.io/get-pip.py | python
+#deactivate
 
 # If the above doesn't work (due to pip version) use the following instead
-#python3 -m venv venv
+python3 -m venv venv
 
 source venv/bin/activate
 pip install -r requirements.txt

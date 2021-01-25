@@ -402,8 +402,32 @@ nav:
           - Scale up: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)"
           - Rollout: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/rollout.md, master)"
           - Checklist: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/checklist.md, master)"
-        Configuring the Android app: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_capture_app_INDEX.md, master, 1)"
-        Managing mobile devices: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/dhis2_android_MDM_INDEX.md, master, 1)"
+        Configuring the Android app:
+          - About this guide: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)"
+          - Introduction: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)"
+          - Recommentations for mobile deployment: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)"
+          - Contribute to the app: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)"
+          - New visual configurations: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)"
+          - New settings: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)"
+          - New Android-specific features: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)"
+          - Program-specific features: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)"
+          - Features supported: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)"
+          - Program rules supported: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)"
+          - Program indicators supported: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)"
+          - Value types supported: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)"
+          - Settings configuration: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/app-android-settings-configuration.md, master)"
+        Managing mobile devices:
+          - About this guide: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)"
+          - Considerations: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)"
+          - Choosing and MDM: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)"
+          - Comparison chart: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)"
+          - "Annex A - Previous Info": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)"
+          - "Annex B - Flyve": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)"
+          - "Annex C - Headwind": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-c-headwind.md, master)"
+          - "Annex D - Entgra": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-d-entgra.md, master)"
+          - "Annex E - Miradore": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-e-miradore.md, master)"
+          - "Annex F - Engineplus": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)"
+          - "Annex G - Scalefusion": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)"
         Software Release Information:
           DHIS 2 core releases:
             alt__DHIS core version 2.35:
@@ -447,6 +471,14 @@ nav:
             - Email: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/email.md, master)'
             - Data Store: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-store.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/apps.md, master)'
+          alt__DHIS core version 2.35:
+            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, 2.35)'
+          alt__DHIS core version 2.34:
+            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, 2.34)'
+          alt__DHIS core version 2.33:
+            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, 2.33)'
+          alt__DHIS core version 2.32:
+            - Web API: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api.md, 2.32)'
         Loading Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md, master)'
         Core Javadocs:
           - DHIS 2.35 Javadocs: https://docs.dhis2.org/2.35/javadoc/
@@ -514,3 +546,4 @@ nav:
                 - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
             - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
             - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
+

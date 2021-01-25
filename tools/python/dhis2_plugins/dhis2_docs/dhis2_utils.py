@@ -90,7 +90,7 @@ class lister:
 class fetcher:
 
     # Initializing
-    def __init__(self,config):
+    def __init__(self,config,tx_slug):
         # set up a temporary directory for github clones
         # id = uuid.uuid4().hex
         self.h = helpers()
@@ -109,11 +109,10 @@ class fetcher:
         self.nav_strings = {}
         self.tx_files = set()
         self.tx_config = []
-        self.tx_project_slug = "docs-full-site"
         self.theme_dir = config['theme'].dirs[0]
-        self.local_nav_source = self.theme_dir + '/i18n/navigation_en.json'
-        self.local_nav = self.theme_dir + '/i18n/navigation_'
-        self.tx = transifex.tx('docs-full-site')
+        self.local_nav_source = 'i18n/navigation_en.json'
+        self.local_nav = 'i18n/navigation_'
+        self.tx = transifex.tx(tx_slug)
 
         self.nav_trans_strings = {}
 
@@ -131,16 +130,20 @@ class fetcher:
         if not os.path.isdir(tmpRoot):
             os.makedirs(os.path.dirname(tmpRoot), exist_ok=True)
             branch_opt = '--branch ' + branch
-            Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
+            Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt])
+
+        repo = Repo(tmpRoot)
+        rev_d = repo.git.log('--pretty=%as','-1',file_path)
+            
 
         if self.appendcount:
-            self.include_file(tmpRoot + "/" + file_path, local_path)
+            self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d)
         else:
-            self.include_file(tmpRoot + "/" + file_path, local_path, github_repo+'/blob/'+branch+'/'+file_path)
+            self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d)
 
 
 
-    def include_file(self, origin, local_path, edit_url=''):
+    def include_file(self, origin, local_path, edit_url='',rev_date=''):
 
         # ensure the destination directory exists
         destination = self.docs_dir + local_path
@@ -153,11 +156,18 @@ class fetcher:
             else:
                 # do a direct copy
                 shutil.copyfile(origin, destination)
-                if edit_url:
+                if edit_url or rev_date or self.appendcount == 1:
                     post = frontmatter.load(destination)
-                    post['edit_url'] = 'https://github.com/'+edit_url
+                    if edit_url:
+                        post['edit_url'] = 'https://github.com/'+edit_url
+                    if self.appendcount == 1:
+                        post['template'] = 'single.html'
+                    if rev_date:
+                        post['revision_date'] = rev_date
                     with open(destination, 'w') as emd:
                         print(frontmatter.dumps(post), file=emd)
+
+
                 # copy the images
                 f = open(destination, "r")
                 markdown = f.read()
@@ -188,6 +198,13 @@ class fetcher:
 
                     # convert <!--DHIS2-SECTION-ID:data_visualizer--> references to header attribute formats
                     self.fix_refs(destination)
+
+                if rev_date:
+                    post = frontmatter.load(destination)
+                    if rev_date > post['revision_date']:
+                        post['revision_date'] = rev_date
+                        with open(destination, 'w') as emd:
+                            print(frontmatter.dumps(post), file=emd)
 
 
 
@@ -323,7 +340,7 @@ class fetcher:
         x = []
         for nav_item in nav:
             if type(nav_item) == dict:
-                #print(nav_item)
+                # print(nav_item)
                 nav_item, v_map = self.crawl_nav_dict(nav_item,path, v_map, v_tmp)
             else:
                 if type(nav_item) == list:
@@ -337,6 +354,7 @@ class fetcher:
             if nav_item not in x:
                 x.append(nav_item)
         if self.appendcount:
+            self.appendcount = 0
             return nav_item, v_map
         return x, v_map
 
@@ -364,8 +382,8 @@ class fetcher:
                 if type(n) == list:
                     n, v_map = self.crawl_nav_list(nav[k],p, v_map, tmp_v, k)
                 else:
+                    # print(type(n),n)
                     if n[0] == '@':
-                        self.appendcount = 0
                         v_map[p] = tmp_v
                         # print(p,tmp_v)
                         n = self.fetch_file(nav[k],p,tmp_v)
