@@ -90,7 +90,7 @@ class lister:
 class fetcher:
 
     # Initializing
-    def __init__(self,config):
+    def __init__(self,config,tx_slug):
         # set up a temporary directory for github clones
         # id = uuid.uuid4().hex
         self.h = helpers()
@@ -103,13 +103,16 @@ class fetcher:
         self.alternate_prefix = 'alt__'
         self.github_base = 'https://github.com/'
 
+        # appendcount is "0" create if doesn't exist, or ">0" - create or append
+        self.appendcount = 0
+
         self.nav_strings = {}
+        self.tx_files = set()
         self.tx_config = []
-        self.tx_project_slug = "docs-full-site"
         self.theme_dir = config['theme'].dirs[0]
-        self.local_nav_source = self.theme_dir + '/i18n/navigation_en.json'
-        self.local_nav = self.theme_dir + '/i18n/navigation_'
-        self.tx = transifex.tx('docs-full-site')
+        self.local_nav_source = 'i18n/navigation_en.json'
+        self.local_nav = 'i18n/navigation_'
+        self.tx = transifex.tx(tx_slug)
 
         self.nav_trans_strings = {}
 
@@ -127,16 +130,24 @@ class fetcher:
         if not os.path.isdir(tmpRoot):
             os.makedirs(os.path.dirname(tmpRoot), exist_ok=True)
             branch_opt = '--branch ' + branch
-            Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt,'--depth 1'])
+            Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt])
 
-        self.include_file(tmpRoot + "/" + file_path, local_path, github_repo+'/blob/'+branch+'/'+file_path)
+        repo = Repo(tmpRoot)
+        rev_d = repo.git.log('--pretty=%as','-1',file_path)
+            
+
+        if self.appendcount:
+            self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d)
+        else:
+            self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d)
 
 
-    def include_file(self, origin, local_path, edit_url=''):
+
+    def include_file(self, origin, local_path, edit_url='',rev_date=''):
 
         # ensure the destination directory exists
         destination = self.docs_dir + local_path
-        if not os.path.isfile(destination):
+        if not os.path.isfile(destination) or self.appendcount == 1:
             os.makedirs(os.path.dirname(destination), exist_ok=True)
             # print("Copying file: " + origin + " to " + destination)
             if self.h.grep(b'!INCLUDE', origin ):
@@ -145,11 +156,18 @@ class fetcher:
             else:
                 # do a direct copy
                 shutil.copyfile(origin, destination)
-                if edit_url:
+                if edit_url or rev_date or self.appendcount == 1:
                     post = frontmatter.load(destination)
-                    post['edit_url'] = 'https://github.com/'+edit_url
+                    if edit_url:
+                        post['edit_url'] = 'https://github.com/'+edit_url
+                    if self.appendcount == 1:
+                        post['template'] = 'single.html'
+                    if rev_date:
+                        post['revision_date'] = rev_date
                     with open(destination, 'w') as emd:
                         print(frontmatter.dumps(post), file=emd)
+
+
                 # copy the images
                 f = open(destination, "r")
                 markdown = f.read()
@@ -157,16 +175,47 @@ class fetcher:
                 self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
                 f.close()
 
-
             # convert <!--DHIS2-SECTION-ID:data_visualizer--> references to header attribute formats
             self.fix_refs(destination)
+        else:
+            if self.appendcount:
+                if self.h.grep(b'!INCLUDE', origin ):
+                    # markdown pre-process instead of direct copy
+                    self.markdown_preprocess(origin, destination)
+                else:
+                    # do a direct append
+                    appendfile = open(destination, "a")
+                    appendfile.write("\n\n")
+                    appendfile.write(open(origin, "r").read())
+                    appendfile.close()
+
+                    # copy the images
+                    f = open(destination, "r")
+                    markdown = f.read()
+                    #print(markdown)
+                    self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
+                    f.close()
+
+                    # convert <!--DHIS2-SECTION-ID:data_visualizer--> references to header attribute formats
+                    self.fix_refs(destination)
+
+                if rev_date:
+                    post = frontmatter.load(destination)
+                    if rev_date > post['revision_date']:
+                        post['revision_date'] = rev_date
+                        with open(destination, 'w') as emd:
+                            print(frontmatter.dumps(post), file=emd)
+
 
 
     def markdown_preprocess(self,fromfile, tofile):
 
 
         mdpp = open(fromfile, 'r')
-        md = open(tofile, 'w')
+        if self.appendcount:
+            md = open(tofile, 'a')
+        else:
+            md = open(tofile, 'w')
 
         modules = list(MarkdownPP.modules)
 
@@ -287,21 +336,26 @@ class fetcher:
         return new_nav
 
 
-    def crawl_nav_list(self, nav, path, v_map, v_tmp):
+    def crawl_nav_list(self, nav, path, v_map, v_tmp, parent=''):
         x = []
         for nav_item in nav:
             if type(nav_item) == dict:
-                #print(nav_item)
+                # print(nav_item)
                 nav_item, v_map = self.crawl_nav_dict(nav_item,path, v_map, v_tmp)
             else:
                 if type(nav_item) == list:
                     nav_item, v_map = self.crawl_nav_list(nav_item,path, v_map, v_tmp)
                 else:
                     if nav_item[0] == '@':
+                        self.appendcount += 1
                         v_map[path] = v_tmp
                         nav_item = self.fetch_file(nav_item,path,v_tmp)
 
-            x.append(nav_item)
+            if nav_item not in x:
+                x.append(nav_item)
+        if self.appendcount:
+            self.appendcount = 0
+            return nav_item, v_map
         return x, v_map
 
 
@@ -326,8 +380,9 @@ class fetcher:
                 n, v_map = self.crawl_nav_dict(nav[k],p, v_map, tmp_v)
             else:
                 if type(n) == list:
-                    n, v_map = self.crawl_nav_list(nav[k],p, v_map, tmp_v)
+                    n, v_map = self.crawl_nav_list(nav[k],p, v_map, tmp_v, k)
                 else:
+                    # print(type(n),n)
                     if n[0] == '@':
                         v_map[p] = tmp_v
                         # print(p,tmp_v)
@@ -344,14 +399,16 @@ class fetcher:
 
     def store_for_tx(self,file,alternates):
 
-        tx_entry = {}
-        tx_path = "/".join(file.split('/')[0:-1])
-        tx_file = file.split('/')[-1]
-        tx_entry['resource_slug'] = tx_path.upper().replace('/','__')+'__'+tx_file.replace('.','-')
-        tx_entry['file_path'] = 'docs/'+tx_path+'/'+tx_file
-        tx_entry['categories'] = alternates
-        #self.docs_dir
-        self.tx_config.append(tx_entry)
+        if file not in self.tx_files:
+            tx_entry = {}
+            tx_path = "/".join(file.split('/')[0:-1])
+            tx_file = file.split('/')[-1]
+            tx_entry['resource_slug'] = tx_path.upper().replace('/','__')+'__'+tx_file.replace('.','-')
+            tx_entry['file_path'] = 'docs/'+tx_path+'/'+tx_file
+            tx_entry['categories'] = alternates
+            #self.docs_dir
+            self.tx_config.append(tx_entry)
+            self.tx_files.add(file)
 
 
     def configure_translations(self, config):
@@ -495,7 +552,7 @@ class fetcher:
                     bmap.update({newname:[chk]})
 
         # delete the original file
-        os.remove(self.docs_dir + book)
+        #os.remove(self.docs_dir + book)
 
         # return the array of pages
         return content
