@@ -14,6 +14,11 @@ python3 setup.py develop
 pip install MarkdownPP
 cd -
 
+cd tools/python/markdown-extensions/d_card
+python3 setup.py develop
+pip install d_card
+cd -
+
 cd tools/python/dhis2_plugins
 python3 setup.py develop
 pip install dhis2_plugins

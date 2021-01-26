@@ -29,8 +29,14 @@
     --yellow200: #FFE082;
   }
 
-  
-  
+img.twemoji, img.gemoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+
   @media screen {
 
 body {
@@ -477,7 +483,7 @@ hr {
     color: #333;
     counter-reset: chapter;
   }
-  
+
   pre {
     background-color: #f7f7f7;
     color: #1a6094;
@@ -486,26 +492,26 @@ hr {
     margin: 3.5ex 0;
     padding: 2ex;
   }
-  
+
   p code {
     font-family: monospace;
     white-space: normal;
   }
-  
-  
-  
-  blockquote,
+
+
+
+  /* blockquote,
   q {
-    quotes:none;
-  }
-  
+    quotes:unset;
+  } */
+
   blockquote:before,
   q:before,
   blockquote:after,
   q:after {
     content: none;
   }
-  
+
   blockquote {
     background-color: #fcfcfc;
     border: 1px solid #dddddd;
@@ -515,19 +521,19 @@ hr {
     background-position: 10px 10px;
     background-repeat: no-repeat;
   }
-  
+
   blockquote :last-child {
     margin-bottom: 0;
   }
-  
+
   li blockquote {
     margin: 0.5em 0 1em;
   }
-  
+
   blockquote p {
     margin: 5px;
   }
-  
+
   td blockquote{
     margin: 0px;
     margin-top:5px;
@@ -540,63 +546,63 @@ hr {
     margin-right:auto;
     text-align: center;
   }
-  
+
   figure{
     display:block;
     margin-left:auto;
     margin-right:auto;
     text-align: center;
   }
-  
+
   figcaption{
     text-align:center;
     margin:1em;
     font-style:italic;
   }
-  
+
   .Note{
     background-image: url(../images/admin/note.png);
   }
-  
+
   .Tip, .Truc {
     background-image: url(../images/admin/tip.png);
   }
-  
+
   .Important{
     background-image: url(../images/admin/important.png);
   }
-  
+
   .Caution, .Prudence{
     background-image: url(../images/admin/caution.png);
   }
-  
+
   .Warning, .Attention, .Danger{
     background-image: url(../images/admin/warning.png);
   }
-  
+
   .Complete, .complete {
     background-image: url(../images/admin/icon-complete.png);
   }
-  
+
   .Incomplete, .incomplete {
     background-image: url(../images/admin/icon-incomplete.png);
   }
-  
+
   .Not, .not, .not_applicable, .Not_applicable {
     background-image: url(../images/admin/icon-na.png);
   }
-  
+
   .Not, .not, .not_applicable, .Not_applicable {
     background-image: url(../images/admin/icon-na.png);
   }
-  
+
   .Work, .work, .work_in_progress, .Work_in_progress, .Work_In_Progress{
     background-image: url(../images/admin/icon-wip.png);
   }
-  
-  
 
-  
+
+
+
   blockquote {
     background-color: var(--blue050);
     border: 1px solid #c5e3fc;
@@ -607,18 +613,18 @@ hr {
     background-repeat: no-repeat;
     color:var(--grey900);
   }
-  
+
   blockquote.Caution, blockquote.Prudence, blockquote.Important {
     background-color:var(--yellow050);
     border:1px solid #FFE082;
   }
-  
+
   blockquote.Warning, blockquote.Attention, blockquote.Danger {
     background-color:var(--red050);
     border:2px solid #D32F2F;
   }
-  
-  
+
+
   .thanks{
     border:1px solid #ddd;
     padding:0 1em 0;
@@ -627,7 +633,7 @@ hr {
     bottom:10px;
     left:0;
   }
-  
+
   caption {
     font-style: italic;
     font-weight: bold;
@@ -635,21 +641,21 @@ hr {
     padding-top: 0.5em;
     text-align: left;
   }
-  
+
   a {
     color: #07c;
     text-decoration: underline;
   }
-  
+
   nav a {
     color: #07c;
     text-decoration: none;
   }
-  
+
   .thanks a {
     text-decoration: none;
   }
-  
+
   h1 a,
   h2 a,
   h3 a,
@@ -671,30 +677,30 @@ hr {
     font-size: 130%;
     break-before: always;
   }
-  
+
   h2 {
     font-size: 110%;
   }
-  
+
   h3 {
     font-size: 95%;
   }
-  
+
   h4 {
     font-size: 90%;
   }
-  
+
   h5 {
     font-size: 90%;
   }
-  
+
   .headerDiv {
     left:0;
     top:0;
     width:100%;
     margin-left:-1em;
   }
-  
+
   h1.title {
     font-size: 300%;
     font-weight: bold;
@@ -704,7 +710,7 @@ hr {
     font-family: 'Rubik', sans-serif;
     line-height: 150%;
   }
-  
+
   h2.subtitle {
     font-size: 250%;
     font-weight: normal;
@@ -715,7 +721,7 @@ hr {
     font-family: 'Rubik', sans-serif;
     line-height: 150%;
   }
-  
+
   .productionDiv {
     position: absolute;
     bottom:100px;
@@ -723,7 +729,7 @@ hr {
     height:120px;
     width:100%;
   }
-  
+
   p.productionInfo {
     font-size: 28px;
     font-weight: normal;
@@ -731,7 +737,7 @@ hr {
     color: #393D4D;
     border: none;
   }
-  
+
   p.productionInfoSub {
     font-size: 20px;
     font-weight: normal;
@@ -739,42 +745,41 @@ hr {
     color: #393D4D;
     border: none;
   }
-  
+
   dt code {
     font-weight: bold;
   }
   dd p {
     margin-top: 0;
   }
-  
+
   table {
     width: auto;
-    width: unset;
     border-bottom: 1px solid #ddd;
     border-collapse: collapse;
     border-right: 1px solid #ddd;
     border-spacing: 0;
     margin-bottom: 2em;
   }
-  
+
   table th {
     background-color: #eee;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 0.2em 1em;
   }
-  
+
   table td {
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 0.2em 1em;
     vertical-align: top;
   }
-  
+
   .banner {
     display:none;
   }
-  
+
   .coverlogo {
     width: 84%;
     height: 60px;
@@ -782,54 +787,54 @@ hr {
     bottom: 0px;
     left: 0px;
   }
-  
+
   .coverlogo img {
     width: 180px;
     display: block;
     padding: 0px;
   }
-  
+
   .license {
     bottom: 0px;
   }
-  
+
   #footer {
     padding-top: 1em;
     font-size: 70%;
     color: gray;
     text-align: center;
   }
-  
+
   #pagebreak {
     page-break-before: always;
   }
-  
+
   h1 {
     string-set: chapter content();
   }
-  
+
   h2,
   h3 {
     string-set: section content();
   }
-  
+
   nav ul {
     list-style-type: none;
   }
-  
+
   img {
     max-width: 100%;
     max-height: 800px;
     margin:3%;
   }
-  
+
   hr {
     border: 0;
     color: #ccc;
     background-color: #ccc;
     height: 1px;
   }
-  
+
   @page {
     size: A4;
     font-family: Arial, 'Open Sans', sans-serif;
@@ -845,11 +850,11 @@ hr {
       content: string(chapter);
     }
   }
-  
+
   @page frontmatter {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-  
+
     @top-right {
       content: "";
     }
@@ -868,7 +873,7 @@ hr {
   @page frontmatter :left {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-  
+
     @top-right {
       content: "";
     }
@@ -884,14 +889,14 @@ hr {
       content: "";
     }
   }
-  
+
   @page :first {
     border-top: 8px solid #43CBCB;
     border-bottom: 0px solid black;
     margin: 60px;
     margin-top: 120px;
     padding-left: 0px;
-  
+
     @top-right {
       content: "";
     }
@@ -905,8 +910,8 @@ hr {
       content: "";
     }
   }
-  
-  
+
+
   @page :right {
     @bottom-right {
       content: counter(page);
@@ -919,6 +924,5 @@ hr {
       content: counter(page);
     }
   }
-  
+
   }
-  

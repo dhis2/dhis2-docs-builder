@@ -77,6 +77,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+  - d_cardbox
+  - d_card
   - attr_list
   - def_list
   - footnotes
@@ -86,8 +88,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math
@@ -106,7 +108,7 @@ markdown_extensions:
 site_dir: ./target/en/
 
 nav:
-    - Home: '@github(Philip-Larsen-Donnelly/dhis2-markdown-docs, src/commonmark/en/content/index_new.md, master)'
+    - Home: '@github(dhis2/dhis2-docs, src/commonmark/en/content/home.md, master)'
     - Use:
         Use: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/index.md, master)"
         What is DHIS2?: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.35)"
@@ -546,4 +548,3 @@ nav:
                 - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
             - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
             - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
-

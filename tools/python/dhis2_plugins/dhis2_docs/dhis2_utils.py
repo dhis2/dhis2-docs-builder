@@ -90,7 +90,7 @@ class lister:
 class fetcher:
 
     # Initializing
-    def __init__(self,config,tx_slug):
+    def __init__(self,config,tx_slug,template):
         # set up a temporary directory for github clones
         # id = uuid.uuid4().hex
         self.h = helpers()
@@ -106,6 +106,7 @@ class fetcher:
         # appendcount is "0" create if doesn't exist, or ">0" - create or append
         self.appendcount = 0
 
+        self.template = template
         self.nav_strings = {}
         self.tx_files = set()
         self.tx_config = []
@@ -156,16 +157,16 @@ class fetcher:
             else:
                 # do a direct copy
                 shutil.copyfile(origin, destination)
-                if edit_url or rev_date or self.appendcount == 1:
-                    post = frontmatter.load(destination)
-                    if edit_url:
-                        post['edit_url'] = 'https://github.com/'+edit_url
-                    if self.appendcount == 1:
-                        post['template'] = 'single.html'
-                    if rev_date:
-                        post['revision_date'] = rev_date
-                    with open(destination, 'w') as emd:
-                        print(frontmatter.dumps(post), file=emd)
+                # if edit_url or rev_date or self.appendcount == 1:
+                #     post = frontmatter.load(destination)
+                #     if edit_url:
+                #         post['edit_url'] = 'https://github.com/'+edit_url
+                #     if self.appendcount == 1:
+                #         post['template'] = 'single.html'
+                #     if rev_date:
+                #         post['revision_date'] = rev_date
+                #     with open(destination, 'w') as emd:
+                #         print(frontmatter.dumps(post), file=emd)
 
 
                 # copy the images
@@ -175,8 +176,21 @@ class fetcher:
                 self.copy_markdown_images(os.path.dirname(origin), markdown, destination)
                 f.close()
 
+
+            if edit_url or rev_date or (self.template == "single" and self.appendcount < 2):
+                post = frontmatter.load(destination)
+                if edit_url:
+                    post['edit_url'] = 'https://github.com/'+edit_url
+                if self.template == "single" and self.appendcount < 2:
+                    post['template'] = 'single.html'
+                if rev_date:
+                    post['revision_date'] = rev_date
+                with open(destination, 'w') as emd:
+                    print(frontmatter.dumps(post), file=emd)
+
             # convert <!--DHIS2-SECTION-ID:data_visualizer--> references to header attribute formats
             self.fix_refs(destination)
+
         else:
             if self.appendcount:
                 if self.h.grep(b'!INCLUDE', origin ):

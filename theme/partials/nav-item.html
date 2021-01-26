@@ -56,7 +56,7 @@
 
 
   <li class="{{ class }} md-nav__item--nested {{ dhis2class }}">
-    {% set checked = "checked" if nav_item.active %}
+    {% set checked = "checked" if (nav_item.active or ( "navigation.expanded" in config.theme.features )) %}
     <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
     <label class="md-nav__link" for="{{ path }}">
       {{ nav__title }}

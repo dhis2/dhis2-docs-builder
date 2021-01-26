@@ -8,8 +8,12 @@ class Dhis2DocsPlugin(BasePlugin):
 
     config_scheme = (
         ('make_pdfs', config_options.Type(bool, default=False)),
-        ('tx_project_slug', mkdocs.config.config_options.Type(str, default='docs-full-site'))
+        ('tx_project_slug', mkdocs.config.config_options.Type(str, default='docs-full-site')),
+        ('template', mkdocs.config.config_options.Type(str, default='default'))
     )
+
+    def __init__(self):
+        self.html = HTML
 
     def on_page_context(self, context, page, config, **kwargs):
         # page.edit_url = ""
@@ -28,7 +32,7 @@ class Dhis2DocsPlugin(BasePlugin):
         #config['extra']['dhis2_language'] = config['extra']['dhis2_language'].replace('/en/','/'+lang+'/')
         config['theme']['language'] = lang[0:2]
 
-        fetcher = dhis2_utils.fetcher(config,self.config['tx_project_slug'])
+        fetcher = dhis2_utils.fetcher(config,self.config['tx_project_slug'],self.config['template'])
         if lang != 'en':
             fetcher.pull_translations(lang,'nav')
         # fetcher.say_hello()
@@ -75,7 +79,7 @@ class Dhis2DocsPlugin(BasePlugin):
     def on_page_markdown(self, markdown, page, config, files):
 
         # remove any remaining DHIS2-EDIT comments from markdown
-        md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown,dhis2_utils.re.MULTILINE)
+        md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown)
 
         # if len(dhis2_utils.re.findall(r'^#\s+',md,dhis2_utils.re.MULTILINE)) > 1:
         #     mark2 = md.replace('\n#','\n##')
@@ -170,11 +174,11 @@ class Dhis2DocsPlugin(BasePlugin):
                 for filename in [f for f in filenames if f.endswith(".html")]:
                     # don't convert files that are in the root (index files)
                     if (dirpath != config['site_dir']):
-                        # print("TO PDF:",dhis2_utils.os.path.join(dirpath, filename))
-                        print("TO PDF-:",dirpath, filename)
                         html_file = dhis2_utils.os.path.join(dirpath, filename)
+                        print("Converting to PDF:",html_file)
                         pdf_file = html_file.replace('.html','.pdf')
-                        HTML(html_file).write_pdf(pdf_file)
+                        self.html(html_file).write_pdf(pdf_file)
+                        print("Converting to PDF: Done.")
 
 
 

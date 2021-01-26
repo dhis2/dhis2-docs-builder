@@ -143,6 +143,14 @@
 {{ page.content }}
 
 
+
+{% block scripts %}
+    <script src="{{ 'assets/javascripts/vendor.fd16492e.min.js' | url }}"></script>
+    <script src="{{ 'assets/javascripts/bundle.7836ba4d.min.js' | url }}"></script>
+{% for path in config["extra_javascript"] %}
+  <script src="{{ path | url }}"></script>
+{% endfor %}
+{% endblock %}
     
 </body>
 </html>
