@@ -29,6 +29,12 @@ jobs:
         python3 setup.py develop
         pip install MarkdownPP
 
+    - name: Install markdown extensions
+      run: |
+        cd tools/python/markdown-extensions/d_card
+        python3 setup.py develop
+        pip install d_card
+
     - name: Install dhis2_plugins for mkdocs
       run: |
         cd tools/python/dhis2_plugins

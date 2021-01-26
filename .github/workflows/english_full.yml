@@ -26,6 +26,12 @@ jobs:
         python3 setup.py develop
         pip install MarkdownPP
 
+    - name: Install markdown extensions
+      run: |
+        cd tools/python/markdown-extensions/d_card
+        python3 setup.py develop
+        pip install d_card
+
     - name: Install dhis2_plugins for mkdocs
       run: |
         cd tools/python/dhis2_plugins
@@ -42,7 +48,7 @@ jobs:
 
     - name: Build the docs
       run: |
-        mkdocs build --config-file mkdocs_full.yml 
+        mkdocs build --config-file mkdocs_full.yml
       env:
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
