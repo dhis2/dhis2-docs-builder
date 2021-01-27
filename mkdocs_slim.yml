@@ -1,5 +1,5 @@
 site_name: DHIS2 Documentation
-site_description: Official documentation of the DHIS 2 platform
+site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
@@ -176,10 +176,10 @@ nav:
       Implementer guide:
         - A quick guide to DHIS2 implementation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
         - Conceptual Design Principles: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/conceptual-design-principles.md, master)'
-        - DHIS 2 Documentation Guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)'
+        - DHIS2 Documentation Guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)'
       Tracker Implementation guide: '@github(dhis2/dhis2-docs-implementation,dhis2_tracker_implementation_INDEX.md, master, 1)'
       Software Release Information:
-        DHIS 2 core releases:
+        DHIS2 core releases:
           alt__DHIS core version 2.35:
             - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
             - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
@@ -200,18 +200,18 @@ nav:
               - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
   - Develop:
       Develop: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/index.md, master)'
-      DHIS 2 Developer guide:
+      DHIS2 Developer guide:
         alt__DHIS core version 2.35:
           - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.35)'
           - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.35)'
         alt__DHIS core version 2.34:
           - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.34)'
           - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.34)'
-      DHIS 2 Javadocs: https://docs.dhis2.org/master/javadoc/
-      DHIS 2 Android SDK Developer Guide: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
+      DHIS2 Javadocs: https://docs.dhis2.org/master/javadoc/
+      DHIS2 Android SDK Developer Guide: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
   - Manage:
       Manage: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/index.md, master)'
-      DHIS 2 System Administration guide:
+      DHIS2 System Administration guide:
         alt__DHIS core version 2.35:
           - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.35)'
           - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.35)'
@@ -232,7 +232,7 @@ nav:
           - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)'
   - Topics:
       - alt__Metadata:
-          DHIS 2 WHO Digital Health Data Toolkit:
+          DHIS2 WHO Digital Health Data Toolkit:
             - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
             - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
             - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'

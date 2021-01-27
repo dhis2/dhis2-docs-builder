@@ -1,5 +1,5 @@
 site_name: DHIS2 Documentation
-site_description: Official documentation of the DHIS 2 platform
+site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
@@ -370,7 +370,7 @@ nav:
           - Deployment Strategies: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/deployment-strategies.md, master)"
           - DHIS2 as Data Warehouse: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-data-warehouse.md, master)"
           - Integration concepts: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/integration-concepts.md, master)"
-          - Guidelines for offline data entry using DHIS 2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/offline-data-entry.md, master)"
+          - Guidelines for offline data entry using DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/offline-data-entry.md, master)"
           - Support: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/support.md, master)"
           - Organisation Units: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/organisation-units.md, master)"
           - Data Elements and Custom Dimensions: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-elements-and-custom-dimensions.md, master)"
@@ -380,9 +380,9 @@ nav:
           - Users and user roles: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/users-and-user-roles.md, master)"
           - Data Analysis Tools Overview: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/data-analysis-tools-overview.md, master)"
           - DHIS2 as a platform: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-as-a-platform.md, master)"
-          - Localization of DHIS 2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/localization-of-dhis2.md, master)"
+          - Localization of DHIS2: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/localization-of-dhis2.md, master)"
           - DHIS2 Tools Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-tools-guide.md, master)"
-          - DHIS 2 Documentation Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)"
+          - DHIS2 Documentation Guide: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)"
           - Submitting quick document fixes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/common/submitting-a-doc-fix.md, master)"
           - Using JIRA for DHIS2 issues: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/using-jira-for-dhis2-issues.md, master)"
         Implementing Tracker programs:
@@ -398,7 +398,7 @@ nav:
           - Data security and privacy: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/data-security-and-privacy.md, master)"
           - Mobile device specifications: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/mobile-device-specs.md, master)"
           - SMS for reporting: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/SMS-for-reporting.md, master)"
-          - DHIS 2 configuration for Android: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-configuration-for-android.md, master)"
+          - DHIS2 configuration for Android: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-configuration-for-android.md, master)"
           - Installing the app: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/installing-the-app.md, master)"
           - Testing: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/testing.md, master)"
           - Scale up: "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)"
@@ -431,7 +431,7 @@ nav:
           - "Annex F - Engineplus": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)"
           - "Annex G - Scalefusion": "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)"
         Software Release Information:
-          DHIS 2 core releases:
+          DHIS2 core releases:
             alt__DHIS core version 2.35:
               - Release Notes: "@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)"
               - Upgrade Notes: "@github(dhis2/dhis2-releases,releases/2.35/README.md, master)"
@@ -513,7 +513,7 @@ nav:
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)'
     - Topics:
         - alt__Metadata:
-            DHIS 2 WHO Digital Health Data Toolkit:
+            DHIS2 WHO Digital Health Data Toolkit:
               - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
               - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
               - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
