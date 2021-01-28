@@ -87,8 +87,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.gemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math
@@ -242,3 +242,6 @@ nav:
           - Tanzania Integrated Health Information Architecture:
               - Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)'
               - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
+      - alt__Single Page:
+          - Current documentation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs.md, master)'
+          - Previous versions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs_archive.md, master)'

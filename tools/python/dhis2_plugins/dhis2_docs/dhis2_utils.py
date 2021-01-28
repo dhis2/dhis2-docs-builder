@@ -179,6 +179,7 @@ class fetcher:
 
             if edit_url or rev_date or (self.template == "single" and self.appendcount < 2):
                 post = frontmatter.load(destination)
+
                 if edit_url:
                     post['edit_url'] = 'https://github.com/'+edit_url
                 if self.template == "single" and self.appendcount < 2:
@@ -215,6 +216,7 @@ class fetcher:
 
                 if rev_date:
                     post = frontmatter.load(destination)
+
                     if rev_date > post['revision_date']:
                         post['revision_date'] = rev_date
                         with open(destination, 'w') as emd:
@@ -282,7 +284,12 @@ class fetcher:
         # root = os.path.dirname(os.path.dirname(self.page.url))
         # root = page.url
 
-        # paths = []
+        paths = []
+
+        fm = frontmatter.loads(markdown)
+        if 'logo' in fm.metadata:
+            paths.append(fm['logo'])
+
 
         p = re.compile("!\[[^\]]*\]\((.*?)(?:\s+\"(.*[^\"])\"?)?\s*\)")
         it = p.finditer(markdown)
@@ -290,17 +297,22 @@ class fetcher:
             path = match.group(1)
 
             if path[0:10] != '__common__':
-                destinationPath = os.path.realpath(os.path.dirname(dest)+'/'+path)
+                paths.append(path)
 
-                if not os.path.isfile(destinationPath):
-                    try:
-                        # print("Copying image: " + basedir + "/" + path + " to " + destinationPath)
-                        os.makedirs(os.path.dirname(destinationPath), exist_ok=True)
-                        shutil.copyfile(basedir + "/" + path, destinationPath)
-                    except FileNotFoundError:
-                        print("Referenced image not found:",basedir + "/" + path)
-                        pass
+        for path in paths:
 
+            destinationPath = os.path.realpath(os.path.dirname(dest)+'/'+path)
+
+            if not os.path.isfile(destinationPath):
+                try:
+                    # print("Copying image: " + basedir + "/" + path + " to " + destinationPath)
+                    os.makedirs(os.path.dirname(destinationPath), exist_ok=True)
+                    shutil.copyfile(basedir + "/" + path, destinationPath)
+                except FileNotFoundError:
+                    print("Referenced image not found:",basedir + "/" + path)
+                    pass
+
+        
 
 
     def fetch_file(self, file_def, path, alternates):

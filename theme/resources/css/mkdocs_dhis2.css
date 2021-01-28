@@ -922,6 +922,11 @@ d_card-container {
   font-weight:bold;
 }
 
+.d_card th {
+  display:none;  
+}
+
+
 /*  */
 /*  */
 /*  */

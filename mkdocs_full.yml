@@ -68,6 +68,7 @@ plugins:
   - edit_url
   - dhis2_docs:
       make_pdfs: true
+      template: single
       tx_project_slug: dhis2-single-page-docs
   - minify:
       minify_html: true

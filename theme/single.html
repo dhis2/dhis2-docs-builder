@@ -77,7 +77,8 @@
 
 <div class="headerDiv">
 <header style="text-align:left;padding-left:0px;width:100%;">
-<h1 class="title">{{ page.title }}</h1>
+{% set title = page.meta.title | default(page.title) %}
+<h1 class="title">{{ title }}</h1>
 <h2 class="subtitle">
 {% for vm in config['version_map'] %}
     {% if vm+'.html' in page.abs_url %}
@@ -87,6 +88,9 @@
     {% endif %}
 {% endfor %}
 </h2>
+{% if page.meta.logo %}
+<img src="{{ page.meta.logo }}" class="center" style="width:200px;"/>
+{% endif %}
 </header></div>
 
 
