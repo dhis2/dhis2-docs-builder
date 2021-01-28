@@ -1,4 +1,4 @@
-name: Build the core documentation - Français
+name: Français
 
 on:
   schedule:

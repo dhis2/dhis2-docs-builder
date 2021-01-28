@@ -1,4 +1,4 @@
-name: Build the core documentation - Português
+name: Português
 
 on:
   schedule:

@@ -1,4 +1,4 @@
-name: Core Docs - English - Single Page
+name: English - Single Page
 
 on:
   workflow_dispatch:
