@@ -1,4 +1,4 @@
-name: Build the core documentation - English original - single page docs
+name: Core Docs - English - Single Page
 
 on:
   workflow_dispatch:
@@ -48,7 +48,7 @@ jobs:
 
     - name: Build the docs
       run: |
-        mkdocs build --config-file mkdocs_full.yml
+        mkdocs build --config-file mkdocs_single_page.yml
       env:
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
@@ -61,6 +61,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'target/en/full/.'
-        DEST_DIR: 'en/full/'
+        SOURCE_DIR: 'target/full/en/.'
+        DEST_DIR: 'full/en/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}

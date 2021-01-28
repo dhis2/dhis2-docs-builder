@@ -1,5 +1,5 @@
 site_name: DHIS2 Documentation
-site_description: Official documentation of the DHIS 2 platform
+site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/full/'
@@ -68,6 +68,7 @@ plugins:
   - edit_url
   - dhis2_docs:
       make_pdfs: true
+      template: single
       tx_project_slug: dhis2-single-page-docs
   - minify:
       minify_html: true
@@ -88,8 +89,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math
@@ -105,10 +106,9 @@ markdown_extensions:
       custom_checkbox: true
 
 # output when building
-site_dir: ./target/en/full/
+site_dir: ./target/full/en/
 
 nav:
-    - Home: '@github(Philip-Larsen-Donnelly/dhis2-markdown-docs, src/commonmark/en/content/index_new.md, master)'
     - Use:
         User Guides:
           alt__DHIS core version 2.35:
