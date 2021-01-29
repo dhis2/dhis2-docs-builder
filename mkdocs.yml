@@ -548,3 +548,6 @@ nav:
                 - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
             - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
             - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
+        - alt__Single Page:
+            - Current documentation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs.md, master)'
+            - Previous versions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs_archive.md, master)'

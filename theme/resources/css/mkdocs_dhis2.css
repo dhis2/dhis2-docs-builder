@@ -923,7 +923,9 @@ d_card-container {
 }
 
 .d_card th {
-  display:none;  
+  _display:none;  
+  background-color: white !important;
+  font-weight: bold;
 }
 
 
