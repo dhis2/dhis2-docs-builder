@@ -898,37 +898,41 @@ v-tag {
 /* Style the info cards */
 
 d_card-container {
-  margin:10px 20px 0;
+  margin:8px 0;
   display:flex;
   flex-flow:row wrap;
   justify-content:space-between;
-  align-content:lex-start;
+  align-content:flex-start;
   min-width:0;
   width:auto;
-
 }
 
 .d_card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);
-  border:1px solid #eee;
+  background: #FFFFFF;
+  border: 1px solid #E8EDF2;
+  box-shadow: 0 2px 4px 0 rgba(64,75,90,0.05);
   min-width:400px;
   flex:1 1 23vw;
-  padding:20px 2vw;
-  margin:0px 20px 20px 0px;
+  padding:1rem;
+  margin:0px 32px 32px 0px;
+  font-size: 1rem;
 }
 
-.d_card-title {
-  font-size:larger;
-  font-weight:bold;
+.d_card p {
+  font-size: 0.7rem
 }
 
-.d_card th {
-  _display:none;  
+.d_card p a { 
+  font-size: 0.7rem;
+}
+
+p.d_card-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.d_card th { 
   background-color: white !important;
   font-weight: bold;
 }
-
-
-/*  */
-/*  */
-/*  */
