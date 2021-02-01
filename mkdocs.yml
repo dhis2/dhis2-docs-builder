@@ -355,12 +355,58 @@ nav:
               - Release and upgrade notes: "@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,master)"
         Optional Apps:
           Action Tracker App:
-            alt__App version 1.0: "@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master, 1)"
+            alt__App version 1.0:
+              - Dashboard and Demo Server:
+                - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/action_tracker/at-app-introduction.md, master)'
+                - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/action_tracker/at-app-browsing.md, master)'
+              - Planning, tracking and analyzing actions:
+                - Action planning: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/action_tracker/at-app-action-planning.md, master)'
+                - Action tracking: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/action_tracker/at-app-action-tracking.md, master)'
+              - Maintenance and Support:
+                - Maintenance: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/action_tracker/at-app-maintenance.md, master)'
           Bottleneck Analysis App:
-            alt__App version 1.2.2: "@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master, 1)"
+            alt__App version 1.2.2:
+              - Introduction and Usage:
+                - Dashboard and demo: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bottleneck-analysis-dashboard-and-demo-server.md, master)'
+                - App architecture: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bna-app-architecture.md, master)'
+                - Navigating the app: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/navigating-the-bna-app.md, master)'
+                - Analysis and interpretation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bna-analysis-and-interpretation.md, master)'
+                - Visualization operations: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/visualization-operations.md, master)'
+              - Installation and Configuration:
+                - Installation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bna-app-installation.md, master)'
+                - Maintenance: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bna-app-maintenance.md, master)'
+              - User Implementation:
+                - Implementation overview: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/guide-to-bna-app-implementation.md, master)'
+                - Planning and organising: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/planning-and-organising.md, master)'
+                - Adopting the BNA app: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/adopting-the-use-of-the-bna-app.md, master)'
+                - Capacity building: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/capacity-building.md, master)'
+                - Setting up the app: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/setting-up-a-new-bna-app.md, master)'
+                - End user training: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/end-user-training.md, master)'
+                - Integration concepts: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/integration-concepts-for-the-bna-app.md, master)'
+                - Support and scale-up: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/bna-app-support-and-scale-up.md, master)'
+                - Opportunities and challenges: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/opportunities-and-challenges.md, master)'
+                - Sustainability: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna/scale-up-and-sustainability.md, master)'
           Interactive Scorecard App:
-            alt__App version 0.1: "@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master, 1)"
-          WHO Data Quality Tool: "@github(pamod-dev/dhis2-doc-support,docs/en/dhis2_who_data_quality_tool_guide.md, master, 1)"
+            alt__App version 0.1:
+              - Scorecard and demo: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/scorecard-and-demo-server.md, master)'
+              - Installation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/installing-scorecard.md, master)'
+              - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/opening-and-browsing-scorecards.md, master)'
+              - Analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/analysis-with-scorecard.md, master)'
+              - Layout: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/scorecard-layouts-headers-and-legends.md, master)'
+              - Options: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/additional-options.md, master)'
+              - Context menu: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/context-menu.md, master)'
+              - Further analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/further-analysis.md, master)'
+              - Creating and managing scorecards: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/creating-and-managing-scorecard.md, master)'
+              - Customization: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/customizations-and-editing-of-scorecard.md, master)'
+              - Related indicator analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/related-indicators-analysis-in-dhis2.md, master)'
+              - Implementation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/scorecard-and-bottleneck-analysis-implementation.md, master)'
+              - Help: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/help-tour-guide-translation.md, master)'
+              - Use cases: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/scorecard-community-and-use-cases.md, master)'
+              - ANNEX: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/annex.md, master)'
+              - BIBLIOGRAPHY: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/bibliography.md, master)'
+          WHO Data Quality Tool:
+              - Installation and configuration: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-config.md, master)'
+              - Usage and interpretation: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-use.md, master)'
     - Implement:
         Implement: "@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/index.md, master)"
         Understanding DHIS2 implementation:
@@ -512,42 +558,56 @@ nav:
             - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md, master)'
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)'
     - Topics:
-        - alt__Metadata:
-            DHIS2 WHO Digital Health Data Toolkit:
-              - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
-              - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
-              - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
-            COVID-19 Surveillance: '@github(dhis2/dhis2-covid19-doc,docs/en/dhis2_covid19_surveillance_INDEX.md, master, 1)'
-            Immunisation:
-              - Immunisation Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/EPI/Immunisation Aggregate System Design.md, master)"
-            Malaria:
-              - Malaria Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/MAL/Malaria Aggregate System Design.md, master)"
-            Tuberculosis:
-              - TB Aggregate System Design: "@github(dhis2/metadata-package-development, metadata/TB/TB Aggregate System Design.md,master)"
-              - TB Case Surveillance Program (Tracker): "@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,master)"
-              - TB case surveillance tracker installation guide: "@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)"
-        - alt__Tutorials:
-            - Really clear the cache: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/really-clear-the-cache.md, master)'
-            - Setting up targets: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/setting-up-targets.md, master)'
-            - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/creating-scorecards-using-pt-app.md, master)'
-            - Setting up email: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/setting-up-email.md, master)'
-            - Google Earth Engine sign-up: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/google-earth-engine-signup.md, master)'
-            - Analysing Nginx logs using goAccess: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-nginx-logs-using-goaccess.md, master)'
-            - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
-            - Enable SPDY: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/enable-spdy.md, master)'
-            - What are users up to?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/what-are-users-up-to.md, master)'
-        - alt__User Stories:
-            - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
-            - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
-            - West Africa Regional Systems and DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)'
-            - Zambia Education Management System EMIS: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)'
-            - Rwanda HMIS powered by DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)'
-            - DHIS2 Tracker e-Registry in Palestine: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)'
-            - Tanzania Integrated Health Information Architecture:
-                - Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)'
-                - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
-            - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
-            - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
-        - alt__Single Page:
-            - Current documentation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs.md, master)'
-            - Previous versions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs_archive.md, master)'
+      - alt__Metadata:
+          DHIS2 WHO Digital Health Data Toolkit:
+            - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
+            - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
+            - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
+          COD:
+            - Cause of Death system design: '@github(dhis2/metadata-package-development,metadata/COD/Cause of Death System Design.md, master)'
+          COVID-19 Surveillance: 
+            - Overview: '@github(dhis2/dhis2-covid19-doc, docs/en/index.md, master)'
+            - Release Notes: '@github(dhis2/dhis2-covid19-doc, docs/en/release-notes-v03.md, master)'
+            - Upgrade Notes: '@github(dhis2/dhis2-covid19-doc, docs/en/upgrade-notes-02-to-03.md, master)'
+            - COVID-19 tracker installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-tracker.md, master)'
+            - COVID-19 events installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-event.md, master)'
+            - COVID-19 aggregate installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-aggregate.md, master)'
+            - COVID-19 system design: '@github(dhis2/dhis2-covid19-doc, docs/en/system-design-tracker.md, master)'
+          IDSR:
+            - Disease surveillance aggregate system design: "@github(dhis2/metadata-package-development, metadata/IDSR/VPD Surveillance - Aggregate System Design.md, master)"
+          Immunisation:
+            - Immunisation aggregate system design: "@github(dhis2/metadata-package-development, metadata/EPI/Immunisation Aggregate System Design.md, master)"
+            - Adverse Events Following Immunization (AEFI) tracker system design: "@github(dhis2/metadata-package-development, metadata/AEFI/Adverse Events Following Immunization (AEFI) Tracker System Design.md, master)"
+          Malaria:
+            - Malaria aggregate system design: "@github(dhis2/metadata-package-development, metadata/MAL/Malaria Aggregate System Design.md, master)"
+          RMNCAH:
+            - RMNCAH aggregate system design: "@github(dhis2/metadata-package-development, metadata/RMNCAH/RMNCAH Aggregate System Design.md, master)"
+          Tuberculosis:
+            - TB Aggregate system design: "@github(dhis2/metadata-package-development, metadata/TB/TB Aggregate System Design.md,master)"
+            - TB Case Surveillance Program (Tracker): "@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,master)"
+            - TB case surveillance tracker installation guide: "@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)"
+      - alt__Tutorials:
+          - Really clear the cache: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/really-clear-the-cache.md, master)'
+          - Setting up targets: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/setting-up-targets.md, master)'
+          - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/creating-scorecards-using-pt-app.md, master)'
+          - Setting up email: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/setting-up-email.md, master)'
+          - Google Earth Engine sign-up: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/google-earth-engine-signup.md, master)'
+          - Analysing Nginx logs using goAccess: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-nginx-logs-using-goaccess.md, master)'
+          - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
+          - Enable SPDY: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/enable-spdy.md, master)'
+          - What are users up to?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/what-are-users-up-to.md, master)'
+      - alt__User Stories:
+          - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
+          - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
+          - West Africa Regional Systems and DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)'
+          - Zambia Education Management System EMIS: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-education-management-system-emis.md, master)'
+          - Rwanda HMIS powered by DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/rwanda-hmis-powered-by-dhis2.md, master)'
+          - DHIS2 Tracker e-Registry in Palestine: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-e-registry-in-palestine.md, master)'
+          - Tanzania Integrated Health Information Architecture:
+              - Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)'
+              - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
+          - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-a-management-information-system-at-psi.md, master)'
+          - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
+      - alt__Single Page:
+          - Current documentation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs.md, master)'
+          - Previous versions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs_archive.md, master)'

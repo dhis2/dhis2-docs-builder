@@ -319,7 +319,7 @@ class fetcher:
         new_nav = path+'.md'
         # print(new_nav,file_def.split('(')[0])
         if file_def.split('(')[0] == "@github":
-            parts = file_def.split('(')[1].strip(' )').split(',')
+            parts = file_def.replace('@github(','').strip(' )').split(',')
             github_repo = parts[0].strip()
             git_file = parts[1].strip()
             git_branch = parts[2].strip()
@@ -341,7 +341,7 @@ class fetcher:
 
 
         if file_def.split('(')[0] == "@file":
-            parts = file_def.split('(')[1].strip(' )').split(',')
+            parts = file_def.replace('@file(').strip(' )').split(',')
             local_file = parts[0].strip()
             try:
                 decompose = parts[1].strip()
