@@ -573,6 +573,8 @@ nav:
             - COVID-19 events installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-event.md, master)'
             - COVID-19 aggregate installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-aggregate.md, master)'
             - COVID-19 system design: '@github(dhis2/dhis2-covid19-doc, docs/en/system-design-tracker.md, master)'
+          COVID-19 Vaccine Delivery:
+            - COVAX aggregate system design: "@github(dhis2/metadata-package-development, metadata/COVAX/COVAX_system-design-aggregate.md, master)'
           IDSR:
             - Disease surveillance aggregate system design: "@github(dhis2/metadata-package-development, metadata/IDSR/VPD Surveillance - Aggregate System Design.md, master)"
           Immunisation:
