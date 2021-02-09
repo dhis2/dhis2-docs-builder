@@ -1,9 +1,9 @@
-name: English - Single Page
+name: Español - Single Page
 
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '14 0 * * *'
+    - cron:  '34 1 * * *'
   workflow_dispatch:
 
 jobs:
@@ -53,6 +53,7 @@ jobs:
       run: |
         mkdocs build --config-file mkdocs_single_page.yml
       env:
+        DHIS2_DOCS_LANGUAGE: 'es_419'
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
     - name: Sync docs to S3
@@ -64,6 +65,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'target/en/full/.'
-        DEST_DIR: 'en/full/'
+        SOURCE_DIR: 'target/es_419/full/.'
+        DEST_DIR: 'es_419/full/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
