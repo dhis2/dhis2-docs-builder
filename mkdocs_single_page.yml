@@ -106,7 +106,7 @@ markdown_extensions:
       custom_checkbox: true
 
 # output when building
-site_dir: ./target/full/en/
+site_dir: ./target/en/full/
 
 nav:
     - Use:
