@@ -545,7 +545,6 @@ nav:
           - Google Earth Engine sign-up: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/google-earth-engine-signup.md, master)'
           - Analysing Nginx logs using goAccess: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-nginx-logs-using-goaccess.md, master)'
           - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
-          - Enable SPDY: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/enable-spdy.md, master)'
           - What are users up to?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/what-are-users-up-to.md, master)'
       - alt__User Stories:
           - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
