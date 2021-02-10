@@ -538,6 +538,7 @@ nav:
             - TB Case Surveillance Program (Tracker): '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,master)'
             - TB case surveillance tracker installation guide: '@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)'
       - alt__Tutorials:
+          - Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/index.md, master)'
           - Really clear the cache: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/really-clear-the-cache.md, master)'
           - Setting up targets: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/setting-up-targets.md, master)'
           - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/creating-scorecards-using-pt-app.md, master)'
@@ -547,6 +548,7 @@ nav:
           - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
           - What are users up to?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/what-are-users-up-to.md, master)'
       - alt__User Stories:
+          - User Stories: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/index.md, master)'
           - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
           - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
           - West Africa Regional Systems and DHIS2: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/west-africa-regional-systems-and-dhis2.md, master)'
