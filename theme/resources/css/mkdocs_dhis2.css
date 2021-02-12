@@ -217,6 +217,14 @@ pre {
   .md-content__inner::before {
     height: 0;
   }
+
+  .d-home {
+    display: none;
+  }
+}
+
+.d-home-toc {
+  display:none;
 }
 
 /*  */
@@ -925,7 +933,7 @@ d_card-container {
   font-size: 0.7rem
 }
 
-.d_card p a { 
+.d_card p a {
   font-size: 0.7rem;
 }
 
@@ -935,7 +943,7 @@ p.d_card-title {
   margin: 0px;
 }
 
-.d_card th { 
+.d_card th {
   background-color: white !important;
   font-weight: bold;
 }

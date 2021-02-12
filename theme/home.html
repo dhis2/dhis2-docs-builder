@@ -1,12 +1,28 @@
 {% extends "main.html" %}
+
 {% block site_nav %}
-{% if nav %}
-<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-</div>
-{% endif %}
+  {% if nav %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+      <div class="d-home md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.toc %}
+    <div class="d-home-toc md-sidebar md-sidebar--secondary" data-md-component="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/toc.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
 {% endblock %}
+
 {% block content %}
 <div class="index-padding"></div>
-{{ super.super() }} 
+{{ super.super() }}
 {% endblock %}
 {% block footer %}{% endblock %}

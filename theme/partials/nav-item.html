@@ -14,6 +14,9 @@
 {% if nav_item.title == nav_item.parent.title|replace(alt_prefix,"") %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
+{% if nav_item.title == "Home" %}
+  {% set dhis2class = "md-nav__item--hidden" %}
+{% endif %}
 <!-- DHIS2 -END -->
 
 {% set class = "md-nav__item" %}
@@ -54,7 +57,10 @@
 
   {% else %}
 
-    {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
+
+      {% if (nav_item.title|replace(alt_prefix,"") != nav_item.title) and not (nav_item.active) %}
+        {% set dhis2class = dhis2class + " d-home" %}
+      {% endif %}
 <!-- DHIS2 -END -->
 
 
@@ -81,7 +87,6 @@
     </nav>
   </li>
 <!-- DHIS2 -BEGIN -->
-   {% endif %}
   {% endif %}
 <!-- DHIS2 -END -->
 
