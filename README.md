@@ -81,7 +81,7 @@ nav:
 
 > **Tip**
 >
-> When modifying the structure it is an advantage to use an editor that code "fold" the yaml code at different levels.
+> When modifying the structure it is an advantage to use an editor that can "fold" the yaml code at different levels.
 
 There are a few things that are special about this configuration. They are explained in the following sections.
 
