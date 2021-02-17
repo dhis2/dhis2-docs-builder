@@ -513,30 +513,34 @@ nav:
             - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
             - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
           COD:
-            - Cause of Death system design: '@github(dhis2/metadata-package-development,metadata/COD/Cause of Death System Design.md, master)'
+            - Cause of Death Design: '@github(dhis2/metadata-package-development, metadata/COD/cod_design.md, master)'
           COVID-19 Surveillance:
-            - Overview: '@github(dhis2/dhis2-covid19-doc, docs/en/index.md, master)'
-            - Release Notes: '@github(dhis2/dhis2-covid19-doc, docs/en/release-notes-v03.md, master)'
-            - Upgrade Notes: '@github(dhis2/dhis2-covid19-doc, docs/en/upgrade-notes-02-to-03.md, master)'
-            - COVID-19 tracker installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-tracker.md, master)'
-            - COVID-19 events installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-event.md, master)'
-            - COVID-19 aggregate installation: '@github(dhis2/dhis2-covid19-doc, docs/en/installation-guide-aggregate.md, master)'
-            - COVID-19 system design: '@github(dhis2/dhis2-covid19-doc, docs/en/system-design-tracker.md, master)'
+            - COVID-19 Surveillance: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_surveillance_digital_data_package.md, master)'
+            - Release Notes: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_release_notes_v03.md, master)'
+            - Upgrade Notes: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_upgrade_notes_02_to_03.md, master)'
+            - COVID-19 Aggregate Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_aggregate_system_design.md, master)'
+            - COVID-19 Aggregate Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_aggregate_installation.md, master)'
+            - COVID-19 Case-based Surveillance Tracker Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_case-based_surveillance_tracker_design.md, master)'
+            - COVID-19 POE Tracker Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_poe_design.md, master)'
+            - COVID-19 Tracker Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_tracker_installation.md, master)'
+            - COVID-19 Surveillance Events Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_design.md, master)'
+            - COVID-19 Events Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_installation.md, master)'
           COVID-19 Vaccine Delivery:
-            - COVAX aggregate system design: '@github(dhis2/metadata-package-development, metadata/COVAX/COVAX_system-design-aggregate.md, master)'
+            - COVAX Aggregate Design: '@github(dhis2/metadata-package-development, metadata/COVAX/covax_aggregate_design.md, master)'
+            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAX/covid_vaccine_budget_guide.md, master)'
           IDSR:
-            - Disease surveillance aggregate system design: '@github(dhis2/metadata-package-development, metadata/IDSR/VPD Surveillance - Aggregate System Design.md, master)'
+            - Disease Surveillance Aggregate Design: '@github(dhis2/metadata-package-development, metadata/IDSR/vpd_surveillance_aggregate_design.md, master)'
           Immunisation:
-            - Immunisation aggregate system design: '@github(dhis2/metadata-package-development, metadata/EPI/Immunisation Aggregate System Design.md, master)'
-            - Adverse Events Following Immunization (AEFI) tracker system design: '@github(dhis2/metadata-package-development, metadata/AEFI/Adverse Events Following Immunization (AEFI) Tracker System Design.md, master)'
+            - Immunisation Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
+            - Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/aefi_tracker_design.md, master)'
           Malaria:
-            - Malaria aggregate system design: '@github(dhis2/metadata-package-development, metadata/MAL/Malaria Aggregate System Design.md, master)'
+            - Malaria Aggregate Design: '@github(dhis2/metadata-package-development, metadata/MAL/malaria_aggregate_design.md, master)'
           RMNCAH:
-            - RMNCAH aggregate system design: '@github(dhis2/metadata-package-development, metadata/RMNCAH/RMNCAH Aggregate System Design.md, master)'
+            - RMNCAH Aggregate Design: '@github(dhis2/metadata-package-development, metadata/RMNCAH/rmncah_aggregate_design.md, master)'
           Tuberculosis:
-            - TB Aggregate system design: '@github(dhis2/metadata-package-development, metadata/TB/TB Aggregate System Design.md,master)'
-            - TB Case Surveillance Program (Tracker): '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/V1.0_TB Case Surveillance System Design.md,master)'
-            - TB case surveillance tracker installation guide: '@github(dhis2/metadata-package-development,metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/TB Case Surveillance Installation Guide.md, master)'
+            - TB Aggregate Design: '@github(dhis2/metadata-package-development, metadata/TB/tb_aggregate_design.md, master)'
+            - TB Case Surveillance Tracker Design: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_design.md, master)'
+            - TB Case Surveillance Tracker Installation: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_installation.md, master)'
       - alt__Tutorials:
           - Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/index.md, master)'
           - Really clear the cache: '@github(dhis2/dhis2-docs, src/commonmark/en/content/tutorials/really-clear-the-cache.md, master)'
