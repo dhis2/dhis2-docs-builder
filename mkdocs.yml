@@ -538,11 +538,12 @@ nav:
           IDSR:
             - Disease Surveillance Aggregate Design: '@github(dhis2/metadata-package-development, metadata/IDSR/vpd_surveillance_aggregate_design.md, master)'
           Immunisation:
-            - Immunisation Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
-            - Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_design.md, master)'
-            - Adverse Events Following Immunization (AEFI) Tracker Installation: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+            Immunisation Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
+            Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_design.md, master)'
+            Adverse Events Following Immunization (AEFI) Tracker Installation: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+            Immunization Analysis App:
               alt__App version 1.0.3:
-                - Immunization Analysis App User Manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
+                - User Manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria Aggregate Design: '@github(dhis2/metadata-package-development, metadata/MAL/malaria_aggregate_design.md, master)'
           RMNCAH:
