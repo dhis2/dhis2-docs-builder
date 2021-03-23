@@ -103,7 +103,7 @@ class Include(Module):
         edit=edit_uri
             # print("     ALT: ",DOCSBASE+'/blob/'+branch+'/'+ROOT+filename)
 
-        shift = int(match.group(3) or 1)
+        shift = int(match.group(3) or 0)
 
         if not path.isabs(filename):
             filename = path.join(pwd, filename)
