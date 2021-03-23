@@ -135,7 +135,7 @@ class fetcher:
 
         repo = Repo(tmpRoot)
         rev_d = repo.git.log('--pretty=%as','-1',file_path)
-            
+
 
         if self.appendcount:
             self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d)
@@ -312,7 +312,7 @@ class fetcher:
                     print("Referenced image not found:",basedir + "/" + path)
                     pass
 
-        
+
 
 
     def fetch_file(self, file_def, path, alternates):
@@ -341,7 +341,7 @@ class fetcher:
 
 
         if file_def.split('(')[0] == "@file":
-            parts = file_def.replace('@file(').strip(' )').split(',')
+            parts = file_def.replace('@file(','').strip(' )').split(',')
             local_file = parts[0].strip()
             try:
                 decompose = parts[1].strip()
