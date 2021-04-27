@@ -460,6 +460,7 @@ nav:
           alt__DHIS core version 2.36:
             - Introduction: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/overview.md, 2.36)'
             - Metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata.md, 2.36)'
+            - Metadata Gist: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata-gist.md, 2.36)'
             - Data: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data.md, 2.36)'
             - Data Validation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-validation.md, 2.36)'
             - Data Approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-approval.md, 2.36)'
@@ -485,6 +486,7 @@ nav:
           alt__DHIS core version master:
             - Introduction: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/overview.md, master)'
             - Metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata.md, master)'
+            - Metadata Gist: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata-gist.md, master)'
             - Data: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data.md, master)'
             - Data Validation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-validation.md, master)'
             - Data Approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-approval.md, master)'
