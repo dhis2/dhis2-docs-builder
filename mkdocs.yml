@@ -422,7 +422,7 @@ nav:
         Managing mobile devices:
           - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
           - Considerations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)'
-          - Choosing and MDM: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)'
+          - Choosing an MDM: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)'
           - Comparison chart: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)'
           - "Annex A - Previous Info": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)'
           - "Annex B - Flyve": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)'
