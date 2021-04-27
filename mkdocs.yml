@@ -445,7 +445,7 @@ nav:
           Android app releases:
             alt__DHIS core version 2.36:
               alt__Android app version 2.4.0:
-                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.4/ReleaseNote-2.4.0.md, 2.4)'
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.4/ReleaseNote-2.4.0.md, master)'
             alt__DHIS core version 2.35:
               alt__Android app version 2.3.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
