@@ -393,6 +393,7 @@ nav:
           Developer Manual:
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/overview.md, 2.36)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata.md, 2.36)'
+            - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata-gist.md, 2.36)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data.md, 2.36)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-validation.md, 2.36)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-approval.md, 2.36)'
@@ -418,6 +419,7 @@ nav:
           Developer Manual:
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/overview.md, master)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata.md, master)'
+            - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/metadata-gist.md, master)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data.md, master)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-validation.md, master)'
             - '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/web-api/data-approval.md, master)'
