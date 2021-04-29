@@ -136,6 +136,7 @@ body {
 
 .md-typeset code {
   font-size: 80%;
+  word-break: keep-all;
 }
 
 h1,
