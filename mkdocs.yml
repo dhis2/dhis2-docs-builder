@@ -556,15 +556,18 @@ nav:
             - COVID-19 Surveillance Events Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_design.md, master)'
             - COVID-19 Events Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_installation.md, master)'
           COVID-19 Vaccine Delivery:
-            - alt_Version 1.1.0:
-              - COVAC Aggregate Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design_v1.1.0.md, master)'
-            - alt_Version 1.0.0:
-              - COVAC Aggregate Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design.md, master)'
-            - COVAC Aggregate Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
-            - COVAC Immunization Registry Tracker Design: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_design.md, master)'
-            - COVAC Immunization Registry Tracker Change Log: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_change_log.md, master)'
-            - COVAC Immunization Registry Tracker Installation: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_installation.md, master)'
-            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAC/covid19_vaccine_budget_guide.md, master)'
+            COVAC Aggregate:
+              alt__Version 1.1.0:
+              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design_v1.1.0.md, master)'
+              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+              alt__Version 1.0.0:
+              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design.md, master)'
+              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+            COVAC Immunization Registry Tracker:
+            - Design: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_design.md, master)'
+            - Change Log: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_change_log.md, master)'
+            - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_installation.md, master)'
+            COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAC/covid19_vaccine_budget_guide.md, master)'
           IDSR:
             - Disease Surveillance Aggregate Design: '@github(dhis2/metadata-package-development, metadata/IDSR/vpd_surveillance_aggregate_design.md, master)'
           Immunisation:
