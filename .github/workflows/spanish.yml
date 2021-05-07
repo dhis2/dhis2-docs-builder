@@ -58,8 +58,8 @@ jobs:
 
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
-      #with:
-      #  args: --delete
+      with:
+       args: --delete --exclude 'full*'
       env:
         AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
