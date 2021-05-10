@@ -126,71 +126,77 @@ figcaption{
   font-style:italic;
 }
 
-.Note{
+.note {
   background-image: url(../images/admin/note.png);
 }
 
-.Tip, .Truc {
+.tip,
+.truc,
+.astuce {
   background-image: url(../images/admin/tip.png);
 }
 
-.Important{
+.important {
   background-image: url(../images/admin/important.png);
 }
 
-.Caution, .Prudence{
+.caution,
+.prudence {
   background-image: url(../images/admin/caution.png);
 }
 
-.Warning, .Attention, .Danger{
+.warning,
+.attention,
+.danger {
   background-image: url(../images/admin/warning.png);
 }
 
-.Complete, .complete {
-  background-image: url(../images/admin/icon-complete.png);
-}
-
-.Incomplete, .incomplete {
-  background-image: url(../images/admin/icon-incomplete.png);
-}
-
-.Not, .not, .not_applicable, .Not_applicable {
-  background-image: url(../images/admin/icon-na.png);
-}
-
-.Not, .not, .not_applicable, .Not_applicable {
-  background-image: url(../images/admin/icon-na.png);
-}
-
-.Work, .work, .work_in_progress, .Work_in_progress, .Work_In_Progress{
+.work_in_progress {
   background-image: url(../images/admin/icon-wip.png);
 }
 
+.complete {
+  background-image: url(../images/admin/icon-complete.png);
+}
 
+.incomplete {
+  background-image: url(../images/admin/icon-incomplete.png);
+}
+
+.not_applicable {
+  background-image: url(../images/admin/icon-na.png);
+}
+
+.example {
+  background-image: url(../images/admin/example.png);
+}
 
 blockquote {
-	background-color: var(--blue050);
-	border: 1px solid var(--blue200);
-  border-radius:3px;
-	border-left: normal;
-  margin-top:32px;
-	margin-bottom: 40px;
-	padding: 6px 16px 12px 52px;
-	background-position: 16px 12px;
-	background-repeat: no-repeat;
-  color:var(--grey900);
+  background-color: var(--blue050);
+  border: 1px solid var(--blue200);
+  border-radius: 3px;
+  border-left: normal;
+  margin-top: 32px;
+  margin-bottom: 40px;
+  padding: 6px 16px 12px 52px;
+  background-position: 16px 12px;
+  background-repeat: no-repeat;
+  color: var(--grey900);
 }
 
-blockquote.Caution, blockquote.Prudence, blockquote.Important {
-  background-color:var(--yellow050);
-  border:1px solid var(--yellow200);
+blockquote.caution,
+blockquote.prudence,
+blockquote.important {
+  background-color: var(--yellow050);
+  border: 1px solid var(--yellow200);
 }
 
-blockquote.Warning, blockquote.Attention, blockquote.Danger {
-  background-color:var(--red050);
-  border:2px solid var(--red500);
+blockquote.warning,
+blockquote.attention,
+blockquote.danger {
+  background-color: var(--red050);
+  border: 2px solid var(--red500);
 }
-
 
 .thanks{
   border:1px solid #ddd;
@@ -199,11 +205,12 @@ blockquote.Warning, blockquote.Attention, blockquote.Danger {
 }
 
 caption {
-  font-style: italic;
-  font-weight: bold;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  text-align: left;
+  color: var(--grey700);
+  font-weight: 700;
+  font-size: 0.7rem;
+  font-style: normal;
+  margin: 0 0.4rem;
+  padding: 0.6rem 0;
 }
 
 a {
