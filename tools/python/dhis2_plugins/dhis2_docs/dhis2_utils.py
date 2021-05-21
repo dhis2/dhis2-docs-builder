@@ -52,9 +52,7 @@ class helpers:
         refslug = ' { #'+self.slugify(matchobj.group(2))+' } '
         return matchobj.group(1)+matchobj.group(2)+refslug+matchobj.group(3)
 
-        def grep(self, pattern, file_path):
-            with io.open(file_path, "r", encoding="utf-8") as f:
-                return re.search(pattern, mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ))
+
 
 class lister:
 
@@ -273,10 +271,43 @@ class fetcher:
         markdown = p.sub(r'\1 { #\3 } \2\3\4',md)
 
         # Add an attribute list identifier to all sections that don't have one
-        q = re.compile('(^#+)([^\n{<]*)([^{#]*?$)',re.MULTILINE)
-        md = q.sub(self.h.slugmatch,markdown)
+        # q = re.compile('(^#+)([^\n{<]*)([^{#]*?$)',re.MULTILINE)
+        # md = q.sub(self.h.slugmatch,markdown)
+        md = self.add_anchor_attributes(markdown)
 
         return md
+
+    def add_anchor_attributes(self,md):
+            
+            new_md = ""
+            codebloc=False
+            for line in md.split('\n'):
+                try:
+                    if not codebloc:
+                        # check if the line matches "# <Title>" without an anchor attribute
+                        # if so, add the anchor ref
+                        found = re.search('(^#+)([^\n{<]*)([^{#]*?$)',line.rstrip()).group(2)
+                        # if found:
+                        refslug = ' { #'+self.h.slugify(found)+' } '
+                        new_md = new_md + line + refslug + '\n'
+                    else:
+                        new_md = new_md + line + '\n'
+
+                except AttributeError:
+                    # error message does not match the pattern
+                    found = '' # apply error handling
+                    new_md = new_md + line + '\n'
+
+                try:
+                    if line[:2] == "``":
+                        if codebloc:
+                            codebloc = False
+                        else:
+                            codebloc = True
+                except:
+                    pass
+            
+            return new_md
 
 
 
