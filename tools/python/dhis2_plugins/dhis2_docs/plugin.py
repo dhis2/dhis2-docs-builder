@@ -1,8 +1,12 @@
+from logging import NullHandler, fatal
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
 import mkdocs.structure.files
 from . import dhis2_utils
 from weasyprint import HTML
+from os.path import relpath
+
+
 
 class Dhis2DocsPlugin(BasePlugin):
 
@@ -14,6 +18,8 @@ class Dhis2DocsPlugin(BasePlugin):
 
     def __init__(self):
         self.html = HTML
+        self.global_toc = {}
+        self.current_page = ""
 
     def on_page_context(self, context, page, config, **kwargs):
         # page.edit_url = ""
@@ -41,6 +47,7 @@ class Dhis2DocsPlugin(BasePlugin):
         fetched = fetcher.crawl_nav_list(config['nav'],'',version_map,[])
         config['nav'] = fetched[0]
         config['version_map'] = fetched[1]
+        self.global_toc = fetcher.global_toc
 
         print("Done.")
         fetcher.configure_translations(config)
@@ -78,14 +85,70 @@ class Dhis2DocsPlugin(BasePlugin):
 
     def on_page_markdown(self, markdown, page, config, files):
 
+        # print(page.url)
+        self.current_page = page.url
+
         # remove any remaining DHIS2-EDIT comments from markdown
         md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown)
 
-        # if len(dhis2_utils.re.findall(r'^#\s+',md,dhis2_utils.re.MULTILINE)) > 1:
-        #     mark2 = md.replace('\n#','\n##')
-        #     return mark2
+        # find any links referring to anchor tags, and resolve the path
+        q = dhis2_utils.re.compile('(\[[^\]]*])(\(#[^) ]* *\))')
+        md2 = q.sub(self.linkfixer,md)
 
-        return md
+        return md2
+
+    def linkfixer(self, matchobj):
+        # We have a link to an anchor. Now we have to find the anchor in the documents
+        # Ideally the anchor is unique. If not, we will find the "closest" document containing the anchor
+
+        # By default the link is just the plain anchor, unchanged.
+        new_link = matchobj.group(2)
+
+        l = new_link.strip('()')
+        # check if the link matches any anchors in the docs
+        if l in self.global_toc:
+            anchor_count = 0
+            closest = None
+            ambiguities = []
+            for anchor in self.global_toc[l]:
+                noskip = True
+                # If the anchor is in a different version to the current page, then ignor it
+                for x in dhis2_utils.re.findall("[^/]*-version-[^/]*", anchor):
+                    if (dhis2_utils.re.sub('[0-9]+','',x) in self.current_page) or (dhis2_utils.re.sub('master','',x) in self.current_page):
+                        if x not in self.current_page:
+                            noskip = False
+                            break
+
+                if noskip:
+                    anchor_count += 1
+                    ambiguities.append(anchor)
+                    rel_link = relpath(anchor, '/'.join(self.current_page.split('/')[:-1]))
+                    # print("anchor,current,rel:\n\t",anchor,"\n\t",'/'.join(self.current_page.split('/')[:-1]),"\n\t",rel_link)
+                    rel_precode = relpath(anchor.replace('.md','/'), self.current_page.replace('.html','/'))
+                    rel_coded = dhis2_utils.re.sub('[^/.]+','C',rel_precode).replace('..','P').replace('.C','/')
+                    # print("coded:",rel_coded)
+                    if closest:
+                        if rel_coded < closest:
+                            new_link = '(' + rel_link + l + ')'
+                            closest = rel_coded
+                    else:
+                        new_link = '(' + rel_link + l + ')'
+                        closest = rel_coded
+                    if rel_coded == '.':
+                        # if the anchor is in the same file, then ignore other files (treat as unambiguous)
+                        anchor_count = 1
+                        break
+
+            
+            if anchor_count > 1:
+                print("WARNING -  Link '{}' in file '{}' is ambiguous:".format(l,self.current_page))
+                for a in ambiguities:
+                    print("           {}{}".format(a,l))
+
+                # print("         The first anchor with that name, in the closest document, will be used")
+         
+        ret = matchobj.group(1)+new_link
+        return ret
 
 
     def on_post_build(self, config):

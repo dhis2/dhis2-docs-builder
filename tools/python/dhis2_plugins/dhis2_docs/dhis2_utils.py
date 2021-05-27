@@ -10,6 +10,7 @@
 
 """
 import json
+from typing import NewType
 import yaml
 import re
 import unicodedata
@@ -114,6 +115,8 @@ class fetcher:
         self.tx = transifex.tx(tx_slug)
 
         self.nav_trans_strings = {}
+        self.global_toc = {}
+        self.current_file = ""
 
     # Calling destructor
     # def __del__(self):
@@ -144,6 +147,7 @@ class fetcher:
 
     def include_file(self, origin, local_path, edit_url='',rev_date=''):
 
+        self.current_file = local_path
         # ensure the destination directory exists
         destination = self.docs_dir + local_path
         if not os.path.isfile(destination) or self.appendcount == 1:
@@ -275,6 +279,17 @@ class fetcher:
         # md = q.sub(self.h.slugmatch,markdown)
         md = self.add_anchor_attributes(markdown)
 
+        # record the available anchors across the documentation
+        # we will use this to convert inter-document links
+        for anch in re.findall(r'(^#+)([^\n{<]*)({ *#.*?$)',md,re.MULTILINE):
+            a = anch[2].strip(' {}')
+            if a not in self.global_toc:
+                self.global_toc[a] = []
+            cf = self.current_file
+            if cf not in self.global_toc[a]:
+                self.global_toc[a].append(cf)
+
+
         return md
 
     def add_anchor_attributes(self,md):
@@ -289,6 +304,8 @@ class fetcher:
                         found = re.search('(^#+)([^\n{<]*)([^{#]*?$)',line.rstrip()).group(2)
                         # if found:
                         refslug = ' { #'+self.h.slugify(found)+' } '
+                        if refslug == ' { # } ':
+                            refslug = ''
                         new_md = new_md + line + refslug + '\n'
                     else:
                         new_md = new_md + line + '\n'
@@ -332,7 +349,7 @@ class fetcher:
 
         for path in paths:
 
-            destinationPath = os.path.realpath(os.path.dirname(dest)+'/'+path)
+            destinationPath = os.path.realpath(os.path.dirname(dest)+ '/'+path)
 
             if not os.path.isfile(destinationPath):
                 try:
