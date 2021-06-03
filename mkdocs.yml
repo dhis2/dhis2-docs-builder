@@ -541,7 +541,7 @@ nav:
           DHIS2 WHO Digital Health Data Toolkit:
             - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, metadata/about-metadata.md, master)'
             - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, metadata/metadata-design-principles.md, master)'
-                - Shared metadata library: '@github(dhis2/dhis2-docs, metadata/metadata-shared-library.md, master)' 
+            - Shared metadata library: '@github(dhis2/dhis2-docs, metadata/metadata-shared-library.md, master)' 
             - Naming conventions: '@github(dhis2/dhis2-docs, metadata/metadata-naming-conventions.md, master)'
           COD:
             - Cause of Death Design: '@github(dhis2/metadata-package-development, metadata/COD/cod_design.md, master)'
