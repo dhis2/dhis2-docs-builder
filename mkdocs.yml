@@ -151,6 +151,7 @@ nav:
               - Import/Export App: '@github(dhis2/dhis2-docs, user/importexport-app.md,2.36)'
               - Metadata synchronizing: '@github(dhis2/dhis2-docs, user/configure-metadata-synchronizing.md,2.36)'
               - Mobile: '@github(dhis2/dhis2-docs, user/mobile.md,2.36)'
+              - Configure SMS: '@github(dhis2/dhis2-docs, user/sms-configuration.md,master)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, user/about-data-dimensions.md,2.36)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, user/additional-data-dimensions.md,2.36)'
@@ -295,6 +296,7 @@ nav:
               - Import/Export App: '@github(dhis2/dhis2-docs, user/importexport-app.md,master)'
               - Metadata synchronizing: '@github(dhis2/dhis2-docs, user/configure-metadata-synchronizing.md,master)'
               - Mobile: '@github(dhis2/dhis2-docs, user/mobile.md,master)'
+              - Configure SMS: '@github(dhis2/dhis2-docs, user/sms-configuration.md,master)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, user/about-data-dimensions.md,master)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, user/additional-data-dimensions.md,master)'
