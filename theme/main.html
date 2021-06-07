@@ -1,4 +1,26 @@
-{% extends "base.html" %} {% block announce %}
+{% extends "base.html" %}
+
+{% block config %}
+  {{ super() }}
+  <script>
+    var search = {
+      transform: function(query) {
+        return query
+          .replace(/[[\]{}()*?.,\\^$|#:]/g, '\\$&')
+          .split(/"([^"]+)"/g)
+          .map((terms, index) => index & 1
+            ? terms.replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +")
+            : terms
+          )
+          .join("")
+        .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "")
+        .trim()
+      }
+    }
+  </script>
+{% endblock %}
+
+{% block announce %}
 <div class="domain-nav-container">
   <a
     href="https://www.dhis2.org"
