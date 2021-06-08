@@ -6,7 +6,7 @@
     var search = {
       transform: function(query) {
         return query
-          .replace(/[\\#:]/g, '\\$&')
+          .replace(/[\\'#:]/g, '\\$&')
           .replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +")
           .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "")
           .trim()
