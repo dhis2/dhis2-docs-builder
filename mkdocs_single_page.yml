@@ -468,24 +468,28 @@ nav:
        alt__DHIS core version 2.36:
          System Administration Guide:
            - '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.36)'
+           - '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.36)'
            - '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.36)'
            - '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.36)'
        alt__DHIS core version 2.35:
          System Administration Guide:
            - '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.35)'
+           - '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.35)'
            - '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.35)'
            - '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.35)'
        alt__DHIS core version 2.34:
          System Administration Guide:
            - '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.34)'
+           - '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.34)'
            - '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.34)'
            - '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.34)'
        alt__DHIS core version master:
          System Administration Guide:
            - '@github(dhis2/dhis2-docs, sysadmin/installation.md, master)'
+           - '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/monitoring.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/audit.md, master)'
            - '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md, master)'
