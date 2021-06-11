@@ -521,21 +521,25 @@ nav:
         Performing system administration:
           alt__DHIS core version 2.36:
             - Installation: '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.36)'
+            - Upgrading: '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
             - Monitoring: '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.36)'
             - Audit: '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.36)'
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.36)'
           alt__DHIS core version 2.35:
             - Installation: '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.35)'
+            - Upgrading: '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
             - Monitoring: '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.35)'
             - Audit: '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.35)'
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.35)'
           alt__DHIS core version 2.34:
             - Installation: '@github(dhis2/dhis2-docs, sysadmin/installation.md,2.34)'
+            - Upgrading: '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
             - Monitoring: '@github(dhis2/dhis2-docs, sysadmin/monitoring.md,2.34)'
             - Audit: '@github(dhis2/dhis2-docs, sysadmin/audit.md,2.34)'
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md,2.34)'
           alt__DHIS core version master:
             - Installation: '@github(dhis2/dhis2-docs, sysadmin/installation.md, master)'
+            - Upgrading: '@github(dhis2/dhis2-docs, sysadmin/upgrading.md, master)'
             - Monitoring: '@github(dhis2/dhis2-docs, sysadmin/monitoring.md, master)'
             - Audit: '@github(dhis2/dhis2-docs, sysadmin/audit.md, master)'
             - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, sysadmin/SMS-reporting.md, master)'
