@@ -760,29 +760,34 @@ hr {
     margin-top: 0;
   }
 
+
   table {
-    width: auto;
     border-bottom: 1px solid #ddd;
     border-collapse: collapse;
     border-right: 1px solid #ddd;
     border-spacing: 0;
     margin-bottom: 2em;
+    table-layout: fixed;
+    width: 100%;
+    font-size: smaller;
   }
-
+  
   table th {
     background-color: #eee;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 0.2em 1em;
+    word-wrap: break-word;
   }
-
+  
   table td {
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 0.2em 1em;
     vertical-align: top;
+    word-wrap: break-word;
   }
-
+  
   .banner {
     display:none;
   }
