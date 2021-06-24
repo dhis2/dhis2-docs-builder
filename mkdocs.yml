@@ -584,7 +584,7 @@ nav:
             - VPD Case-based Tracker Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
           HIV:
             - HIV Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)',
+              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
               - '@github(dhis2-metadata/HIV_LMIS-AGG-HIV_Logistics, docs/hiv_lmis_aggregate_design.md, master)'
           Immunization:
             Immunization Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
@@ -597,14 +597,14 @@ nav:
             - Malaria Aggregate Design: '@github(dhis2/metadata-package-development, metadata/MAL/malaria_aggregate_design.md, master)'
             - Malaria Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
             - Malaria Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)',
+              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
               - '@github(dhis2-metadata/MAL_LMIS-AGG-Malaria_Logistics, docs/mal_lmis_aggregate_design.md, master)'
           RMNCAH:
             - RMNCAH Aggregate Design: '@github(dhis2/metadata-package-development, metadata/RMNCAH/rmncah_aggregate_design.md, master)'
           Tuberculosis:
             - TB Aggregate Design: '@github(dhis2/metadata-package-development, metadata/TB/tb_aggregate_design.md, master)'
             - TB Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)',
+              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
               - '@github(dhis2-metadata/TB_LMIS-AGG-TB_Logistics, docs/tb_lmis_aggregate_design.md, master)'
             - TB Case Surveillance Tracker Design: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_design.md, master)'
             - TB Case Surveillance Tracker Installation: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_installation.md, master)'
