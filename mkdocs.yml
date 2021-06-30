@@ -507,7 +507,7 @@ nav:
             - New Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/new-tracker.md, master)'
             - Email: '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, master)'
             - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
-            - OrganisationUnit Profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
+            - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
         Loading Apps: '@github(dhis2/dhis2-docs, src/developer/apps.md, master)'
         Core Javadocs:
