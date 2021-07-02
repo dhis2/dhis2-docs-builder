@@ -44,7 +44,8 @@ class Dhis2DocsPlugin(BasePlugin):
         # fetcher.say_hello()
         print("Fetching documents...")
         version_map = {}
-        fetched = fetcher.crawl_nav_list(config['nav'],'',version_map,[])
+        expanded_nav = fetcher.expand_nav_list(config['nav'])
+        fetched = fetcher.crawl_nav_list(expanded_nav,'',version_map,[])
         config['nav'] = fetched[0]
         config['version_map'] = fetched[1]
         self.global_toc = fetcher.global_toc
