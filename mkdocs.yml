@@ -508,7 +508,7 @@ nav:
             - New Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/new-tracker.md, master)'
             - Email: '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, master)'
             - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
-            - OrganisationUnit Profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
+            - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
         Loading Apps: '@github(dhis2/dhis2-docs, src/developer/apps.md, master)'
         Core Javadocs:
@@ -564,18 +564,18 @@ nav:
             - COVID-19 Surveillance Events Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_design.md, master)'
             - COVID-19 Events Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_installation.md, master)'
           COVID-19 Vaccine Delivery:
-            COVAC Aggregate:
-              alt__Version 1.1.0:
-              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design_v1.1.0.md, master)'
-              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
-              alt__Version 1.0.0:
-              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design.md, master)'
-              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
-            COVAC Immunization Registry Tracker:
-            - Design: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_design.md, master)'
-            - Change Log: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_change_log.md, master)'
-            - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_installation.md, master)'
-            COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAC/covid19_vaccine_budget_guide.md, master)'
+            - COVAC Aggregate:
+               alt__Version 1.1.0:
+               - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design_v1.1.0.md, master)'
+               - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+               alt__Version 1.0.0:
+               - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design.md, master)'
+               - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+            - COVAC Immunization Registry Tracker:
+              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_design.md, master)'
+              - Change Log: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_change_log.md, master)'
+              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_installation.md, master)'
+            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAC/covid19_vaccine_budget_guide.md, master)'
           CRVS:
             - Cause of Death Tracker and Event Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
             - Cause of Death Tracker and Event Installation: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_installation_guide.md, master)'
@@ -585,16 +585,20 @@ nav:
             - IDSR Aggregate Design: '@github(dhis2/metadata-package-development, metadata/IDSR/vpd_surveillance_aggregate_design.md, master)'
             - VPD Case-based Tracker Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
           HIV:
+            - HIV Aggregate Design: '@github(dhis2-metadata/HIV-AGG-HIV_Aggregate, docs/hiv_aggregate_design.md, master)'
             - HIV Logistics Design:
               - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
               - '@github(dhis2-metadata/HIV_LMIS-AGG-HIV_Logistics, docs/hiv_lmis_aggregate_design.md, master)'
           Immunization:
-            Immunization Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
-            Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_design.md, master)'
-            Adverse Events Following Immunization (AEFI) Tracker Installation: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
-            Immunization Analysis App:
-              alt__App version 1.0.3:
-                - User Manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
+            - Immunization Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
+            - EPI Logistics Design:
+              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
+              - '@github(dhis2-metadata/EPI_LMIS-AGG-EPI_Logistics, docs/epi_lmis_aggregate_design.md, master)'
+            - Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_design.md, master)'
+            - Adverse Events Following Immunization (AEFI) Tracker Installation: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+            - Immunization Analysis App:
+               alt__App version 1.0.3:
+                 - User Manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria Aggregate Design: '@github(dhis2/metadata-package-development, metadata/MAL/malaria_aggregate_design.md, master)'
             - Malaria Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
