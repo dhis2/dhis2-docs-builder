@@ -93,7 +93,7 @@ mkdocs usually refers to file paths under the `./docs/`. Our implementation star
 
    To reference a file in a GitHub repository, we use the following syntax:
 
-   ```
+   ```yaml
    @github(<GitHub-repo>,<path-to-file>,<GitHub-branch>)
    ```
 
@@ -103,7 +103,7 @@ mkdocs usually refers to file paths under the `./docs/`. Our implementation star
 
    To reference a local file, we can use the following syntax:
 
-   ```
+   ```yaml
    @file(<path-to-file>)
    ```
 
@@ -120,7 +120,8 @@ mkdocs uses the path of the files in the `./docs/` folder to determine the folde
 - "Home" is a special page and is used for the `home.html` file in the root of the site
 - the `alt__` prefix is a special marker for something we call [alternates](#alternates), and is remove from the folder name.
 - Folder names are "slugified"; that is, they are converted into html friendly paths, so
-  ```
+
+  ```yaml
   - Use:
       User guides:
         alt__DHIS core version 2.35:
@@ -141,3 +142,69 @@ Alternates are a mechanism we have introduced to allow independent versioning of
 - Alternates can be nested. This can be useful if a particular document is applicable to more than one version; such as a specific DHIS2 version AND a specific App version. *Alternates are not limited to versions, but can be used for any categories that you wish to display as "alternatives" for a given document.*
 
 Probably the easiest way to understand Alternates is to compare the `mkdocs.yml` configuration with the [DHIS2 Docs site](docs.dhis2.org).
+
+### Maintaining parts of the site structure in other locations
+
+It is possible to maintain sub-structures in other locations by using the `@github` or `@file` references to point to a `.yml` file instead of a `.md` file.
+
+The `.yml` file follows the same structure as the master `nav` section, and basically describes the content that will replace the reference. Probably the easiest way to understand this is with some examples.
+
+#### Examples
+
+Let us assume we want to maintain the contents and structure of "Data Entry" in a repository called `data-entry`, on the master branch. We could set up the reference from the master file like so:
+
+```yaml
+- Use:
+    User guides:
+      alt__DHIS core version 2.35:
+        Collecting data:
+          - Data Entry: '@github(dhis2/data-entry, src/index.yml, master)'
+```
+The file in this example is called `src/index.yml` but could be any valid path and filename. However, it must have the extension `.yml`.
+
+1. If you wish to simply replace the reference with a single file:
+
+    Set the contents of `src/index-yml` to include the relative file path:
+
+    ```yaml
+    'my_data_entry_file.md'
+    ```
+    This is the equivalent of
+
+    ```yaml
+    - Use:
+        User guides:
+          alt__DHIS core version 2.35:
+            Collecting data:
+              - Data Entry: '@github(dhis2/data-entry, src/my_data_entry_file.md, master)'`
+    ```
+    in the master file
+
+1. Alternatively, you can create an arbitrary level of structure:
+
+    Set the contents of `src/index-yml` to include the structure as you would in the master .yml:
+
+    ```yaml
+    # Page references (referecens to markdown files) are relative to this .yml file
+
+    - Section One: 'section1.md'
+    # complex structure are allowed to create pages at different levels of navigation
+    - Section Two:
+        Sub-Section One:
+          Page One: 'SS1/page1.md'
+          Page Two: 'SS1/page2.md'
+        Sub-Section Two:
+          Page One: '../another/location/SS2page1.md' # <-- relative paths are supported
+    - Section Three: 'section3.md'
+    # combine .md's into a single page called "Combined Doc"
+    - Combined Doc:
+      - 'monitoring.md'
+      - 'SMS-reporting.md'
+    # Nest another @github (can be `.md` or another `.yml`)
+    - Nested Github: '@github(dhis2/dhis2-docs, src/sysadmin/sysadmin.yml,2.35)' 
+    # Nest another local .yml file 
+    - Nested Local File: '@file(index2.yml)'  # another local .yml flie
+    # Try to avoid circular references. There is some protection built into the document generation, 
+    # but duplication of content will make document searches less effective
+    - Circular Refs: '@file(index.yml)'  # <-- don't reference the current file again! :) 
+    ```

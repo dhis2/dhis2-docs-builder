@@ -12,6 +12,7 @@
 import json
 from typing import NewType
 import yaml
+import requests
 import re
 import unicodedata
 import uuid
@@ -69,6 +70,8 @@ class lister:
             else:
                 if type(nav_item) == list:
                     page = self.crawl_page_list(nav_item)
+                else:
+                    page = [nav_item]
             pages = pages + page
         return pages
 
@@ -123,8 +126,7 @@ class fetcher:
     #     # Delete all temporary files
     #     shutil.rmtree(self.root)
 
-
-    def include_git(self, github_repo, file_path, branch, local_path):
+    def clone_git(self, github_repo, branch):
 
         tmpRoot = self.root + '/' + github_repo + '/' + branch
         git_url = self.github_base + github_repo + ".git"
@@ -134,6 +136,12 @@ class fetcher:
             branch_opt = '--branch ' + branch
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt])
 
+
+    def include_git(self, github_repo, file_path, branch, local_path):
+
+        self.clone_git(github_repo, branch)
+
+        tmpRoot = self.root + '/' + github_repo + '/' + branch
         repo = Repo(tmpRoot)
         rev_d = repo.git.log('--pretty=%as','-1',file_path)
 
@@ -293,7 +301,7 @@ class fetcher:
         return md
 
     def add_anchor_attributes(self,md):
-            
+
             new_md = ""
             codebloc=False
             for line in md.split('\n'):
@@ -323,7 +331,7 @@ class fetcher:
                             codebloc = True
                 except:
                     pass
-            
+
             return new_md
 
 
@@ -408,6 +416,139 @@ class fetcher:
                 print("File format not supported (must be .md):",local_file)
 
         return new_nav
+
+    def expand_item(self,item,depth):
+
+        # prevent infinite recursion
+        if depth > 4:
+            return item
+
+        yaml_text = ""
+        pre_text = ""
+        post_text = ""
+
+        if item.split('(')[0] == "@github":
+            parts = item.replace('@github(','').strip(' )').split(',')
+            github_repo = parts[0].strip()
+            git_file = parts[1].strip()
+            git_branch = parts[2].strip()
+
+            pre_text = "@github("+github_repo+","+os.path.dirname(git_file)+"/"
+            post_text = ","+''.join(parts[2:])+")"
+
+            git_raw = "https://raw.githubusercontent.com/"+github_repo+"/"+git_branch+"/"+git_file
+
+            # print(github_repo,git_file,git_branch)
+            if git_file.endswith('.yml'):
+                print("Expanding nested YAML:", github_repo, git_branch, git_file)
+                git_raw = "https://raw.githubusercontent.com/"+github_repo+"/"+git_branch+"/"+git_file
+
+                response = requests.get(git_raw)
+                if response.ok:
+                    yaml_text = response.text
+                else:
+                    print(response.text)
+
+
+        if item.split('(')[0] == "@file":
+            parts = item.replace('@file(','').strip(' )').split(',')
+            local_file = parts[0].strip()
+
+            pre_text = "@file("+os.path.dirname(local_file)+"/"
+            post_text = ")"
+            if len(parts) > 1:
+                post_text = ","+''.join(parts[1:])+")"
+
+            if local_file.endswith('.yml'):
+                print("Expanding nested YAML:", local_file)
+
+                with open(local_file) as f:
+                    yaml_text = f.read()
+
+        # print("++++++++++")
+        # print(item)
+        # print(yaml_text)
+        # print("----------")
+
+        if yaml_text == "":
+            # no yaml to expand, just return the item unchanged
+            return item
+
+        else:
+            #return the contents of the yaml
+            nested_nav = yaml.load(yaml_text, Loader=yaml.FullLoader)
+
+            # we need to modify the objects by encapsulating files inside the
+            # relevant @github or @file constructs
+            wrapper = {'pre':pre_text, 'post':post_text}
+            # print(wrapper)
+            if type(nested_nav) == list:
+                rewrap = self.expand_nav_list(nested_nav,wrapper)
+                #allow for recursive expansion
+                expansion = self.expand_nav_list(rewrap,depth=depth+1)
+
+            else:
+                if type(nested_nav) == dict:
+                    rewrap = self.expand_nav_dict(nested_nav,wrapper)
+                    #allow for recursive expansion
+                    expansion = self.expand_nav_dict(rewrap,depth=depth+1)
+                else:
+                    expansion = wrapper['pre']+nested_nav+wrapper['post']
+
+            # print(json.dumps(expansion,indent=2))
+            return expansion
+
+
+    def expand_nav_list(self,nav,wrapper={},depth=0):
+        x = []
+        for nav_item in nav:
+            if type(nav_item) == dict:
+                # print(nav_item)
+                nav_item = self.expand_nav_dict(nav_item,wrapper,depth)
+            else:
+                if type(nav_item) == list:
+                    nav_item = self.expand_nav_list(nav_item,wrapper,depth)
+                else:
+                    if nav_item[0] == '@':
+                        if wrapper and '@file' in nav_item:
+                            nav_item = wrapper['pre']+nav_item+wrapper['post']
+                        else:
+                            nav_item = self.expand_item(nav_item,depth)
+                    else:
+                        if wrapper:
+                            nav_item = wrapper['pre']+nav_item+wrapper['post']
+
+            # if nav_item not in x:
+            if type(nav_item) == list:
+                x.extend(nav_item)
+            else:
+                x.append(nav_item)
+
+        return x
+
+    def expand_nav_dict(self, nav, wrapper={},depth=0):
+        x={}
+        for k, n in nav.items():
+
+            if type(n) == dict:
+                n = self.expand_nav_dict(nav[k],wrapper,depth)
+            else:
+                if type(n) == list:
+                    n = self.expand_nav_list(nav[k],wrapper,depth)
+                else:
+                    # print(type(n),n)
+                    if n[0] == '@':
+                        if wrapper and '@file' in n:
+                            n = wrapper['pre']+n+wrapper['post']
+                        else:
+                            n = self.expand_item(n,depth)
+                    else:
+                        if wrapper:
+                            n = wrapper['pre']+n+wrapper['post']
+
+            x[k] = n
+
+        return x
 
 
     def crawl_nav_list(self, nav, path, v_map, v_tmp, parent=''):

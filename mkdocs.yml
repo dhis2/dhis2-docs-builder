@@ -104,6 +104,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
+  - mdx_headdown
 
 # output when building
 site_dir: ./target/en/
