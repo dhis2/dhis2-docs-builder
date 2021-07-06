@@ -158,7 +158,7 @@ Let us assume we want to maintain the contents and structure of "Data Entry" in 
     User guides:
       alt__DHIS core version 2.35:
         Collecting data:
-          - Data Entry: '@github(dhis2/data-entry, src/index.yml, master)'
+          - Data Entry: '@github(dhis2/data-entry, src/index.yml, 2.35)'
 ```
 The file in this example is called `src/index.yml` but could be any valid path and filename. However, it must have the extension `.yml`.
 
@@ -176,7 +176,7 @@ The file in this example is called `src/index.yml` but could be any valid path a
         User guides:
           alt__DHIS core version 2.35:
             Collecting data:
-              - Data Entry: '@github(dhis2/data-entry, src/my_data_entry_file.md, master)'`
+              - Data Entry: '@github(dhis2/data-entry, src/my_data_entry_file.md, 2.35)'`
     ```
     in the master file
 
