@@ -196,7 +196,7 @@ The file in this example is called `src/index.yml` but could be any valid path a
         Sub-Section Two:
           Page One: '../another/location/SS2page1.md' # <-- relative paths are supported
     - Section Three: 'section3.md'
-    # combine .md's into a single page called "Combined Doc"
+    # combine .md's into a single page called "Combined Doc" by specifying the files in a list
     - Combined Doc:
       - 'monitoring.md'
       - 'SMS-reporting.md'
