@@ -185,7 +185,7 @@ The file in this example is called `src/index.yml` but could be any valid path a
     Set the contents of `src/index-yml` to include the structure as you would in the master .yml:
 
     ```yaml
-    # Page references (referecens to markdown files) are relative to this .yml file
+    # Page references (references to markdown files) are relative to this .yml file
 
     - Section One: 'section1.md'
     # complex structure are allowed to create pages at different levels of navigation
