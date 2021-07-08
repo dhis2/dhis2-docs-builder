@@ -4,7 +4,7 @@
   {{ super() }}
 
   <script>
-    window.onload = (event) => {
+    document.addEventListener("DOMContentLoaded", ()=>{
       // redirect anchors from previous docs site to new locations
       const redirect_map = {
         '#webapi_tei_grid_query_request_syntax': 'develop/using-the-api/dhis-core-version-master/tracker.html#webapi_tracked_entity_instance_management',
@@ -16,7 +16,7 @@
       if (window.location.hash in redirect_map) {
         window.location = redirect_map[window.location.hash]
       }
-    };
+    });
   </script>
 {% endblock %}
 
