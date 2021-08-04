@@ -138,7 +138,7 @@ nav:
               - '@github(dhis2/dhis2-docs, src/user/configure-report-functionality.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/system-settings.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/data-administration.md,master)'
-              - '@github(dhis2/dhis2-docs, src/user/visualize-usage-statistics.md,master)'
+              - '@github(dhis2/usage-analytics-app, docs/user/index.yml,master)'
               - '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/scheduling.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/importexport-app.md,master)'
