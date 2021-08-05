@@ -7,22 +7,8 @@
 python3 -m venv venv
 
 source venv/bin/activate
-pip install -r requirements.txt
 
-cd tools/python/markdown-pp-master
-python3 setup.py develop
-pip install MarkdownPP
-cd -
-
-cd tools/python/markdown-extensions/d_card
-python3 setup.py develop
-pip install d_card
-cd -
-
-cd tools/python/dhis2_plugins
-python3 setup.py develop
-pip install dhis2_plugins
-cd -
+source scripts/setup-deps.sh
 
 # a temporary hacks
 cp tools/python/blockprocessors.py venv/lib/python3*/site-packages/markdown/
