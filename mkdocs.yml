@@ -291,7 +291,7 @@ nav:
               - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,master)'
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,master)'
-              - Usage Analytics: '@github(dhis2/usage-analytics-app, docs/user/index.yml,master)'
+              - '@github(dhis2/usage-analytics-app, docs/user/index.yml,master)'
               - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,master)'
               - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,master)'
               - Import/Export App: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,master)'
