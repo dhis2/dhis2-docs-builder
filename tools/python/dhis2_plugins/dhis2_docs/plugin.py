@@ -55,7 +55,19 @@ class Dhis2DocsPlugin(BasePlugin):
 
         # Push English source files to transifex
         if lang == 'en':
-            fetcher.push_translations()
+            # run prettier over the markdown to remove line wrapping (ensures consistent
+            # formatting for transifex)
+            try:
+                print("Formatting files with prettier and removing line wrapping...")
+                prettify = subprocess.Popen(['prettier', '--prose-wrap', 'never', '--write', 'docs/**/*.md'])
+                prettify.wait()
+                print("Done.")
+
+                # Only attempt to push sources to transifex if the files are successfully formatted
+                fetcher.push_translations()
+
+            except OSError:
+                print("prettier not found. Markdown files may render differently in the official build.")
 
         # Pull translated versions of files from transifex if necessary
         if lang != 'en':
