@@ -49,10 +49,12 @@ jobs:
         cp tools/python/attr_list.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
         cp tools/python/tables.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
 
-    - name:
+    - name: Install node
       uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      with:
+        node-version: '14'
+        
+    - name: install prettier
       run: npm install -g prettier
 
     - name: Build the docs
