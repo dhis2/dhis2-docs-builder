@@ -5,6 +5,7 @@ import mkdocs.structure.files
 from . import dhis2_utils
 from weasyprint import HTML
 from os.path import relpath
+import subprocess
 
 
 
