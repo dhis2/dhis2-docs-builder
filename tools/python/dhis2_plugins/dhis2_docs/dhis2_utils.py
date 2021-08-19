@@ -121,6 +121,10 @@ class fetcher:
         self.global_toc = {}
         self.current_file = ""
 
+        lang = os.getenv('DHIS2_DOCS_LANGUAGE')
+        if lang == None:
+            lang = 'en'
+        self.language_code = lang
     # Calling destructor
     # def __del__(self):
     #     # Delete all temporary files
@@ -361,9 +365,14 @@ class fetcher:
 
             if not os.path.isfile(destinationPath):
                 try:
+                    name, ext = os.path.splitext(path)
+                    localised_path = "{name}_{loc}{ext}".format(name=name, loc=self.language_code, ext=ext)
+                    from_file = path
+                    if os.path.isfile(basedir + "/" + localised_path):
+                        from_file = localised_path
                     # print("Copying image: " + basedir + "/" + path + " to " + destinationPath)
                     os.makedirs(os.path.dirname(destinationPath), exist_ok=True)
-                    shutil.copyfile(basedir + "/" + path, destinationPath)
+                    shutil.copyfile(basedir + "/" + from_file, destinationPath)
                 except FileNotFoundError:
                     print("Referenced image not found:",basedir + "/" + path)
                     pass
