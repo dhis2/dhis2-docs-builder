@@ -6,7 +6,9 @@ This is the build source for the DHIS2 documentation site.
 
 ### Requirements and setup
 
-Python3 is required (tested with python 3.8)
+- Python3 is required (tested with python 3.7, 3.8, 3.9)
+- Pango 1.x (debian: `libpango1.0.0`)
+- Cairo (debian: `python3-cairo`)
 
 Setup the environment
 ```
