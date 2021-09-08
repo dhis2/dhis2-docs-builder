@@ -621,7 +621,7 @@ nav:
             - WHO Metadata Packages: https://dhis2.org/who-package-downloads/
       - alt__Tutorials:
           - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
-          - Really clear the cache: '@github(dhis2/dhis2-docs, src/tutorials/really-clear-the-cache.md, master)'
+          - '@github(dhis2/cache-cleaner-app, docs/tutorials/index.yml, master)'
           - Setting up targets: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-targets.md, master)'
           - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/tutorials/creating-scorecards-using-pt-app.md, master)'
           - Setting up email: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-email.md, master)'
