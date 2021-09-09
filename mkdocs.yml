@@ -309,6 +309,16 @@ nav:
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,master)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,master)'
         Optional Apps:
+          Standalone Action Tracker App:
+            alt__App version 1.0:
+              - Standalone Action Tracker App Demo:
+                - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-introduction.md, master)'
+                - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture.md, master)'
+                - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-browsing.md, master)'
+              - Standalone Action Tracker Administration:
+                - Administration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-administration.md, master)'
+              - Maintenance and Support:
+                - Maintenance: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-maintenance.md, master)'
           Action Tracker App:
             alt__App version 1.0:
               - Dashboard and Demo Server:
