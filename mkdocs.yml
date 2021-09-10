@@ -313,7 +313,7 @@ nav:
             alt__App version 1.0:
               - Standalone Action Tracker App Demo:
                 - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-introduction.md, master)'
-                - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture.md, master)'
+                - Architecture: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture.md, master)'
                 - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-browsing.md, master)'
               - Standalone Action Tracker Administration:
                 - Administration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-administration.md, master)'
