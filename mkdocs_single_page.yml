@@ -145,6 +145,7 @@ nav:
               - '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/mobile.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,master)'
+              - '@github(dhis2/app-management-app, docs/user/installing-apps.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/relationship-model.md,master)'
