@@ -520,7 +520,7 @@ nav:
             - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
             - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
-        '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
+        Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
         Core Javadocs:
           - DHIS 2.36 Javadocs: https://docs.dhis2.org/javadoc/2.36/
           - DHIS 2.35 Javadocs: https://docs.dhis2.org/javadoc/2.35/
