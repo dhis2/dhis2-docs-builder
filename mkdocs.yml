@@ -563,70 +563,116 @@ nav:
             - Shared metadata library: '@github(dhis2/dhis2-docs, src/metadata/metadata-shared-library.md, master)'
             - Naming conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           COVID-19 Surveillance:
-            - COVID-19 Surveillance: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_surveillance_digital_data_package.md, master)'
-            - Release Notes: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_release_notes_v03.md, master)'
-            - Upgrade Notes: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_upgrade_notes_02_to_03.md, master)'
-            - COVID-19 Aggregate Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_aggregate_system_design.md, master)'
-            - COVID-19 Aggregate Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_aggregate_installation.md, master)'
-            - COVID-19 Case-based Surveillance Tracker Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_case-based_surveillance_tracker_design.md, master)'
-            - COVID-19 POE Tracker Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_poe_design.md, master)'
-            - COVID-19 Tracker Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_tracker_installation.md, master)'
-            - COVID-19 Surveillance Events Design: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_design.md, master)'
-            - COVID-19 Events Installation: '@github(dhis2/metadata-package-development, metadata/COVID19/covid19_event_installation.md, master)'
+            - COVID-19 Digital Data Package: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_surveillance_digital_data_package.md, master)'
+            - Release Notes: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_release_notes_v03.md, master)'
+            - Upgrade Notes: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_upgrade_notes_02_to_03.md, master)'
+            - COVID-19 Aggregate:
+              - Design: '@github(dhis2-metadata/COVID19-AGG-COVID19_Surveillance, docs/covid19_aggregate_system_design.md, master)'
+              - Installation: '@github(dhis2-metadata/COVID19-AGG-COVID19_Surveillance, docs/covid19_aggregate_installation.md, master)'
+            - COVID-19 Case-based Surveillance Tracker:
+              - Design: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_case-based_surveillance_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_tracker_installation.md, master)'
+            - COVID-19 POE Tracker:
+              - Design: '@github(dhis2-metadata/COVID19_POE-TRK-Points_of_Entry, docs/covid19_poe_design.md, master)'
+              - Installation: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_tracker_installation.md, master)'
+            - COVID-19 Surveillance Events:
+              - Design: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_design.md, master)'
+              - Installation: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_installation.md, master)'
           COVID-19 Vaccine Delivery:
             - COVAC Aggregate:
                alt__Version 1.1.0:
-               - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design_v1.1.0.md, master)'
-               - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+               - Design: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covac_aggregate_design_v1.1.0.md, master)'
+               - Installation: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covac_aggregate_installation.md, master)'
                alt__Version 1.0.0:
-               - Design: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_design.md, master)'
-               - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC/covac_aggregate_installation.md, master)'
+               - Design: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covac_aggregate_design.md, master)'
+               - Installation: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covac_aggregate_installation.md, master)'
             - COVAC Immunization Registry Tracker:
-              - Design: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_design.md, master)'
-              - Change Log: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_change_log.md, master)'
-              - Installation: '@github(dhis2/metadata-package-development, metadata/COVAC_Tracker/covac_immunization_registry_tracker_installation.md, master)'
-            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2/metadata-package-development, metadata/COVAC/covid19_vaccine_budget_guide.md, master)'
+              - Design: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/covac_immunization_registry_tracker_design.md, master)'
+              - Change Log: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/covac_immunization_registry_tracker_change_log.md, master)'
+              - Installation: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/covac_immunization_registry_tracker_installation.md, master)'
+              - Training materials:
+                - Trainer's Guide: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_user_guide.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_exercises.md, master)'        
+                - Android Trainer's Guide: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_trainers_guide.md, master)'
+                - Android User Guide: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
+                - Android Data Entry Exercises: '@github(dhis2-metadata/COVAC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
+            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
           CRVS:
-            - Cause of Death Tracker and Event Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
-            - Cause of Death Tracker and Event Installation: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_installation_guide.md, master)'
-            - Cause of Death Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
-            - Vital Events Tracker Design: '@github(dhis2-metadata/CRVS_VE-TRK-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)' 
+            - Cause of Death Tracker and Events:
+              - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
+              - Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
+              - Installation: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_installation_guide.md, master)'
+            - Vital Events Tracker:
+              - Design: '@github(dhis2-metadata/CRVS_VE-TRK-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
+              - Vital Events Installation Annex: '@github(dhis2-metadata/CRVS_VE-TRK-Vital_Events_Notification, docs/vital_events_tracker_installation.md, master)'
           Disease Surveillance:
-            - IDSR Aggregate Design: '@github(dhis2/metadata-package-development, metadata/IDSR/vpd_surveillance_aggregate_design.md, master)'
-            - VPD Case-based Tracker Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
+            - IDSR Aggregate:
+              - Design: '@github(dhis2-metadata/IDSR-AGG-Integrated_Disease_Surveillance_And_Response, docs/vpd_surveillance_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - VPD Case-based Tracker:
+              - Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
+              - VPD CS Installation Annex: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_installation.md, master)'
           HIV:
-            - HIV Aggregate Design: '@github(dhis2-metadata/HIV-AGG-HIV_Aggregate, docs/hiv_aggregate_design.md, master)'
-            - HIV Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
-              - '@github(dhis2-metadata/HIV_LMIS-AGG-HIV_Logistics, docs/hiv_lmis_aggregate_design.md, master)'
+            - HIV Aggregate:
+              - Design: '@github(dhis2-metadata/HIV-AGG-HIV_Aggregate, docs/hiv_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - HIV Logistics:
+              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - HIV Logistics Design: '@github(dhis2-metadata/HIV_LMIS-AGG-HIV_Logistics, docs/hiv_lmis_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Immunization:
-            - Immunization Aggregate Design: '@github(dhis2/metadata-package-development, metadata/EPI/immunisation_aggregate_design.md, master)'
-            - EPI Immunization eRegistry Design: '@github(dhis2-metadata/EPI-TRK-Immunization_Registry, docs/epi_immunization_registry_design.md, master'
-            - EPI Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
-              - '@github(dhis2-metadata/EPI_LMIS-AGG-EPI_Logistics, docs/epi_lmis_aggregate_design.md, master)'
-            - Adverse Events Following Immunization (AEFI) Tracker Design: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_design.md, master)'
-            - Adverse Events Following Immunization (AEFI) Tracker Installation: '@github(dhis2/metadata-package-development, metadata/AEFI/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+            - Immunization Aggregate:
+              - Design: '@github(dhis2-metadata/EPI-AGG-Expanded_Program_On_Immunization, docs/immunisation_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - EPI Immunization eRegistry:
+              - Design: '@github(dhis2-metadata/EPI-TRK-Immunization_Registry, docs/epi_immunization_registry_design.md, master'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
+            - EPI Logistics:
+              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - EPI Logistics Design: '@github(dhis2-metadata/EPI_LMIS-AGG-EPI_Logistics, docs/epi_lmis_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - Adverse Events Following Immunization (AEFI) Tracker:
+              - Design: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+              - Training Materials:
+                - Trainer's Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_complete_data_entry.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_data_entry_exercises.md, master)'
+                - Navigating Through Dashboards: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_dashboard_navigation.md, master)'
             - Immunization Analysis App:
                alt__App version 1.0.3:
-                 - User Manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
+                 - User Manual: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
-            - Malaria Aggregate Design: '@github(dhis2/metadata-package-development, metadata/MAL/malaria_aggregate_design.md, master)'
-            - Malaria Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
-            - Malaria Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
-              - '@github(dhis2-metadata/MAL_LMIS-AGG-Malaria_Logistics, docs/mal_lmis_aggregate_design.md, master)'
+            - Malaria Aggregate:
+              - Design: '@github(dhis2-metadata/MAL-AGG-Malaria_Burden_Reduction, docs/malaria_aggregate_design.md, master)'
+              - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - Malaria Logistics:
+              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - Malaria Logistics Design: '@github(dhis2-metadata/MAL_LMIS-AGG-Malaria_Logistics, docs/mal_lmis_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           RMNCAH:
-            - RMNCAH Aggregate Design: '@github(dhis2/metadata-package-development, metadata/RMNCAH/rmncah_aggregate_design.md, master)'
+            - RMNCAH Aggregate:
+              - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
-            - TB Aggregate Design: '@github(dhis2/metadata-package-development, metadata/TB/tb_aggregate_design.md, master)'
-            - TB Logistics Design:
-              - '@github(dhis2-metadata/LMIS-Logistics_Management_Information_System, docs/lmis_general_aggregate_design.md, master)'
-              - '@github(dhis2-metadata/TB_LMIS-AGG-TB_Logistics, docs/tb_lmis_aggregate_design.md, master)'
-            - TB Case Surveillance Tracker Design: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_design.md, master)'
-            - TB Case Surveillance Tracker Installation: '@github(dhis2/metadata-package-development, metadata/TB_Tracker/TB-REG_TRACKER_V1_DHIS2.33/tb_case_surveillance_installation.md, master)'
-            - Anti-Tuberculosis Drug Resistance Survey (DRS) Tracker Design: '@github(dhis2-metadata/TB_DRS-TRK-Anti_Tuberculosis_Drug_Resistance_Survey, docs/tb_drs_design.md, master'
-            - Anti-Tuberculosis Drug Resistance Survey (DRS) Tracker Installation: '@github(dhis2-metadata/TB_DRS-TRK-Anti_Tuberculosis_Drug_Resistance_Survey, docs/tb_drs_installation.md, master'
+            - TB Aggregate:
+              - Design: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_design.md, master)'
+              - Changelog: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_changelog.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - TB Logistics:
+              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - TB Logistics Design: '@github(dhis2-metadata/TB_LMIS-AGG-TB_Logistics, docs/tb_lmis_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - TB Case Surveillance Tracker:
+              - Design: '@github(dhis2-metadata/TB_CS-TRK-TB_Case_Surveillance, docs/tb_case_surveillance_design.md, master)'
+              - Installation: '@github(dhis2-metadata/TB_CS-TRK-TB_Case_Surveillance, docs/tb_case_surveillance_installation.md, master)'
+            - Anti-Tuberculosis Drug Resistance Survey (DRS) Tracker:
+              - Design: '@github(dhis2-metadata/TB_DRS-TRK-Anti_Tuberculosis_Drug_Resistance_Survey, docs/tb_drs_design.md, master'
+              - Installation: '@github(dhis2-metadata/TB_DRS-TRK-Anti_Tuberculosis_Drug_Resistance_Survey, docs/tb_drs_installation.md, master'
           Downloads Section:
             - WHO Metadata Packages: https://dhis2.org/who-package-downloads/
       - alt__Tutorials:
