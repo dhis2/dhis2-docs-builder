@@ -377,35 +377,21 @@ nav:
               - Installation and configuration: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-config.md, master)'
               - Usage and interpretation: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-use.md, master)'
     - Implement:
-        Implement: '@github(dhis2/dhis2-docs, src/implementation/index.md, master)'
-        Understanding DHIS2 implementation:
-          - A quick guide to DHIS2 implementation: '@github(dhis2/dhis2-docs, src/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
-          - Conceptual Design Principles: '@github(dhis2/dhis2-docs, src/implementation/conceptual-design-principles.md, master)'
-          - Setting Up a New Database: '@github(dhis2/dhis2-docs, src/implementation/setting-up-a-new-database.md, master)'
-          - Deployment Strategies: '@github(dhis2/dhis2-docs, src/implementation/deployment-strategies.md, master)'
-          - DHIS2 as Data Warehouse: '@github(dhis2/dhis2-docs, src/implementation/dhis2-as-data-warehouse.md, master)'
-          - Integration concepts: '@github(dhis2/dhis2-docs, src/implementation/integration-concepts.md, master)'
-          - Guidelines for offline data entry using DHIS2: '@github(dhis2/dhis2-docs, src/implementation/offline-data-entry.md, master)'
-          - Support: '@github(dhis2/dhis2-docs, src/implementation/support.md, master)'
-          - Organisation Units: '@github(dhis2/dhis2-docs, src/implementation/organisation-units.md, master)'
-          - Data Elements and Custom Dimensions: '@github(dhis2/dhis2-docs, src/implementation/data-elements-and-custom-dimensions.md, master)'
-          - Data Sets and Forms: '@github(dhis2/dhis2-docs, src/implementation/data-sets-and-forms.md, master)'
-          - Data Quality: '@github(dhis2/dhis2-docs, src/implementation/data-quality.md, master)'
-          - Indicators: '@github(dhis2/dhis2-docs, src/implementation/indicators.md, master)'
-          - Users and user roles: '@github(dhis2/dhis2-docs, src/implementation/users-and-user-roles.md, master)'
-          - Data Analysis Tools Overview: '@github(dhis2/dhis2-docs, src/implementation/data-analysis-tools-overview.md, master)'
-          - DHIS2 as a platform: '@github(dhis2/dhis2-docs, src/implementation/dhis2-as-a-platform.md, master)'
-          - Localization of DHIS2: '@github(dhis2/dhis2-docs, src/implementation/localization-of-dhis2.md, master)'
-          - DHIS2 Tools Guide: '@github(dhis2/dhis2-docs, src/implementation/dhis2-tools-guide.md, master)'
-          - DHIS2 Documentation Guide: '@github(dhis2/dhis2-docs, src/implementation/dhis2-documentation-guide.md, master)'
-          - Submitting quick document fixes: '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
-          - Using JIRA for DHIS2 issues: '@github(dhis2/dhis2-docs, src/implementation/using-jira-for-dhis2-issues.md, master)'
-        Implementing Tracker programs:
-          - Target audience: '@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)'
-          - Introduction: '@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)'
-          - Is my project ready for Tracker?: '@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)'
-          - Build your Tracker programs: '@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)'
-        Implementing with Android:
+        Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
+        Implementing DHIS2:
+          - Overview: '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+          - Conceptual Design Principles: '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
+          - Setting Up a New Database: '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
+          - Deployment Strategies: '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
+          - DHIS2 as Data Warehouse: '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
+          - DHIS2 as a platform: '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-a-platform.md, master)'
+          - Integration concepts: '@github(dhis2/dhis2-docs-implementation, content/implementation/integration-concepts.md, master)'
+        Tracker implementation:
+          - Target audience: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/target-audience.md, master)'
+          - Introduction: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/introduction.md, master)'
+          - Is my project ready for Tracker?: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/is-my-project-ready-for-tracker.md, master)'
+          - Build your Tracker programs: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/building-your-tracker-programs.md, master)'
+        Android implementation:
           - Executive summary: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)'
           - Document Map: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)'
           - Android Capture overview: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-capture-android-overview.md, master)'
@@ -419,7 +405,24 @@ nav:
           - Scale up: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)'
           - Rollout: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/rollout.md, master)'
           - Checklist: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/checklist.md, master)'
-        Configuring the Android app:
+        Database design:
+          - Data Quality: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-quality.md, master)'
+          - Organisation Units: '@github(dhis2/dhis2-docs-implementation, content/database_design/organisation-units.md, master)'
+          - Aggregate system design:
+            - Data Elements and Custom Dimensions: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-elements-and-custom-dimensions.md, master)'
+            - Data Sets and Forms: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-sets-and-forms.md, master)'
+            - Indicators: '@github(dhis2/dhis2-docs-implementation, content/database_design/indicators.md, master)'
+        Maintenance and use:
+          - Users and user roles: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/users-and-user-roles.md, master)'
+          - Guidelines for offline data entry using DHIS2: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/offline-data-entry.md, master)'
+          - Data Analysis Tools Overview: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/data-analysis-tools-overview.md, master)'
+          - Localization of DHIS2: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/localization-of-dhis2.md, master)'
+        Support and documentation:
+          - DHIS2 Documentation Guide: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/dhis2-documentation-guide.md, master)'
+          - Submitting quick document fixes: '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
+          - Using JIRA for DHIS2 issues: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/using-jira-for-dhis2-issues.md, master)'
+          - Support: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/support.md, master)'
+        Android app configuration:
           - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
           - Introduction: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
           - Recommentations for mobile deployment: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'

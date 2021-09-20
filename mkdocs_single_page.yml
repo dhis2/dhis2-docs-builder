@@ -348,73 +348,76 @@ nav:
           Interactive Scorecard Ap Manual: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master)'
           WHO Data Quality Tool Manual: '@github(pamod-dev/dhis2-doc-support, docs/en/dhis2_who_data_quality_tool_guide.md, master)'
     - Implement:
-        DHIS2 Implementation Guide:
-           - '@github(dhis2/dhis2-docs, src/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/conceptual-design-principles.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/setting-up-a-new-database.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/deployment-strategies.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/dhis2-as-data-warehouse.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/integration-concepts.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/offline-data-entry.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/support.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/organisation-units.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/data-elements-and-custom-dimensions.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/data-sets-and-forms.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/data-quality.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/indicators.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/users-and-user-roles.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/data-analysis-tools-overview.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/dhis2-as-a-platform.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/localization-of-dhis2.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/dhis2-tools-guide.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/dhis2-documentation-guide.md, master)'
-           - '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
-           - '@github(dhis2/dhis2-docs, src/implementation/using-jira-for-dhis2-issues.md, master)'
-        DHIS2 Tracker Implementation Guide:
-           - '@github(dhis2/dhis2-docs-implementation,chapters/target-audience.md, master)'
-           - '@github(dhis2/dhis2-docs-implementation,chapters/introduction.md, master)'
-           - '@github(dhis2/dhis2-docs-implementation,chapters/is-my-project-ready-for-tracker.md, master)'
-           - '@github(dhis2/dhis2-docs-implementation,chapters/building-your-tracker-programs.md, master)'
-        DHIS2 Android Implementation Guide:
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-capture-android-overview.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-server-requirements.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/data-security-and-privacy.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/mobile-device-specs.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/SMS-for-reporting.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-configuration-for-android.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/installing-the-app.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/testing.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/rollout.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/checklist.md, master)'
-        DHIS2 Android Configuration Guide:
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)'
-           - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/app-android-settings-configuration.md, master)'
-        Mobile Device Management Guidelines:
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-c-headwind.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-d-entgra.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-e-miradore.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)"
-           - "@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)"
+        Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
+        Implementing DHIS2:
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-a-platform.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/integration-concepts.md, master)'
+        Tracker implementation:
+          - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/target-audience.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/introduction.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/is-my-project-ready-for-tracker.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/building-your-tracker-programs.md, master)'
+        Android implementation:
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-capture-android-overview.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-server-requirements.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/data-security-and-privacy.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/mobile-device-specs.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/SMS-for-reporting.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/dhis2-configuration-for-android.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/installing-the-app.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/testing.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/rollout.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/checklist.md, master)'
+        Managing mobile devices:
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-c-headwind.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-d-entgra.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-e-miradore.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)'
+        Database design:
+          - '@github(dhis2/dhis2-docs-implementation, content/database_design/data-quality.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/database_design/organisation-units.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/database_design/data-elements-and-custom-dimensions.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/database_design/data-sets-and-forms.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/database_design/indicators.md, master)'
+        Maintenance and use:
+          - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/users-and-user-roles.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/offline-data-entry.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/data-analysis-tools-overview.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/localization-of-dhis2.md, master)'
+        Support and documentation:
+          - '@github(dhis2/dhis2-docs-implementation, content/support_documentation/dhis2-documentation-guide.md, master)'
+          - '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/support_documentation/using-jira-for-dhis2-issues.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/support_documentation/support.md, master)'
+        Android app configuration:
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)'
+          - '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/app-android-settings-configuration.md, master)'
     - Develop:
         alt__DHIS core version 2.36:
           Developer Manual:
