@@ -21,6 +21,13 @@
 |User Manual|2.35|[HTML](../../full/use/user-guides/dhis-core-version-235/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-235/dhis2-user-manual.pdf)|
 |User Manual|2.34|[HTML](../../full/use/user-guides/dhis-core-version-234/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-234/dhis2-user-manual.pdf)|
 
+### Android
+
+|Document|Version|||
+|:---------|---|---|---|
+|Android Configuration|master|[HTML](../../full/use/dhis2-android-app.html)|[PDF](../../full/use/dhis2-android-app.pdf)|
+
+
 ## Optional Apps Manuals
 
 |Document|Version|||
@@ -35,10 +42,9 @@
 |Document|||
 |:------|---|---|
 |Implementation Guide|[HTML](../../full/implement/dhis2-implementation-guide.html)|[PDF](../../full/implement/dhis2-implementation-guide.pdf)|
-|Tracker Implementation Guide|[HTML](../../full/implement/dhis2-tracker-implementation-guide.html)|[PDF](../../full/implement/dhis2-tracker-implementation-guide.pdf)|
-|Android Implementation Guide|[HTML](../../full/implement/dhis2-android-implementation-guide.html)|[PDF](../../full/implement/dhis2-android-implementation-guide.pdf)|
-|Android Configuration Guide|[HTML](../../full/implement/dhis2-android-configuration-guide.html)|[PDF](../../full/implement/dhis2-android-configuration-guide.pdf)|
-|Mobile Device Management Guidelines|[HTML](../../full/implement/mobile-device-management-guidelines.html)|[PDF](../../full/implement/mobile-device-management-guidelines.pdf)|
+|Tracker Implementation Guide|[HTML](../../full/implement/tracker-implementation.html)|[PDF](../../full/implement/tracker-implementation.pdf)|
+|Android Implementation Guide|[HTML](../../full/implement/android-implementation.html)|[PDF](../../full/implement/android-implementation.pdf)|
+|Mobile Device Management Guidelines|[HTML](../../full/implement/managing-mobile-devices.html)|[PDF](../../full/implement/managing-mobile-devices.pdf)|
 
 ## Developer
 
