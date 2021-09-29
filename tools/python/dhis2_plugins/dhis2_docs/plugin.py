@@ -36,8 +36,8 @@ class Dhis2DocsPlugin(BasePlugin):
             lang = 'en'
         config['site_url'] = config['site_url'].replace('/en','/'+lang)
         config['site_dir'] = config['site_dir'].replace('/en','/'+lang)
-        #config['extra']['dhis2_language'] = config['extra']['dhis2_language'].replace('/en/','/'+lang+'/')
         config['theme']['language'] = lang[0:2]
+        config['theme']['language_select'] = lang
 
         fetcher = dhis2_utils.fetcher(config,self.config['tx_project_slug'],self.config['template'])
         if lang != 'en':
@@ -153,14 +153,14 @@ class Dhis2DocsPlugin(BasePlugin):
                         anchor_count = 1
                         break
 
-            
+
             if anchor_count > 1:
                 print("WARNING -  Link '{}' in file '{}' is ambiguous:".format(l,self.current_page))
                 for a in ambiguities:
                     print("           {}{}".format(a,l))
 
                 # print("         The first anchor with that name, in the closest document, will be used")
-         
+
         ret = matchobj.group(1)+new_link
         return ret
 
@@ -246,7 +246,7 @@ class Dhis2DocsPlugin(BasePlugin):
 
 
         if self.config['make_pdfs']:
-            
+
             for dirpath, dirnames, filenames in dhis2_utils.os.walk(config['site_dir']):
                 for filename in [f for f in filenames if f.endswith(".html")]:
                     # don't convert files that are in the root (index files)

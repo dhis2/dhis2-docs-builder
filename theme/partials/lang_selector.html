@@ -23,7 +23,7 @@
       <p>{{ key | upper }}</p>
     </option>
     {% endif %} {% endfor %} {% for key, value in
-    config.extra.dhis2_languages.items() %} {% if key != config.theme.language
+    config.extra.dhis2_languages.items() %} {% if key != config.theme.language_select
     %}
     <option value="/{{ key }}/{{ page.url }}" title="{{ value }}">
       <p>{{ key | upper }}</p>
