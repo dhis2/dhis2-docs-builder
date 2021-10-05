@@ -622,6 +622,9 @@ nav:
             - HIV Aggregate:
               - Design: '@github(dhis2-metadata/HIV-AGG-HIV_Aggregate, docs/hiv_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - HIV Case Surveillance Tracker:
+              - Design: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_design.md, master)'
+              - Installation: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_installation.md, master)'
             - HIV Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - HIV Logistics Design: '@github(dhis2-metadata/HIV_LMIS-AGG-HIV_Logistics, docs/hiv_lmis_aggregate_design.md, master)'
