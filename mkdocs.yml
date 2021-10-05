@@ -309,6 +309,20 @@ nav:
               - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/user/dhis2-tutorials.md,master)'
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,master)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,master)'
+        Android App:
+          - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
+          - Introduction: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
+          - Recommentations for mobile deployment: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'
+          - Contribute to the app: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)'
+          - New visual configurations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)'
+          - New settings: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)'
+          - New Android-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)'
+          - Program-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)'
+          - Features supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)'
+          - Program rules supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)'
+          - Program indicators supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)'
+          - Value types supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)'
+          - Settings configuration: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/app-android-settings-configuration.md, master)'
         Optional Apps:
           Standalone Action Tracker App:
             alt__App version 1.0:
@@ -405,6 +419,18 @@ nav:
           - Scale up: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/scale-up.md, master)'
           - Rollout: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/rollout.md, master)'
           - Checklist: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/checklist.md, master)'
+          - Managing mobile devices:
+              - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
+              - Considerations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)'
+              - Choosing an MDM: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)'
+              - Comparison chart: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)'
+              - "Annex A - Previous Info": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)'
+              - "Annex B - Flyve": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)'
+              - "Annex C - Headwind": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-c-headwind.md, master)'
+              - "Annex D - Entgra": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-d-entgra.md, master)'
+              - "Annex E - Miradore": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-e-miradore.md, master)'
+              - "Annex F - Engineplus": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)'
+              - "Annex G - Scalefusion": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)'
         Database design:
           - Data Quality: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-quality.md, master)'
           - Organisation Units: '@github(dhis2/dhis2-docs-implementation, content/database_design/organisation-units.md, master)'
@@ -422,32 +448,6 @@ nav:
           - Submitting quick document fixes: '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
           - Using JIRA for DHIS2 issues: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/using-jira-for-dhis2-issues.md, master)'
           - Support: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/support.md, master)'
-        Android app configuration:
-          - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
-          - Introduction: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
-          - Recommentations for mobile deployment: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'
-          - Contribute to the app: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)'
-          - New visual configurations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)'
-          - New settings: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)'
-          - New Android-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)'
-          - Program-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)'
-          - Features supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)'
-          - Program rules supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)'
-          - Program indicators supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)'
-          - Value types supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)'
-          - Settings configuration: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/app-android-settings-configuration.md, master)'
-        Managing mobile devices:
-          - About this guide: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/common/about-this-android-guide.md, master)'
-          - Considerations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/considerations.md, master)'
-          - Choosing an MDM: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/choosing-an-mdm.md, master)'
-          - Comparison chart: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/comparison-chart.md, master)'
-          - "Annex A - Previous Info": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-a-previous-info.md, master)'
-          - "Annex B - Flyve": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-b-flyve.md, master)'
-          - "Annex C - Headwind": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-c-headwind.md, master)'
-          - "Annex D - Entgra": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-d-entgra.md, master)'
-          - "Annex E - Miradore": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-e-miradore.md, master)'
-          - "Annex F - Engineplus": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-f-engineplus.md, master)'
-          - "Annex G - Scalefusion": '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/mdm/A-g-scalefusion.md, master)'
         Software Release Information:
           DHIS2 core releases:
             alt__DHIS core version 2.36:
