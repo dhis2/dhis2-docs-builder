@@ -370,23 +370,16 @@ nav:
             alt__App version 1.0.3:
               - Immunization analysis app user manual: '@github(dhis2/metadata-package-development, metadata/AEFI/immunisation_analysis_app_user_manual.md, master)'
           Interactive Scorecard App:
-            alt__App version 0.1:
-              - Scorecard and demo: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/scorecard-and-demo-server.md, master)'
-              - Installation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/installing-scorecard.md, master)'
-              - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/opening-and-browsing-scorecards.md, master)'
-              - Analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/analysis-with-scorecard.md, master)'
-              - Layout: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/scorecard-layouts-headers-and-legends.md, master)'
-              - Options: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/additional-options.md, master)'
-              - Context menu: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/context-menu.md, master)'
-              - Further analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/further-analysis.md, master)'
-              - Creating and managing scorecards: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/creating-and-managing-scorecard.md, master)'
-              - Customization: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/customizations-and-editing-of-scorecard.md, master)'
-              - Related indicator analysis: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/related-indicators-analysis-in-dhis2.md, master)'
-              - Implementation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/scorecard-and-bottleneck-analysis-implementation.md, master)'
-              - Help: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/help-tour-guide-translation.md, master)'
-              - Use cases: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/scorecard-community-and-use-cases.md, master)'
-              - ANNEX: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/annex.md, master)'
-              - BIBLIOGRAPHY: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard_old_version/bibliography.md, master)'
+            alt__App version 2.5.0:
+              - About this guide: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/about-this-guide.md, scorecard-v2.5.0)'
+              - Introduction to the Scorecard App: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/introduction-to-scorecard.md, scorecard-v2.5.0)'
+              - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/accessing-scorecard-app.md, scorecard-v2.5.0)'
+              - Creating scorecard: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/creating-scorecard.md, scorecard-v2.5.0)'
+              - Saving configurations: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/saving-configurations.md, scorecard-v2.5.0)'
+              - Viewing scorecard: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/viewing-scorecard.md, scorecard-v2.5.0)'
+              - Scorecard App Architecture: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/scorecard-app-architecture.md, scorecard-v2.5.0)'
+              - Accessing and transilating scorecard: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/accessing-and-translating-scorecard.md, scorecard-v2.5.0)'
+              - Support and maintenance options: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/scorecard/support-and-maintanace-options.md, scorecard-v2.5.0)'
           WHO Data Quality Tool:
               - Installation and configuration: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-config.md, master)'
               - Usage and interpretation: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-use.md, master)'
