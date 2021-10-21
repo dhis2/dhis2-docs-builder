@@ -558,6 +558,29 @@ nav:
             - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
             - Shared metadata library: '@github(dhis2/dhis2-docs, src/metadata/metadata-shared-library.md, master)'
             - Naming conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
+          CHIS Community Health Information System:
+            - CHIS General Design: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/chis_aggregate_design.md, master'
+            - Adolescant Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ado_aggregate_design.md, master'
+            - Child Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cdh_aggregate_design.md, master'
+            - Child Protection and Interpersonal Violence: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cpiv_aggregate_design.md, master'
+            - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/cch_crvs_aggregate_design.md, master'
+            - Clean Energy: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ene_aggregate_design.md, master'
+            - Community Based Surveillance: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cbs_aggregate_design.md, master'
+            - HIV: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_hiv_aggregate_design.md, master'
+            - Immunization: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_epi_aggregate_design.md, master'
+            - Integrated Community Case Management: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_iccm_aggregate_design.md, master'
+            - Malaria: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_mal_aggregate_design.md, master'
+            - Maternal Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_mat_aggregate_design.md, master'
+            - Mental Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_men_aggrgate_design.md, master'
+            - Neglected Tropical Diseases: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ntd_aggregate_design.md, master'
+            - Newborn Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_nbh_aggregate_design.md, master'
+            - Non-communicable Diseases: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ncd_aggregate_design.md, master'
+            - Nutrition: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_nut_aggregate_design.md, master'
+            - People-centered Services: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_pcs_aggregate_design.md, master'
+            - Population Composition: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_pop_aggregate_design.md, master'
+            - Sexual and Reproductive Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_srh_aggregate_design.md, master'
+            - Tuberculosis: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_tb_aggregate_design.md, master'
+            - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_wash_aggregate_design.md, master'
           COVID-19 Surveillance:
             - COVID-19 Digital Data Package: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_surveillance_digital_data_package.md, master)'
             - Release Notes: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_release_notes_v03.md, master)'
@@ -626,8 +649,9 @@ nav:
             - Immunization Aggregate:
               - Design: '@github(dhis2-metadata/EPI-AGG-Expanded_Program_On_Immunization, docs/immunisation_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
-            - EPI Immunization eRegistry:
-              - Design: '@github(dhis2-metadata/EPI-TRK-Immunization_Registry, docs/epi_immunization_registry_design.md, master'
+            - EIR Immunization eRegistry:
+              - Design: '@github(dhis2-metadata/EIR-TRK-Electronic_Immunization_Registry, docs/eir_immunization_registry_design.md, master'
+              - Change Log: '@github(dhis2-metadata/EIR-TRK-Electronic_Immunization_Registry, docs/eir_change_log.md, master'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
             - EPI Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
