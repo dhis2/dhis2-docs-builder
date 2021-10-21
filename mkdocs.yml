@@ -563,7 +563,7 @@ nav:
             - Adolescant Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ado_aggregate_design.md, master'
             - Child Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cdh_aggregate_design.md, master'
             - Child Protection and Interpersonal Violence: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cpiv_aggregate_design.md, master'
-            - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/cch_crvs_aggregate_design.md, master'
+            - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_crvs_aggregate_design.md, master'
             - Clean Energy: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ene_aggregate_design.md, master'
             - Community Based Surveillance: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cbs_aggregate_design.md, master'
             - HIV: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_hiv_aggregate_design.md, master'
