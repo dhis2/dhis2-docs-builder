@@ -708,6 +708,7 @@ nav:
           - Analysing Nginx logs using goAccess: '@github(dhis2/dhis2-docs, src/tutorials/analysing-nginx-logs-using-goaccess.md, master)'
           - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
           - What are users up to?: '@github(dhis2/dhis2-docs, src/tutorials/what-are-users-up-to.md, master)'
+          - Configure OIDC with Okta and DHIS 2: '@github(dhis2/dhis2-docs, src/tutorials/configure-oidc-with-okta.md, master)'
       - alt__User Stories:
           - User Stories: '@github(dhis2/dhis2-docs, src/stories/index.md, master)'
           - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
