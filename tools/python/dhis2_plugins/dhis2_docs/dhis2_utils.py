@@ -270,11 +270,13 @@ class fetcher:
     def fix_refs(self, tofile):
 
         # read the file into a string
-        f = open(tofile, "r")
+        # open with UTF-8-sig to remove any BOMs from file
+        f = open(tofile, "r", encoding='UTF-8-sig')
         markdown = f.read()
         f.close()
 
-        md = self.ref_update(markdown)
+        # replace \uFEFF to remove any BOMs
+        md = self.ref_update(markdown.replace(u'\uFEFF', ''))
 
         # write back to the file
         ub = open(tofile,'w')
