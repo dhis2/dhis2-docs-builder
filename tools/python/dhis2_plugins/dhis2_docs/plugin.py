@@ -60,7 +60,7 @@ class Dhis2DocsPlugin(BasePlugin):
             # formatting for transifex)
             try:
                 print("Formatting files with prettier and removing line wrapping...")
-                prettify = subprocess.Popen(['prettier', '--prose-wrap', 'never', '--write', 'docs/**/*.md'])
+                prettify = subprocess.Popen(['prettier', '--prose-wrap', 'never', '--tab-width', '4', '--write', 'docs/**/*.md'])
                 prettify.wait()
                 print("Done.")
 
