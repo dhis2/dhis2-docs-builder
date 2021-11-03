@@ -783,6 +783,7 @@ nav:
           - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
           - '@github(dhis2/cache-cleaner-app, docs/tutorials/index.yml, master)'
           - Configure OIDC with Okta: '@github(dhis2/dhis2-docs, src/tutorials/configure-oidc-with-okta.md, master)'
+          - Performance monitoring with Glowroot: '@github(dhis2/dhis2-docs, src/tutorials/glowroot.md, master)'
           - Setting up targets: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-targets.md, master)'
           - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/tutorials/creating-scorecards-using-pt-app.md, master)'
           - Setting up email: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-email.md, master)'
