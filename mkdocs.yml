@@ -516,6 +516,9 @@ nav:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
               alt__Android app version 2.1.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
+            alt__DHIS core version 2.37:
+              alt__Android app version 2.5.0:
+                - Preliminary Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.5/ReleaseNote-2.5.0.md, 2.5)'
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
         Using the API:
