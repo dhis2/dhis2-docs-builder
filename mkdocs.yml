@@ -8,8 +8,6 @@ google_analytics: ['UA-157707339-2', 'docs.dhis2.org']
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
 repo_name: 'dhis2-docs on GitHub'
-# Query string example
-# edit_uri: tree/master/src/commonmark/en/content/
 use_directory_urls: false
 # docs_dir:
 
@@ -49,8 +47,17 @@ theme:
     alt_marker: 'alt__'
   custom_dir: 'theme'
   palette:
-    primary: 'black'
-    accent: 'blue'
+    - scheme: default
+      primary: 'black'
+      accent: 'blue'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'black'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   language: 'en'
   font: false
 
