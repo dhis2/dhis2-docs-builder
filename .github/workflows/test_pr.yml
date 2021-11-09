@@ -78,4 +78,4 @@ jobs:
       with:
         issue-number: ${{ github.event.pull_request.number }}
         body: |
-          CI Preview: https://docs.dhis2.org/temp/${{ env.GITHUB_HEAD_REF }}/en/home.html
+          CI Preview: https://docs.dhis2.org/temp/$${{ github.event.pull_request.head.ref }}/en/home.html
