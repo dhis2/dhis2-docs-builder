@@ -8,18 +8,17 @@ google_analytics: ['UA-157707339-2', 'docs.dhis2.org']
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
 repo_name: 'dhis2-docs on GitHub'
-# Query string example
-# edit_uri: tree/master/src/commonmark/en/content/
 use_directory_urls: false
 # docs_dir:
 
 extra:
   dhis2_languages:
+    en: 'English'
     fr: 'Français'
     es_419: 'Español (latinoamerica)'
-    en: 'English'
     pt: 'Português'
-    cs: 'Czech'
+    cs: 'čeština'
+    zh: '中文'
   social:
     - icon: fontawesome/brands/github
       link: https://www.github.com/dhis2
@@ -48,8 +47,17 @@ theme:
     alt_marker: 'alt__'
   custom_dir: 'theme'
   palette:
-    primary: 'black'
-    accent: 'blue'
+    - scheme: default
+      primary: 'black'
+      accent: 'blue'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'black'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   language: 'en'
   font: false
 
@@ -63,7 +71,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - search
+  - search:
+      separator: '[\s]+'
   - edit_url
   - dhis2_docs
   - minify:
@@ -87,8 +96,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.inlinehilite:
       custom_inline:
         - name: math
@@ -107,141 +116,89 @@ markdown_extensions:
 site_dir: ./target/en/
 
 nav:
-  - Home: '@github(dhis2/dhis2-docs, src/commonmark/en/content/home.md, master)'
-  - Use:
-      Use: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/index.md, master)'
-      User guide:
-        alt__DHIS core version 2.35:
-          What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.35)'
-          Collecting data:
-            - Data Entry: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.35)'
-          Tracking individual level data:
-            - Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.35)'
-            - Event Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.35)'
-            - Tracker Capture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.35)'
-          Approving data:
-            - Data Approval: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-approval.md,2.35)'
-          Analysing data:
-            - Reports: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-reporting-functionality.md,2.35)'
-            - Data Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-visualizer.md,2.35)'
-            - Pivot Tables: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/analyze-data-in-pivot-tables.md,2.35)'
-            - Maps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-maps-app.md,2.35)'
-            - Dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.35)'
-            - Event Reports: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-reports-app.md,2.35)'
-            - Event Visualizer: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-visualizer-app.md,2.35)'
-          Changing user settings:
-            - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.35)'
-            - User account preferences: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/set-user-account-preferences.md,2.35)'
-          Configuring the system:
-            - Metadata: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-metadata.md,2.35)'
-            - Users, Roles and Groups: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/manage-users-user-roles-and-user-groups.md,2.35)'
-            - User authorities: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/user-authorities.md,2.35)'
-            - About sharing of objects: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-sharing-of-objects.md,2.35)'
-            - Maps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-the-gis-app.md,2.35)'
-            - Report: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/configure-report-functionality.md,2.35)'
-            - System settings: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/system-settings.md,2.35)'
-          Maintaining the system:
-            - Data Administration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/data-administration.md,2.35)'
-            - Visualize usage statistics: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/visualize-usage-statistics.md,2.35)'
-            - Datastore Manager: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/datastore-manager.md,2.35)'
-          Understanding the data model:
-            - About data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-data-dimensions.md,2.35)'
-            - Additional data dimensions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/additional-data-dimensions.md,2.35)'
-            - Relationship model: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/relationship-model.md,2.35)'
-          Additional information:
-            - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-glossary.md,2.35)'
-            - Demo server, live package and database design: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/about-demo-server-live-package-and-database-design.md,2.35)'
-            - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-tutorials.md,2.35)'
-            - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/dhis2-frequently-asked-questions.md,2.35)'
-            - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/release-and-upgrade-notes.md,2.35)'
-        alt__DHIS core version 2.34:
-          - Getting started - help to navigate the user guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/getting-started-help-to-navigate-the-user-guide.md,2.34)'
-          - What is DHIS2?: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/what-is-dhis2.md,2.34)'
-          - Managing dashboards: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/managing-dashboards.md,2.34)'
-          - Messaging: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/messaging.md,2.34)'
-          - Using the Data Entry app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-data-entry-app.md,2.34)'
-          - Using the Event Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-event-capture-app.md,2.34)'
-          - Using the Tracker Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-tracker-capture-app.md,2.34)'
-          - Using the Capture app: '@github(dhis2/dhis2-docs, src/commonmark/en/content/user/using-the-capture-app.md,2.34)'
-      Optional Apps:
-        Action Tracker App:
-          alt__App version 1.0: '@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master, 1)'
-        Bottleneck Analysis App:
-          alt__App version 1.2.2: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master, 1)'
-        Interactive Scorecard App:
-          alt__App version 0.1: '@github(hisptz/unicef-apps-docs,src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master, 1)'
-        WHO Data Quality Tool: '@github(pamod-dev/dhis2-doc-support,docs/en/dhis2_who_data_quality_tool_guide.md, master, 1)'
-  - Implement:
-      Implement: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/index.md, master)'
-      Implementer guide:
-        - A quick guide to DHIS2 implementation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
-        - Conceptual Design Principles: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/conceptual-design-principles.md, master)'
-        - DHIS2 Documentation Guide: '@github(dhis2/dhis2-docs, src/commonmark/en/content/implementation/dhis2-documentation-guide.md, master)'
-      Tracker Implementation guide: '@github(dhis2/dhis2-docs-implementation,dhis2_tracker_implementation_INDEX.md, master, 1)'
-      Software Release Information:
-        DHIS2 core releases:
+    - Home: '@github(dhis2/dhis2-docs, src/home.md, master)'
+    - Implement:
+        Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
+        Support and documentation:
+          - DHIS2 Documentation Guide: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/dhis2-documentation-guide.md, master)'
+          - Submitting quick document fixes: '@github(dhis2/dhis2-docs, src/common/submitting-a-doc-fix.md, master)'
+          - Using JIRA for DHIS2 issues: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/using-jira-for-dhis2-issues.md, master)'
+          - Support: '@github(dhis2/dhis2-docs-implementation, content/support_documentation/support.md, master)'
+        Software Release Information:
+          DHIS2 core releases:
+            alt__DHIS core version 2.36:
+              - Release Notes: '@github(dhis2/dhis2-releases,releases/2.36/ReleaseNote-2.36.md, master)'
+              - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.36/README.md, master)'
+            alt__DHIS core version 2.35:
+              - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
+              - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
+            alt__DHIS core version 2.34:
+              - Release Notes: '@github(dhis2/dhis2-releases,releases/2.34/ReleaseNote-2.34.0.md, master)'
+              - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.34/README.md, master)'
+          Android app releases:
+            alt__DHIS core version 2.36:
+              alt__Android app version 2.4.0:
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.4/ReleaseNote-2.4.0.md, master)'
+            alt__DHIS core version 2.35:
+              alt__Android app version 2.3.0:
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
+            alt__DHIS core version 2.34:
+              alt__Android app version 2.2.0:
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
+              alt__Android app version 2.1.0:
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
+    - Manage:
+        Manage: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
+        Performing system administration:
+          alt__DHIS core version 2.36:
+            - Installation: '@github(dhis2/dhis2-docs, src/sysadmin/installation.md,2.36)'
+            - Upgrading: '@github(dhis2/dhis2-docs, src/sysadmin/upgrading.md, master)'
+            - Monitoring: '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md,2.36)'
+            - Audit: '@github(dhis2/dhis2-docs, src/sysadmin/audit.md,2.36)'
+            - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md,2.36)'
           alt__DHIS core version 2.35:
-            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
-            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
+            - Installation: '@github(dhis2/dhis2-docs, src/sysadmin/installation.md,2.35)'
+            - Upgrading: '@github(dhis2/dhis2-docs, src/sysadmin/upgrading.md, master)'
+            - Monitoring: '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md,2.35)'
+            - Audit: '@github(dhis2/dhis2-docs, src/sysadmin/audit.md,2.35)'
+            - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md,2.35)'
           alt__DHIS core version 2.34:
-            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.34/ReleaseNote-2.34.0.md, master)'
-            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.34/README.md, master)'
-          alt__DHIS core version 2.33:
-            - Release Notes: '@github(dhis2/dhis2-releases,releases/2.33/ReleaseNote-2.33.0.md, master)'
-            - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.33/README.md, master)'
-        Android app releases:
-          alt__DHIS core version 2.35:
-            alt__Android app version 2.3.0:
-              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
-          alt__DHIS core version 2.34:
-            alt__Android app version 2.2.0:
-              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
-            alt__Android app version 2.1.0:
-              - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
-  - Develop:
-      Develop: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/index.md, master)'
-      DHIS2 Developer guide:
-        alt__DHIS core version 2.35:
-          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.35)'
-          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.35)'
-        alt__DHIS core version 2.34:
-          - Apps: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/apps.md,2.34)'
-          - DHIS2 and R integration: '@github(dhis2/dhis2-docs, src/commonmark/en/content/developer/dhis2-and-r-integration.md,2.34)'
-      DHIS2 Javadocs: https://docs.dhis2.org/master/javadoc/
-      DHIS2 Android SDK Developer Guide: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
-  - Manage:
-      Manage: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/index.md, master)'
-      DHIS2 System Administration guide:
-        alt__DHIS core version 2.35:
-          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.35)'
-          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.35)'
-          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.35)'
-          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.35)'
-        alt__DHIS core version 2.34:
-          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.34)'
-          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md,2.34)'
-          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md,2.34)'
-          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.34)'
-        alt__DHIS core version 2.33:
-          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md,2.33)'
-          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md,2.33)'
-        alt__DHIS core version master:
-          - Installation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/installation.md, master)'
-          - Monitoring: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/monitoring.md, master)'
-          - Audit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/audit.md, master)'
-          - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/commonmark/en/content/sysadmin/SMS-reporting.md, master)'
-  - Topics:
-      - alt__Metadata:
-          DHIS2 WHO Digital Health Data Toolkit:
-            - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/about-metadata.md, master)'
-            - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-design-principles.md, master)'
-            - Naming conventions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/metadata/metadata-naming-conventions.md, master)'
+            - Installation: '@github(dhis2/dhis2-docs, src/sysadmin/installation.md,2.34)'
+            - Upgrading: '@github(dhis2/dhis2-docs, src/sysadmin/upgrading.md, master)'
+            - Monitoring: '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md,2.34)'
+            - Audit: '@github(dhis2/dhis2-docs, src/sysadmin/audit.md,2.34)'
+            - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md,2.34)'
+          alt__DHIS core version master:
+            - Installation: '@github(dhis2/dhis2-docs, src/sysadmin/installation.md, master)'
+            - Upgrading: '@github(dhis2/dhis2-docs, src/sysadmin/upgrading.md, master)'
+            - Monitoring: '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md, master)'
+            - Audit: '@github(dhis2/dhis2-docs, src/sysadmin/audit.md, master)'
+            - Using Gateways for SMS reporting: '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md, master)'
+    - Topics:
+      - alt__Tutorials:
+          - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
+          - '@github(dhis2/cache-cleaner-app, docs/tutorials/index.yml, master)'
+          - Configure OIDC with Okta: '@github(dhis2/dhis2-docs, src/tutorials/configure-oidc-with-okta.md, master)'
+          - Setting up targets: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-targets.md, master)'
+          - Creating scorecards with Pivot Tables: '@github(dhis2/dhis2-docs, src/tutorials/creating-scorecards-using-pt-app.md, master)'
+          - Setting up email: '@github(dhis2/dhis2-docs, src/tutorials/setting-up-email.md, master)'
+          - Google Earth Engine sign-up: '@github(dhis2/dhis2-docs, src/tutorials/google-earth-engine-signup.md, master)'
+          - Analysing Nginx logs using goAccess: '@github(dhis2/dhis2-docs, src/tutorials/analysing-nginx-logs-using-goaccess.md, master)'
+          - Analysing Postgresql logs using pgbadger: '@github(dhis2/dhis2-docs, src/tutorials/analysing-postgresql-logs-using-pgbadger.md, master)'
+          - What are users up to?: '@github(dhis2/dhis2-docs, src/tutorials/what-are-users-up-to.md, master)'
       - alt__User Stories:
-          - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
-          - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
+          - User Stories: '@github(dhis2/dhis2-docs, src/stories/index.md, master)'
+          - Improving surveillance of Visceral Leishmaniasis VL in Somalia: '@github(dhis2/dhis2-docs, src/stories/dhis2-tracker-improving-surveillance-of-visceral-leishmaniasis-vl-in-somalia-draft.md, master)'
+          - DHIS2 in the Autonomous Region of Kurdistan, Iraq: '@github(dhis2/dhis2-docs, src/stories/dhis2-in-the-autonomous-region-of-kurdistan-iraq.md, master)'
+          - West Africa Regional Systems and DHIS2: '@github(dhis2/dhis2-docs, src/stories/west-africa-regional-systems-and-dhis2.md, master)'
+          - Zambia Education Management System EMIS: '@github(dhis2/dhis2-docs, src/stories/zambia-education-management-system-emis.md, master)'
+          - Rwanda HMIS powered by DHIS2: '@github(dhis2/dhis2-docs, src/stories/rwanda-hmis-powered-by-dhis2.md, master)'
+          - DHIS2 Tracker e-Registry in Palestine: '@github(dhis2/dhis2-docs, src/stories/dhis2-tracker-e-registry-in-palestine.md, master)'
           - Tanzania Integrated Health Information Architecture:
-              - Overview: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture.md, master)'
-              - Architecture: '@github(dhis2/dhis2-docs, src/commonmark/en/content/stories/tanzania-integrated-health-information-architecture_B.md, master)'
+              - Overview: '@github(dhis2/dhis2-docs, src/stories/tanzania-integrated-health-information-architecture.md, master)'
+              - Architecture: '@github(dhis2/dhis2-docs, src/stories/tanzania-integrated-health-information-architecture_B.md, master)'
+          - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/stories/dhis2-a-management-information-system-at-psi.md, master)'
+          - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
       - alt__Single Page:
-          - Current documentation: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs.md, master)'
-          - Previous versions: '@github(dhis2/dhis2-docs, src/commonmark/en/content/single_page_docs_archive.md, master)'
+          - Current documentation: '@file(special_pages/single_page_docs.md)'
+          - Previous versions: '@file(special_pages/single_page_docs_archive.md)'

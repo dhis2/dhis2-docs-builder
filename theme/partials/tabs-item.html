@@ -1,25 +1,19 @@
 {#-
   This file was automatically generated - do not edit
 -#}
-{% if nav_item.is_homepage or nav_item.url == "index.html" %}
-  <li class="md-tabs__item">
-    {% set class = "md-tabs__link" %}
-    {% if not page.ancestors | length and nav | selectattr("url", page.url) %}
-      {% set class = "md-tabs__link md-tabs__link--active" %}
-    {% endif %}
-    <a href="{{ nav_item.url | url }}" class="{{ class }}">
-      {{ nav_item.title }}
-    </a>
-  </li>
-{% elif nav_item.children and nav_item.children | length > 0 %}
-  {% set title = title | default(nav_item.title) %}
+{% if not class %}
+  {% set class = "md-tabs__link" %}
+  {% if nav_item.active %}
+    {% set class = class ~ " md-tabs__link--active" %}
+  {% endif %}
+{% endif %}
+{% if nav_item.children %}
+  {% set title = title | d(nav_item.title) %}
 
   {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
   {% if ((nav_item.children | first).title|replace(alt_prefix,'')) != (nav_item.children | first).title %}
-
     <select onChange="window.document.location.href=this.options[this.selectedIndex].value;">
       <option selected disabled hidden>{{ nav_item.title }}</option>
-
       {% for nav_sub in nav_item.children %}
         {% set tab_alt_title = nav_sub.title|replace(alt_prefix,'') %}
         {% if nav_sub.active %}
@@ -30,32 +24,29 @@
           {% include "partials/tabs-firstpage.html" %}
         {% else %}
           <option value="{{ nav_sub.url | url }}">{{ tab_alt_title }}</option>
-
         {% endif %}
-
       {% endfor %}
-
     </select>
-
   {% else %}
-    {% if (nav_item.children | first).children %}
-      {% set nav_item = nav_item.children | first %}
-      {% include "partials/tabs-item.html" %}
-    {% else %}
-      <li class="md-tabs__item">
-        {% set class = "md-tabs__link" %}
-        {% if nav_item.active %}
-          {% set class = "md-tabs__link md-tabs__link--active" %}
-        {% endif %}
-        <a href="{{ (nav_item.children | first).url | url }}" class="{{ class }}">
-          {{ title }}
-        </a>
-      </li>
-    {% endif %}
+
+
+  {% set nav_item = nav_item.children | first %}
+  {% if nav_item.children %}
+    {% include "partials/tabs-item.html" %}
+  {% else %}
+    <li class="md-tabs__item">
+      <a href="{{ nav_item.url | url }}" class="{{ class }}">
+        {{ title }}
+      </a>
+    </li>
   {% endif %}
+
+
+{% endif %}
+
 {% elif nav_item.url.startswith("http") %}
   <li class="md-tabs__item">
-    <a href="{{ nav_item.url | url }}" class="md-tabs__link">
+    <a href="{{ nav_item.url | url }}" class="{{ class }}">
       {{ nav_item.title }}
     </a>
   </li>
