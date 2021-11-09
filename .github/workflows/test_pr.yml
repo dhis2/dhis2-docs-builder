@@ -71,7 +71,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'target/en/.'
-        DEST_DIR: 'temp/GITHUB_HEAD_REF/en/'
+        DEST_DIR: "temp/{GITHUB_HEAD_REF}/en/"
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
 
     - name: Add comment
@@ -79,4 +79,4 @@ jobs:
       with:
         issue-number: ${{ github.event.issue.number }}
         body: |
-          Preview: https://docs.dhis2.org/temp/$GITHUB_HEAD_REF/en/home.html
+          Preview: https://docs.dhis2.org/temp/${GITHUB_HEAD_REF}/en/home.html
