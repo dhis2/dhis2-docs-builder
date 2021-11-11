@@ -952,8 +952,9 @@ v-tag {
   justify-content: space-between;
 }
 
-.footer-nav-link {
+a.footer-nav-link {
   display: flex;
+  color: var(--action-base);
 }
 
 .footer-nav-link-next {
@@ -969,7 +970,9 @@ v-tag {
 .footer-nav-link-next svg {
   margin-left: 8px;
 }
-
+.footer-nav-link svg path {
+  fill: var(--action-base) !important;
+}
 .md-content__inner > :last-child {
   margin-bottom: 2rem;
 }
