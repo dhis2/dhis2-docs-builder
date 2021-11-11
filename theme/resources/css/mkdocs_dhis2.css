@@ -100,7 +100,7 @@
   --text-base: #e8e6e3;
   --text-muted: #b0a99f;
 
-  --action-base: #9170cd;
+  --action-base: #8fccff;
   --action-hover: #6aafe7;
   --nav-link-active: #222526;
 
@@ -161,9 +161,7 @@ select {
 select::-ms-expand {
   display: none;
 }
-select:hover {
-  /* cursor: pointer; */
-}
+
 select:focus {
   box-shadow: 0 0 1px 3px var(--action-hover);
   box-shadow: 0 0 0 3px -moz-mac-focusring;
@@ -352,7 +350,7 @@ select option {
 .md-header__title {
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 0 1.5rem 0 0.5rem !importan;
+  padding: 0 1.5rem 0 0.5rem !important;
 }
 
 /*  */
@@ -894,7 +892,7 @@ caption {
 
 .md-search-result mark {
   color: unset;
-  background-color: #ffdf39;
+  background-color: var(--yellow200);
   font-weight: 500;
 }
 
