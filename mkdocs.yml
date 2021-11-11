@@ -281,6 +281,7 @@ nav:
             Working with your account:
               - Messaging: '@github(dhis2/dhis2-docs, src/user/messaging.md,master)'
               - '@github(dhis2/user-profile-app, docs/user/index.yml, master)'
+              - Personal access tokens: '@github(dhis2/dhis2-docs, src/user/personal-access-tokens.md,master)'
             Configuring the system:
               - Metadata: '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,master)'
               - Programs: '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-maintenance-app.md,master)'
