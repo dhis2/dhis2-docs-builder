@@ -440,6 +440,7 @@ nav:
         Maintenance and use:
           - Users and user roles: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/users-and-user-roles.md, master)'
           - Guidelines for offline data entry using DHIS2: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/offline-data-entry.md, master)'
+          - Tracker and aggregate data integration:  '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/tracker-aggregate-integration.md, master)'
           - Data Analysis Tools Overview: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/data-analysis-tools-overview.md, master)'
           - Localization of DHIS2: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/localization-of-dhis2.md, master)'
         Support and documentation:
