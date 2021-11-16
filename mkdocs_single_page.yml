@@ -383,6 +383,7 @@ nav:
           - '@github(dhis2/dhis2-docs-implementation, content/database_design/indicators.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/users-and-user-roles.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/offline-data-entry.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/tracker-aggregate-integration.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/data-analysis-tools-overview.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/localization-of-dhis2.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/support_documentation/dhis2-documentation-guide.md, master)'
