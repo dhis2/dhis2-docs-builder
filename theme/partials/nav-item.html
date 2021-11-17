@@ -8,10 +8,10 @@
   {% set nav__title = nav_item.title|replace(alt_prefix,"") %}
 {% endif %}
 {% set dhis2class = "" %}
-{% if nav_item.title == nav_item.parent.title %}
+{% if (nav_item.title == nav_item.parent.title and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
-{% if (nav_item.title == nav_item.parent.title|replace(alt_prefix,"") and not nav_item.parent) %}
+{% if (nav_item.title == nav_item.parent.title|replace(alt_prefix,"") and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
 {% if nav_item.title == "Home" %}
