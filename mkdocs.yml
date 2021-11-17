@@ -123,7 +123,7 @@ nav:
               - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.37)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.37)'
             Approving data:
-              - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.37)'
+              - Understanding Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.37)'
               - '@github(dhis2/approval-app, docs/user/index.yml, master)'
             Analysing data:
               - Reports: '@github(dhis2/dhis2-docs, src/user/using-reporting-functionality.md,2.37)'
