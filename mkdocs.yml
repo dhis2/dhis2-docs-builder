@@ -98,7 +98,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
   - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.smartsymbols
+  - pymdownx.smartsymbols:
+      copyright: false
   - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.tabbed
