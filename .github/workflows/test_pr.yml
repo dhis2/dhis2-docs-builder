@@ -59,3 +59,23 @@ jobs:
     - name: Build the docs
       run: |
         mkdocs build
+
+    - name: Sync docs to S3 for preview
+      uses: dhis2/s3-sync-action@master
+      # with:
+      #  args: --delete --exclude 'full*'
+      env:
+        AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+        AWS_REGION: 'eu-west-1'
+        SOURCE_DIR: 'target/en/.'
+        DEST_DIR: 'temp/PR/${{github.event.issue.number}}/en/'
+        AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
+
+    - name: Add comment with preview link
+      uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          Preview: https://docs.dhis2.org/temp/PR/${{github.event.issue.number}}/en/home.html
