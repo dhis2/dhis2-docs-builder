@@ -192,28 +192,12 @@ class Dhis2DocsPlugin(BasePlugin):
                 search_index = dhis2_utils.json.load(f)
 
             included_records = []
+            matching_paragraphs = []
 
-            for rec in search_index["docs"]:
-                # if rec["location"] == "" or rec["location"].startswith("#"):
-                #     included_records.append(rec)
-                # else:
-                #     rec_main_name, rec_subchapter = rec["location"].split("/")[-2:]
-
-                #     if rec_main_name + rec_subchapter in to_ignore:
-                #         # print("ignored", rec["location"])
-                #         included_records.append(rec)
-                #     elif (
-                #         rec_main_name not in to_exclude
-                #         and rec_main_name + rec_subchapter
-                #         not in to_exclude  # Also ignore subchapters of excluded main records
-                #     ):
-                #         # print("included", rec["location"])
-                #         included_records.append(rec)
-                #     else:
-                #         logger.info(f"exclude-search: {rec['location']}")
-
-                # if '#' not in rec["location"]:
+            for rec in reversed(search_index["docs"]):
+                
                 versions = []
+                text_cksum = ""
 
                 loc = rec["location"].strip('.md')
 
@@ -224,9 +208,11 @@ class Dhis2DocsPlugin(BasePlugin):
 
                     if loc in config['version_map']:
                         versions = config['version_map'][loc]
+                        text_cksum = dhis2_utils.hashlib.md5(rec['text'].encode('utf-8')).hexdigest()
                     else:
                         if locdir in config['version_map']:
                             versions = config['version_map'][locdir]
+                            text_cksum = dhis2_utils.hashlib.md5(rec['text'].encode('utf-8')).hexdigest()
 
 
                     for v in versions:
@@ -237,8 +223,14 @@ class Dhis2DocsPlugin(BasePlugin):
                     pass
 
 
+                if text_cksum == "":
+                    included_records.insert(0,rec)
+                else:
+                    if text_cksum not in matching_paragraphs:
+                        included_records.insert(0,rec)
+                        matching_paragraphs.append(text_cksum)
 
-                included_records.append(rec)
+
 
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:
