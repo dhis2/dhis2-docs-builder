@@ -142,19 +142,11 @@
 /* All credit to Select styling guidance here: https://www.filamentgroup.com/lab/select-css.html*/
 
 select {
-  padding: 0 1.5em 0 0;
+  padding: 0 .5em 0 0;
   box-sizing: border-box;
   margin: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   border: 1px solid transparent;
   background-color: transparent;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA4IDUiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMjEuNjQ2IDYuNjQ2LjcwOC43MDgtMy4zNTQgMy4zNTMtMy4zNTQtMy4zNTMuNzA4LS43MDggMi42NDYgMi42NDd6IiBmaWxsPSJpbmhlcml0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1IC02KSIvPjwvc3ZnPg==),
-    linear-gradient(to bottom, #a76d6d00 0%, transparent 100%);
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
   font-size: 0.62rem;
   font-family:inter;
 }
@@ -321,9 +313,8 @@ pre {
   color: var(--md-primary-bg-color);
   font-size: 0.7rem;
   padding: 0;
-  padding-right: 1.2rem;
+  padding-right: .2rem;
   margin-left: 0.6rem;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA4IDUiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMjEuNjQ2IDYuNjQ2LjcwOC43MDgtMy4zNTQgMy4zNTMtMy4zNTQtMy4zNTMuNzA4LS43MDggMi42NDYgMi42NDd6IiBmaWxsPSIjZmZmZmZmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1IC02KSIvPjwvc3ZnPg==') !important;
 }
 /* style the select options to native on all platforms */
 select option {
@@ -340,7 +331,8 @@ select option {
 }
 
 .language-selector{
-  width:3.5em;
+  /* width:4.8em; */
+  padding-right:0px;
 }
 
 .md-nav__item--hidden {
@@ -531,7 +523,7 @@ a.domain-nav-item:after {
 }
 
 .md-content-alternates select{
-  color: var(--md-default-fg-color);
+  color: var(--md-default-fg-color) !important;
 }
 
 /* Hack padding to align the alternate selector and give the appearance of a top bar */
@@ -982,7 +974,7 @@ a.footer-nav-link {
 /* Misc. */
 /*  */
 
-/* change to the github icon to the official logo Â¯\_(ãƒ„)_/Â¯ */
+/* change to the github icon to the official logo Ã‚Â¯\_(Ã£Æ’â€ž)_/Ã‚Â¯ */
 .md-source__icon svg {
   display: none;
 }

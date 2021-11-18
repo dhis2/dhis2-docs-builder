@@ -26,5 +26,5 @@ six==1.11.0
 tinycss2==1.0.0
 transifex-client==0.14.2
 Unidecode==1.0.23
-WeasyPrint==52.2
+WeasyPrint==53.4
 webencodings==0.5.1

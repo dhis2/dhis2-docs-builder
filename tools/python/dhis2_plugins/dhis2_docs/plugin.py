@@ -195,11 +195,12 @@ class Dhis2DocsPlugin(BasePlugin):
             matching_paragraphs = []
 
             for rec in reversed(search_index["docs"]):
-                
+
                 versions = []
                 text_cksum = ""
+                ignore = False
 
-                loc = rec["location"].strip('.md')
+                loc = rec["location"] #.strip('.md')
 
                 try:
                     loc = dhis2_utils.re.search('(.+?)\.html.*', rec["location"]).group(1)
@@ -208,29 +209,35 @@ class Dhis2DocsPlugin(BasePlugin):
 
                     if loc in config['version_map']:
                         versions = config['version_map'][loc]
-                        text_cksum = dhis2_utils.hashlib.md5(rec['text'].encode('utf-8')).hexdigest()
+                        # text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
                     else:
                         if locdir in config['version_map']:
                             versions = config['version_map'][locdir]
-                            text_cksum = dhis2_utils.hashlib.md5(rec['text'].encode('utf-8')).hexdigest()
+                            # text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
 
 
-                    for v in versions:
-                        rec["title"] = rec["title"] + '<v-tag>' + v + '</v-tag>'
+                    # for v in versions:
+                    #     rec["title"] += '<v-tag>' + v + '</v-tag>'
 
                 except AttributeError:
                     # .html not found in the location
                     pass
 
+                for v in versions:
+                    rec["title"] += '<v-tag>' + v + '</v-tag>'
+                    if v[0:19] == "DHIS core version 2":
+                        ignore = True
 
-                if text_cksum == "":
+
+                # if text_cksum == "":
+                #     included_records.insert(0,rec)
+                # else:
+                #     if text_cksum not in matching_paragraphs:
+                #         included_records.insert(0,rec)
+                #         matching_paragraphs.append(text_cksum)
+
+                if not ignore:
                     included_records.insert(0,rec)
-                else:
-                    if text_cksum not in matching_paragraphs:
-                        included_records.insert(0,rec)
-                        matching_paragraphs.append(text_cksum)
-
-
 
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:
