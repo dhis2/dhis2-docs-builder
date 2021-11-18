@@ -69,7 +69,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'target/en/.'comment
+        SOURCE_DIR: 'target/en/.'
         DEST_DIR: "temp/PR/${GITHUB_HEAD_REF}/en/"
 
     - name: Add comment with preview link
