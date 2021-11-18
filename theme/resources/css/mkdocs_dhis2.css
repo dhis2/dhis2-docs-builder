@@ -321,6 +321,7 @@ pre {
   color: var(--md-primary-bg-color);
   font-size: 0.7rem;
   padding: 0;
+  padding-right: 1.2rem;
   margin-left: 0.6rem;
   background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUiIHZpZXdCb3g9IjAgMCA4IDUiIHdpZHRoPSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xMjEuNjQ2IDYuNjQ2LjcwOC43MDgtMy4zNTQgMy4zNTMtMy4zNTQtMy4zNTMuNzA4LS43MDggMi42NDYgMi42NDd6IiBmaWxsPSIjZmZmZmZmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE1IC02KSIvPjwvc3ZnPg==') !important;
 }
