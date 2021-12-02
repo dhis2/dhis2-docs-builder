@@ -643,7 +643,7 @@ nav:
                 - Android Trainer's Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_trainers_guide.md, master)'
                 - Android User Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
                 - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
-            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
+            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
           CRVS:
             - Cause of Death Tracker and Events:
               - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
