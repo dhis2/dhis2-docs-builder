@@ -353,13 +353,21 @@ class fetcher:
             paths.append(fm['logo'])
 
 
-        p = re.compile("!\[[^\]]*\]\((.*?)(?:\s+\"(.*[^\"])\"?)?\s*\)")
+        p = re.compile("!\[[^\]]*\]\((.*?)(?:\s+\"([^\"]*)\"?)?\s*\)")
         it = p.finditer(markdown)
         for match in it:
             path = match.group(1)
 
             if path[0:10] != '__common__':
                 paths.append(path)
+
+        # apply the same process as images to relative xlsx files
+        x = re.compile("\[[^\]]*\]\(((?!http| *#)[^\"\)]*?xlsx)(?:\s+\"([^\"]*)\"?)?\s*\)")
+        xt = x.finditer(markdown)
+        for match in xt:
+            path = match.group(1)
+            paths.append(path)
+
 
         for path in paths:
 
