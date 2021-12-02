@@ -635,7 +635,7 @@ nav:
             - COVID-19 Electronic Immunization Registry Tracker:
               - Design: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_design.md, master)'
               - Change Log: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_change_log.md, master)'
-              - Installation: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_installation, master)'
+              - Installation: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_installation.md, master)'
               - Training materials:
                 - Trainer's Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_trainers_guide.md, master)'
                 - Data Entry User Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_user_guide.md, master)'
