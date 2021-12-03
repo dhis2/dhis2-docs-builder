@@ -649,6 +649,9 @@ nav:
               - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
               - Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
               - Installation: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_installation_guide.md, master)'
+            - Rapid Mortality Surveillance Events:
+              - Design: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_event_design.md, master)'
+              - Installation: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_events_installation.md, master)'
             - Vital Events Tracker:
               - Design: '@github(dhis2-metadata/CRVS_VE-TRK-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
