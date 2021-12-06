@@ -172,27 +172,16 @@ class Dhis2DocsPlugin(BasePlugin):
                 "plugin is deactivated!"
             )
         else:
-            # to_exclude = self.config["exclude"]
-            # to_ignore = self.config["ignore"]
-            # if to_exclude:
-            #     # TODO: Other suffixes ipynb etc., more robust
-            #     to_exclude = [f.replace(".md", "") for f in to_exclude]
-            #     if to_ignore:
-            #         to_ignore = [f.replace(".md", "") for f in to_ignore]
-            #         # subchapters require both the subchapter as well as the main record.
-            #         also_ignore = []
-            #         for ignore_entry in to_ignore:
-            #             if not ignore_entry.endswith(".md"):
-            #                 ignore_entry_main_name = ignore_entry.split("#")[0]
-            #                 also_ignore.append(ignore_entry_main_name)
-            #         to_ignore += also_ignore
 
             search_index_fp = config.data["site_dir"] + "/search/search_index.json"
             with open(search_index_fp, "r") as f:
                 search_index = dhis2_utils.json.load(f)
 
+            temp_records = []
             included_records = []
             matching_paragraphs = []
+            unique_records = set()
+
 
             for rec in reversed(search_index["docs"]):
 
@@ -209,35 +198,33 @@ class Dhis2DocsPlugin(BasePlugin):
 
                     if loc in config['version_map']:
                         versions = config['version_map'][loc]
-                        # text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
+                        text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
                     else:
                         if locdir in config['version_map']:
                             versions = config['version_map'][locdir]
-                            # text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
+                            text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
 
-
-                    # for v in versions:
-                    #     rec["title"] += '<v-tag>' + v + '</v-tag>'
+                    for v in versions:
+                        rec["title"] += '<v-tag>' + v + '</v-tag>'
 
                 except AttributeError:
                     # .html not found in the location
                     pass
 
-                for v in versions:
-                    rec["title"] += '<v-tag>' + v + '</v-tag>'
-                    if v[0:19] == "DHIS core version 2":
-                        ignore = True
+                if text_cksum == "":
+                    # included_records.insert(0,rec)
+                    unique_records.add(rec['location'])
+                else:
+                    if text_cksum not in matching_paragraphs:
+                        unique_records.add(loc+'.html')
+                        unique_records.add(rec['location'])
+                        matching_paragraphs.append(text_cksum)
 
+                temp_records.insert(0,rec)
 
-                # if text_cksum == "":
-                #     included_records.insert(0,rec)
-                # else:
-                #     if text_cksum not in matching_paragraphs:
-                #         included_records.insert(0,rec)
-                #         matching_paragraphs.append(text_cksum)
-
-                if not ignore:
-                    included_records.insert(0,rec)
+            for rec in temp_records:
+                if rec['location'] in unique_records:
+                    included_records.append(rec)
 
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:
