@@ -3,13 +3,15 @@
 {% block config %}
   {{ super() }}
   <script>
-    var search = {
+    var __search = {
       transform: function(query) {
-        return query
+        var q = query
           .replace(/[\\'#:]/g, '\\$&')
+          .replace(/^[^\s]{1,2}$/g, "")
           .replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +")
           .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "")
-          .trim()
+          .trim();
+        return q;
       }
     }
   </script>
