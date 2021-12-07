@@ -1,6 +1,7 @@
 {#-
   This file was automatically generated - do not edit
 -#}
+{% macro render(nav_item, path, level) %}
 
 <!-- DHIS2 -BEGIN -->
 {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
@@ -11,6 +12,9 @@
 {% if (nav_item.title == nav_item.parent.title and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
+{% if level == 1 %}
+  {% set dhis2class = "md-nav__item--hidden" %}
+{% endif %}
 {% if (nav_item.title == nav_item.parent.title|replace(alt_prefix,"") and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
@@ -19,117 +23,145 @@
 {% endif %}
 <!-- DHIS2 -END -->
 
-{% set class = "md-nav__item" %}
-{% if nav_item.active %}
-  {% set class = "md-nav__item md-nav__item--active" %}
-{% endif %}
+  {% set class = "md-nav__item" %}
+  {% if nav_item.active %}
+    {% set class = class ~ " md-nav__item--active" %}
+  {% endif %}
+  {% if nav_item.children %}
 
-{% if nav_item.children %}
+  <!-- DHIS2 -BEGIN -->
+    {% if (((nav_item.title|replace(alt_prefix,"")) != nav_item.title) and nav_item.parent.parent)  %}
+
+      {% if nav_item.active  %}
+
+        {% set base = path %}
+        {% for nav_item in nav_item.children %}
+          {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
+        {% endfor %}
+
+      {% else%}
+      <!-- If this is the first alternative, and none are selected, display this in the nav -->
+        {% for active_alt in nav_item.parent.children if active_alt.active %}
+        {% else %}
+          {% if nav_item == (nav_item.parent.children|first) %}
+            {% set base = path %}
+            {% for nav_item in nav_item.children %}
+              {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+      {% endif %}
+
+    {% else %}
 
 
-<!-- DHIS2 -BEGIN -->
-  {% if (((nav_item.title|replace(alt_prefix,"")) != nav_item.title) and nav_item.parent.parent)  %}
-
-    {% if nav_item.active  %}
-
-      {% set base = path %}
-      {% for nav_item in nav_item.children %}
-        {% set path = base + "-" + loop.index | string %}
-
-        {% include "partials/nav-item.html"  %}
-      {% endfor %}
-
-    {% else%}
-    <!-- If this is the first alternative, and none are selected, display this in the nav -->
-      {% for active_alt in nav_item.parent.children if active_alt.active %}
-      {% else %}
-        {% if nav_item == (nav_item.parent.children|first) %}
-          {% set base = path %}
-          {% for nav_item in nav_item.children %}
-            {% set path = base ~ "-" ~ loop.index %}
-
-            {% include "partials/nav-item.html"  %}
-          {% endfor %}
+        {% if (nav_item.title|replace(alt_prefix,"") != nav_item.title) and not (nav_item.active) %}
+          {% set dhis2class = dhis2class + " d-home" %}
         {% endif %}
-      {% endfor %}
+  <!-- DHIS2 -END -->
 
+    {% if "navigation.sections" in features and level == 1 + (
+      "navigation.tabs" in features
+    ) %}
+      {% set class = class ~ " md-nav__item--section" %}
     {% endif %}
+    <li class="{{ class }} md-nav__item--nested {{ dhis2class }}">
+      {% set checked = "checked" if nav_item.active %}
+      {% if "navigation.expand" in features and not checked %}
+        <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" data-md-state="indeterminate" type="checkbox" id="{{ path }}" checked>
+      {% else %}
+        <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
+      {% endif %}
+      {% set indexes = [] %}
+      {% if "navigation.indexes" in features %}
+        {% for item in nav_item.children %}
+          {% if item.is_index and not index is defined %}
+            {% set _ = indexes.append(item) %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if not indexes %}
+        <label class="md-nav__link {{ dhis2class }}" for="{{ path }}">
+          {{ nav__title }}
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      {% else %}
+        {% set index = indexes | first %}
+        {% set class = "md-nav__link--active" if index == page %}
+        <div class="md-nav__link md-nav__link--index {{ class }} {{ dhis2class }}">
+          <a href="{{ index.url | url }}">{{ nav_item.title }}</a>
+          {% if nav_item.children | length > 1 %}
+            <label for="{{ path }}">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          {% endif %}
+        </div>
+      {% endif %}
+      <nav class="md-nav" aria-label="{{ nav_item.title }}" data-md-level="{{ level }}">
+        <label class="md-nav__title" for="{{ path }}">
+          <span class="md-nav__icon md-icon"></span>
+          {{ nav__title }}
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          {% for nav_item in nav_item.children %}
+            {% if "navigation.indexes" in features and nav_item.is_index %}
+            {% else %}
+              {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DHIS2 -BEGIN -->
+    {% endif %}
+    <!-- DHIS2 -END -->
+
+  {% elif nav_item == page %}
+
+  <!-- DHIS2 -BEGIN -->
+    {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
+  <!-- DHIS2 -END -->
+
+    <li class="{{ class }} {{ dhis2class }}">
+      {% set toc = page.toc %}
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      {% set first = toc | first %}
+      {% if first and first.level == 1 %}
+        {% set toc = first.children %}
+      {% endif %}
+      {% if toc %}
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          {{ nav__title }}
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      {% endif %}
+      <a href="{{ nav_item.url | url }}" class="md-nav__link md-nav__link--active">
+        {{ nav__title }}
+      </a>
+      {% if toc %}
+        {% include "partials/toc.html" %}
+      {% endif %}
+    </li>
+  <!-- DHIS2 -BEGIN -->
+    {% endif %}
+  <!-- DHIS2 -END -->
+
 
   {% else %}
 
-
-      {% if (nav_item.title|replace(alt_prefix,"") != nav_item.title) and not (nav_item.active) %}
-        {% set dhis2class = dhis2class + " d-home" %}
-      {% endif %}
-<!-- DHIS2 -END -->
-
-
-  <li class="{{ class }} md-nav__item--nested {{ dhis2class }}">
-    {% set checked = "checked" if (nav_item.active or ( "navigation.expanded" in config.theme.features )) %}
-    <input class="md-nav__toggle md-toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" {{ checked }}>
-    <label class="md-nav__link" for="{{ path }}">
-      {{ nav__title }}
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="{{ nav_item.title }}" data-md-level="{{ level }}">
-      <label class="md-nav__title {{ dhis2class }}" for="{{ path }}">
-        <span class="md-nav__icon md-icon"></span>
-        {{ nav__title }}
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        {% set base = path %}
-        {% for nav_item in nav_item.children %}
-          {% set path = base ~ "-" ~ loop.index %}
-          {% set level = level + 1 %}
-          {% include "partials/nav-item.html"  %}
-        {% endfor %}
-      </ul>
-    </nav>
-  </li>
-<!-- DHIS2 -BEGIN -->
-  {% endif %}
-<!-- DHIS2 -END -->
-
-{% elif nav_item == page %}
-
-<!-- DHIS2 -BEGIN -->
+  <!-- DHIS2 -BEGIN -->
   {% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
-<!-- DHIS2 -END -->
-
-  <li class="{{ class }} {{ dhis2class }}">
-    {% set toc = page.toc %}
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    {% if toc | first is defined and "\x3ch1 id=" in page.content %}
-      {% set toc = (toc | first).children %}
+  <!-- DHIS2 -END -->
+    <li class="{{ class }} {{ dhis2class }}">
+      <a href="{{ nav_item.url | url }}" class="md-nav__link">
+        {{ nav_item.title }}
+      </a>
+    </li>
+  <!-- DHIS2 -BEGIN -->
     {% endif %}
-    {% if toc | first is defined %}
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        {{ nav__title }}
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    {% endif %}
-    <a href="{{ nav_item.url | url }}" class="md-nav__link md-nav__link--active">
-      {{ nav__title }}
-    </a>
-    {% if toc | first is defined %}
-      {% include "partials/toc.html" %}
-    {% endif %}
-  </li>
-<!-- DHIS2 -BEGIN -->
+  <!-- DHIS2 -END -->
   {% endif %}
-<!-- DHIS2 -END -->
-{% else %}
-
-<!-- DHIS2 -BEGIN -->
-{% if (nav_item.active) or ((nav_item.title|replace(alt_prefix,"")) == nav_item.title) %}
-<!-- DHIS2 -END -->
-  <li class="{{ class }} {{ dhis2class }}">
-    <a href="{{ nav_item.url | url }}" class="md-nav__link">
-      {{ nav__title }}
-    </a>
-  </li>
-<!-- DHIS2 -BEGIN -->
-  {% endif %}
-<!-- DHIS2 -END -->
-
-{% endif %}
+{% endmacro %}
+{{ render(nav_item, path, level) }}

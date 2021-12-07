@@ -172,50 +172,24 @@ class Dhis2DocsPlugin(BasePlugin):
                 "plugin is deactivated!"
             )
         else:
-            # to_exclude = self.config["exclude"]
-            # to_ignore = self.config["ignore"]
-            # if to_exclude:
-            #     # TODO: Other suffixes ipynb etc., more robust
-            #     to_exclude = [f.replace(".md", "") for f in to_exclude]
-            #     if to_ignore:
-            #         to_ignore = [f.replace(".md", "") for f in to_ignore]
-            #         # subchapters require both the subchapter as well as the main record.
-            #         also_ignore = []
-            #         for ignore_entry in to_ignore:
-            #             if not ignore_entry.endswith(".md"):
-            #                 ignore_entry_main_name = ignore_entry.split("#")[0]
-            #                 also_ignore.append(ignore_entry_main_name)
-            #         to_ignore += also_ignore
 
             search_index_fp = config.data["site_dir"] + "/search/search_index.json"
             with open(search_index_fp, "r") as f:
                 search_index = dhis2_utils.json.load(f)
 
+            temp_records = []
             included_records = []
+            matching_paragraphs = []
+            unique_records = set()
 
-            for rec in search_index["docs"]:
-                # if rec["location"] == "" or rec["location"].startswith("#"):
-                #     included_records.append(rec)
-                # else:
-                #     rec_main_name, rec_subchapter = rec["location"].split("/")[-2:]
 
-                #     if rec_main_name + rec_subchapter in to_ignore:
-                #         # print("ignored", rec["location"])
-                #         included_records.append(rec)
-                #     elif (
-                #         rec_main_name not in to_exclude
-                #         and rec_main_name + rec_subchapter
-                #         not in to_exclude  # Also ignore subchapters of excluded main records
-                #     ):
-                #         # print("included", rec["location"])
-                #         included_records.append(rec)
-                #     else:
-                #         logger.info(f"exclude-search: {rec['location']}")
+            for rec in reversed(search_index["docs"]):
 
-                # if '#' not in rec["location"]:
                 versions = []
+                text_cksum = ""
+                ignore = False
 
-                loc = rec["location"].strip('.md')
+                loc = rec["location"] #.strip('.md')
 
                 try:
                     loc = dhis2_utils.re.search('(.+?)\.html.*', rec["location"]).group(1)
@@ -224,21 +198,33 @@ class Dhis2DocsPlugin(BasePlugin):
 
                     if loc in config['version_map']:
                         versions = config['version_map'][loc]
+                        text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
                     else:
                         if locdir in config['version_map']:
                             versions = config['version_map'][locdir]
-
+                            text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
 
                     for v in versions:
-                        rec["title"] = rec["title"] + '<v-tag>' + v + '</v-tag>'
+                        rec["title"] += '<v-tag>' + v + '</v-tag>'
 
                 except AttributeError:
                     # .html not found in the location
                     pass
 
+                if text_cksum == "":
+                    # included_records.insert(0,rec)
+                    unique_records.add(rec['location'])
+                else:
+                    if text_cksum not in matching_paragraphs:
+                        unique_records.add(loc+'.html')
+                        unique_records.add(rec['location'])
+                        matching_paragraphs.append(text_cksum)
 
+                temp_records.insert(0,rec)
 
-                included_records.append(rec)
+            for rec in temp_records:
+                if rec['location'] in unique_records:
+                    included_records.append(rec)
 
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:

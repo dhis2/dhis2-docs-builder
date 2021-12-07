@@ -3,13 +3,15 @@
 {% block config %}
   {{ super() }}
   <script>
-    var search = {
+    var __search = {
       transform: function(query) {
-        return query
+        var q = query
           .replace(/[\\'#:]/g, '\\$&')
+          .replace(/^[^\s]{1,2}$/g, "")
           .replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +")
           .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "")
-          .trim()
+          .trim();
+        return q;
       }
     }
   </script>
@@ -47,9 +49,11 @@
   >
 </div>
 {% endblock %} {% block content %}
+{% if not page.meta.template %}
 <div class="md-content-alternates">
   {% include "partials/alternates.html" %}
 </div>
+{% endif %}
 {{ super() }}
 <!-- Link to previous and/or next page -->
 {% if page.previous_page or page.next_page %}
