@@ -773,3 +773,47 @@ nav:
       - alt__Single Page:
           - Current documentation: '@file(special_pages/single_page_docs.md)'
           - Previous versions: '@file(special_pages/single_page_docs_archive.md)'
+      - alt__Training Docs:
+          - General Guidance:
+              - Capacity Building Considerations: '@github(dhis2/training-docs, content/general_guidance/capacity_building_considerations.md, main)'
+              - Content Key: '@github(dhis2/training-docs, content/general_guidance/content_key.md, main)'
+              - Training DB Considerations: '@github(dhis2/training-docs, content/general_guidance/training_DB_considerations.md, main)'
+          - Tracker Config Course:
+              - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creating_tracker_program.md, main)'
+          - Tracker Use Academy:
+              - Tracker Use Academy SOP: '@github(dhis2/training-docs, content/tracker_use/tracker_use_academy_sop.md, main)'
+              - Webinars:
+                - Trainer&apos;s Guide to Tracker Features: '@github(dhis2/training-docs, content/tracker_use/tg_webinar_features.md, main)'
+                - Trainer&apos;s Guide to Tracker Use Cases: '@github(dhis2/training-docs, content/tracker_use/tg_webinar_use_cases.md, main)'
+              - Events Visualizer:
+                - Trainer&apos;s Guide to Event Visualizer: '@github(dhis2/training-docs, content/tracker_use/tg_event_visualizer.md, main)'
+                - Learner&apos;s Guide to Event Visualizer: '@github(dhis2/training-docs, content/tracker_use/lg_event_visualizer.md, main)'
+                - Event Visualizer - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_event_visualizer.md, main)'
+              - Event Reports:
+                - Trainer&apos;s Guide to Event Reports: '@github(dhis2/training-docs, content/tracker_use/tg_event_reports.md, main)'
+                - Learner&apos;s Guide to Event Reports: '@github(dhis2/training-docs,content/tracker_use/lg_event_reports.md, main)'
+                - Event Reports - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_event_reports.md, main)'
+              - Tracker Maps - Event and TEI Layer:
+                - Trainer&apos;s Guide to Tracker Maps - Event and TEI Layer: '@github(dhis2/training-docs, content/tracker_use/tg_maps.md, main)'
+                - Learner&apos;s Guide to Maps - Event and TEI Layer: '@github(dhis2/training-docs, content/tracker_use/lg_maps.md, main)'
+                - Maps - Event and TEI Layer - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_maps.md, main)'
+              - Tracker Data Model:
+                - Tracker Data Model - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_tracker_data_model.md, main)'
+              - Tracker Capture (Web):
+                - Trainer&apos;s guide to Tracker-Capture (Web-Based): '@github(dhis2/training-docs, content/tracker_use/tg_tracker_capture_web.md, main)'
+                - Learner&apos;s Guide to Tracker Capture: '@github(dhis2/training-docs, content/tracker_use/lg_tracker_capture_web.md, main)'
+                - Tracker Capture - Exercise: '@github(dhis2/training-docs, content/tracker_use/tracker_capture_ungraded_exercise.md, main)'
+                - Tracker Capture Web - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_tracker_capture_web.md, main)'
+              - Tracker Capture (Android):
+                - Trainer&apos;s Guide to Tracker Capture (Android): '@github(dhis2/training-docs, content/tracker_use/tg_tracker_capture_android.md, main)'
+                - Learner&apos;s Guide to Android Capture: '@github(dhis2/training-docs, content/tracker_use/lg_tracker_capture_android.md, main)'
+                - Android Data Capture - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_tracker_capture_android.md, main)'
+              - Program Indicator Analysis:
+                - Trainer&apos;s Guide to Program Indicator Analysis: '@github(dhis2/training-docs, content/tracker_use/tg_program_indicator_analysis.md, main)'
+                - Learner&apos;s Guide to Program Indicator Analysis: '@github(dhis2/training-docs, content/tracker_use/lg_program_indicator_analysis.md, main)'
+                - Program Indicators - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_program_indicators.md, main)'
+              - Android Analysis:
+                - Android Analysis - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_android_analysis.md, main)'
+              - Custom Apps:
+                - Trainer&apos;s Guide to Custom Apps: '@github(dhis2/training-docs, content/tracker_use/tg_custom_apps.md, main)'
+                - Learner&apos;s Guide to Event Reports: '@github(dhis2/training-docs, content/tracker_use/lg_custom_apps.md, main)'
