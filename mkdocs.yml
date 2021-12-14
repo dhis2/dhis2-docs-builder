@@ -654,7 +654,7 @@ nav:
                 - Android User Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
                 - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
-          CRVS:
+          CRVS & Mortality:
             - Cause of Death Tracker and Events:
               - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
               - Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
@@ -713,6 +713,9 @@ nav:
               - Design: '@github(dhis2-metadata/MAL-AGG-Malaria_Burden_Reduction, docs/malaria_aggregate_design.md, master)'
               - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - Malaria Case Surveillance:
+              - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_installation.md, master)'
             - Malaria Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MAL_LMIS-AGG-Malaria_Logistics, docs/mal_lmis_aggregate_design.md, master)'
@@ -728,11 +731,10 @@ nav:
           Tuberculosis:
             - TB Aggregate:
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
-              - TB Household Contacts:
-                - Design: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_hh_design.md, master)'
-              - TB Notifications and Outcomes:
-                - Design: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_design.md, master)'
-                - Changelog: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_changelog.md, master)'
+              - Design:
+                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_design.md, master)'
+                - TB Household Contacts: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_hh_design.md, master)'
+              - Changelog: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_changelog.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - TB Logistics Design: '@github(dhis2-metadata/TB_LMIS-AGG-TB_Logistics, docs/tb_lmis_aggregate_design.md, master)'
