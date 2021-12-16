@@ -730,10 +730,10 @@ nav:
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
             - TB Aggregate:
-              - Installation: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/TBAG_tb_installation.md, master)'
               - Design:
                 - TB Notifications and Outcomes: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_agg_design.md, master)'
                 - TB Household Contacts: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_hh_design.md, master)'
+              - Installation: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/TBAG_tb_installation.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - TB Logistics Design: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_lmis_aggregate_design.md, master)'
