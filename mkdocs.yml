@@ -713,7 +713,7 @@ nav:
               - Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_design.md, master)'
               - Data Quality Dashboard Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAGDQ_dashboard_design.md, master)'
               - Installation: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_installation.md, master)'
-            - Malaria Case Surveillance:
+            - Malaria Surveillance:
               - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
             - Malaria Logistics:
