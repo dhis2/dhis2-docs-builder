@@ -715,7 +715,7 @@ nav:
               - Installation: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_installation.md, master)'
             - Malaria Case Surveillance:
               - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_installation.md, master)'
+              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
             - Malaria Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_lmis_design.md, master)'
