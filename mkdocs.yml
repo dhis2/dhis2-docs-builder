@@ -331,11 +331,11 @@ nav:
           - Introduction: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/introduction.md, master)'
           - Recommentations for mobile deployment: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, master)'
           - Contribute to the app: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/contribute-to-the-app.md, master)'
-          - Visual configurations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-visual-configurations.md, master)'
-          - Settings: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-settings.md, master)'
-          - Android-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/new-android-specific-features.md, master)'
-          - Program-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/programs-specific-features.md, master)'
-          - Features supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/features-supported.md, master)'
+          - Visual configurations: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/visual-configurations.md, master)'
+          - Settings: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/settings.md, master)'
+          - Android-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/android-specific-features.md, master)'
+          - Program-specific features: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/datasets-features.md, master)'
+          - Features supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-features.md, master)'
           - Program rules supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-rules-supported-in-android-capture-app.md, master)'
           - Program indicators supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/program-indicators.md, master)'
           - Value types supported: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/capture-app/value-types-supported.md, master)'
@@ -654,7 +654,7 @@ nav:
                 - Android User Guide: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
                 - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR-TRK-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
-          CRVS:
+          CRVS & Mortality:
             - Cause of Death Tracker and Events:
               - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
               - Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
@@ -710,33 +710,34 @@ nav:
                  - User Manual: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria Aggregate:
-              - Design: '@github(dhis2-metadata/MAL-AGG-Malaria_Burden_Reduction, docs/malaria_aggregate_design.md, master)'
-              - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_DQ-DSH-Malaria_DQ_Burden_Reduction, docs/malaria_dq_dashboard_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_design.md, master)'
+              - Data Quality Dashboard Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAGDQ_dashboard_design.md, master)'
+              - Installation: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_installation.md, master)'
+            - Malaria Surveillance:
+              - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
+              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
             - Malaria Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
-              - Malaria Logistics Design: '@github(dhis2-metadata/MAL_LMIS-AGG-Malaria_Logistics, docs/mal_lmis_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Malaria Logistics Design: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_lmis_design.md, master)'
+              - Installation: '@github(dhis2-metadata/MLAG-Malaria_Aggregate, docs/MLAG_malaria_installation.md, master)'
           Nutrition:
             - Nutrition Aggregate:
-              - Design: '@github(dhis2-metadata/NUT-AGG-Nutrition, docs/nutrition_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Design: '@github(dhis2-metadata/NUTR-Nutrition, docs/nutrition_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/NUTR-Nutrition, docs/NUTR_nutrition_installation.md, master)'
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
             - TB Aggregate:
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
-              - TB Household Contacts:
-                - Design: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_hh_design.md, master)'
-              - TB Notifications and Outcomes:
-                - Design: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_design.md, master)'
-                - Changelog: '@github(dhis2-metadata/TB-AGG-Tuberculosis, docs/tb_agg_changelog.md, master)'
+              - Design:
+                - TB Notifications and Outcomes: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_agg_design.md, master)'
+                - TB Household Contacts: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_hh_design.md, master)'
+              - Installation: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/TBAG_tb_installation.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
-              - TB Logistics Design: '@github(dhis2-metadata/TB_LMIS-AGG-TB_Logistics, docs/tb_lmis_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - TB Logistics Design: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/tb_lmis_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/TBAG-Tuberculosis_Aggregate, docs/TBAG_tb_installation.md, master)'
             - TB Case Surveillance Tracker:
               - Design: '@github(dhis2-metadata/TB_CS-TRK-TB_Case_Surveillance, docs/tb_case_surveillance_design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_CS-TRK-TB_Case_Surveillance, docs/tb_case_surveillance_installation.md, master)'
@@ -776,7 +777,6 @@ nav:
       - alt__Training Docs:
           - General Guidance:
               - Capacity Building Considerations: '@github(dhis2/training-docs, content/general_guidance/capacity_building_considerations.md, main)'
-              - Content Key: '@github(dhis2/training-docs, content/general_guidance/content_key.md, main)'
               - Training DB Considerations: '@github(dhis2/training-docs, content/general_guidance/training_DB_considerations.md, main)'
           - Tracker Config Course:
               - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creating_tracker_program.md, main)'
