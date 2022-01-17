@@ -415,6 +415,7 @@ nav:
           - Introduction: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/introduction.md, master)'
           - Is my project ready for Tracker?: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/is-my-project-ready-for-tracker.md, master)'
           - Build your Tracker programs: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/building-your-tracker-programs.md, master)'
+          - Tracker performance at scale: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/optimizing_for_covid_vacc_campaigns.md, master)'
         Android implementation:
           - Executive summary: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/executive-summary.md, master)'
           - Document Map: '@github(dhis2/dhis2-android-capture-app,docs/src/commonmark/en/content/implementation-guide/document-map.md, master)'
