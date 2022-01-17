@@ -13,7 +13,7 @@ mkdocs==1.2.3
 mkdocs-material==7.3.4
 mkdocs-minify-plugin==0.2.1
 pdfrw==0.4
-Pillow==8.3.2
+Pillow==9.0.0
 ply==3.11
 pycparser==2.18
 pymdown-extensions==9.0
