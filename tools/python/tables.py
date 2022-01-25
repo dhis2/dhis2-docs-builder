@@ -67,7 +67,9 @@ class TableProcessor(BlockProcessor):
 
             if is_table:
                 row = self._split_row(rows[1])
-                is_table = (len(row) == row0_len) and set(''.join(row)) <= set('|:- ')
+                is_table = (len(row) >= row0_len) and set(''.join(row)) <= set('|:- ')
+                if len(row) > row0_len:
+                    print("WARN: Table row contains more cells than header row: ",row)
                 if is_table:
                     self.separator = row
 
