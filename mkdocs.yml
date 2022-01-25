@@ -665,11 +665,11 @@ nav:
               - Installation: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_events_installation.md, master)'
             - Vital Events Tracker:
                alt__Version 1.1.0:
-              - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design_v1.1.0.md, master)'
-              - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
-              alt__Version 1.0.0:
-              - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
+               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design_v1.1.0.md, master)'
+               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
+               alt__Version 1.0.0:
+               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
+               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
           Disease Surveillance:
             - IDSR Aggregate:
               - Design: '@github(dhis2-metadata/IDSR-AGG-Integrated_Disease_Surveillance_And_Response, docs/vpd_surveillance_aggregate_design.md, master)'
