@@ -664,10 +664,10 @@ nav:
               - Design: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_event_design.md, master)'
               - Installation: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_events_installation.md, master)'
             - Vital Events Tracker:
-               alt_Version 1.1.0:
+               alt__Version 1.1.0:
               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design_v1.1.0.md, master)'
               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
-              alt_Version 1.0.0:
+              alt__Version 1.0.0:
               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
           Disease Surveillance:
