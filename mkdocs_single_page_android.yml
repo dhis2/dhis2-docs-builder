@@ -111,31 +111,7 @@ site_dir: ./target/en/full/
 
 nav:
     - Use:
-        DHIS2 Android App:
-          - '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/introduction.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/contribute-to-the-app.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/visual-configurations.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/settings.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/android-specific-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/datasets-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/programs-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/program-rules-supported-in-android-capture-app.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/program-indicators.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/value-types-supported.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/app-android-settings-configuration.md, main)'
+        DHIS2 Android App: '@github(dhis2/dhis2-android-docs, DHIS2_Android_App_INDEX_singlepage.yml, main)'
     - Implement:
-        Android implementation: '@github(dhis2/dhis2-android-docs, DHIS2_Android_App_INDEX.yml, main)'
-        Managing mobile devices:
-          - '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/considerations.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/choosing-an-mdm.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/comparison-chart.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-a-previous-info.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-b-flyve.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-c-headwind.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-d-entgra.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-e-miradore.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-f-engineplus.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-g-scalefusion.md, main)'
+        Android implementation: '@github(dhis2/dhis2-android-docs, DHIS2_Android_Implementation_INDEX_singlepage.yml, main)'
+        Managing mobile devices: '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX_singlepage.yml, main)'

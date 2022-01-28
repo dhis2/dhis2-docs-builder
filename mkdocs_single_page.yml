@@ -349,20 +349,7 @@ nav:
               - '@github(dhis2/dhis2-docs, src/user/using-the-event-visualizer-app.md,2.35)'
               - '@github(dhis2/dhis2-docs, src/user/messaging.md,2.35)'
               - '@github(dhis2/dhis2-docs, src/user/set-user-account-preferences.md,2.35)'
-        DHIS2 Android App:
-          - '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/introduction.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/recommendations-for-a-dhis2-mobile-deployment.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/contribute-to-the-app.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/visual-configurations.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/settings.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/android-specific-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/datasets-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/programs-features.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/program-rules-supported-in-android-capture-app.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/program-indicators.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/value-types-supported.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/capture-app/app-android-settings-configuration.md, main)'
+        DHIS2 Android App: '@github(dhis2/dhis2-android-docs, DHIS2_Android_App_INDEX_singlepage.yml, main)' #Android uses external INDEX files
         Optional Apps:
           Action Tracker App: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master)'
           Bottleneck Analysis App: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master)'
@@ -397,32 +384,10 @@ nav:
           - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/is-my-project-ready-for-tracker.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/building-your-tracker-programs.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/optimizing_for_covid_vacc_campaigns.md, master)'
-        Android implementation:
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/executive-summary.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/document-map.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/dhis2-capture-android-overview.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/dhis2-server-requirements.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/data-security-and-privacy.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/mobile-device-specs.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/SMS-for-reporting.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/dhis2-configuration-for-android.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/installing-the-app.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/testing.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/scale-up.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/rollout.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/implementation-guide/checklist.md, main)'
-        Managing mobile devices:
-          - '@github(dhis2/dhis2-android-docs,content/common/about-this-android-guide.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/considerations.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/choosing-an-mdm.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/comparison-chart.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-a-previous-info.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-b-flyve.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-c-headwind.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-d-entgra.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-e-miradore.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-f-engineplus.md, main)'
-          - '@github(dhis2/dhis2-android-docs,content/mdm/A-g-scalefusion.md, main)'
+        Android implementation: 
+          - '@github(dhis2/dhis2-android-docs, DHIS2_Android_Implementation_INDEX_singlepage.yml, main)' #Android uses external INDEX files
+        Managing mobile devices: 
+          - '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX_singlepage.yml, main)' #Android uses external INDEX files
     - Develop:
         alt__DHIS core version 2.36:
           Developer Manual:
