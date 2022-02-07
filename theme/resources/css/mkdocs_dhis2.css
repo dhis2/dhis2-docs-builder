@@ -457,6 +457,9 @@ a.domain-nav-item:after {
     color: var(--text-muted);
     background-color: var(--fill-bg-200);
   }
+  .md-nav__item--hidden {
+    display: block;
+  }
 }
 
 /*  */
