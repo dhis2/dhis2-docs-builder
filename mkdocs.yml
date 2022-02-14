@@ -417,6 +417,7 @@ nav:
             - Data Sets and Forms: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-sets-and-forms.md, master)'
             - Indicators: '@github(dhis2/dhis2-docs-implementation, content/database_design/indicators.md, master)'
         Maintenance and use:
+          - Metadata integrity and quality: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/metadata_quality_assessment.md, metadata-assessment)'
           - Users and user roles: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/users-and-user-roles.md, master)'
           - Guidelines for offline data entry using DHIS2: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/offline-data-entry.md, master)'
           - Tracker and aggregate data integration:  '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/tracker-aggregate-integration.md, master)'
