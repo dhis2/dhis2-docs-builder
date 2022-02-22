@@ -696,6 +696,10 @@ nav:
             - Nutrition Aggregate:
               - Design: '@github(dhis2-metadata/NUTR-Nutrition, docs/nutrition_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR-Nutrition, docs/NUTR_nutrition_installation.md, master)'
+          Noncommunicable diseases:
+            - Rehabilitation Aggregate:
+              - Design: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/rehab_aggregate_design.md, master)'
+              - Installation: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/RHAG_rehab_aggregate_installation.md, master)'
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
