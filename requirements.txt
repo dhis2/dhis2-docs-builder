@@ -7,6 +7,7 @@ GitPython==3.1.11
 defusedxml==0.5.0
 html5lib==1.0.1
 idna==2.8
+Jinja2==3.0.3
 Markdown==3.2.1
 markdown-captions==2
 mkdocs==1.2.3
@@ -25,6 +26,7 @@ requests==2.24.0
 six==1.11.0
 tinycss2==1.0.0
 transifex-client==0.14.2
+translayer @ https://github.com/Philip-Larsen-Donnelly/translayer/archive/refs/tags/v0.0.5.zip
 Unidecode==1.0.23
 WeasyPrint==53.4
 webencodings==0.5.1

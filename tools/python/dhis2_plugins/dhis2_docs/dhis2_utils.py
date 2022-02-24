@@ -13,6 +13,8 @@ import json
 from typing import NewType
 import yaml
 import requests
+import threading
+import concurrent.futures
 import re
 import unicodedata
 import uuid
@@ -28,9 +30,16 @@ import frontmatter
 from git.repo.base import Repo
 import MarkdownPP
 from . import transifex
+from collections import defaultdict
+from jinja2 import Template
+import time
+
 
 
 class helpers:
+    def __init__(self):
+        self.FILE_MARKER = '<files>'
+
     def slugify(self, value, allow_unicode=False):
         """
         Convert to ASCII if 'allow_unicode' is False. Convert spaces to hyphens.
@@ -53,6 +62,26 @@ class helpers:
 
         refslug = ' { #'+self.slugify(matchobj.group(2))+' } '
         return matchobj.group(1)+matchobj.group(2)+refslug+matchobj.group(3)
+
+    def attach(self, branch, trunk, link, stats):
+        '''
+        Insert a branch of directories on its trunk.
+        '''
+        parts = branch.replace('//','/').split('/', 1)
+        if len(parts) == 1:  # branch is a file
+            trunk[self.FILE_MARKER].append({"name":parts[0],"href":link,"translated":stats['translated_strings'],"total":stats['total_strings']})
+        else:
+            node, others = parts
+            if node not in trunk:
+                trunk[node] = defaultdict(dict, ((self.FILE_MARKER, []),))
+            self.attach(others, trunk[node],link,stats)
+            if "<translated>" in trunk[node]:
+                trunk[node]["<translated>"] += stats['translated_strings']
+                trunk[node]["<total>"] += stats['total_strings']
+            else:
+                trunk[node]["<translated>"] = stats['translated_strings']
+                trunk[node]["<total>"] = stats['total_strings']
+
 
 
 
@@ -125,6 +154,9 @@ class fetcher:
         if lang == None:
             lang = 'en'
         self.language_code = lang
+        self.trans_dict = defaultdict(dict, ((helpers().FILE_MARKER, []),))
+        self.site_dir = config['site_dir']
+
     # Calling destructor
     # def __del__(self):
     #     # Delete all temporary files
@@ -308,37 +340,37 @@ class fetcher:
 
     def add_anchor_attributes(self,md):
 
-            new_md = ""
-            codebloc=False
-            for line in md.split('\n'):
-                try:
-                    if not codebloc:
-                        # check if the line matches "# <Title>" without an anchor attribute
-                        # if so, add the anchor ref
-                        found = re.search('(^#+)([^\n{<]*)([^{#]*?$)',line.rstrip()).group(2)
-                        # if found:
-                        refslug = ' { #'+self.h.slugify(found)+' } '
-                        if refslug == ' { # } ':
-                            refslug = ''
-                        new_md = new_md + line + refslug + '\n'
-                    else:
-                        new_md = new_md + line + '\n'
-
-                except AttributeError:
-                    # error message does not match the pattern
-                    found = '' # apply error handling
+        new_md = ""
+        codebloc=False
+        for line in md.split('\n'):
+            try:
+                if not codebloc:
+                    # check if the line matches "# <Title>" without an anchor attribute
+                    # if so, add the anchor ref
+                    found = re.search('(^#+)([^\n{<]*)([^{#]*?$)',line.rstrip()).group(2)
+                    # if found:
+                    refslug = ' { #'+self.h.slugify(found)+' } '
+                    if refslug == ' { # } ':
+                        refslug = ''
+                    new_md = new_md + line + refslug + '\n'
+                else:
                     new_md = new_md + line + '\n'
 
-                try:
-                    if line[:2] == "``":
-                        if codebloc:
-                            codebloc = False
-                        else:
-                            codebloc = True
-                except:
-                    pass
+            except AttributeError:
+                # error message does not match the pattern
+                found = '' # apply error handling
+                new_md = new_md + line + '\n'
 
-            return new_md
+            try:
+                if line[:2] == "``":
+                    if codebloc:
+                        codebloc = False
+                    else:
+                        codebloc = True
+            except:
+                pass
+
+        return new_md
 
 
 
@@ -659,8 +691,9 @@ class fetcher:
         if self.tx.tx_token:
             self.tx.push(self.local_nav_source,'0__Navigation-Menu',['MENU'],'STRUCTURED_JSON')
 
-            for t in self.tx_config:
-                self.tx.push(t['file_path'],t['resource_slug'],t['categories'],'GITHUBMARKDOWN')
+            with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+                for t in self.tx_config:
+                    executor.submit(self.tx.push,t['file_path'],t['resource_slug'],t['categories'],'GITHUBMARKDOWN')
         else:
             print("No DHIS2_DOCS_TX_TOKEN. Translations will not be pushed to transifex.")
 
@@ -669,7 +702,9 @@ class fetcher:
 
         # can only retrieve translations if the token was provided in env
         if self.tx.tx_token:
+
             if set == 'nav':
+
                 local_nav = self.local_nav + language_code + '.json'
                 self.tx.pull(local_nav,'0__Navigation-Menu',language_code)
                 try:
@@ -678,10 +713,50 @@ class fetcher:
                     nav_local.close()
                 except:
                     pass
+                translate_path = self.tx.tx_edit_root+self.tx.project_slug+'/translate/#'+language_code+'/0__Navigation-Menu'
+                lstats = self.tx.get_stats('0__Navigation-Menu',language_code)
+                helpers().attach(local_nav.replace('i18n','menu'), self.trans_dict, translate_path, lstats)
+
 
             if set == 'docs':
+
+                tic = time.perf_counter()
+                # use multithreaded workers to pull the translations from transifex
+                # because the transifex API now works asynchronously
+                with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+                    for t in self.tx_config:
+                        executor.submit(self.tx.pull,t['file_path'],t['resource_slug'],language_code)
+
+                toc = time.perf_counter()
+                print(f"Pulled files from transifex in {toc - tic:0.4f} seconds")
+
+                with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+                    for t in self.tx_config:
+                        executor.submit(self.tx.get_stats,t['resource_slug'],language_code)
+
                 for t in self.tx_config:
-                    self.tx.pull(t['file_path'],t['resource_slug'],language_code)
+                    translate_path = self.tx.tx_edit_root+self.tx.project_slug+'/translate/#'+language_code+'/'+t['resource_slug']
+                    lstats = self.tx.get_stats(t['resource_slug'],language_code)
+                    helpers().attach(t['file_path'], self.trans_dict, translate_path, lstats)
+
+
+                with open('theme/resources/i18n/translationlinks.html') as f:
+                    mytemplate=f.read()
+                t = Template(mytemplate)
+
+                tac = time.perf_counter()
+                print(f"Prepared the translations in {tac - toc:0.4f} seconds")
+
+                # print("=======================")
+                # print(json.dumps(self.trans_dict,indent=2))
+                # print("=======================")
+
+                ren = t.render(files=self.trans_dict)
+                return ren
+
+
+
+
         else:
             print("No DHIS2_DOCS_TX_TOKEN. Translations will not be pulled from transifex.")
 
