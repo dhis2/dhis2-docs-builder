@@ -16,6 +16,7 @@ import glob
 import sys
 import tempfile
 import frontmatter
+from translayer import tx3
 
 class tx:
 
@@ -25,15 +26,11 @@ class tx:
         # project_slug='meta-who-packages'
         self.tx_token = os.getenv('DHIS2_DOCS_TX_TOKEN')
         self.project_slug=project_slug
-        # tx_i18n_type='KEYVALUEJSON'
+        if self.tx_token:
+            self.tx = tx3.tx('hisp-uio',self.tx_token,log_level=30)
+
         self.tx_mode='default'
-        self.tx_langs_api='https://www.transifex.com/api/2/project/{s}/resource/{r}/?details'
-        self.tx_stats_api='https://www.transifex.com/api/2/project/{s}/resource/{r}/stats/{l}'
-        self.tx_translations_api='https://www.transifex.com/api/2/project/{s}/resource/{r}/translation/{l}/?mode={m}&file'
-        self.tx_resources_api='https://www.transifex.com/api/2/project/{s}/resources/'
-        self.tx_resource_api='https://www.transifex.com/api/2/project/{s}/resource/{r}'
-        self.tx_content_api='https://www.transifex.com/api/2/project/{s}/resource/{r}/content'
-        self.tx_translations_update_api='https://www.transifex.com/api/2/project/{s}/resource/{r}/translation/{l}'
+
         self.tx_edit_root='https://www.transifex.com/hisp-uio/'
 
         # We need to map language codes that DHIS2 doesn't support natively
@@ -42,16 +39,6 @@ class tx:
         # uz@Latn --> uz_UZ
         self.langmap={'fa_AF': 'prs', 'uz@Cyrl':'uz','uz@Latn':'uz_UZ'}
 
-        self.TX_AUTH=('api',self.tx_token)
-
-        # get a list of resources for the project
-        self.tx_resources = []
-        urlr = self.tx_resources_api.format(s=project_slug)
-        response = requests.get(urlr, auth=self.TX_AUTH)
-        if response.status_code == requests.codes['OK']:
-            res = (x['slug'] for x in response.json())
-            for resource_s in res:
-                self.tx_resources.append(resource_s)
 
 
     def push(self,path_to_file,resource_slug,categories,tx_i18n_type):
@@ -65,40 +52,16 @@ class tx:
             c = ca + categories
         else:
             c = categories
+        
+        while '' in c:
+            c.remove('')
 
-        # check if our resource exists
-        if resource_slug in self.tx_resources:
-            # If it does - update it
-            url = self.tx_content_api.format(s=self.project_slug, r=resource_slug)
-            files = {'upload_file': open(path_to_file, "rb")}
-            r = requests.put(url, files=files, auth=self.TX_AUTH)
-            # print(r.status_code,": PUT ",url)
-                # print(r.headers,": PUT ",url)
+        if not self.tx.project(self.project_slug).resource(resource_slug):
+           print("Resource does not exist. Creating.")
+           self.tx.project(self.project_slug).new_resource(resource_slug,resource_slug,tx_i18n_type,path=path_to_file,categories=c)
         else:
-            # if it doesn't - create it
-            print("Resource does not exist. Creating...")
-            url = self.tx_resources_api.format(s=self.project_slug)
-            data = {
-                'name': resource_slug,
-                'slug': resource_slug,
-                'i18n_type': tx_i18n_type,
-                'categories': c
-            }
-            files = {'upload_file': open(path_to_file, "rb")}
-            r = requests.post(url, files=files, data=data, auth=self.TX_AUTH)
-            # print(r.status_code,": POST ",url)
+           self.tx.project(self.project_slug).resource(resource_slug).push(path_to_file)
 
-        if r.status_code != requests.codes['OK']:
-            print(r.text)
-
-        # if c:
-        #     url = self.tx_resource_api.format(s=self.project_slug, r=resource_slug)
-        #     data = {
-        #         'categories': c
-        #     }
-        #     r = requests.put(url, data=json.dumps(data), auth=self.TX_AUTH, headers={'content-type': 'application/json'})
-        #     if r.status_code != requests.codes['OK']:
-        #         print(r.text)
 
     def pull(self,path_to_file,resource_slug,language_code):
 
@@ -113,16 +76,16 @@ class tx:
             mapped_language_code = self.langmap[language_code]
 
 
-        url = self.tx_translations_api.format(s=self.project_slug, r=resource_slug, l=language_code, m=self.tx_mode)
-        response = requests.get(url, auth=self.TX_AUTH)
-        if response.status_code == requests.codes['OK']:
-            os.makedirs(os.path.dirname(path_to_file), exist_ok=True)
-            with open(path_to_file, 'wb') as f:
-                for line in response.iter_content():
-                    f.write(line)
+        self.tx.project(self.project_slug).resource(resource_slug).pull(language_code,path_to_file)
 
-            # set the appropriate edit url to transifex resource
-            fm = frontmatter.load(path_to_file)
-            fm['edit_url'] = self.tx_edit_root+self.project_slug+'/translate/#'+language_code+'/'+resource_slug
-            with open(path_to_file, 'w') as emd:
-                print(frontmatter.dumps(fm), file=emd)
+        # set the appropriate edit url to transifex resource
+        translate_path = self.tx_edit_root+self.project_slug+'/translate/#'+language_code+'/'+resource_slug
+        fm = frontmatter.load(path_to_file)
+        fm['edit_url'] = translate_path
+        with open(path_to_file, 'w') as emd:
+            print(frontmatter.dumps(fm), file=emd)
+
+    def get_stats(self,resource_slug,language_code):
+        return self.tx.project(self.project_slug).resource(resource_slug).language_stats(language_code)
+
+

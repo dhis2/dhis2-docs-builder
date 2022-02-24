@@ -8,7 +8,6 @@ from os.path import relpath
 import subprocess
 
 
-
 class Dhis2DocsPlugin(BasePlugin):
 
     config_scheme = (
@@ -21,6 +20,7 @@ class Dhis2DocsPlugin(BasePlugin):
         self.html = HTML
         self.global_toc = {}
         self.current_page = ""
+        self.translation_links = ""
 
     def on_page_context(self, context, page, config, **kwargs):
         # page.edit_url = ""
@@ -72,7 +72,7 @@ class Dhis2DocsPlugin(BasePlugin):
 
         # Pull translated versions of files from transifex if necessary
         if lang != 'en':
-            fetcher.pull_translations(lang)
+            self.translation_links = fetcher.pull_translations(lang)
 
 
         # update the Yaml file
@@ -243,6 +243,8 @@ class Dhis2DocsPlugin(BasePlugin):
                         self.html(html_file).write_pdf(pdf_file)
                         print("Converting to PDF: Done.")
 
-
+        if self.translation_links != "":
+            with open(config['site_dir']+"/translate.html", 'w') as tran:
+                tran.write(self.translation_links)
 
         return config
