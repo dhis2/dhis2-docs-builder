@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="/resources/css/translate.css">
-
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/en/resources/css/translate.css">
 </head>
 <body>
      <ul>
@@ -48,11 +48,9 @@
         {%- endif %}
      {%- endfor%}
     </ul>
-
     <script>
-        var toggler = document.getElementsByClassName("caret");
+    var toggler = document.getElementsByClassName("caret");
     var i;
-    
     for (i = 0; i < toggler.length; i++) {
       toggler[i].addEventListener("click", function() {
         this.parentElement.querySelector(".nested").classList.toggle("active");
@@ -60,4 +58,5 @@
       });
     }
     </script>
-</body>
+         </body>
+   </html>
