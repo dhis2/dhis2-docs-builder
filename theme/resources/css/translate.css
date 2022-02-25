@@ -44,19 +44,19 @@ body {
   
   /* Create the caret/arrow with a unicode, and style it */
   .caret::after {
-    content: ">";
-    color: black;
+    content: "\f105";
     display: inline-block;
     margin-right: 6px;
     font-weight: bold;
     margin-left:10px;
+    font-family:Fontawesome;
   }
   
   /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
   .caret-down::after {
     transform: rotate(90deg);
   }
-  
+    
   /* Hide the nested list */
   .nested {
     display: none;
