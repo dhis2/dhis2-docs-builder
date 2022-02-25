@@ -9,6 +9,10 @@
      {%- for key, value in files.items() recursive%}
         {%-if key not in  ["<translated>","<total>"]%}
          {%-if key != "<files>"%}
+             {%- set act = '' %} 
+             {%- if loop.depth < 3 %}
+                 {%- set act = ' active' %} 
+             {%- endif %}
              {%- set perc = value['<translated>']/value['<total>'] %}
              {%- if perc < 0.25 %}
                 {% set pbg = "upto-25" %}
@@ -23,7 +27,7 @@
              {%- endif %}
                 <li><div class="percentage-track"><div class="percentage percentage-{{ pbg }}" style="width:{{ "{:.2%}".format(perc) }};">{{ "{:.0%}".format(perc) }}</div></div>
                 <span class="caret">{{key}}</span>
-            <ul class="nested">
+            <ul class="nested{{ act }}">
              {{loop(value.items())}}
              </ul>
             </li>
