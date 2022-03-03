@@ -279,7 +279,7 @@ nav:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,master)'
             Tracking individual level data:
-              - Capture: '@github(dhis2/dhis2-docs, src/user/using-the-capture-app.md,master)'
+              - '@github(dhis2/capture-app, docs/user/index.yml, master)'
               - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,master)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,master)'
             Approving data:
