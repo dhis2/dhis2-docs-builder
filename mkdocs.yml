@@ -561,9 +561,9 @@ nav:
       - alt__Metadata:
           DHIS2 WHO Digital Health Data Toolkit:
             - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/metadata/about-metadata.md, master)'
-            - General design principles for WHO metadata packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
-            - Shared metadata library: '@github(dhis2/dhis2-docs, src/metadata/metadata-shared-library.md, master)'
-            - Naming conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
+            - General Design Principles for WHO Metadata Packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
+            - Common Metadata Library: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/common-metadata-library.md, master)'
+            - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           CHIS Community Health Information System:
             - CHIS General Design: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/chis_aggregate_design.md, master'
             - Adolescant Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ado_aggregate_design.md, master'
@@ -696,7 +696,7 @@ nav:
             - Nutrition Aggregate:
               - Design: '@github(dhis2-metadata/NUTR-Nutrition, docs/nutrition_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR-Nutrition, docs/NUTR_nutrition_installation.md, master)'
-          Noncommunicable diseases:
+          Rehabilitation:
             - Rehabilitation Aggregate:
               - Design: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/rehab_aggregate_design.md, master)'
               - Installation: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/RHAG_rehab_aggregate_installation.md, master)'
