@@ -27,12 +27,13 @@
       <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         {% if config.copyright %}
-        <div class="md-footer-copyright__highlight">{{ config.copyright }}</div>
+        <div class="md-footer-copyright__highlight"><a href="/{{ config.theme.language }}/terms-of-use.html">{{ config.copyright }}</a></div>
         {% endif %} Made with
         <a
           href="https://squidfunk.github.io/mkdocs-material/"
           target="_blank"
           rel="noopener"
+          style="text-decoration: none;"
         >
           Material for MkDocs
         </a>

@@ -121,6 +121,7 @@ site_dir: ./target/en/
 
 nav:
     - Home: '@github(dhis2/dhis2-docs, src/home.md, master)'
+    - Terms of use: '@github(dhis2/dhis2-docs, src/termsofuse.md, master)'
     - Use:
         Use: '@github(dhis2/dhis2-docs, src/user/index.md, master)'
         What is DHIS2?: '@github(dhis2/dhis2-docs, src/user/what-is-dhis2.md,master)'
@@ -326,7 +327,7 @@ nav:
               - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/user/dhis2-tutorials.md,master)'
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,master)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,master)'
-        Android App: 
+        Android App:
           - '@github(dhis2/dhis2-android-docs,DHIS2_Android_App_INDEX.yml, main)' #Android uses external INDEX files
         Optional Apps:
           Standalone Action Tracker App:
@@ -405,9 +406,9 @@ nav:
           - Is my project ready for Tracker?: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/is-my-project-ready-for-tracker.md, master)'
           - Build your Tracker programs: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/building-your-tracker-programs.md, master)'
           - Tracker performance at scale: '@github(dhis2/dhis2-docs-implementation, content/tracker_implementation/optimizing_for_covid_vacc_campaigns.md, master)'
-        Android implementation: 
+        Android implementation:
           - '@github(dhis2/dhis2-android-docs, DHIS2_Android_Implementation_INDEX.yml, main)' #Android uses external INDEX files
-          - Managing mobile devices: 
+          - Managing mobile devices:
             - '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX.yml, main)' #Android uses external INDEX files
         Database design:
           - Data Quality: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-quality.md, master)'
