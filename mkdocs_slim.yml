@@ -117,6 +117,7 @@ site_dir: ./target/en/
 
 nav:
     - Home: '@github(dhis2/dhis2-docs, src/home.md, master)'
+    - Terms of use: '@github(dhis2/dhis2-docs, src/termsofuse.md, master)'
     - Implement:
         Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
         Support and documentation:
