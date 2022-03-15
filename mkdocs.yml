@@ -563,7 +563,9 @@ nav:
           DHIS2 WHO Digital Health Data Toolkit:
             - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/metadata/about-metadata.md, master)'
             - General Design Principles for WHO Metadata Packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
-            - Common Metadata Library: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/common-metadata-library.md, master)'
+            - Common Metadata Library:
+              - Design: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/gnrc-design.md, master)'
+              - Installation: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/gnrc-installation.md, master)'
             - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           CHIS Community Health Information System:
             - CHIS General Design: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/chis_aggregate_design.md, master'
