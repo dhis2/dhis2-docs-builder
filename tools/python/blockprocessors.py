@@ -277,7 +277,7 @@ class CodeBlockProcessor(BlockProcessor):
 class BlockQuoteProcessor(BlockProcessor):
 
     RE = re.compile(r'(^|\n)[ ]{0,3}>[ ]?(.*)')
-    BQ_CLASS = re.compile(r'(^|\n)[ ]{0,3}>[ ]+\*\*(.*)\*\*')
+    BQ_CLASS = re.compile(r'(^|\n)[ ]{0,4}>(([^\n{]*){[ ]*\.(.*)[ ]*}|[ ]+\*\*(.*)\*\*)')
 
     def test(self, parent, block):
         return bool(self.RE.search(block))
@@ -303,9 +303,15 @@ class BlockQuoteProcessor(BlockProcessor):
             # This is a new blockquote. Create a new parent element.
             quote = util.etree.SubElement(parent, 'blockquote')
             if bqc_orig:
-                bqc = bqc_orig.group(2).replace(' ','_').lower()
-                bqc_spaces = bqc.replace('_',' ')
-                block = block.replace(bqc,bqc_spaces)
+                if bqc_orig.group(4):
+                    bqc = bqc_orig.group(4)
+                    title_old = bqc_orig.group(2).strip()
+                    title_new = bqc_orig.group(3).strip()
+                    block = block.replace(title_old,title_new)
+                else:
+                    bqc = bqc_orig.group(5).replace(' ','_').lower()
+                    bqc_spaces = bqc.replace('_',' ')
+                    block = block.replace(bqc,bqc_spaces)
                 quote.set('class',bqc)
             # Recursively parse block with blockquote as parent.
             # change parser state so blockquotes embedded in lists use p tags
