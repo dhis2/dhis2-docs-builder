@@ -410,6 +410,16 @@ nav:
           - '@github(dhis2/dhis2-android-docs, DHIS2_Android_Implementation_INDEX.yml, main)' #Android uses external INDEX files
           - Managing mobile devices:
             - '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX.yml, main)' #Android uses external INDEX files
+        CHIS implementation:
+          - Background: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/01_background.md, chis-chapter)'
+          - Foundational Terms: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/02_foundational terms.md, chis-chapter)'
+          - Design Principles: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/03_design_principles.md, chis-chapter)'
+          - Assessing CHIS: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/04_assessment.md, chis-chapter)'
+          - Data Quality and Use: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/05_data_use.md, chis-chapter)'
+          - Sustainable Design and Architecture: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/06_dhis2_configuration.md, chis-chapter)'
+          - Training and Supervision: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/07_training_support.md, chis-chapter)'
+          - Sustainability and Governance: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/08_governance_sustainability.md, chis-chapter)'
+          - CHIS Assessment Tool: '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/09_appendices.md, chis-chapter)'
         Database design:
           - Data Quality: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-quality.md, master)'
           - Organisation Units: '@github(dhis2/dhis2-docs-implementation, content/database_design/organisation-units.md, master)'
