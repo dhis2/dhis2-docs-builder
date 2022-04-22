@@ -391,15 +391,15 @@ nav:
         Managing mobile devices: 
           - '@github(dhis2/dhis2-android-docs, DHIS2_Android_MDM_INDEX_singlepage.yml, main)' #Android uses external INDEX files
         CHIS implementation:
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/01_background.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/02_foundational terms.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/03_design_principles.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/04_assessment.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/05_data_use.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/06_dhis2_configuration.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/07_training_support.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/08_governance_sustainability.md, chis-chapter)'
-          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/09_appendices.md, chis-chapter)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/01_background.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/02_foundational terms.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/03_design_principles.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/04_assessment.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/05_data_use.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/06_dhis2_configuration.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/07_training_support.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/08_governance_sustainability.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/chis_implementation/09_appendices.md, master)'
     - Develop:
         alt__DHIS core version 2.36:
           Developer Manual:
