@@ -450,6 +450,9 @@ nav:
             alt__DHIS core version 2.35:
               - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
               - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
+            alt__DHIS core version 2.38 PRELIMINARY:
+              - Release Notes: '@github(dhis2/dhis2-releases,releases/2.38/ReleaseNote-2.38.md, master)'
+              - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.38/README.md, master)'
           Android app releases:
             alt__DHIS core version 2.37:
               alt__Android app version 2.5.0:
@@ -460,6 +463,9 @@ nav:
             alt__DHIS core version 2.35:
               alt__Android app version 2.3.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
+            alt__DHIS core version 2.38 PRELIMINARY:
+              alt__Android app version 2.6.0:
+                - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.6/ReleaseNote-2.6.0.md, 2.6)'
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
         Using the API:
