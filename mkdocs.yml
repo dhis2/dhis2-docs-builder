@@ -750,8 +750,8 @@ nav:
                - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
           Disease Surveillance:
             - IDSR Aggregate:
-              - Design: '@github(dhis2-metadata/IDSR-AGG-Integrated_Disease_Surveillance_And_Response, docs/vpd_surveillance_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Design: '@github(dhis2-metadata/IDSR_AGG, docs/idsr_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IDSR_AGG, docs/idsr_agg-installation.md, master)'
             - VPD Case-based Tracker:
               - Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
@@ -808,8 +808,8 @@ nav:
               - Installation: '@github(dhis2-metadata/NUTR-Nutrition, docs/NUTR_nutrition_installation.md, master)'
           Rehabilitation:
             - Rehabilitation Aggregate:
-              - Design: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/rehab_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/RHAG-Rehabilitation, docs/RHAG_rehab_aggregate_installation.md, master)'
+              - Design: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-installation.md, master)'
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
@@ -817,19 +817,19 @@ nav:
           Tuberculosis:
             - TB Aggregate:
               - Design:
-                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_design.md, master)'
-                - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh_design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_installation.md, master)'
+                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-design.md, master)'
+                - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
+              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
-              - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk_design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_installation.md, master)'
+              - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
+              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Case Surveillance Tracker:
-              - Design: '@github(dhis2-metadata/TBCS-TB_Case_Surveillance, docs/tb_case_surveillance_design.md, master)'
-              - Installation: '@github(dhis2-metadata/TBCS-TB_Case_Surveillance, docs/TBCS-installation.md, master)'
+              - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design.md, master)'
+              - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
             - Anti-Tuberculosis Drug Resistance Survey (DRS) Tracker:
-              - Design: '@github(dhis2-metadata/TBDR-Anti_Tuberculosis_Drug_Resistance_Survey, docs/tb_drs_design.md, master'
-              - Installation: '@github(dhis2-metadata/TBDR-Anti_Tuberculosis_Drug_Resistance_Survey, docs/TBDR-installation.md, master'
+              - Design: '@github(dhis2-metadata/TB_DRS, docs/tb_drs-design.md, master'
+              - Installation: '@github(dhis2-metadata/TB_DRS, docs/tb_drs-installation.md, master'
           Downloads Section:
             - WHO Metadata Packages: https://dhis2.org/who-package-downloads/
       - alt__Tutorials:
