@@ -31,7 +31,8 @@ window.onclick = function(event) {
 var dataArr = {};
 // Load the locations once, on page-load.
 $(document).ready(function() {
-    $.getJSON( "/search/search_index_simple.json").done(function(data) {
+    var langbase = document.getElementById("language-selector").options[0].value.replace('/home.html','')
+    $.getJSON( langbase+"/search/search_index_simple.json").done(function(data) {
         window.dataArr = data;
     }).fail(function(data) {
         console.log('no results found');
