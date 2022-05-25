@@ -6,6 +6,7 @@ from . import dhis2_utils
 from weasyprint import HTML
 from os.path import relpath
 import subprocess
+import copy
 
 
 class Dhis2DocsPlugin(BasePlugin):
@@ -174,14 +175,17 @@ class Dhis2DocsPlugin(BasePlugin):
         else:
 
             search_index_fp = config.data["site_dir"] + "/search/search_index.json"
+            search_index_algolia = config.data["site_dir"] + "/search/search_index_simple.json"
             with open(search_index_fp, "r") as f:
                 search_index = dhis2_utils.json.load(f)
 
             temp_records = []
+            more_records = []
             included_records = []
             matching_paragraphs = []
             unique_records = set()
 
+            dropped=0
 
             for rec in reversed(search_index["docs"]):
 
@@ -204,8 +208,12 @@ class Dhis2DocsPlugin(BasePlugin):
                             versions = config['version_map'][locdir]
                             text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
 
+                    r = copy.deepcopy(rec)
+                    rec["versions"] = versions
+
                     for v in versions:
-                        rec["title"] += '<v-tag>' + v + '</v-tag>'
+                        r["title"] += '<v-tag>' + v + '</v-tag>'
+
 
                 except AttributeError:
                     # .html not found in the location
@@ -220,16 +228,42 @@ class Dhis2DocsPlugin(BasePlugin):
                         unique_records.add(rec['location'])
                         matching_paragraphs.append(text_cksum)
 
-                temp_records.insert(0,rec)
+                if '#' in rec["location"]:
+                    temp_records.insert(0,r)
+                    more_records.insert(0,rec)
+                else:
+                    temp_records.insert(0,r)
+                    #print(rec["title"],"is full page.")
+                    dropped +=1
+
+
 
             for rec in temp_records:
                 if rec['location'] in unique_records:
                     included_records.append(rec)
 
+
+            for rec in more_records:
+                cpaths = rec["location"].split('/')
+                if len(cpaths) > 1:
+                    cat = cpaths[0]
+                    if cat == "Topics":
+                        rec["category"] = rec["location"].split('/')[1]
+                    else:
+                        rec["category"] = rec["location"].split('/')[0]
+                for v in rec["versions"]:
+                    if v in rec["category"]:
+                        rec["versions"].remove(v)
+
             search_index["docs"] = included_records
             with open(search_index_fp, "w") as f:
                 dhis2_utils.json.dump(search_index, f)
 
+            with open(search_index_algolia, "w") as f:
+                dhis2_utils.json.dump(more_records, f)
+
+            print("Number of SEARCH records: "+str(len(more_records)))
+            print("Number of DROPPED records: "+str(dropped))
 
         if self.config['make_pdfs']:
 

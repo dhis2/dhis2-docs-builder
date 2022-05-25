@@ -67,6 +67,25 @@
         </div>
       </div>
     {% endif %}
+    <!-- Trigger/Open The Modal -->
+<button id="simpleBtn" class="simpleButton"></button>
+
+<!-- The Modal -->
+<div id="simpleModal" class="simplemodal">
+
+  <!-- Modal content -->
+  <div class="simplemodal-content">
+    <div class="simpleHeader">
+      <span class="simpleClose">&times;</span>
+      <input id="simplesearch" class="simplesearch" type="text" placeholder="Search term">
+      <span id="simpleInfo" class="simpleInfo"></span>
+    </div>
+    <div id="simplematches" style="overflow-y:hidden; white-space:pre-wrap"></div>
+  </div>
+
+</div>
+    <div id="dsearch" class="dsearch">
+    </div>
     {% if "search" in config["plugins"] %}
       <label class="md-header__button md-icon" for="__search">
         {% include ".icons/material/magnify.svg" %}

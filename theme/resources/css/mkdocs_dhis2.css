@@ -1038,3 +1038,131 @@ p.d_card-title {
   background-color: var(--md-default-bg-color) !important;
   font-weight: bold;
 }
+
+
+.simpleButton {
+  color: unset !important;
+  font-size: 14px !important;
+  font-family: unset !important;
+  padding: 10px;
+  height:32px;
+  width:32px;
+}
+.simpleButton::before {
+  content: "\f1e5";
+  display: inline-block;
+  font-family:Fontawesome;
+  font-size: 18px;
+}
+
+/* The Modal (background) */
+.simplemodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.simplemodal-content {
+  background-color: var(--md-default-bg-color);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--fill-bg-200);
+  width: 80%;
+  max-width: 900px;
+}
+
+.simpleHeader {
+  height:50px;
+  width:100%;
+}
+
+.simplesearch {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  border: 1px solid var(--fill-bg-200);
+  width: 400px;
+  background-color: var(--md-default-bg-color);
+  float:left;
+}
+
+.simpleInfo {
+  color: var(--text-muted);
+  float: left;
+  margin:10px 0px 0px 10px;
+  font-size:0.6rem;
+}
+
+
+/* The Close Button */
+.simpleClose {
+  color: var(--text-muted);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.simpleClose:hover,
+.simpleClose:focus {
+  color:  var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagetitle {
+  margin: 0.5em 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #276696;
+  padding-top: 20px;
+}
+
+.sectitle {
+font-weight: 700;
+font-size: 0.8rem;
+color:  var(--text-muted);
+  margin:5px;
+}
+.sectext {
+  margin:5px;
+  color:var(--text-muted);
+  font-size:0.7rem;
+}
+
+.sectext mark {
+  _background-color: #43CBCB;
+}
+
+
+.bread {
+
+color: #276696;
+}
+
+.card a {
+  text-decoration: none;
+  width:96%;
+}
+.card {
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right:auto;
+  border: 2px solid var(--md-default-bg-color);
+}
+
+.card:hover {
+  border: 2px solid var(--fill-bg-200);
+  __box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 12px;
+}

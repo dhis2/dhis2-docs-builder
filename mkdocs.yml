@@ -67,11 +67,15 @@ theme:
 # our css
 extra_css:
   - resources/css/mkdocs_dhis2.css
+  
 
 extra_javascript:
   - resources/javascript/config.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
+  - resources/javascript/simple_search.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 plugins:
   - search:
