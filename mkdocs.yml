@@ -694,19 +694,19 @@ nav:
             - Tuberculosis: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_tb_aggregate_design.md, master'
             - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_wash_aggregate_design.md, master'
           COVID-19 Surveillance:
-            - COVID-19 Digital Data Package: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_surveillance_digital_data_package.md, master)'
-            - Release Notes: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_release_notes_v03.md, master)'
-            - Upgrade Notes: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_upgrade_notes_02_to_03.md, master)'
+            - COVID-19 Digital Data Package: '@github(dhis2-metadata/C19_CS, docs/covid19_surveillance_digital_data_package.md, master)'
+            - Release Notes: '@github(dhis2-metadata/C19_CS, docs/covid19-release_notes-v0.3.md, master)'
+            - Upgrade Notes: '@github(dhis2-metadata/C19_CS, docs/covid19_upgrade_notes_02_to_03.md, master)'
             - COVID-19 Aggregate:
-              - Design: '@github(dhis2-metadata/COVID19-AGG-COVID19_Surveillance, docs/covid19_aggregate_system_design.md, master)'
-              - Installation: '@github(dhis2-metadata/COVID19-AGG-COVID19_Surveillance, docs/covid19_aggregate_installation.md, master)'
-            - COVID-19 Case-based Surveillance Tracker:
-              - Design: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_case-based_surveillance_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_tracker_installation.md, master)'
+              - Design: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-installation.md, master)'
+            - COVID-19 Case Surveillance Tracker:
+              - Design: '@github(dhis2-metadata/C19_CS, docs/c19_cs-design.md, master)'
+              - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
             - COVID-19 POE Tracker:
-              - Design: '@github(dhis2-metadata/COVID19_POE-TRK-Points_of_Entry, docs/covid19_poe_design.md, master)'
-              - Installation: '@github(dhis2-metadata/COVID19-TRK-COVID19_Case_Based_Surveillance, docs/covid19_tracker_installation.md, master)'
-            - COVID-19 Surveillance Events:
+              - Design: '@github(dhis2-metadata/C19_POE, docs/c19_poe-design.md, master)'
+              - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
+            - COVID-19 Surveillance Events [Discontinued]:
               - Design: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_design.md, master)'
               - Installation: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_installation.md, master)'
           COVID-19 Vaccine Delivery:
@@ -730,20 +730,20 @@ nav:
                 - Android Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
           CRVS & Mortality:
-            - Cause of Death Tracker and Events:
-              - Design: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_design.md, master)'
-              - Change Log: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/changelog.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_COD-TRK-Cause_of_Death, docs/cod_installation_guide.md, master)'
+            - Cause of Death Tracker:
+              - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design.md, master)'
+              - Change Log: '@github(dhis2-metadata/CRVS_COD, docs/changelog.md, master)'
+              - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
             - Rapid Mortality Surveillance Events:
               - Design: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_event_design.md, master)'
               - Installation: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_events_installation.md, master)'
             - Vital Events Tracker:
                alt__Version 1.1.0:
-               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design_v1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
+               - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design-v1.1.0.md, master)'
+               - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
                alt__Version 1.0.0:
-               - Design: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/vital_events_tracker_design.md, master)'
-               - Installation: '@github(dhis2-metadata/VE00-Vital_Events_Notification, docs/VE00-installation.md, master)'
+               - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design-v1.0.0.md, master)'
+               - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
           Disease Surveillance:
             - IDSR Aggregate:
               - Design: '@github(dhis2-metadata/IDSR_AGG, docs/idsr_agg-design.md, master)'
