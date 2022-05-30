@@ -47,6 +47,7 @@ jobs:
         cp tools/python/blockprocessors.py ${pythonLocation}/lib/python3.8/site-packages/markdown/
         cp tools/python/attr_list.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
         cp tools/python/tables.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
+        cp tools/python/search_index.py ${pythonLocation}/lib/python3.8/site-packages/mkdocs/contrib/search/
 
     - name: Install node
       uses: actions/setup-node@v2
