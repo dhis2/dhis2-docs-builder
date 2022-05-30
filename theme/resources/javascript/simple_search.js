@@ -29,10 +29,11 @@ window.onclick = function(event) {
 
 // Variable to hold the locations
 var dataArr = {};
+var langbase = "";
 // Load the locations once, on page-load.
 $(document).ready(function() {
-    var langbase = document.getElementById("language-selector").options[0].value.replace('/home.html','')
-    $.getJSON( langbase+"/search/search_index_simple.json").done(function(data) {
+    langbase = "/"+document.getElementById("language-selector").options[0].value.split("/")[1]+"/";
+    $.getJSON( langbase+"search/search_index_simple.json").done(function(data) {
         window.dataArr = data;
     }).fail(function(data) {
         console.log('no results found');
@@ -42,7 +43,7 @@ $(document).ready(function() {
 // Respond to any input change, and show first few matches
 $("#simplesearch").on('input', function() {
 
-    var searchphrase = $(this).val().toLowerCase();
+    var searchphrase = $(this).val().toLowerCase().replace('"','\"');
     var di = document.getElementById("simpleInfo");
 
 
@@ -85,7 +86,7 @@ $("#simplesearch").on('input', function() {
             lastpage = page;
             var tr = results.insertRow(-1);
 
-            var res = '<div class="card"><a href="' + m.location + '"><div class="container"><p class="sectitle">' + m.title + '</p><p class="sectext">' + highlighter(m.text, searchphrase, true) + '</p></div></a></div>';
+            var res = '<div class="card"><a href="' + langbase + m.location + '"><div class="container"><p class="sectitle">' + m.title + '</p><p class="sectext">' + highlighter(m.text, searchphrase, true) + '</p></div></a></div>';
 
             var tabCell = tr.insertCell(-1);
             tabCell.innerHTML = res;
@@ -105,9 +106,9 @@ $("#simplesearch").on('input', function() {
             var start = text.toLowerCase().indexOf(phrase);
             var first = 0;
             if (cropStart) first = start-100;
-            if (start == -1) return text.substring(0,100-phrase.length);
+            if (start == -1) return escapeHtml(text.substring(0,100-phrase.length));
             else {
-                return text.substring(first,start)+'<mark>'+ escapeHtml(text.substring(start,start+phrase.length))+'</mark>'+ highlighter(text.substring(start+phrase.length),phrase);   // The function returns the product of p1 and p2
+                return escapeHtml(text.substring(first,start))+'<mark>'+ escapeHtml(text.substring(start,start+phrase.length))+'</mark>'+ highlighter(text.substring(start+phrase.length),phrase);   // The function returns the product of p1 and p2
             }
 
         function escapeHtml(unsafe)
