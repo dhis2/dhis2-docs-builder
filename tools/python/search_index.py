@@ -65,7 +65,8 @@ class SearchIndex:
         # Fix the spacing around hightlighted content in code blocks
         # i.e. removing space before and after </span> tag
         tag_regex = re.compile('\s*<span([^>]*)>')
-        html = tag_regex.sub('', page.content)
+        tmp_page = re.sub('<span class="w">\s*','&nbsp;', page.content)
+        html = tag_regex.sub('', tmp_page)
         html = re.sub('</span>\s*','', html)
 
         parser.feed(html)
