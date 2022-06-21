@@ -752,10 +752,25 @@ nav:
               - Design: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
               - VPD CS Installation Annex: '@github(dhis2-metadata/VPD_CBS-TRK-Vaccine_Preventable_Disease_Case_Based_Surveillance, docs/vpd_cbs_installation.md, master)'
+          Entomology and Vector Control:
+            - Entomology General Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/ento-design-guide.md, master)'
+            - Breeding Sites Monitoring:
+              - Larviciding:
+                - Design: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-design.md, master)'
+            - Indoor Residual Spraying:
+              - Residual Efficacy Monitoring:
+                - Design: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-design.md, master)'
+            - Insecticide-treated Nets:
+              - Bioefficacy:
+                - Design: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-design.md, master)'
           HIV:
             - HIV Aggregate:
-              - Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               alt__Version 1.2.0:
+               - Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-v.1.2.0-design.md, master)'
+               - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
+               alt__Version 1.1.0:
+               - Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-v.1.1.0-design.md, master)'
+               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
             - HIV Case Surveillance Tracker:
               - Design: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_design.md, master)'
               - Installation: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_installation.md, master)'
@@ -788,9 +803,14 @@ nav:
                  - User Manual: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria Aggregate:
-              - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design.md, master)'
-              - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+               alt__Version 2.0.0:
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.2.0.0-design.md, master)'
+               - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+               alt__Version 1.2.1:
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.1.2.1-design.md, master)'
+               - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
               - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
