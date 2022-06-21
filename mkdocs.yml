@@ -804,13 +804,13 @@ nav:
           Malaria:
             - Malaria Aggregate:
                alt__Version 2.0.0:
-              - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.2.0.0-design.md, master)'
-              - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.2.0.0-design.md, master)'
+               - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
-              - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.1.2.1-design.md, master)'
-              - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.1.2.1-design.md, master)'
+               - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
               - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
