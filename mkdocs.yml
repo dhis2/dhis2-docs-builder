@@ -667,8 +667,8 @@ nav:
             - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/metadata/about-metadata.md, master)'
             - General Design Principles for WHO Metadata Packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
             - Common Metadata Library:
-              - Design: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/gnrc-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GNRC-Common_Metadata_Library, docs/gnrc-installation.md, master)'
+              - Design: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-design.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-installation.md, master)'
             - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           CHIS Community Health Information System:
             - CHIS General Design: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/chis_aggregate_design.md, master'
@@ -757,12 +757,15 @@ nav:
             - Breeding Sites Monitoring:
               - Larviciding:
                 - Design: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-design.md, master)'
+                - Installation: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-installation.md, master)'
             - Indoor Residual Spraying:
               - Residual Efficacy Monitoring:
                 - Design: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-design.md, master)'
+                - Installation: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-installation.md, master)'
             - Insecticide-treated Nets:
               - Bioefficacy:
                 - Design: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-design.md, master)'
+                - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
           HIV:
             - HIV Aggregate:
                alt__Version 1.2.0:
