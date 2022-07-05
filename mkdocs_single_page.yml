@@ -419,6 +419,7 @@ nav:
     - Implement:
         DHIS2 implementation guide:
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'          
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'

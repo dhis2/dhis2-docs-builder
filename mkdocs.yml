@@ -445,6 +445,7 @@ nav:
         Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
         Implementing DHIS2:
           - Overview: '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+          - Planning and Budgeting: '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'
           - Conceptual Design Principles: '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - Setting Up a New Database: '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - Deployment Strategies: '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
