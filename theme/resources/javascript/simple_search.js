@@ -68,22 +68,22 @@ var langbase = String(document.currentScript.src).replace('resources/javascript/
 // Load the locations once, on page-load.
 $(document).ready(function() {
 
-    var localData = ssGetWithExpiry('ssIndex');
-    if (localData != null){
-        window.dataArr = localData;
-    }
-    else {
+    // var localData = ssGetWithExpiry('ssIndex');
+    // if (localData != null){
+    //     window.dataArr = localData;
+    // }
+    // else {
         $.ajax({
             cache: true,
             success: function(data) {
                 
-                ssSetWithExpiry('ssIndex',data,3600000);
+                //ssSetWithExpiry('ssIndex',data,3600000);
                 window.dataArr = data;
             },
             url: langbase + 'search/search_index_simple.json'
 
         });
-    }
+    // }
 });
 // Respond to any input change, and show first few matches
 $("#simplesearch").on('input', function() {
