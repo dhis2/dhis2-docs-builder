@@ -32,12 +32,12 @@ console.log("current_script:"+me);
 // Variable to hold the locations
 var dataArr = {};
 var langbase = "";
+var simple_search_script = document.currentScript;
+
 // Load the locations once, on page-load.
 $(document).ready(function() {
-    var me = document.currentScript;
-    console.log("current_script_doc:"+me);
-    langbase = "/"+document.getElementById("language-selector").options[0].value.split("/")[1]+"/";
-    $.getJSON( langbase+"search/search_index_simple.json").done(function(data) {
+    langbase = String(simple_search_script.src).replace('resources/javascript/simple_search.js','');
+    $.getJSON(langbase + 'search/search_index_simple.json').done(function(data) {
         window.dataArr = data;
     }).fail(function(data) {
         console.log('no results found');
