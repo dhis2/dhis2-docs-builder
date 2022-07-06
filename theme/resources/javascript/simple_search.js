@@ -25,6 +25,8 @@ window.onclick = function(event) {
 }
 
 
+var me = document.currentScript;
+console.log("current_script:"+me);
 
 
 // Variable to hold the locations
@@ -32,6 +34,8 @@ var dataArr = {};
 var langbase = "";
 // Load the locations once, on page-load.
 $(document).ready(function() {
+    var me = document.currentScript;
+    console.log("current_script_doc:"+me);
     langbase = "/"+document.getElementById("language-selector").options[0].value.split("/")[1]+"/";
     $.getJSON( langbase+"search/search_index_simple.json").done(function(data) {
         window.dataArr = data;
