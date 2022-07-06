@@ -9,6 +9,11 @@ var span = document.getElementsByClassName("simpleClose")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
+  var res = ssGetWithExpiry('ssPhrase');
+  if (res != null){
+    document.getElementById("simplesearch").value = res;
+    document.getElementById("simplematches").innerHTML = ssGetWithExpiry('ssMatches');
+  }
   modal.style.display = "block";
 }
 
@@ -24,25 +29,61 @@ window.onclick = function(event) {
   }
 }
 
+function ssSetWithExpiry(key, value, ttl) {
+	const now = new Date()
+    
+	// `item` is an object which contains the original value
+	// as well as the time when it's supposed to expire
+	const item = {
+		value: value,
+		expiry: now.getTime() + ttl,
+	}
+	localStorage.setItem(key, JSON.stringify(item))
+}
 
-var me = document.currentScript;
-console.log("current_script:"+me);
-
+function ssGetWithExpiry(key) {
+	const itemStr = localStorage.getItem(key)
+	// if the item doesn't exist, return null
+	if (!itemStr) {
+		return null
+	}
+	const item = JSON.parse(itemStr)
+	const now = new Date()
+    
+	// compare the expiry time of the item with the current time
+	if (now.getTime() > item.expiry) {
+        
+		// If the item is expired, delete the item from storage
+		// and return null
+		localStorage.removeItem(key)
+		return null
+	}
+	return item.value
+}
 
 // Variable to hold the locations
 var dataArr = {};
-var langbase = "";
-var simple_search_script = document.currentScript;
+var langbase = String(document.currentScript.src).replace('resources/javascript/simple_search.js','');
 
 // Load the locations once, on page-load.
 $(document).ready(function() {
-    langbase = String(simple_search_script.src).replace('resources/javascript/simple_search.js','');
-    $.getJSON(langbase + 'search/search_index_simple.json').done(function(data) {
-        window.dataArr = data;
-    }).fail(function(data) {
-        console.log('no results found');
-        //window.dataArr = testData; // remove this line in non-demo mode
-    });
+
+    var localData = ssGetWithExpiry('ssIndex');
+    if (localData != null){
+        window.dataArr = localData;
+    }
+    else {
+        $.ajax({
+            cache: true,
+            success: function(data) {
+                
+                ssSetWithExpiry('ssIndex',data,3600000);
+                window.dataArr = data;
+            },
+            url: langbase + 'search/search_index_simple.json'
+
+        });
+    }
 });
 // Respond to any input change, and show first few matches
 $("#simplesearch").on('input', function() {
@@ -51,7 +92,10 @@ $("#simplesearch").on('input', function() {
     var di = document.getElementById("simpleInfo");
 
 
-    if (searchphrase.length < 4){ $('#simplematches').html('')}
+    if (searchphrase.length < 4){ 
+        $('#simplematches').html('');
+        ssSetWithExpiry('ssMatches','',86400000);
+    }
     else{
         di.innerHTML = "searching...";
         // find the current version
@@ -100,8 +144,10 @@ $("#simplesearch").on('input', function() {
         var divContainer = document.getElementById("simplematches");
         divContainer.innerHTML = "";
         divContainer.appendChild(results);
+        ssSetWithExpiry('ssMatches',divContainer.innerHTML,86400000);
         //$('#matches').html(ms.join('\n'));
     }
+    ssSetWithExpiry('ssPhrase',$(this).val(),86400000);
 
 });
 
