@@ -809,7 +809,7 @@ nav:
             - Malaria Aggregate:
                alt__Version 2.0.0:
                - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note-2.0.0.md, master)'
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mmal_agg-design-2.0.0.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.0.0.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
