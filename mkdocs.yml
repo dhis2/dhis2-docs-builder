@@ -445,6 +445,7 @@ nav:
         Implement: '@github(dhis2/dhis2-docs-implementation, content/index.md, master)'
         Implementing DHIS2:
           - Overview: '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
+          - Planning and Budgeting: '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'
           - Conceptual Design Principles: '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - Setting Up a New Database: '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - Deployment Strategies: '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
@@ -807,11 +808,13 @@ nav:
           Malaria:
             - Malaria Aggregate:
                alt__Version 2.0.0:
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.2.0.0-design.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note-2.0.0.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mmal_agg-design-2.0.0.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-v.1.2.1-design.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note_2.0.0.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
