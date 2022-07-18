@@ -813,7 +813,7 @@ nav:
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note_2.0.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note-2.0.0.md, master)'
                - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
