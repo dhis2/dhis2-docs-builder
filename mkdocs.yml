@@ -747,10 +747,10 @@ nav:
                - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
           Disease Surveillance:
             - IDS Aggregate:
-              alt__Version 1.2.0:
-              - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-release_note-1.2.0.md, master)'
-              - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design-1.2.0.md, master)'
-              - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
+               alt__Version 1.2.0:
+               - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-release_note-1.2.0.md, master)'
+               - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design-1.2.0.md, master)'
+               - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
             - VPD Case Surveillance Tracker:
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
