@@ -1,0 +1,99 @@
+body {
+    font: 14px system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    
+  }
+  
+  span {
+    color: #404b5a;
+    font-weight:bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color:#4375cd;
+  }
+  
+  a:after {
+    padding:4px;
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA3IDciPgogIDxwYXRoIGZpbGw9IiMyOTNGNkYiIGQ9Ik03LDAgTDcsNCBMNiw0IEw1Ljk5OTQ0NjYxLDEuNzA3IEwxLjM1MzU1MzM5LDYuMzUzNTUzMzkgTDAuNjQ2NDQ2NjA5LDUuNjQ2NDQ2NjEgTDUuMjkyNDQ2NjEsMSBMMywxIEwzLDAgTDcsMCBaIi8+Cjwvc3ZnPgo=);
+      
+  }
+  
+  /* Remove default bullets */
+  ul,
+  #myUL {
+    list-style-type: none;
+    padding-top:4px;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+      padding:4px;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::after {
+    content: "\f105";
+    display: inline-block;
+    margin-right: 6px;
+    font-weight: bold;
+    margin-left:10px;
+    font-family:Fontawesome;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::after {
+    transform: rotate(90deg);
+  }
+    
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+  
+  /* percentage */
+  .percentage-track {
+    float:left;
+    border: #d6d6d6 1px solid;
+    width: 100px;
+    overflow: hidden;
+    margin-right:10px;
+  }
+  .percentage {
+    _padding: 4px 4px;
+    max-width: 100px;
+  }
+  /* percentage colors, for reference */
+  .percentage-upto-25 {
+    background-color: #ffc6c6;
+  }
+  .percentage-upto-50 {
+    background-color: #ffebc6;
+  }
+  .percentage-upto-75 {
+    background-color: #eaf2c8;
+  }
+  .percentage-upto-100 {
+    background-color: #d5efd3;
+  }
+  .percentage-100 {
+    background-color: #569850;
+    color: white;
+  }
+  
