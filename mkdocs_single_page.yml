@@ -428,6 +428,7 @@ nav:
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/security_considerations.md, master)'
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/server-hosting.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-a-platform.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/integration-concepts.md, master)'
