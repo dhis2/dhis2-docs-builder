@@ -452,6 +452,7 @@ nav:
           - Setting Up a New Database: '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - Deployment Strategies: '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
           - Security Considerations: '@github(dhis2/dhis2-docs-implementation, content/implementation/security_considerations.md, master)'
+          - Server Hosting: '@github(dhis2/dhis2-docs-implementation, content/implementation/server-hosting.md, master)'
           - DHIS2 as Data Warehouse: '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
           - DHIS2 as a platform: '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-a-platform.md, master)'
           - Integration concepts: '@github(dhis2/dhis2-docs-implementation, content/implementation/integration-concepts.md, master)'
