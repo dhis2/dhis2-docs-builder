@@ -450,7 +450,6 @@ nav:
           - Planning and Budgeting: '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'
           - Conceptual Design Principles: '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - Setting Up a New Database: '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
-          - Deployment Strategies: '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
           - Security Considerations: '@github(dhis2/dhis2-docs-implementation, content/implementation/security_considerations.md, master)'
           - Server Hosting: '@github(dhis2/dhis2-docs-implementation, content/implementation/server-hosting.md, master)'
           - DHIS2 as Data Warehouse: '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
