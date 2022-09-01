@@ -426,7 +426,6 @@ nav:
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'          
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
-          - '@github(dhis2/dhis2-docs-implementation, content/implementation/deployment-strategies.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/security_considerations.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/server-hosting.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/dhis2-as-data-warehouse.md, master)'
