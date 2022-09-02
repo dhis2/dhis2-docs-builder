@@ -325,18 +325,21 @@ class fetcher:
         # md = q.sub(self.h.slugmatch,markdown)
         md = self.add_anchor_attributes(markdown)
 
+        self.store_anchors(self.current_file,md)
+
+
+        return md
+
+    def store_anchors(self,cf,md):
         # record the available anchors across the documentation
         # we will use this to convert inter-document links
         for anch in re.findall(r'(^#+)([^\n{<]*)({ *#.*?$)',md,re.MULTILINE):
             a = anch[2].strip(' {}')
             if a not in self.global_toc:
                 self.global_toc[a] = []
-            cf = self.current_file
             if cf not in self.global_toc[a]:
                 self.global_toc[a].append(cf)
 
-
-        return md
 
     def add_anchor_attributes(self,md):
 
@@ -790,7 +793,6 @@ class fetcher:
                                 except AttributeError:
                                     edit = ""
 
-
                         if lastname:
                             chk = hashlib.md5(lastchapter.encode('utf-8')).hexdigest()
                             chapter_file = self.docs_dir + lastname
@@ -799,6 +801,7 @@ class fetcher:
                                 os.makedirs(os.path.dirname(chapter_file), exist_ok=True)
                                 lc = open(chapter_file,'w')
                                 lc.write(self.ref_update(lastchapter))
+                                self.store_anchors(lastname,lastchapter)
                                 lc.close
                             try:
                                 bmap[newname] += [chk]
@@ -854,6 +857,7 @@ class fetcher:
 
                     lc = open(chapter_file,'w')
                     lc.write(self.ref_update(lastchapter))
+                    self.store_anchors(lastname,lastchapter)
                     lc.close
                 try:
                     bmap[newname] += [chk]
