@@ -632,7 +632,7 @@ nav:
           - DHIS 2.35 Javadocs: https://docs.dhis2.org/javadoc/2.35/
           - DHIS master Javadocs: https://docs.dhis2.org/javadoc/master/
         Integrating with R: '@github(dhis2/dhis2-docs, src/developer/dhis2-and-r-integration.md, master)'
-        Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.md, master, 1)'
+        Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.yml, master, 1)'
     - Manage:
         Manage: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
         Performing system administration:
