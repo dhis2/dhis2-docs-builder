@@ -700,7 +700,7 @@ nav:
             - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_wash_aggregate_design.md, master'
           COVID-19 Surveillance:
             - COVID-19 Digital Data Package: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
-            - Release Notes: '@github(dhis2-metadata/C19_CS, docs/c19_cs-release_note-2022.md, master)'
+            - Release Note: '@github(dhis2-metadata/C19_CS, docs/c19_cs-release_note-2022.md, master)'
             - COVID-19 Aggregate:
               - Design: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-installation.md, master)'
