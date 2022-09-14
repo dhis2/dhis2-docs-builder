@@ -845,6 +845,7 @@ nav:
             - TB Aggregate:
               - Design:
                 - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-design.md, master)'
+                - TB Laboratory: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_lab-design.md, master)'
                 - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Logistics:
