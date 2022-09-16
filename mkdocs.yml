@@ -756,8 +756,7 @@ nav:
                - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
             - VPD Case Surveillance Tracker:
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
-              - VPD CS Installation Annex: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
+              - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
           Entomology and Vector Control:
             - Entomology General Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/ento-design-guide.md, master)'
             - Breeding Sites Monitoring:
