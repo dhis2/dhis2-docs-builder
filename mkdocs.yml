@@ -755,9 +755,9 @@ nav:
                - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design-1.2.0.md, master)'
                - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
             - VPD Case Surveillance Tracker:
+              - Release Note: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-release_note-1.1.0.md, master)'
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
-              - VPD CS Installation Annex: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
+              - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
           Entomology and Vector Control:
             - Entomology General Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/ento-design-guide.md, master)'
             - Breeding Sites Monitoring:
@@ -845,6 +845,7 @@ nav:
             - TB Aggregate:
               - Design:
                 - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-design.md, master)'
+                - TB Laboratory: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_lab-design.md, master)'
                 - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Logistics:
