@@ -614,6 +614,7 @@ nav:
             - Visualizations: '@github(dhis2/dhis2-docs, src/developer/web-api/visualizations.md, master)'
             - Analytics: '@github(dhis2/dhis2-docs, src/developer/web-api/analytics.md, master)'
             - Maintenance: '@github(dhis2/dhis2-docs, src/developer/web-api/maintenance.md, master)'
+            - Data Exchange: '@github(dhis2/dhis2-docs, src/developer/web-api/data-exchange.md, master)'
             - I18n: '@github(dhis2/dhis2-docs, src/developer/web-api/i18n.md, master)'
             - SMS: '@github(dhis2/dhis2-docs, src/developer/web-api/sms.md, master)'
             - Users: '@github(dhis2/dhis2-docs, src/developer/web-api/users.md, master)'
