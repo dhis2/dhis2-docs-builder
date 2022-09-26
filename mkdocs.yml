@@ -832,8 +832,8 @@ nav:
               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
           Non-Communicable Diseases:
             - Hypertension Control Tracker:
-              - Design: '@github(dhis2-metadata/NCD_HTM, docs/ncd_htm-design.md, master)'
-              - Installation: '@github(dhis2-metadata/NCD_HTM, docs/ncd_htm-installation.md, master)'
+              - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
+              - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
           Nutrition:
             - Nutrition Aggregate:
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
