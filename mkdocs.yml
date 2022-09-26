@@ -708,7 +708,7 @@ nav:
             - COVID-19 Case Surveillance Tracker:
               - Design: '@github(dhis2-metadata/C19_CS, docs/c19_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
-            - COVID-19 POE Tracker:
+            - COVID-19 POE Tracker [Discontinued]:
               - Design: '@github(dhis2-metadata/C19_POE, docs/c19_poe-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
             - COVID-19 Surveillance Events [Discontinued]:
@@ -735,7 +735,7 @@ nav:
                 - Android Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/COVAC-AGG-COVID19_Vaccination, docs/covid19_vaccine_budget_guide.md, master)'
           CRVS & Mortality:
-            - Cause of Death Tracker:
+            - Cause of Death Tracker [Discontinued]:
               - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design.md, master)'
               - Change Log: '@github(dhis2-metadata/CRVS_COD, docs/changelog.md, master)'
               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
@@ -830,6 +830,10 @@ nav:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+          Non-Communicable Diseases:
+            - Hypertension Control Tracker:
+              - Design: '@github(dhis2-metadata/NCD_HTM, docs/ncd_htm-design.md, master)'
+              - Installation: '@github(dhis2-metadata/NCD_HTM, docs/ncd_htm-installation.md, master)'
           Nutrition:
             - Nutrition Aggregate:
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
