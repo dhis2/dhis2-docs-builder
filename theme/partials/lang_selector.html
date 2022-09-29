@@ -19,13 +19,13 @@
   >
     {% for key, value in config.extra.dhis2_languages.items() %} {% if key ==
     config.theme.language_select %}
-    <option value="/{{ key }}/{{ page.url }}" title="{{ value }}">
+    <option value="{{ config.extra.dhis2_site_context | default('/') }}{{ key }}/{{ page.url }}" title="{{ value }}">
       <p>{{ key | upper | replace('_419','') }}</p>
     </option>
     {% endif %} {% endfor %} {% for key, value in
     config.extra.dhis2_languages.items() %} {% if key != config.theme.language_select
     %}
-    <option value="/{{ key }}/{{ page.url }}" title="{{ value }}">
+    <option value="{{ config.extra.dhis2_site_context | default('/') }}{{ key }}/{{ page.url }}" title="{{ value }}">
       <p>{{ key | upper | replace('_419','') }}</p>
     </option>
     {% endif %} {% endfor %}
