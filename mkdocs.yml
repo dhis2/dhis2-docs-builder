@@ -790,14 +790,14 @@ nav:
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Immunization:
             - Immunization Aggregate:
-              alt__Version 1.0.0:
-              - Release Note: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-design-1.0.0.md, master)'
-              - Installation: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-installation.md, master)'
-              alt__Version 0.9.2:
-              - Release Note: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-design-0.9.2.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               alt__Version 1.0.0:
+               - Release Note: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-release_note.md, master)'
+               - Design: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-design-1.0.0.md, master)'
+               - Installation: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-installation.md, master)'
+               alt__Version 0.9.2:
+               - Release Note: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-release_note.md, master)'
+               - Design: '@github(dhis2-metadata/IMM_EPIAGG, docs/imm_epiagg-design-0.9.2.md, master)'
+               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
             - EIR Immunization eRegistry:
               - Design: '@github(dhis2-metadata/EIR-TRK-Electronic_Immunization_Registry, docs/eir_immunization_registry_design.md, master'
               - Change Log: '@github(dhis2-metadata/EIR-TRK-Electronic_Immunization_Registry, docs/eir_change_log.md, master'
