@@ -715,7 +715,7 @@ nav:
             - COVAC Aggregate:
                alt__Version 1.1.0:
                - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_aff-installation.md, master)'
+               - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
                alt__Version 1.0.0:
                - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
