@@ -786,7 +786,7 @@ nav:
               - HIV Logistics Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
           Immunization:
-            - Immunization (EPI) HMIS:
+            - Expanded Programme on Immunization (EPI) Aggregate:
                alt__Version 1.0.0:
                - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-1.0.0.md, master)'
