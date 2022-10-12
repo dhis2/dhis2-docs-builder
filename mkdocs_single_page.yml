@@ -116,6 +116,7 @@ nav:
             DHIS2 User Manual:
               - '@github(dhis2/dhis2-docs, src/user/what-is-dhis2.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
+              - '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,master)'
               - '@github(dhis2/capture-app, docs/user/using-the-capture-app.md, master)'
               - '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,master)'
