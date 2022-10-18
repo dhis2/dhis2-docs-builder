@@ -96,6 +96,7 @@ markdown_extensions:
         - name: math
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols:
@@ -423,7 +424,7 @@ nav:
     - Implement:
         DHIS2 implementation guide:
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/a-quick-guide-to-dhis2-implementation.md, master)'
-          - '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'          
+          - '@github(dhis2/dhis2-docs-implementation, content/implementation/planning-budgeting.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/conceptual-design-principles.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/setting-up-a-new-database.md, master)'
           - '@github(dhis2/dhis2-docs-implementation, content/implementation/security_considerations.md, master)'
