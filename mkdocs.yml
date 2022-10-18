@@ -106,6 +106,7 @@ markdown_extensions:
         - name: math
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols:
@@ -507,6 +508,9 @@ nav:
             alt__DHIS core version 2.35:
               - Release Notes: '@github(dhis2/dhis2-releases,releases/2.35/ReleaseNote-2.35.0.md, master)'
               - Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.35/README.md, master)'
+            alt__DHIS core version 2.39:
+              - Preliminary Release Notes: '@github(dhis2/dhis2-releases,releases/2.39/ReleaseNote-2.39.md, master)'
+              - Preliminary Upgrade Notes: '@github(dhis2/dhis2-releases,releases/2.39/README.md, master)'
           Android app releases:
             alt__DHIS core version 2.38:
               alt__Android app version 2.6.0:
@@ -520,6 +524,9 @@ nav:
             alt__DHIS core version 2.35:
               alt__Android app version 2.3.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.3/ReleaseNote-2.3.0.md, master)'
+            alt__DHIS core version 2.39:
+              alt__Android app version 2.7.0:
+                - Preliminary Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.7/ReleaseNote-2.7.0.md, 2.7)'
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
         Using the API:

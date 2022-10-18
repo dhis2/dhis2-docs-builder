@@ -56,9 +56,6 @@
 
   --md-typeset-color: var(--text-base);
   --md-typeset-a-color: var(--action-base);
-  --md-typeset-kbd-color: #f8f9fa;
-  --md-typeset-kbd-accent-color: orange;
-  --md-typeset-kbd-border-color: #d5dde5;
   --md-code-fg-color: --text-muted;
   --md-code-bg-color: var(--fill-bg-100);
 
@@ -118,9 +115,6 @@
 
   --md-typeset-color: var(--text-base);
   --md-typeset-a-color: var(--action-base);
-  --md-typeset-kbd-color: #f8f9fa;
-  --md-typeset-kbd-accent-color: orange;
-  --md-typeset-kbd-border-color: #d5dde5;
   --md-code-fg-color: --text-muted;
   --md-code-bg-color: var(--fill-bg-100);
 
@@ -131,6 +125,13 @@
 /*  */
 /* Global rules */
 /*  */
+
+/* Joe's fix for rendering of keys
+.md-typeset kbd {
+	background-color: var(--md-default-bg-color);
+	box-shadow: 0 .1rem 0 .05rem var(--md-default-fg-color--lightest),0 .1rem 0 var(--md-typeset-kbd-border-color),0 -.1rem .2rem var(--md-default-bg-color--light) inset;
+	color: var(--md-default-fg-color);
+}
 
 /* Remove scrollbar hovering */
 .md-sidebar__scrollwrap:hover,
