@@ -796,6 +796,10 @@ nav:
                - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
                - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+            - Immunization Triangulation Dashboard:
+               - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-release_note.md, master)'
+               - Design: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-design.md, master)'
+               - Installation: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-installation.md, master)'
             - EIR Immunization eRegistry:
               - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
               - Change Log: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-change_log.md, master'
