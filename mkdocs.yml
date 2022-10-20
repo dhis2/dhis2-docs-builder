@@ -330,6 +330,7 @@ nav:
           alt__DHIS core version master:
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
+              - Data Entry (beta): '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,master)'
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,master)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
