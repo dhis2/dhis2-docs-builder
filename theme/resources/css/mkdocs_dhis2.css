@@ -673,44 +673,80 @@ figcaption {
   font-style: italic;
 }
 
-.note {
+.note,
+.nota,
+.observação,
+.poznámka,
+.注意 {
   background-image: url(../images/admin/note.png);
 }
 
 .tip,
+.conseil,
+.consejo,
 .truc,
-.astuce {
+.dica,
+.astuce,
+.提示 {
   background-image: url(../images/admin/tip.png);
 }
 
-.important {
+.important,
+._importante_,
+.importante,
+.důležité,
+.重要 {
   background-image: url(../images/admin/important.png);
 }
 
 .caution,
-.prudence {
+.prudence,
+.precaución,
+.cuidado,
+.pozor,
+.attention{
   background-image: url(../images/admin/caution.png);
 }
 
 .warning,
-.attention,
-.danger {
+.avertissement,
+.advertencia,
+.aviso,
+.danger,
+.varování,
+.警告{
   background-image: url(../images/admin/warning.png);
 }
 
-.work_in_progress {
+.work_in_progress,
+.tâches_en_cours,
+.trabajo_en_progreso,
+.工作_进度_,
+.工作_进度 {
   background-image: url(../images/admin/icon-wip.png);
 }
 
-.complete {
+.complete,
+.completo,
+.complet,
+.dokončeno,
+.完成 {
   background-image: url(../images/admin/icon-complete.png);
 }
 
-.incomplete {
+.incomplete,
+.incompleto,
+.incomplet,
+.neúplné,
+.不完整 {
   background-image: url(../images/admin/icon-incomplete.png);
 }
 
-.not_applicable {
+.not_applicable,
+.no_aplicable,
+.non_applicable,
+.não_aplicável,
+.不_适用 {
   background-image: url(../images/admin/icon-na.png);
 }
 
@@ -742,14 +778,26 @@ caption {
 
 .md-typeset blockquote.caution,
 .md-typeset blockquote.prudence,
-.md-typeset blockquote.important {
+.md-typeset blockquote.precaución,
+.md-typeset blockquote.cuidado,
+.md-typeset blockquote.attention,
+.md-typeset blockquote.important,
+.md-typeset blockquote.importante,
+.md-typeset blockquote.důležité,
+.md-typeset blockquote.pozor,
+.md-typeset blockquote.重要
+{
   background-color: var(--yellow050);
   border: 1px solid var(--yellow200);
 }
 
 .md-typeset blockquote.warning,
-.md-typeset blockquote.attention,
-.md-typeset blockquote.danger {
+.md-typeset blockquote.avertissement,
+.md-typeset blockquote.advertencia,
+.md-typeset blockquote.aviso,
+.md-typeset blockquote.danger,
+.md-typeset blockquote.varování,
+.md-typeset blockquote.警告{
   background-color: var(--red050);
   border: 2px solid var(--red500);
 }
