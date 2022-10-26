@@ -707,7 +707,7 @@ nav:
             - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_wash_aggregate_design.md, master'
           COVID-19 Surveillance:
             - COVID-19 Digital Data Package: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
-            - Release Note: '@github(dhis2-metadata/C19_CS, docs/c19_cs-release_note-2022.md, master)'
+            - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
             - COVID-19 Aggregate:
               - Design: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-installation.md, master)'
@@ -758,11 +758,11 @@ nav:
           Disease Surveillance:
             - IDS Aggregate:
                alt__Version 1.2.0:
-               - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-release_note-1.2.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design-1.2.0.md, master)'
                - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
             - VPD Case Surveillance:
-              - Release Note: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-release_note-1.1.0.md, master)'
+              - Release Note: '@github(dhis2-metadata/VPD_CS, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
           Entomology and Vector Control:
@@ -797,11 +797,11 @@ nav:
           Immunization:
             - Expanded Programme on Immunization (EPI) Aggregate:
                alt__Version 1.0.0:
-               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-release_note.md, master)'
+               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-1.0.0.md, master)'
                - Installation: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-installation.md, master)'
                alt__Version 0.9.2:
-               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-release_note.md, master)'
+               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
                - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
             - Immunization Triangulation Dashboard:
@@ -830,12 +830,12 @@ nav:
           Malaria:
             - Malaria HMIS:
                alt__Version 2.0.0:
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note-2.0.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.0.0.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-release_note-2.0.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
@@ -869,17 +869,18 @@ nav:
                 - TB Laboratory: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_lab-design.md, master)'
                 - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/TB_AGG, docs/release_note.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
               - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Case Surveillance:
                alt__Version 2.0.0:
-               - Release Note: '@github(dhis2-metadata/TB_CS, docs/tb_cs-release_note-2.0.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design-2.0.0.md, master)'
                - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
                alt__Version 1.0.1:
-               - Release Note: '@github(dhis2-metadata/TB_CS, docs/tb_cs-release_note-2.0.0.md, master)'
+               - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design-1.0.1.md, master)'
                - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
             - Anti-Tuberculosis Drug Resistance Survey (DRS):
@@ -888,6 +889,7 @@ nav:
             - TB - COVID-19 Impact Assessment:
               - Design: '@github(dhis2-metadata/TB_IMPAX, docs/tb_impax-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_IMPAX, docs/tb_impax-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/TB_IMPAX, docs/release_note.md, master)'
           Downloads Section:
             - WHO Metadata Packages: https://dhis2.org/who-package-downloads/
       - alt__Tutorials:
