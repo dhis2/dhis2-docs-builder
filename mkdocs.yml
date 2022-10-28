@@ -766,7 +766,7 @@ nav:
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
           Entomology and Vector Control:
-            - Entomology General Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/ento-design-guide.md, master)'
+            - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, docs/ento-design-guide.md, master)'
             - Breeding Sites Monitoring:
               - Larviciding:
                 - Design: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-design.md, master)'
@@ -786,14 +786,14 @@ nav:
                - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
                alt__Version 1.1.0:
                - Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - HIV Case Surveillance:
               - Design: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_design.md, master)'
               - Installation: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_installation.md, master)'
             - HIV Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - HIV Logistics Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
           Immunization:
             - Expanded Programme on Immunization (EPI) Aggregate:
                alt__Version 1.0.0:
@@ -803,7 +803,7 @@ nav:
                alt__Version 0.9.2:
                - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
-               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - Immunization Triangulation Dashboard:
                - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-design.md, master)'
@@ -811,11 +811,15 @@ nav:
             - EIR Immunization eRegistry:
               - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
               - Change Log: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-change_log.md, master'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/tracker_installation_guide.md, master)'
+            - Vaccination Campaigns:
+              - Use: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/use.md, master)'
+              - Design: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/design.md, master)'
+              - Implement: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/implement.md, master)'
             - EPI Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - Adverse Events Following Immunization (AEFI):
               - Design: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
@@ -843,7 +847,7 @@ nav:
               - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
               - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
             - Malaria Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
           Non-Communicable Diseases:
@@ -861,7 +865,7 @@ nav:
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
             - TB HMIS:
               - Design:
@@ -871,7 +875,7 @@ nav:
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/TB_AGG, docs/release_note.md, master)'
             - TB Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Case Surveillance:
