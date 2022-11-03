@@ -732,16 +732,16 @@ nav:
                - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
             - COVID-19 Electronic Immunization Registry:
-              - Design: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_design.md, master)'
-              - Change Log: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_change_log.md, master)'
-              - Installation: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/CVIR-installation.md, master)'
+              - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_design.md, master)'
+              - Change Log: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_change_log.md, master)'
+              - Installation: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-installation.md, master)'
               - Training materials:
-                - Trainer's Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_user_guide.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_exercises.md, master)'
-                - Android Trainer's Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_trainers_guide.md, master)'
-                - Android User Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
-                - Android Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
+                - Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_user_guide.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_exercises.md, master)'
+                - Android Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_trainers_guide.md, master)'
+                - Android User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_user_guide.md, master)'
+                - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-budget_guide.md, master)'
           CRVS & Mortality:
             - Cause of Death:
@@ -824,16 +824,16 @@ nav:
               - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - Adverse Events Following Immunization (AEFI):
-              - Design: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+              - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
               - Training Materials:
-                - Trainer's Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_complete_data_entry.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_data_entry_exercises.md, master)'
-                - Navigating Through Dashboards: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_dashboard_navigation.md, master)'
+                - Trainer's Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_complete_data_entry.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/IMM_AEFI, training/aefi_data_entry_exercises.md, master)'
+                - Navigating Through Dashboards: '@github(dhis2-metadata/IMM_AEFI, training/aefi_dashboard_navigation.md, master)'
             - Immunization Analysis App:
                alt__App version 1.0.3:
-                 - User Manual: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/immunisation_analysis_app_user_manual.md, master)'
+                 - User Manual: '@github(dhis2-metadata/IMM_AEFI, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria HMIS:
                alt__Version 2.0.0:
@@ -847,8 +847,8 @@ nav:
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
-              - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
+              - Design: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-design.md, master)'
+              - Installation: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-installation.md, master)'
             - Malaria Logistics:
               - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_stk-design.md, master)'
