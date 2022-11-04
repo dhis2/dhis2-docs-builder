@@ -860,6 +860,7 @@ nav:
           Nutrition:
             - Nutrition: '@github(dhis2-metadata/NUTR_AGG, docs/index.md, master)'
             - Nutrition Aggregate:
+              - Release Note: '@github(dhis2-metadata/NUTR_AGG, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-installation.md, master)'
           Rehabilitation:
