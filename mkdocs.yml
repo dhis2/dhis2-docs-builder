@@ -858,6 +858,7 @@ nav:
               - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
               - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
           Nutrition:
+            - Nutrition: '@github(dhis2-metadata/NUTR_AGG, docs/index.md, master)'
             - Nutrition Aggregate:
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-installation.md, master)'
