@@ -12,9 +12,6 @@
 {% if (nav_item.title == nav_item.parent.title and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
-{% if (nav_item.title == nav_item.parent.title and nav_item.parent.parent.title == "Metadata") %}
-  {% set dhis2class = "md-nav__item--hidden" %}
-{% endif %}
 {% if level == 1 %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
