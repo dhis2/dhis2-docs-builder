@@ -713,28 +713,31 @@ nav:
               - Installation: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-installation.md, master)'
             - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           CHIS Community Health Information System:
-            - CHIS General Design: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/chis_aggregate_design.md, master'
-            - Adolescant Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ado_aggregate_design.md, master'
-            - Child Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cdh_aggregate_design.md, master'
-            - Child Protection and Interpersonal Violence: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cpiv_aggregate_design.md, master'
-            - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_crvs_aggregate_design.md, master'
-            - Clean Energy: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ene_aggregate_design.md, master'
-            - Community Based Surveillance: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_cbs_aggregate_design.md, master'
-            - HIV: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_hiv_aggregate_design.md, master'
-            - Immunization: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_epi_aggregate_design.md, master'
-            - Integrated Community Case Management: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_iccm_aggregate_design.md, master'
-            - Malaria: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_mal_aggregate_design.md, master'
-            - Maternal Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_mat_aggregate_design.md, master'
-            - Mental Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_men_aggrgate_design.md, master'
-            - Neglected Tropical Diseases: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ntd_aggregate_design.md, master'
-            - Newborn Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_nbh_aggregate_design.md, master'
-            - Non-communicable Diseases: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_ncd_aggregate_design.md, master'
-            - Nutrition: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_nut_aggregate_design.md, master'
-            - People-centered Services: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_pcs_aggregate_design.md, master'
-            - Population Composition: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_pop_aggregate_design.md, master'
-            - Sexual and Reproductive Health: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_srh_aggregate_design.md, master'
-            - Tuberculosis: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_tb_aggregate_design.md, master'
-            - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS-AGG-Community_Health_Information_System, docs/ch_wash_aggregate_design.md, master'
+            - Release Note: '@github(dhis2-metadata/CHIS_AGG, docs/release_note.md, master'
+            - Design:
+              - CHIS General Design: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-design.md, master'
+              - Adolescant Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ah-design.md, master'
+              - Child Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ch-design.md, master'
+              - Child Protection and Interpersonal Violence: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_cpiv-design.md, master'
+              - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_crvs-design.md, master'
+              - Clean Energy: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ene-design.md, master'
+              - Community Based Surveillance: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_cbs-design.md, master'
+              - HIV: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_hiv-design.md, master'
+              - Immunization: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_epi-design.md, master'
+              - Integrated Community Case Management: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_iccm-design.md, master'
+              - Malaria: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_mal-design.md, master'
+              - Maternal Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_mat-design.md, master'
+              - Mental Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_men-design.md, master'
+              - Neglected Tropical Diseases: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ntd-design.md, master'
+              - Newborn Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_nbh-design.md, master'
+              - Non-communicable Diseases: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ncd-design.md, master'
+              - Nutrition: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_nut-design.md, master'
+              - People-centered Services: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_pcs-design.md, master'
+              - Population Composition: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_pop-design.md, master'
+              - Sexual and Reproductive Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_srh-design.md, master'
+              - Tuberculosis: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_tb-design.md, master'
+              - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_wash-design.md, master'
+            - Installation: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-installation.md, master'
           COVID-19 Surveillance:
             - COVID-19 Digital Data Package: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
             - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
@@ -759,16 +762,16 @@ nav:
                - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
             - COVID-19 Electronic Immunization Registry:
-              - Design: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_design.md, master)'
-              - Change Log: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/cvc_eir_change_log.md, master)'
-              - Installation: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, docs/CVIR-installation.md, master)'
+              - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_design.md, master)'
+              - Change Log: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_change_log.md, master)'
+              - Installation: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-installation.md, master)'
               - Training materials:
-                - Trainer's Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_user_guide.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_data_entry_exercises.md, master)'
-                - Android Trainer's Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_trainers_guide.md, master)'
-                - Android User Guide: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_user_guide.md, master)'
-                - Android Data Entry Exercises: '@github(dhis2-metadata/CVIR-Electronic_Immunization_Registry_Covid19_Vaccines, training/covac_android_data_entry_exercises.md, master)'
+                - Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_user_guide.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_exercises.md, master)'
+                - Android Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_trainers_guide.md, master)'
+                - Android User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_user_guide.md, master)'
+                - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_android_data_entry_exercises.md, master)'
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-budget_guide.md, master)'
           CRVS & Mortality:
             - Cause of Death:
@@ -776,8 +779,8 @@ nav:
               - Change Log: '@github(dhis2-metadata/CRVS_COD, docs/changelog.md, master)'
               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
             - Rapid Mortality Surveillance:
-              - Design: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_event_design.md, master)'
-              - Installation: '@github(dhis2-metadata/RMS0-Rapid_Mortality_Surveillance, docs/rms_events_installation.md, master)'
+              - Design: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-design.md, master)'
+              - Installation: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-installation.md, master)'
             - Vital Events:
                alt__Version 1.1.0:
                - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design-v1.1.0.md, master)'
@@ -796,7 +799,7 @@ nav:
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
           Entomology and Vector Control:
-            - Entomology General Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/ento-design-guide.md, master)'
+            - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, docs/ento-design-guide.md, master)'
             - Breeding Sites Monitoring:
               - Larviciding:
                 - Design: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-design.md, master)'
@@ -816,14 +819,14 @@ nav:
                - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
                alt__Version 1.1.0:
                - Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - HIV Case Surveillance:
               - Design: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_design.md, master)'
               - Installation: '@github(dhis2-metadata/HIV_CS-TRK-HIV_Case_Surveillance, docs/hiv_case_surveillance_installation.md, master)'
             - HIV Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - HIV Logistics Design: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
           Immunization:
             - Expanded Programme on Immunization (EPI) Aggregate:
                alt__Version 1.0.0:
@@ -833,7 +836,7 @@ nav:
                alt__Version 0.9.2:
                - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
-               - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - Immunization Triangulation Dashboard:
                - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-design.md, master)'
@@ -841,22 +844,26 @@ nav:
             - EIR Immunization eRegistry:
               - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
               - Change Log: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-change_log.md, master'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/tracker_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/tracker_installation_guide.md, master)'
+            - Vaccination Campaigns:
+              - Use: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/use.md, master)'
+              - Design: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/design.md, master)'
+              - Implement: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/implement.md, master)'
             - EPI Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
             - Adverse Events Following Immunization (AEFI):
-              - Design: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/adverse_events_following_immunization_aefi_tracker_installation.md, master)'
+              - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
               - Training Materials:
-                - Trainer's Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_complete_data_entry.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_data_entry_exercises.md, master)'
-                - Navigating Through Dashboards: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, training/aefi_dashboard_navigation.md, master)'
+                - Trainer's Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_complete_data_entry.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/IMM_AEFI, training/aefi_data_entry_exercises.md, master)'
+                - Navigating Through Dashboards: '@github(dhis2-metadata/IMM_AEFI, training/aefi_dashboard_navigation.md, master)'
             - Immunization Analysis App:
                alt__App version 1.0.3:
-                 - User Manual: '@github(dhis2-metadata/AEFI-TRK-Adverse_Events_Following_Immunization, docs/immunisation_analysis_app_user_manual.md, master)'
+                 - User Manual: '@github(dhis2-metadata/IMM_AEFI, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria HMIS:
                alt__Version 2.0.0:
@@ -870,10 +877,10 @@ nav:
                - Data Quality Dashboard Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
-              - Design: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/mal_cs_foci_tracker_design.md, master)'
-              - Installation: '@github(dhis2-metadata/MLS0-Malaria_Case_Surveillance_and_Foci_Investigation, docs/MLS0_tracker_installation.md, master)'
+              - Design: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-design.md, master)'
+              - Installation: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-installation.md, master)'
             - Malaria Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - Malaria Logistics Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
           Non-Communicable Diseases:
@@ -881,7 +888,9 @@ nav:
               - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
               - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
           Nutrition:
+            - Nutrition: '@github(dhis2-metadata/NUTR_AGG, docs/index.md, master)'
             - Nutrition Aggregate:
+              - Release Note: '@github(dhis2-metadata/NUTR_AGG, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-installation.md, master)'
           Rehabilitation:
@@ -891,7 +900,7 @@ nav:
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH-AGG-Reproductive_Maternal_Newborn_Child_and_Adolescent_Health, docs/rmncah_aggregate_design.md, master)'
-              - Installation: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/aggregate_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
             - TB HMIS:
               - Design:
@@ -901,7 +910,7 @@ nav:
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/TB_AGG, docs/release_note.md, master)'
             - TB Logistics:
-              - LMIS Design: '@github(dhis2-metadata/DOCS-General_Metadata_Package_Documentation, docs/lmis_general_aggregate_design.md, master)'
+              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Case Surveillance:
