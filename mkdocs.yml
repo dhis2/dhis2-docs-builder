@@ -851,8 +851,8 @@ nav:
                - Installation: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-installation.md, master)'
             - EIR Immunization eRegistry:
               - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
-              - Change Log: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-change_log.md, master'
-              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/tracker_installation_guide.md, master)'
+              - Installation: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/IMM_EIR, docs/release_note.md, master'
             - Vaccination Campaigns:
               - Use: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/use.md, master)'
               - Design: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/design.md, master)'
