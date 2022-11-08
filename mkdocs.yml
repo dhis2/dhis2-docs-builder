@@ -713,7 +713,7 @@ nav:
               - Installation: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-installation.md, master)'
             - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
           CHIS Community Health Information System:
-            - Release Note: '@github(dhis2-metadata/CHIS_AGG, docs/release_note.md, master'
+            - OVERVIEW: '@github(dhis2-metadata/CHIS_AGG, docs/overview.md, master'
             - Design:
               - CHIS General Design: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-design.md, master'
               - Adolescant Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ah-design.md, master'
@@ -738,33 +738,41 @@ nav:
               - Tuberculosis: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_tb-design.md, master'
               - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_wash-design.md, master'
             - Installation: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-installation.md, master'
+            - Release Note: '@github(dhis2-metadata/CHIS_AGG, docs/release_note.md, master'
           COVID-19 Surveillance:
-            - COVID-19 Digital Data Package: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
+            - OVERVIEW: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
             - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
             - COVID-19 Aggregate:
+              - OVERVIEW: '@github(dhis2-metadata/C19_AGG, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/C19_AGG, docs/release_note.md, master)'
             - COVID-19 Case Surveillance:
+              - OVERVIEW: '@github(dhis2-metadata/C19_CS, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/C19_CS, docs/c19_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
             - COVID-19 Points of Entry[Discontinued]:
+              - OVERVIEW: '@github(dhis2-metadata/C19_POE, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/C19_POE, docs/c19_poe-design.md, master)'
-              - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
             - COVID-19 Surveillance Events [Discontinued]:
-              - Design: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_design.md, master)'
-              - Installation: '@github(dhis2-metadata/COVID19-EVT-COVID19_Surveillance_Events, docs/covid19_event_installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/C19_EVT, docs/overview.md, master)'
+              - Design: '@github(dhis2-metadata/C19_EVT, docs/c19_evt-design.md, master)'
           COVID-19 Vaccine Delivery:
             - COVAC Aggregate:
                alt__Version 1.1.0:
+               - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
                - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design-1.1.0.md, master)'
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
                alt__Version 1.0.0:
-               - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
+               - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
+               - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design-1.0.0.md, master)'
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
             - COVID-19 Electronic Immunization Registry:
+              - OVERVIEW: '@github(dhis2-metadata/CVC_EIR, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_design.md, master)'
-              - Change Log: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_change_log.md, master)'
               - Installation: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/CVC_EIR, docs/release_note.md, master)'
               - Training materials:
                 - Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_trainers_guide.md, master)'
                 - Data Entry User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_user_guide.md, master)'
@@ -888,11 +896,11 @@ nav:
               - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
               - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
           Nutrition:
-            - Nutrition: '@github(dhis2-metadata/NUTR_AGG, docs/index.md, master)'
+            - OVERVIEW: '@github(dhis2-metadata/NUTR_AGG, docs/overview.md, master)'
             - Nutrition Aggregate:
-              - Release Note: '@github(dhis2-metadata/NUTR_AGG, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/NUTR_AGG, docs/release_note.md, master)'
           Rehabilitation:
             - Rehabilitation Aggregate:
               - Design: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-design.md, master)'
