@@ -907,7 +907,7 @@ nav:
               - Installation: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-installation.md, master)'
           RMNCAH:
             - RMNCAH Aggregate:
-              - Design: '@github(dhis2-metadata/RMNCAH_AGG, docs/rmncah_agg_design.md, master)'
+              - Design: '@github(dhis2-metadata/RMNCAH_AGG, docs/rmncah_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/aggregate_installation_guide.md, master)'
           Tuberculosis:
             - TB HMIS:
