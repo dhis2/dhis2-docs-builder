@@ -857,7 +857,7 @@ nav:
                  - HIV Surveillance: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design-1.1.0.md, master)'
                  - LMIS: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
                  - HIV Logistics: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-install.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
                - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
             - HIV Case Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/HIV_CS, docs/overview.md, master)'
@@ -873,7 +873,7 @@ nav:
                alt__Version 0.9.2:
                - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
-               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-install.md, master)'
+               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
             - Immunization Triangulation Dashboard:
                - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/release_note.md, master)'
                - Design: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-design.md, master)'
@@ -889,7 +889,7 @@ nav:
             - EPI Logistics:
               - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_general_aggregate_design.md, master)'
               - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-install.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
             - Adverse Events Following Immunization (AEFI):
               - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design.md, master)'
               - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
@@ -937,7 +937,7 @@ nav:
           RMNCAH:
             - RMNCAH Aggregate:
               - Design: '@github(dhis2-metadata/RMNCAH_AGG, docs/rmncah_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-install.md, master)'
+              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
           Tuberculosis:
             - TB HMIS:
               - Design:
