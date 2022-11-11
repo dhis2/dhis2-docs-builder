@@ -18,7 +18,7 @@
 {% if (nav_item.title == nav_item.parent.title|replace(alt_prefix,"") and not nav_item.parent.parent) %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
-{% if nav_item.title == "Home" %}
+{% if nav_item.title in ["Home","OVERVIEW"] %}
   {% set dhis2class = "md-nav__item--hidden" %}
 {% endif %}
 <!-- DHIS2 -END -->
