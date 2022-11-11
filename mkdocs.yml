@@ -770,7 +770,7 @@ nav:
                - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
             - COVID-19 Electronic Immunization Registry:
               - OVERVIEW: '@github(dhis2-metadata/CVC_EIR, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir_design.md, master)'
+              - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-design.md, master)'
               - Installation: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/CVC_EIR, docs/release_note.md, master)'
               - Training materials:
@@ -837,7 +837,7 @@ nav:
                 - Release Note: '@github(dhis2-metadata/ENTO_IRS, docs/release_note.md, master)'
             - Insecticide-treated Nets:
               - Bioefficacy:
-                - OVERVIEW: '@github(dhis2-metadata/ENTO_IRS, docs/overview.md, master)'
+                - OVERVIEW: '@github(dhis2-metadata/ENTO_ITN, docs/overview.md, master)'
                 - Design: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-design.md, master)'
                 - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
                 - Release Note: '@github(dhis2-metadata/ENTO_ITN, docs/release_note.md, master)'
@@ -863,7 +863,7 @@ nav:
               - OVERVIEW: '@github(dhis2-metadata/HIV_CS, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/HIV_CS, docs/hiv_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/HIV_CS, docs/hiv_cs-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/HIV_CS docs/release_note.md, master)'
+              - Release Note: '@github(dhis2-metadata/HIV_CS, docs/release_note.md, master)'
           Immunization:
             - Expanded Programme on Immunization (EPI) Aggregate:
                alt__Version 1.0.0:
