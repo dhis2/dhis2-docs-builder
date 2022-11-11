@@ -822,7 +822,7 @@ nav:
               - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/VPD_CS, docs/release_note.md, master)'
           Entomology and Vector Control:
-            - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento-design-guide.md, master)'
+            - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento_vc-design.md, master)'
             - Breeding Sites Monitoring:
               - Larviciding:
                 - OVERVIEW: '@github(dhis2-metadata/ENTO_BSM, docs/overview.md, master)'
