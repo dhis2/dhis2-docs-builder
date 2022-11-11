@@ -783,16 +783,16 @@ nav:
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-budget_guide.md, master)'
           CRVS & Mortality:
             - Cause of Death:
-            alt__Version 1.2.1:
-              - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.1.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
-            alt__Version 1.2.0:
-              - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.0.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
+               alt__Version 1.2.1:
+               - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
+               - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.1.md, master)'
+               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
+               - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
+               alt__Version 1.2.0:
+               - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
+               - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.0.md, master)'
+               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
+               - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
             - Rapid Mortality Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/CRVS_RMSE, docs/overview.md, master)'
               - Design: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-design.md, master)'
