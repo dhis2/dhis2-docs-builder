@@ -800,6 +800,7 @@ nav:
               - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-design.md, master)'
               - Installation: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-installation.md, master)'
+              - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
             - Vital Events:
                alt__Version 1.1.0:
                - OVERVIEW: '@github(dhis2-metadata/CRVS_VE, docs/overview.md, master)'
