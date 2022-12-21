@@ -368,8 +368,8 @@ nav:
         DHIS2 Android App: '@github(dhis2/dhis2-android-docs, DHIS2_Android_App_INDEX_singlepage.yml, main)' #Android uses external INDEX files
         Optional Apps:
           Action Tracker App: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_action_tracker_manual_INDEX.md, master)'
-          Bottleneck Analysis App: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_INDEX.md, master)'
-          Interactive Scorecard Ap Manual: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master)'
+          Bottleneck Analysis App: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_bottleneck_analysis_manual_v.1.4.0_INDEX.md master)'
+          Interactive Scorecard App Manual: '@github(hisptz/unicef-apps-docs, src/commonmark/en/dhis2_scorecard_manual_INDEX.md, master)'
           WHO Data Quality Tool Manual: '@github(pamod-dev/dhis2-doc-support, docs/en/dhis2_who_data_quality_tool_guide.md, master)'
     - Implement:
         DHIS2 implementation guide:
