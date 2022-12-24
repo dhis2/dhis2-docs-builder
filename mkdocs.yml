@@ -412,18 +412,18 @@ nav:
             alt__App version 1.4.0:
                 - Introduction:
                   - About this guide: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/common/about-this-guide-bna1.4.0.md, master)'
-                  - Introduction to BNA: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/introduction-to-bna.md, master)'
+                  - Introduction to BNA: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/introduction-to-bna.md, master)'
                   Installation:
-                  - Installation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/bna-app-installation.md, master)'
+                  - Installation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/bna-app-installation.md, master)'
                   Configuration:
-                  - Interventions and indicators configuration: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/interventions-and-indicators-configuration.md, master)'
-                  - Map configuration: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/maps-configuration.md, master)'
-                  - Access: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/grant-access-to-user.md, master)'
+                  - Interventions and indicators configuration: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/interventions-and-indicators-configuration.md, master)'
+                  - Map configuration: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/maps-configuration.md, master)'
+                  - Access: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/grant-access-to-user.md, master)'
                   Usage:
-                  - Data analysis: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/data-analystics.md, master)'
-                  - BNA layout: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/bna-layout.md, master)'
-                  - BNA analysis and interpretation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/bna-analysis-and-interpretation.md, master)'
-                  - Map view: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v1.4.0/map-view.md, master)'
+                  - Data analysis: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/data-analystics.md, master)'
+                  - BNA layout: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/bna-layout.md, master)'
+                  - BNA analysis and interpretation: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/bna-analysis-and-interpretation.md, master)'
+                  - Map view: '@github(hisptz/unicef-apps-docs, src/commonmark/en/content/bna_v.1.4.0/map-view.md, master)'
 
             alt__App version 1.2.2:
               - Introduction and Usage:
