@@ -1,0 +1,111 @@
+site_name: DHIS2 DesignLab
+site_description: Official documentation of the DHIS2 platform
+site_author: DHIS2 Documentation Team
+# site_url sets the canonical url - we want this to point to the latest version
+site_url: 'https://docs.dhis2.org/designlab/en/'
+copyright: 'Copyright &copy; 2008-2022 DHIS2 Team'
+# edit_uri: ''
+repo_url: https://github.com/dhis2designlab/project-toolkit
+repo_name: 'DHIS2 DesignLab Project Toolkit on GitHub'
+use_directory_urls: false
+# docs_dir:
+
+extra:
+  dhis2_languages:
+    en: 'English'
+    # fr: 'Français'
+    # es_419: 'Español (latinoamerica)'
+    # pt: 'Português'
+    # cs: 'čeština'
+    # zh: '中文'
+  dhis2_site_context: '/designlab/'
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dhis2designlab/project-toolkit
+      name: DesignLab Project Toolkit on GitHub
+
+
+theme:
+  name: material
+  logo: 'resources/images/logo.svg'
+  favicon: 'resources/images/favicon.ico'
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integration
+  alternates:
+    alt_marker: 'alt__'
+  custom_dir: 'theme'
+  palette:
+    - scheme: default
+      primary: 'black'
+      accent: 'blue'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'black'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  language: 'en'
+  font: false
+
+# our css
+extra_css:
+  - resources/css/mkdocs_dhis2.css
+
+extra_javascript:
+  - resources/javascript/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search:
+      separator: '[\s]+'
+  - edit_url
+  - dhis2_docs
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+  - markdown_captions
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - d_cardbox
+  - d_card
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite:
+      custom_inline:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols:
+      copyright: false
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# output when building
+site_dir: ./target/en/
+
+nav:
+  - '@github(dhis2designlab/project-toolkit, pages/site_index.yml, main)'
