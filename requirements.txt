@@ -3,7 +3,7 @@ certifi==2018.11.29
 chardet==3.0.4
 cssselect2==0.2.1
 gitdb==4.0.5
-GitPython==3.1.11
+GitPython==3.1.30
 defusedxml==0.5.0
 idna==2.8
 Jinja2==3.0.3
