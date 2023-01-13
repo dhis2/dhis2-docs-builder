@@ -1042,8 +1042,8 @@ nav:
           - General Guidance:
               - Capacity Building Considerations: '@github(dhis2/training-docs, content/general_guidance/capacity_building_considerations.md, main)'
               - Training DB Considerations: '@github(dhis2/training-docs, content/general_guidance/training_DB_considerations.md, main)'
-          - Tracker Config Course:
-              - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creating_tracker_program.md, main)'
+#          - Tracker Config Course:
+#              - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creating_tracker_program.md, main)'
           - Tracker Use Academy:
               - Tracker Use Academy SOP: '@github(dhis2/training-docs, content/tracker_use/tracker_use_academy_sop.md, main)'
               - Webinars:
