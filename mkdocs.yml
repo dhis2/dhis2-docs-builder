@@ -83,7 +83,7 @@ extra_javascript:
 
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: '[\s]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - edit_url
   - dhis2_docs
   - minify:
