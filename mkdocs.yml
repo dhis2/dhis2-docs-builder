@@ -44,8 +44,15 @@ theme:
   favicon: 'resources/images/favicon.ico'
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
+    - navigation.instant
     - toc.integration
+    - content.action.edit
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
   alternates:
     alt_marker: 'alt__'
   custom_dir: 'theme'
@@ -69,17 +76,20 @@ extra_css:
   - resources/css/mkdocs_dhis2.css
 
 extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - resources/javascript/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search:
-      separator: '[\s]+'
+      separator: '[\s\-,:!=\[\]()"]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - edit_url
   - dhis2_docs
   - minify:
       minify_html: true
+  - offline
+
 
 markdown_extensions:
   - codehilite:
@@ -93,7 +103,8 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -111,9 +122,14 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols:
       copyright: false
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tasklist:
       custom_checkbox: true
 

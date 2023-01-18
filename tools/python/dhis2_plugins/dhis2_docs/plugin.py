@@ -1,4 +1,4 @@
-from logging import NullHandler, fatal
+import logging
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
 import mkdocs.structure.files
@@ -7,6 +7,7 @@ from weasyprint import HTML
 from os.path import relpath
 import subprocess
 
+logger = logging.getLogger(__name__)
 
 class Dhis2DocsPlugin(BasePlugin):
 
@@ -166,7 +167,8 @@ class Dhis2DocsPlugin(BasePlugin):
 
 
     def on_post_build(self, config):
-        if not "search" in config["plugins"]:
+
+        if not "material/search" in config["plugins"]:
             logger.debug(
                 "dhis2-search-mod plugin is activated but has no effect as search "
                 "plugin is deactivated!"
