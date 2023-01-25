@@ -70,6 +70,20 @@ theme:
         name: Switch to light mode
   language: 'en'
   font: false
+  filter:
+    versions:
+      - master
+      - 2.36
+      - 2.35
+      - 2.34
+    categories:
+      - Use
+      - Implement
+      - Develop
+      - Manage
+      - Metadata
+      - Tutorials
+      - Stories
 
 # our css
 extra_css:
@@ -83,7 +97,9 @@ extra_javascript:
 
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: '[\s]+'
+      pipeline:
+        - "trimmer"
   - edit_url
   - dhis2_docs
   - minify:
@@ -129,7 +145,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
 

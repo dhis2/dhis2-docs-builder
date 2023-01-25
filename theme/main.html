@@ -1,22 +1,5 @@
 {% extends "base.html" %}
 
-{% block config %}
-  {{ super() }}
-  <script>
-    var __search = {
-      transform: function(query) {
-        var q = query
-          .replace(/[\\'#:]/g, '\\$&')
-          .replace(/^[^\s]{1,2}$/g, "")
-          .replace(/^\b|^(?![^\x00-\x7F]|$)|\s+/g, " +")
-          .replace(/"|(?:^|\s+)[*+\-:^~]+(?=\s+|$)/g, "")
-          .trim();
-        return q;
-      }
-    }
-  </script>
-{% endblock %}
-
 {% block announce %}
 <div class="domain-nav-container">
   <a

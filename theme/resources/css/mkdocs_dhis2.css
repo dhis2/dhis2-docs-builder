@@ -70,7 +70,7 @@
   --grey700: #4a5768;
   --grey600: #6e7a8a;
   --grey500: #a0adba;
-  --grey400: #d5dde5;
+  --grey400: #3b3c3d;
   --grey300: #181a1b;
   --grey200: #1e2020;
   --grey100: #1b1e1f;
@@ -79,7 +79,7 @@
   --green700: #2e7d32;
   --green100: #e8f5e9;
   --red900: #330202;
-  --red700: #b71c1c;
+  --red700: #b74949;
   --red500: #931f1f;
   --red100: #ffe5e8;
   --red050: #390006;
@@ -985,6 +985,9 @@ v-tag {
   font-weight: normal;
 }
 
+.md-tag {
+  display:none !important;
+}
 /* Search bar */
 
 .md-search__input::placeholder {
@@ -995,6 +998,42 @@ v-tag {
   font-size: 0.7rem;
 }
 
+
+.md-search-filter {
+  position:relative;
+  top:0;
+  height:60px;
+  padding:2px 10px;
+  background:var(--grey100);
+  color: var(--grey900);
+  font-size:12px;
+}
+
+.md-chips button {
+  align-items: center;
+  padding: 2px 12px;
+  gap: 5px;
+  
+  height: 23px;
+  color:var(--grey900);
+  
+  /* grey/grey200 */
+  
+  background: var(--grey200);
+  border:1px solid  var(--grey400);
+  border-radius: 10px;
+  margin:2px;
+}
+
+.md-chips button.include {
+  background: var(--blue500);
+  color: var(--md-default-bg-color);
+}
+
+.md-chips button.exclude {
+  background: var(--red700);
+  color: var(--md-default-bg-color);
+}
 /*  */
 /* Footer */
 /*  */
