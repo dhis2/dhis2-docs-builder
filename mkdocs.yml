@@ -73,9 +73,10 @@ theme:
   filter:
     versions:
       - master
+      - 2.39
+      - 2.38
+      - 2.37
       - 2.36
-      - 2.35
-      - 2.34
     categories:
       - Use
       - Implement
