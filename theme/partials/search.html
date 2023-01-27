@@ -6,7 +6,9 @@
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
 
-      <input type="text" class="md-search__input" id="squery" filter="" name="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      {% set pagetags = ' tags:' ~ (page.meta.tags | join(' ') | replace('DHIS core version ','') | replace(' ',' tags:')) if page.meta and page.meta.tags else '' %}
+
+      <input type="text" class="md-search__input" id="squery" filter="{{ pagetags }}" name="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         {% include ".icons/material/magnify.svg" %}
         {% include ".icons/material/arrow-left.svg" %}
@@ -30,10 +32,6 @@
       <div class="md-chips">
         versions:
         {% for version in config.theme.filter.versions %}
-        {% set f_class = "d2-search-filter" %}
-        {% if page.meta and page.meta.tags %}
-        {% set f_class = "d2-search-filter exclude" if ("DHIS core version " ~ version) not in page.meta.tags else f_class %}
-        {% endif %}
         <button class="d2-search-filter" onclick="updateSFilter(this, '{{ version }}')">{{ version }}</button>
         {% endfor %}
 

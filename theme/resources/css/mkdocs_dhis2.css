@@ -985,6 +985,10 @@ v-tag {
   font-weight: normal;
 }
 
+v-tag mark {
+  background-color: unset !important;
+}
+
 .md-tag {
   display:none !important;
 }
