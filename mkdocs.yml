@@ -861,7 +861,7 @@ nav:
                 - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
           HIV:
             - HIV HMIS:
-               alt__Version 1.2.0:
+               alt__Version 1.2.1:
                - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
                - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
                - Design:
@@ -928,6 +928,13 @@ nav:
                - User Manual: '@github(dhis2-metadata/IMM_AEFI, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria HMIS:
+               alt__Version 2.1.0:
+               - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
+               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
+               - Design:
+                 - Malaria HMIS: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.1.0.md, master)'
+                 - Data Quality Dashboard: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 2.0.0:
                - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
                - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
