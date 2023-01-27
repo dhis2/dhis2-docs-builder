@@ -98,8 +98,6 @@ extra_javascript:
 plugins:
   - search:
       separator: '[\s]+'
-      pipeline:
-        - "trimmer"
   - edit_url
   - dhis2_docs
   - minify:
@@ -185,6 +183,14 @@ nav:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
               alt__Android app version 2.1.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
+    - Develop:
+        Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
+        Using the API:
+          alt__DHIS core version 2.39:
+            - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.39)'
+            - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, 2.39)'
+            - Metadata Gist: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata-gist.md, 2.39)'
+            - Data: '@github(dhis2/dhis2-docs, src/developer/web-api/data.md, 2.39)'
     - Manage:
         Manage: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
         Performing system administration:

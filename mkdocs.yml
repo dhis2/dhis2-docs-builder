@@ -99,8 +99,6 @@ extra_javascript:
 plugins:
   - search:
       separator: '[\s]+'
-      pipeline:
-        - "trimmer"
   - edit_url
   - dhis2_docs
   - minify:
