@@ -6,9 +6,9 @@
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
 
-      {% set pagetags = ' tags:' ~ (page.meta.tags | join(' ') | replace('DHIS core version ','') | replace(' ',' tags:')) if page.meta and page.meta.tags else '' %}
+      {% set pagetags = (page.meta.tags ) if page.meta and page.meta.tags else '' %}
 
-      <input type="text" class="md-search__input" id="squery" filter="{{ pagetags }}" name="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" id="squery" filter="{% for pt in pagetags %} tags:{{ pt.split(' ')[-1]  }}{% endfor %}" name="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         {% include ".icons/material/magnify.svg" %}
         {% include ".icons/material/arrow-left.svg" %}

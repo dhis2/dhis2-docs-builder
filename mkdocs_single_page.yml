@@ -64,7 +64,6 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - search
   - edit_url
   - dhis2_docs:
       make_pdfs: true
