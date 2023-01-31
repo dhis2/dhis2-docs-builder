@@ -137,6 +137,7 @@
 .md-banner__inner 
 {
 margin:0 !important;
+padding:0 !important;
 }
 
 /* Remove scrollbar hovering */
@@ -979,7 +980,7 @@ v-tag {
   padding: 4px 6px;
   position: relative;
   float: right;
-  margin: 0;
+  margin-left: 4px;
   text-decoration: none;
   font-size: 0.6rem;
   font-weight: normal;
