@@ -36,17 +36,27 @@ This file was automatically generated - do not edit
     </form>
     <div class="md-search__output">
       {% if config.theme.filter %}
+
       <div class="md-search-filter">
         <div class="md-chips">
-          {% for f in config.theme.filter %}
-          {{ f }}:
-          {% for item in config.theme.filter[f] %}
-          <button class="d2-search-filter" onclick="updateSFilter(this, '{{ item }}')">{{ item }}</button>
+
+          FILTER: 
+          Version:<select class="d2-search-filter" id="versions_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
+            <option class="d2-search-filter" value="" value="">All</option>
+          {% for item in config.theme.filter['versions'] %}
+          <option class="d2-search-filter on" value="{% for i in config.theme.filter['versions'] if i != item %} -tags:{{ i }}{% endfor %}">{{ item }}</option>
           {% endfor %}
-          <br>
+          </select>
+          Category:<select class="d2-search-filter" id="categories_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
+            <option class="d2-search-filter" value="" value="">All</option>
+          {% for item in config.theme.filter['categories'] %}
+          <option class="d2-search-filter on" value=" +tags:{{ item }}">{{ item }}</option>
           {% endfor %}
+          </select>
+
         </div>
       </div>
+
       {% endif %}
       <div class="md-search__scrollwrap" data-md-scrollfix>
 
@@ -92,6 +102,15 @@ This file was automatically generated - do not edit
     element.setAttribute('filter', newf);
     var v = element.value;
     element.value = v;
+    element.focus();
+  }
+  function updateFilters(){
+    console.log("updateFilters");
+    var element = document.getElementById('squery');
+    var vers = document.getElementById('versions_filter');
+    var cats = document.getElementById('categories_filter');
+    var current = element.getAttribute('filter');
+    element.setAttribute('filter', vers.value + cats.value);
     element.focus();
   }
 
