@@ -40,15 +40,15 @@ This file was automatically generated - do not edit
       <div class="md-search-filter">
         <div class="md-chips">
 
-          FILTER: 
-          Version:<select class="d2-search-filter" id="versions_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
-            <option class="d2-search-filter" value="" value="">All</option>
+          Filter results 
+          <select class="d2-search-filter" id="versions_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
+            <option class="d2-search-filter" value="" value="">All versions</option>
           {% for item in config.theme.filter['versions'] %}
-          <option class="d2-search-filter on" value="{% for i in config.theme.filter['versions'] if i != item %} -tags:{{ i }}{% endfor %}">{{ item }}</option>
+          <option class="d2-search-filter on" value="{% for i in config.theme.filter['versions'] if i != item %} -tags:{{ i }}{% endfor %}">version {{ item }}</option>
           {% endfor %}
           </select>
-          Category:<select class="d2-search-filter" id="categories_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
-            <option class="d2-search-filter" value="" value="">All</option>
+          <select class="d2-search-filter" id="categories_filter" onChange="updateFilters(); this.className=this.options[this.selectedIndex].className;">
+            <option class="d2-search-filter" value="" value="">All categories</option>
           {% for item in config.theme.filter['categories'] %}
           <option class="d2-search-filter on" value=" +tags:{{ item }}">{{ item }}</option>
           {% endfor %}
