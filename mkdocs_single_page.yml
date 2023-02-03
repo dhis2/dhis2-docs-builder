@@ -3,7 +3,7 @@ site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/full/'
-copyright: 'Copyright &copy; 2008-2021 DHIS2 Team'
+copyright: 'Copyright &copy; 2008-2023 DHIS2 Team'
 google_analytics: ['UA-157707339-2', 'docs.dhis2.org']
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
