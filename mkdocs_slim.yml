@@ -4,7 +4,6 @@ site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
 copyright: 'Copyright &copy; 2008-2021 DHIS2 Team'
-google_analytics: ['UA-157707339-2', 'docs.dhis2.org']
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
 repo_name: 'dhis2-docs on GitHub'
@@ -35,6 +34,9 @@ extra:
     - icon: fontawesome/brands/discourse
       link: https://community.dhis2.org
       name: DHIS2 Community
+  analytics:
+    provider: google
+    property: UA-157707339-2
 
 theme:
   name: material
@@ -42,7 +44,15 @@ theme:
   favicon: 'resources/images/favicon.ico'
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.instant
     - toc.integration
+    - content.action.edit
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
   alternates:
     alt_marker: 'alt__'
   custom_dir: 'theme'
@@ -60,12 +70,29 @@ theme:
         name: Switch to light mode
   language: 'en'
   font: false
+  filter:
+    versions:
+      - master
+      - 2.36
+      - 2.35
+      - 2.34
+    categories:
+      - Use
+      - Implement
+      - Develop
+      - Manage
+      - Metadata
+      - Tutorials
+      - Stories
+  filter_boost:
+    - '2.39'
 
 # our css
 extra_css:
   - resources/css/mkdocs_dhis2.css
 
 extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - resources/javascript/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -77,6 +104,8 @@ plugins:
   - dhis2_docs
   - minify:
       minify_html: true
+  - offline
+
 
 markdown_extensions:
   - codehilite:
@@ -90,7 +119,8 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -103,12 +133,19 @@ markdown_extensions:
         - name: math
           class: arithmatex
           format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.smartsymbols:
+      copyright: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
 
@@ -148,6 +185,14 @@ nav:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.2/ReleaseNote-2.2.0.md, master)'
               alt__Android app version 2.1.0:
                 - Release Notes: '@github(dhis2/dhis2-releases,android-releases/2.1/ReleaseNote-2.1.0.md, master)'
+    - Develop:
+        Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
+        Using the API:
+          alt__DHIS core version 2.39:
+            - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.39)'
+            - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, 2.39)'
+            - Metadata Gist: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata-gist.md, 2.39)'
+            - Data: '@github(dhis2/dhis2-docs, src/developer/web-api/data.md, 2.39)'
     - Manage:
         Manage: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
         Performing system administration:

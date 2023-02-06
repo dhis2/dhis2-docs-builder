@@ -173,7 +173,7 @@ class fetcher:
             Repo.clone_from(git_url, tmpRoot, multi_options=[branch_opt])
 
 
-    def include_git(self, github_repo, file_path, branch, local_path):
+    def include_git(self, github_repo, file_path, branch, local_path, tags=[]):
 
         self.clone_git(github_repo, branch)
 
@@ -183,13 +183,13 @@ class fetcher:
 
 
         if self.appendcount:
-            self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d)
+            self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d, tags=tags)
         else:
-            self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d)
+            self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d, tags=tags)
 
 
 
-    def include_file(self, origin, local_path, edit_url='',rev_date=''):
+    def include_file(self, origin, local_path, edit_url='',rev_date='', tags=[]):
 
         self.current_file = local_path
         # ensure the destination directory exists
@@ -232,6 +232,8 @@ class fetcher:
                     post['template'] = 'single.html'
                 if rev_date:
                     post['revision_date'] = rev_date
+                if tags:
+                    post['tags'] = [*set(tags)]
                 with open(destination, 'w') as emd:
                     print(frontmatter.dumps(post), file=emd)
 
@@ -441,7 +443,7 @@ class fetcher:
 
             # print(github_repo,git_file,git_branch)
             if git_file.endswith('.md'):
-                self.include_git(github_repo, git_file, git_branch, new_nav)
+                self.include_git(github_repo, git_file, git_branch, new_nav, tags=alternates)
                 if decompose:
                     new_nav = self.chapterise(new_nav,alternates)
                 else:
@@ -461,7 +463,7 @@ class fetcher:
 
             # print(github_repo,git_file,git_branch)
             if local_file.endswith('.md'):
-                self.include_file(local_file, new_nav)
+                self.include_file(local_file, new_nav, tags=alternates)
                 if decompose:
                     new_nav = self.chapterise(new_nav,alternates)
                 else:
@@ -644,6 +646,11 @@ class fetcher:
             else:
                 # this is not an alternate - add to translation source
                 self.nav_strings[k] = { "string": k , "context": path }
+
+                # but for the top-level items, we keep track of like an alternate
+                if path == '':
+                    if no_pref not in ['Home','Topics']:
+                        tmp_v = v_tmp + [no_pref]
 
             if type(n) == dict:
                 n, v_map = self.crawl_nav_dict(nav[k],p, v_map, tmp_v)

@@ -3,7 +3,7 @@ site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
-copyright: 'Copyright &copy; 2008-2021 DHIS2 Team'
+copyright: 'Copyright &copy; 2008-2023 DHIS2 Team'
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
 repo_name: 'dhis2-docs on GitHub'
@@ -44,8 +44,15 @@ theme:
   favicon: 'resources/images/favicon.ico'
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
+    - navigation.instant
     - toc.integration
+    - content.action.edit
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
   alternates:
     alt_marker: 'alt__'
   custom_dir: 'theme'
@@ -63,12 +70,31 @@ theme:
         name: Switch to light mode
   language: 'en'
   font: false
+  filter:
+    versions:
+      - master
+      - 2.39
+      - 2.38
+      - 2.37
+      - 2.36
+    categories:
+      - Use
+      - Implement
+      - Develop
+      - Manage
+      - Metadata
+      - Tutorials
+      - Stories
+      - Training
+  filter_boost:
+    - '2.39'
 
 # our css
 extra_css:
   - resources/css/mkdocs_dhis2.css
 
 extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - resources/javascript/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -80,6 +106,8 @@ plugins:
   - dhis2_docs
   - minify:
       minify_html: true
+  - offline
+
 
 markdown_extensions:
   - codehilite:
@@ -93,7 +121,8 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -111,9 +140,14 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols:
       copyright: false
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tilde
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
 

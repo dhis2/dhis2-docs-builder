@@ -1,4 +1,5 @@
-from logging import NullHandler, fatal
+import logging
+from mkdocs import utils
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
 import mkdocs.structure.files
@@ -7,6 +8,7 @@ from weasyprint import HTML
 from os.path import relpath
 import subprocess
 
+logger = logging.getLogger(__name__)
 
 class Dhis2DocsPlugin(BasePlugin):
 
@@ -166,70 +168,6 @@ class Dhis2DocsPlugin(BasePlugin):
 
 
     def on_post_build(self, config):
-        if not "search" in config["plugins"]:
-            logger.debug(
-                "dhis2-search-mod plugin is activated but has no effect as search "
-                "plugin is deactivated!"
-            )
-        else:
-
-            search_index_fp = config.data["site_dir"] + "/search/search_index.json"
-            with open(search_index_fp, "r") as f:
-                search_index = dhis2_utils.json.load(f)
-
-            temp_records = []
-            included_records = []
-            matching_paragraphs = []
-            unique_records = set()
-
-
-            for rec in reversed(search_index["docs"]):
-
-                versions = []
-                text_cksum = ""
-                ignore = False
-
-                loc = rec["location"] #.strip('.md')
-
-                try:
-                    loc = dhis2_utils.re.search('(.+?)\.html.*', rec["location"]).group(1)
-
-                    locdir = dhis2_utils.os.path.dirname(loc)
-
-                    if loc in config['version_map']:
-                        versions = config['version_map'][loc]
-                        text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
-                    else:
-                        if locdir in config['version_map']:
-                            versions = config['version_map'][locdir]
-                            text_cksum = dhis2_utils.hashlib.md5((rec['title']+rec['text']).encode('utf-8')).hexdigest()
-
-                    for v in versions:
-                        rec["title"] += '<v-tag>' + v + '</v-tag>'
-
-                except AttributeError:
-                    # .html not found in the location
-                    pass
-
-                if text_cksum == "":
-                    # included_records.insert(0,rec)
-                    unique_records.add(rec['location'])
-                else:
-                    if text_cksum not in matching_paragraphs:
-                        unique_records.add(loc+'.html')
-                        unique_records.add(rec['location'])
-                        matching_paragraphs.append(text_cksum)
-
-                temp_records.insert(0,rec)
-
-            for rec in temp_records:
-                if rec['location'] in unique_records:
-                    included_records.append(rec)
-
-            search_index["docs"] = included_records
-            with open(search_index_fp, "w") as f:
-                dhis2_utils.json.dump(search_index, f)
-
 
         if self.config['make_pdfs']:
 
