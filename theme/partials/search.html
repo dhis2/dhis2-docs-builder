@@ -6,10 +6,11 @@ This file was automatically generated - do not edit
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
 
-      {% set pagetags = (page.meta.tags ) if page.meta and page.meta.tags else '' %}
+      {% set boosttags = config.theme.filter_boost if config.theme.filter_boost else '' %}
+      {% set pagetags = (page.meta.tags ) if page.meta and page.meta.tags else boosttags %}
 
-      <input type="text" class="md-search__input" id="squery"
-        filter="{% for pt in pagetags %} tags:{{ pt.split(' ')[-1]  }}{% endfor %}" name="query"
+      <input type="text" class="md-search__input" id="squery" filter="{% for pt in pagetags %} tags:{{ pt.split(' ')[-1]  }}{% endfor %}" 
+        filter_boost="{% for pt in pagetags %} tags:{{ pt.split(' ')[-1]  }}{% endfor %}" name="query"
         aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}"
         autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query"
         required>
@@ -75,12 +76,13 @@ This file was automatically generated - do not edit
 <script>
 
   function updateFilters(){
-    console.log("updateFilters");
+    // console.log("updateFilters");
     var element = document.getElementById('squery');
     var vers = document.getElementById('versions_filter');
     var cats = document.getElementById('categories_filter');
-    var current = element.getAttribute('filter');
-    element.setAttribute('filter', vers.value + cats.value);
+    // var current = element.getAttribute('filter');
+    var boost = element.getAttribute('filter_boost');
+    element.setAttribute('filter', vers.value + cats.value + boost);
     element.focus();
   }
 

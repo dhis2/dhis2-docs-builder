@@ -84,6 +84,8 @@ theme:
       - Metadata
       - Tutorials
       - Stories
+  filter_boost:
+    - '2.39'
 
 # our css
 extra_css:

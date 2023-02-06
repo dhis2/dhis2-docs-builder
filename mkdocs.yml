@@ -86,6 +86,8 @@ theme:
       - Tutorials
       - Stories
       - Training
+  filter_boost:
+    - '2.39'
 
 # our css
 extra_css:
