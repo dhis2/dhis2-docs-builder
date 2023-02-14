@@ -141,6 +141,7 @@ nav:
               - '@github(dhis2/dhis2-docs, src/user/configure-the-gis-app.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/configure-report-functionality.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/system-settings.md,master)'
+              - '@github(dhis2/dhis2-docs, src/user/data-exchange.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/data-administration.md,master)'
               - '@github(dhis2/usage-analytics-app, docs/user/visualize-usage-statistics.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,master)'
