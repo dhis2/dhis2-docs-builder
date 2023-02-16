@@ -196,7 +196,7 @@ nav:
               - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,2.39)'
             Exchanging data:
               - Import/Export: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,2.39)'
-              - Data Exchange: '@github(dhis2/dhis2-docs, src/user/data-exchange.md,master)'
+              - Data Exchange: '@github(dhis2/dhis2-docs, src/user/data-exchange.md,2.39)'
               - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.39)'
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.39)'
