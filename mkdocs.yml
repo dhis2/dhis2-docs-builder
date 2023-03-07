@@ -1129,3 +1129,7 @@ nav:
               - Custom Apps:
                 - Trainer&apos;s Guide to Custom Apps: '@github(dhis2/training-docs, content/tracker_use/tg_custom_apps.md, main)'
                 - Learner&apos;s Guide to Event Reports: '@github(dhis2/training-docs, content/tracker_use/lg_custom_apps.md, main)'
+          - Fundamentals Courses:
+              - Introduction to DHIS2:
+                - Source document: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Introduction-to-DHIS2/source-doc/Introduction-to-dhis2_V1.md, master)'
+                
