@@ -972,23 +972,17 @@ nav:
                alt__Version 2.1.0:
                - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
                - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design:
-                 - Malaria HMIS: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.1.0.md, master)'
-                 - Data Quality Dashboard: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.1.0.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 2.0.0:
                - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
                - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design:
-                 - Malaria HMIS: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.0.0.md, master)'
-                 - Data Quality Dashboard: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.0.0.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
                alt__Version 1.2.1:
                - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
                - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design:
-                 - Malaria HMIS: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
-                 - Data Quality Dashboard: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_dq-design.md, master)'
+               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
                - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/MAL_CS, docs/overview.md, master)'
@@ -1017,10 +1011,16 @@ nav:
               - Design: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-installation.md, master)'
           RMNCAH:
+            - RMNCAH Aggregate:
               - OVERVIEW: '@github(dhis2-metadata/RMNCAH_AGG, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/RMNCAH_AGG, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/RMNCAH_AGG, docs/rmncah_agg-design.md, master)'
               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
+            - RMNCAH Antenatal Care Registry:
+              - OVERVIEW: '@github(dhis2-metadata/RMNCAH_ANC, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/RMNCAH_ANC, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/RMNCAH_ANC, docs/rmncah_anc-design.md, master)'
+              - Installation: '@github(dhis2-metadata/RMNCAH_ANC, docs/rmncah_anc-installation.md, master)'
           Tuberculosis:
             - TB HMIS:
               - OVERVIEW: '@github(dhis2-metadata/TB_AGG, docs/overview.md, master)'
