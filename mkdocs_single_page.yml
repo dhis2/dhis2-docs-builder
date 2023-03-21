@@ -446,6 +446,7 @@ nav:
             - '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
+            - '@github(dhis2/dhis2-docs, src/developer/web-api/openapi.md, master)'
         alt__DHIS core version 2.37:
           Developer Manual:
             - '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.37)'
