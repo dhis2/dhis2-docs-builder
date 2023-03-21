@@ -718,7 +718,6 @@ nav:
             - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
         Core OpenAPI Specification: '@github(dhis2/dhis2-docs, src/developer/web-api/openapi.md, master)'
-        Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
         Core Javadocs:
           - DHIS 2.39 Javadocs: https://docs.dhis2.org/javadoc/2.39/
           - DHIS 2.38 Javadocs: https://docs.dhis2.org/javadoc/2.38/
@@ -726,6 +725,7 @@ nav:
           - DHIS 2.36 Javadocs: https://docs.dhis2.org/javadoc/2.36/
           - DHIS master Javadocs: https://docs.dhis2.org/javadoc/master/
         Integrating with R: '@github(dhis2/dhis2-docs, src/developer/dhis2-and-r-integration.md, master)'
+        Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
         Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.yml, master)'
     - Manage:
         Manage: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
