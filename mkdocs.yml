@@ -1000,6 +1000,11 @@ nav:
               - Release Note: '@github(dhis2-metadata/NCD_HTN, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
               - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
+            - Sensory Function - Eye and Ear Care:
+              - OVERVIEW: '@github(dhis2-metadata/NCD_SF, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/NCD_SF, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/NCD_SF, docs/ncd_sf-design.md, master)'
+              - Installation: '@github(dhis2-metadata/NCD_SF, docs/ncd_sf-installation.md, master)'
           Nutrition:
             - Nutrition Aggregate:
               - OVERVIEW: '@github(dhis2-metadata/NUTR_AGG, docs/overview.md, master)'
