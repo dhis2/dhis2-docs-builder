@@ -47,6 +47,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.instant
+    - navigation.indexes
     - toc.integration
     - content.action.edit
     - content.code.copy

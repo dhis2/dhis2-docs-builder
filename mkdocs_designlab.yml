@@ -32,6 +32,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.indexes
     - toc.integration
   alternates:
     alt_marker: 'alt__'
