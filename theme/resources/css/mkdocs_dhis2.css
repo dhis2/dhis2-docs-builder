@@ -512,6 +512,11 @@ a.domain-nav-item:after {
   cursor:default;
   font-weight:600;
 }
+
+.md-nav__link--index a:hover,
+a.md-nav__link:hover{
+  text-decoration:underline;
+}
 /* adjust the padding for link-to-headers to account for the new alternate bar */
 .md-typeset h3[id]:target::before,
 .md-typeset h2[id]:target::before,
