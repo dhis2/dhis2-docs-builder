@@ -134,7 +134,7 @@
 }
 */
 
-.md-banner__inner 
+.md-banner__inner
 {
 margin:0 !important;
 padding:0 !important;
@@ -508,6 +508,15 @@ a.domain-nav-item:after {
   color: var(--action-hover);
 }
 
+.md-nav__link--index a {
+  cursor:default;
+  font-weight:600;
+}
+
+.md-nav__link--index a:hover,
+a.md-nav__link:hover{
+  text-decoration:underline;
+}
 /* adjust the padding for link-to-headers to account for the new alternate bar */
 .md-typeset h3[id]:target::before,
 .md-typeset h2[id]:target::before,
@@ -1029,12 +1038,12 @@ v-tag mark {
   align-items: center;
   padding: 2px 12px;
   gap: 5px;
-  
+
   height: 23px;
   color:var(--grey900);
-  
+
   /* grey/grey200 */
-  
+
   background: var(--grey200);
   border:1px solid  var(--grey400);
   border-radius: 10px;

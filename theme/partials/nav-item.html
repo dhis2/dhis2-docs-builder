@@ -77,7 +77,7 @@
       {% set indexes = [] %}
       {% if "navigation.indexes" in features %}
         {% for nav_item in nav_item.children %}
-          {% if nav_item.is_index and not index is defined %}
+          {% if (nav_item.is_index or nav_item.title=="OVERVIEW") and not index is defined %}
             {% set _ = indexes.append(nav_item) %}
           {% endif %}
         {% endfor %}
