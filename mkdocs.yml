@@ -1094,7 +1094,7 @@ nav:
           - Current documentation: '@file(special_pages/single_page_docs.md)'
           - Previous versions: '@file(special_pages/single_page_docs_archive.md)'
       - alt__Training Docs:
-          - Training Docs: '@github(dhis2/training-docs, content/index.md, master)'
+          - Training Docs: '@github(dhis2/training-docs, content/index.md, main)'
           - General Guidance:
               - Capacity Building Considerations: '@github(dhis2/training-docs, content/general_guidance/capacity_building_considerations.md, main)'
               - Training DB Considerations: '@github(dhis2/training-docs, content/general_guidance/training_DB_considerations.md, main)'
