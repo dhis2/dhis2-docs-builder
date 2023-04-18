@@ -818,16 +818,10 @@ nav:
               - Design: '@github(dhis2-metadata/C19_EVT, docs/c19_evt-design.md, master)'
           COVID-19 Vaccine Delivery:
             - COVAC Aggregate:
-               alt__Version 1.1.0:
-               - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CVC_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
-               alt__Version 1.0.0:
-               - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CVC_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design-1.0.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/CVC_AGG, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
             - COVID-19 Electronic Immunization Registry:
               - OVERVIEW: '@github(dhis2-metadata/CVC_EIR, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/CVC_EIR, docs/release_note.md, master)'
@@ -843,16 +837,10 @@ nav:
             - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-budget_guide.md, master)'
           CRVS & Mortality:
             - Cause of Death:
-               alt__Version 1.2.1:
-               - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.1.md, master)'
-               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
-               alt__Version 1.2.0:
-               - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design-1.2.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design.md, master)'
+              - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
             - Rapid Mortality Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/CRVS_RMSE, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
@@ -860,23 +848,16 @@ nav:
               - Installation: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
             - Vital Events:
-               alt__Version 1.1.0:
-               - OVERVIEW: '@github(dhis2-metadata/CRVS_VE, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CRVS_VE, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
-               alt__Version 1.0.0:
-               - OVERVIEW: '@github(dhis2-metadata/CRVS_VE, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/CRVS_VE, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design-1.0.0.md, master)'
-               - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/CRVS_VE, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/CRVS_VE, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design.md, master)'
+              - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
           Disease Surveillance:
             - IDS Aggregate:
-               alt__Version 1.2.0:
-               - OVERVIEW: '@github(dhis2-metadata/IDS_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design-1.2.0.md, master)'
-               - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/IDS_AGG, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
             - VPD Case Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/VPD_CS, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/VPD_CS, docs/release_note.md, master)'
@@ -904,22 +885,13 @@ nav:
                 - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
           HIV:
             - HIV HMIS:
-               alt__Version 1.2.1:
-               - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
-               - Design:
-                 - HIV Surveillance: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design-1.2.0.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
+              - Design:
+                 - HIV Surveillance: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design.md, master)'
                  - LMIS: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
                  - HIV Logistics: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-               - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
-               alt__Version 1.1.0:
-               - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
-               - Design:
-                 - HIV Surveillance: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design-1.1.0.md, master)'
-                 - LMIS: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
-                 - HIV Logistics: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
+              - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
             - HIV Case Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/HIV_CS, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/HIV_CS, docs/release_note.md, master)'
@@ -927,16 +899,10 @@ nav:
               - Installation: '@github(dhis2-metadata/HIV_CS, docs/hiv_cs-installation.md, master)'
           Immunization:
             - Expanded Programme on Immunization (EPI) Aggregate:
-               alt__Version 1.0.0:
-               - OVERVIEW: '@github(dhis2-metadata/IMM_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-1.0.0.md, master)'
-               - Installation: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-installation.md, master)'
-               alt__Version 0.9.2:
-               - OVERVIEW: '@github(dhis2-metadata/IMM_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design-0.9.2.md, master)'
-               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/IMM_AGG, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-installation.md, master)'
             - Immunization Triangulation Dashboard:
               - OVERVIEW: '@github(dhis2-metadata/IMM_TRI, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/release_note.md, master)'
@@ -944,7 +910,7 @@ nav:
               - Installation: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-installation.md, master)'
             - EIR Immunization eRegistry:
               - OVERVIEW: '@github(dhis2-metadata/IMM_EIR, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design-1.1.0.md, master'
+              - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
               - Installation: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-installation.md, master)'
               - Release Note: '@github(dhis2-metadata/IMM_EIR, docs/release_note.md, master'
             - Vaccination Campaigns:
@@ -957,35 +923,23 @@ nav:
               - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
             - Adverse Events Following Immunization (AEFI):
-               alt__Version 1.1.0:
-               - OVERVIEW: '@github(dhis2-metadata/IMM_AEFI, docs/overview.md, master)'
-               - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design-1.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
-               - Training Materials:
-                 - Trainer's Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_trainers_guide.md, master)'
-                 - Data Entry User Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_complete_data_entry.md, master)'
-                 - Data Entry Exercises: '@github(dhis2-metadata/IMM_AEFI, training/aefi_data_entry_exercises.md, master)'
-                 - Navigating Through Dashboards: '@github(dhis2-metadata/IMM_AEFI, training/aefi_dashboard_navigation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/IMM_AEFI, docs/overview.md, master)'
+              - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
+              - Training Materials:
+                - Trainer's Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_trainers_guide.md, master)'
+                - Data Entry User Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_complete_data_entry.md, master)'
+                - Data Entry Exercises: '@github(dhis2-metadata/IMM_AEFI, training/aefi_data_entry_exercises.md, master)'
+                - Navigating Through Dashboards: '@github(dhis2-metadata/IMM_AEFI, training/aefi_dashboard_navigation.md, master)'
             - Immunization Analysis App:
                alt__App version 1.0.3:
                - User Manual: '@github(dhis2-metadata/IMM_AEFI, docs/immunisation_analysis_app_user_manual.md, master)'
           Malaria:
             - Malaria HMIS:
-               alt__Version 2.1.0:
-               - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.1.0.md, master)'
-               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
-               alt__Version 2.0.0:
-               - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-2.0.0.md, master)'
-               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
-               alt__Version 1.2.1:
-               - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design-1.2.1.md, master)'
-               - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design.md, master)'
+              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
             - Malaria Surveillance:
               - OVERVIEW: '@github(dhis2-metadata/MAL_CS, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/MAL_CS, docs/release_note.md, master)'
@@ -1042,16 +996,10 @@ nav:
               - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Case Surveillance:
-               alt__Version 2.0.0:
-               - OVERVIEW: '@github(dhis2-metadata/TB_CS, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design-2.0.0.md, master)'
-               - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
-               alt__Version 1.0.1:
-               - OVERVIEW: '@github(dhis2-metadata/TB_CS, docs/overview.md, master)'
-               - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
-               - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design-1.0.1.md, master)'
-               - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
+              - OVERVIEW: '@github(dhis2-metadata/TB_CS, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design.md, master)'
+              - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
             - Anti-Tuberculosis Drug Resistance Survey (DRS):
               - OVERVIEW: '@github(dhis2-metadata/TB_DRS, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/TB_DRS, docs/release_note.md, master)'
