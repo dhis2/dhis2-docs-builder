@@ -863,6 +863,11 @@ nav:
               - Release Note: '@github(dhis2-metadata/VPD_CS, docs/release_note.md, master)'
               - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
               - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
+            - Acute Febrile Illness:
+              - OVERVIEW: '@github(dhis2-metadata/IDS_AFI, docs/overview.md, master)'
+              - Release Note: '@github(dhis2-metadata/IDS_AFI, docs/release_note.md, master)'
+              - Design: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-design.md, master)'
+              - Installation: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-installation.md, master)'
           Entomology and Vector Control:
             - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento_vc-design.md, master)'
             - Breeding Sites Monitoring:
