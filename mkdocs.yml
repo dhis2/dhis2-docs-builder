@@ -712,7 +712,7 @@ nav:
             - Users: '@github(dhis2/dhis2-docs, src/developer/web-api/users.md, master)'
             - Settings and configuration: '@github(dhis2/dhis2-docs, src/developer/web-api/settings-and-configuration.md, master)'
             - Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/tracker.md, master)'
-            - New Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/new-tracker.md, master)'
+            - Tracker (deprecated): '@github(dhis2/dhis2-docs, src/developer/web-api/tracker-old.md, master)'
             - Email: '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, master)'
             - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
             - Data Entry: '@github(dhis2/dhis2-docs, src/developer/web-api/data-entry.md, master)'
