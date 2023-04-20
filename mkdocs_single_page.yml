@@ -441,7 +441,7 @@ nav:
             - '@github(dhis2/dhis2-docs, src/developer/web-api/users.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/settings-and-configuration.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/tracker.md, master)'
-            - '@github(dhis2/dhis2-docs, src/developer/web-api/new-tracker.md, master)'
+            - '@github(dhis2/dhis2-docs, src/developer/web-api/tracker-old.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, master)'
             - '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
