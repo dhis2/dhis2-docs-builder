@@ -1056,6 +1056,7 @@ nav:
 #              - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creating_tracker_program.md, main)'
           - Fundamentals Courses:
               - Introduction to DHIS2: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Introduction-to-DHIS2/course-textbook/Introduction-to-dhis2_textbook.md, master)'
+              - Aggregate Customization Fundamentals: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Customization/course-textbook/Customization_course_textbook.md, master)'
           - Analytics Tools Academy:
               - Using Validation Rules:
                 - Trainer&apos;s Guide to Validation Rules (Use): '@github(dhis2/training-docs, content/analytic_tools/tg_validationrule.md, main)'
