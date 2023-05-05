@@ -1,0 +1,22 @@
+name: Remove docs preview on PR merge
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  remove:
+    if: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove preview from S3
+        uses: vitorsgomes/s3-rm-action@v1.0.1
+        with:
+          args: --recursive
+        env:
+          AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+          AWS_REGION: 'eu-west-1'
+          PATH_TO_DELETE: "temp/PR/${GITHUB_HEAD_REF}"
