@@ -168,12 +168,12 @@ nav:
               - Data Entry (beta): '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,2.40)'
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.40)'
             Tracking individual level data:
-              - '@github(dhis2/capture-app, docs/user/index.yml, 2.40)'
+              - '@github(dhis2/capture-app, docs/user/index.yml, master)'
               - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.40)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.40)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.40)'
-              - '@github(dhis2/approval-app, docs/user/index.yml, 2.40)'
+              - '@github(dhis2/approval-app, docs/user/index.yml, master)'
             Analysing data:
               - Dashboards: '@github(dhis2/dhis2-docs, src/user/managing-dashboards.md,2.40)'
               - Data Visualizer: '@github(dhis2/dhis2-docs, src/user/data-visualizer.md,2.40)'
@@ -184,7 +184,7 @@ nav:
               - Reports: '@github(dhis2/dhis2-docs, src/user/using-reporting-functionality.md,2.40)'
             Working with your account:
               - Messaging: '@github(dhis2/dhis2-docs, src/user/messaging.md,2.40)'
-              - '@github(dhis2/user-profile-app, docs/user/index.yml, 2.40)'
+              - '@github(dhis2/user-profile-app, docs/user/index.yml, master)'
               - Personal access tokens: '@github(dhis2/dhis2-docs, src/user/personal-access-tokens.md,2.40)'
             Configuring the system:
               - Metadata: '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,2.40)'
@@ -201,12 +201,12 @@ nav:
               - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.40)'
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.40)'
-              - '@github(dhis2/usage-analytics-app, docs/user/index.yml, 2.40)'
+              - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
               - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,2.40)'
               - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,2.40)'
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.40)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.40)'
-              - '@github(dhis2/app-management-app, docs/user/index.yml,2.40)'
+              - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.40)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.40)'
