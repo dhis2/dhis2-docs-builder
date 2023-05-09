@@ -719,6 +719,7 @@ nav:
             - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, master)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
             - Event Hooks: '@github(dhis2/dhis2-docs, src/developer/web-api/event-hooks.md, master)'
+            - Route: '@github(dhis2/dhis2-docs, src/developer/web-api/route.md, master)'
         Core OpenAPI Specification: '@github(dhis2/dhis2-docs, src/developer/web-api/openapi.md, master)'
         Core Javadocs:
           - DHIS 2.39 Javadocs: https://docs.dhis2.org/javadoc/2.39/
