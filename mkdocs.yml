@@ -73,11 +73,11 @@ theme:
   font: false
   filter:
     versions:
-      - master
-      - 2.40
-      - 2.39
-      - 2.38
-      - 2.37
+      - 'master'
+      - '2.40'
+      - '2.39'
+      - '2.38'
+      - '2.37'
     categories:
       - Use
       - Implement
