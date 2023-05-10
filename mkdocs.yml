@@ -548,6 +548,12 @@ nav:
             - Data Elements and Custom Dimensions: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-elements-and-custom-dimensions.md, master)'
             - Data Sets and Forms: '@github(dhis2/dhis2-docs-implementation, content/database_design/data-sets-and-forms.md, master)'
             - Indicators: '@github(dhis2/dhis2-docs-implementation, content/database_design/indicators.md, master)'
+          - Tracker system design:
+            - Design Objectives and Ideation: '@github(dhis2/dhis2-docs-implementation, content/database_design/design-objectives-and-ideation.md, master)'
+            - Defining the Tracked Entity: '@github(dhis2/dhis2-docs-implementation, content/database_design/defining-the-tracked-entity.md, master)'
+            - Program Stages Structure: '@github(dhis2/dhis2-docs-implementation, content/database_design/program-stages-structure.md, master)'
+            - Tracker Analytics: '@github(dhis2/dhis2-docs-implementation, content/database_design/tracker-analytics.md, master)'
+            - Interaction Design: '@github(dhis2/dhis2-docs-implementation, content/database_design/interaction-design.md, master)'
         Maintenance and use:
           - Metadata maintenance:
               - Managing metadata: '@github(dhis2/dhis2-docs-implementation, content/maintenance_use/metadata_mgmt_procedures.md, master)'
