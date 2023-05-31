@@ -11,6 +11,7 @@ setuptools.setup(
         'mkdocs.plugins': [
             'edit_url = edit_url.plugin:EditUrlPlugin',
             'dhis2_docs = dhis2_docs.plugin:Dhis2DocsPlugin',
+            'mkdocs_video = mkdocs_video.plugin:MkdocsVideoPlugin',
         ]
     }
 )
