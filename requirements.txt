@@ -18,6 +18,7 @@ htmlmin==0.1.12
 idna==2.8
 Jinja2==3.0.3
 jsmin==3.0.1
+lxml==4.9.2
 Markdown==3.2.1
 markdown-captions==2
 MarkupSafe==2.1.1

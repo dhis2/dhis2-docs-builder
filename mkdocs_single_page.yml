@@ -64,6 +64,11 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
+  - mkdocs_video:
+    css_style:
+      position: "relative"
+      width: "600px"
+      height: "400px"
   - edit_url
   - dhis2_docs:
       make_pdfs: true
