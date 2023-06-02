@@ -36,7 +36,7 @@ extra:
       name: DHIS2 Community
   analytics:
     provider: google
-    property: UA-157707339-2
+    property: G-N3FZVSJ4Z4
 
 theme:
   name: material
