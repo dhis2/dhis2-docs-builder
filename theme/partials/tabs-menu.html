@@ -22,7 +22,7 @@
 
 {# if the current item has children #}
 {% if nav_item.children %}
-  {% if  menu_level < 5 %}
+  {% if  menu_level < 7 %}
 
     {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
     {% set title = nav_item.title | replace(alt_prefix,'') %}

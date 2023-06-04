@@ -1208,12 +1208,14 @@ p.d_card-title {
   z-index: 999;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
+  transition: 0s 0.2s; /* reduce narrow-corridor problem */
 }
 
 .nav-menu li:hover>ul {
   left: 0;
   opacity: 1;
   z-index: 1000;
+  transition: 0s 0.2s; /* reduce narrow-corridor problem */
 }
 
 .nav-menu ul li:hover>ul {
