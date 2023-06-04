@@ -1,0 +1,7 @@
+{% set firsty = (nav_sub.children | first) %}
+{% if firsty.is_page  or (firsty.url and firsty.url.startswith("http")) %}
+<a href="{{ firsty.url | url }}" class="{{ class }} tabnavp">{{ title }}</a>
+{% else %}
+  {% set nav_sub = firsty %}
+  {% include "partials/tabs-firstpage-menu.html" %}
+{% endif %}

@@ -27,7 +27,9 @@
 
             {% block tabs %}
             {% if "navigation.tabs" in features %}
-            {% include "partials/tabs.html" %}
+              {% include "partials/tabs.html" %}
+            {% elif "navigation.menutabs" in features %}
+              {% include "partials/menutabs.html" %}
             {% endif %}
             {% endblock %}
 
