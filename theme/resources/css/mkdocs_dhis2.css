@@ -1192,7 +1192,7 @@ p.d_card-title {
 .nav-menu a {
   margin: 0;
   padding: 0;
-  _line-height: normal;
+  _line-height:normal;
   list-style: none;
   display: block;
   position: relative;
@@ -1233,8 +1233,17 @@ p.d_card-title {
 
 
 /* sub width */
-.nav-menu ul { 
-  min-width: 12em; 
+.nav-menu ul {
+  min-width: 12em;
+}
+
+.nav-menu ul li {
+  margin:0px !important;
+  height:31px;
+}
+.nav-menu ul li a{
+  padding: 0 10px !important;
+  margin:0px ;
 }
 
 
@@ -1243,7 +1252,7 @@ p.d_card-title {
 
 /* root */
 .nav-menu a {
-  padding: 0 10px;
+  padding:  0 10px;
   line-height: 25px;
   text-decoration: none;
 }
