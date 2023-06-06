@@ -654,6 +654,7 @@ nav:
            - '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md, 2.40)'
            - '@github(dhis2/dhis2-docs, src/sysadmin/audit.md, 2.40)'
            - '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md, 2.40)'
+           - '@github(dhis2/dhis2-docs, src/sysadmin/user-impersonation.md, master)'
        alt__DHIS core version master:
          System Administration Guide:
            - '@github(dhis2/dhis2-docs, src/sysadmin/installation.md, master)'
@@ -661,3 +662,4 @@ nav:
            - '@github(dhis2/dhis2-docs, src/sysadmin/monitoring.md, master)'
            - '@github(dhis2/dhis2-docs, src/sysadmin/audit.md, master)'
            - '@github(dhis2/dhis2-docs, src/sysadmin/SMS-reporting.md, master)'
+           - '@github(dhis2/dhis2-docs, src/sysadmin/user-impersonation.md, master)'
