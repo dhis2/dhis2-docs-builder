@@ -1186,6 +1186,18 @@ p.d_card-title {
   padding-top:10px;
 }
 
+
+.md-tabs__list.nav-menu > li > a {
+  height:38px !important;
+  top:-4px;
+  padding:0 15px;
+}
+
+
+.md-tabs__list.nav-menu > li > ul {
+  top:34px !important;
+}
+
 .nav-menu,
 .nav-menu ul,
 .nav-menu li,
@@ -1196,7 +1208,7 @@ p.d_card-title {
   list-style: none;
   display: block;
   position: relative;
-  height:34px;
+  height:30px;
   top:0;
 }
 
@@ -1241,10 +1253,10 @@ p.d_card-title {
 
 .nav-menu ul li {
   margin:0px !important;
-  height:31px;
+  height:30px;
 }
 .nav-menu ul li a{
-  padding: 0 10px !important;
+  padding: 3px 10px !important;
   margin:0px ;
 }
 
