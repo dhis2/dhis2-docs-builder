@@ -1,0 +1,102 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+
+{% set menu_level = (menu_level + 1) %}
+
+{% if not class %}
+  {% set class = "md-tabs__link" %}
+  {% if nav_item.active %}
+    {% set class = class ~ " md-tabs__link--active" %}
+  {% endif %}
+{% endif %}
+
+{% set display = true %}
+{% if nav_item.title == nav_item.parent.title %}
+  {% set display = false %}
+{% endif %}
+
+{% if nav_item.title in ["Home","OVERVIEW"] %}
+  {% set display = false %}
+{% endif %}
+
+{# if the current item has children #}
+{% if nav_item.children %}
+  {% if  menu_level < 7 %}
+
+    {% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
+    {% set title = nav_item.title | replace(alt_prefix,'') %}
+
+
+    {% set ns = namespace(ni=nav_item) %} 
+
+    {% for _ in range(3) %}
+      {% set children = ns.ni.children %}
+      {% set first = ns.ni.children | first %}
+      {% if ((first.title|replace(alt_prefix,"")) != first.title) and menu_level > 1 %}
+        {% set matched_item = false %}
+        {% set ns.ni = first %}
+        {% for ch in children %}
+
+          {% set childslug = ch.title|replace(alt_prefix,"")|lower()|replace(" ","-")|replace('.','') %}
+
+          {% if matched_item == false and (page.url|replace(childslug,"")) != page.url %}
+            {% set matched_item = true %}
+            {% set ns.ni = ch %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+    {% set nav_item = ns.ni %}
+
+    
+    {% if nav_item.children %}
+      <li>
+
+        {% set nav_sub = nav_item %}
+        {% include "partials/tabs-firstpage-menu.html" %}
+
+
+        <ul>
+        {% for nav_sub in nav_item.children %}
+          {% set nav_item = nav_sub %}
+            {% include "partials/tabs-menu.html" %}
+
+        {% endfor %}
+      </ul>
+
+
+      </li>
+    {% else %}
+      {% if display %}
+      <li>
+        <a href="{{ nav_item.url | url }}" class="{{ class }}">
+          {{ title }}
+        </a>
+      </li>
+      {% endif %}
+    {% endif %}
+
+
+  {% endif %}
+
+
+{# else the current item is just a link #}
+{% elif nav_item.url.startswith("http") %}
+  <li>
+    <a href="{{ nav_item.url | url }}" class="{{ class }}">
+      {{ nav_item.title }}
+    </a>
+  </li>
+
+{# if the current item has no children and > level 1 #}
+{% elif menu_level != 1 %}
+{% set title = nav_item.title | replace(alt_prefix,'') %}
+{% if display %}
+<li>
+  <a href="{{ nav_item.url | url }}" class="{{ class }}">{{ title }}</a>
+  
+</li>
+{% endif %}
+{% endif %}

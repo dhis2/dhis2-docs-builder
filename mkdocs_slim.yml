@@ -43,7 +43,7 @@ theme:
   logo: 'resources/images/logo.svg'
   favicon: 'resources/images/favicon.ico'
   features:
-    - navigation.tabs
+    - navigation.menutabs
     - navigation.tabs.sticky
     - navigation.top
     - navigation.instant
