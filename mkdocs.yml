@@ -1025,9 +1025,10 @@ nav:
               - OVERVIEW: '@github(dhis2-metadata/TB_AGG, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/TB_AGG, docs/release_note.md, master)'
               - Design:
-                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-design.md, master)'
+                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_no-design.md, master)'
                 - TB Laboratory: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_lab-design.md, master)'
                 - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
+                - TB Data Quality: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_dq-design.md, master)'
               - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
             - TB Logistics:
               - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
