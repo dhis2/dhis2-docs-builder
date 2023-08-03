@@ -20,7 +20,23 @@ source venv/bin/activate
 ```
 to activate the environment
 
-### Build
+### Simple live preview of your working document
+
+Because the DHIS2 documentation renders the markdown in a specific way, most markdown editors will not show you exactly how it will look on the documentation site. However, once you have the build environment set up above, it is possible to build just your file and get an accurate view of how it will be rendered. It is also possible to see the results of changes you make in real-time.
+
+A small script has been added to this repository to support this, simply pass the target file to that script:
+
+```
+./preview.sh <path/to/your/markdown/file.md>
+```
+
+This will utilise the `serve` feature of mkdocs to built your document to server the document on a local URL (usually http://127.0.0.1:8000/en/) that you can view in your browser. Simply go to the serve URL and click on the Preview tab at the top to see your document fully rendered.
+
+While the preview process is running, as you save changes to the markdown, the document will be re-built and the page updated.
+
+When you are finished, kill the preview process with `CTRL-C`.
+
+### Build full documentation
 
 The build system is based on [mkdocs](https://www.mkdocs.org/). In it's simplest form, to build the full documentation site, in your environment, you simply need to perform:
 ```
