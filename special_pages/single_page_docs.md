@@ -8,25 +8,20 @@
 |Document|Version|||
 |:---------|---|---|---|
 |End User Manual|master|[HTML](../../full/use/user-guides/dhis-core-version-master/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-master/dhis2-end-user-manual.pdf)|
-|End User Manual|2.36|[HTML](../../full/use/user-guides/dhis-core-version-236/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-236/dhis2-end-user-manual.pdf)|
-|End User Manual|2.35|[HTML](../../full/use/user-guides/dhis-core-version-235/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-235/dhis2-end-user-manual.pdf)|
-|End User Manual|2.34|[HTML](../../full/use/user-guides/dhis-core-version-234/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-234/dhis2-end-user-manual.pdf)|
+|End User Manual|2.40|[HTML](../../full/use/user-guides/dhis-core-version-240/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-240/dhis2-end-user-manual.pdf)|
+|End User Manual|2.39|[HTML](../../full/use/user-guides/dhis-core-version-239/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-239/dhis2-end-user-manual.pdf)|
+|End User Manual|2.38|[HTML](../../full/use/user-guides/dhis-core-version-238/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-238/dhis2-end-user-manual.pdf)|
+|End User Manual|2.37|[HTML](../../full/use/user-guides/dhis-core-version-237/dhis2-end-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-237/dhis2-end-user-manual.pdf)|
 
 ### User
 
 |Document|Version|||
 |:---------|---|---|---|
 |User Manual|master|[HTML](../../full/use/user-guides/dhis-core-version-master/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-master/dhis2-user-manual.pdf)|
-|User Manual|2.36|[HTML](../../full/use/user-guides/dhis-core-version-236/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-236/dhis2-user-manual.pdf)|
-|User Manual|2.35|[HTML](../../full/use/user-guides/dhis-core-version-235/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-235/dhis2-user-manual.pdf)|
-|User Manual|2.34|[HTML](../../full/use/user-guides/dhis-core-version-234/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-234/dhis2-user-manual.pdf)|
-
-### Android
-
-|Document|Version|||
-|:---------|---|---|---|
-|Android Configuration|master|[HTML](../../full/use/dhis2-android-app.html)|[PDF](../../full/use/dhis2-android-app.pdf)|
-
+|User Manual|2.40|[HTML](../../full/use/user-guides/dhis-core-version-240/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-240/dhis2-user-manual.pdf)|
+|User Manual|2.39|[HTML](../../full/use/user-guides/dhis-core-version-239/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-239/dhis2-user-manual.pdf)|
+|User Manual|2.38|[HTML](../../full/use/user-guides/dhis-core-version-238/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-238/dhis2-user-manual.pdf)|
+|User Manual|2.37|[HTML](../../full/use/user-guides/dhis-core-version-237/dhis2-user-manual.html)|[PDF](../../full/use/user-guides/dhis-core-version-237/dhis2-user-manual.pdf)|
 
 ## Optional Apps Manuals
 
@@ -42,24 +37,27 @@
 |Document|||
 |:------|---|---|
 |Implementation Guide|[HTML](../../full/implement/dhis2-implementation-guide.html)|[PDF](../../full/implement/dhis2-implementation-guide.pdf)|
-|Tracker Implementation Guide|[HTML](../../full/implement/tracker-implementation.html)|[PDF](../../full/implement/tracker-implementation.pdf)|
-|Android Implementation Guide|[HTML](../../full/implement/android-implementation.html)|[PDF](../../full/implement/android-implementation.pdf)|
-|Mobile Device Management Guidelines|[HTML](../../full/implement/managing-mobile-devices.html)|[PDF](../../full/implement/managing-mobile-devices.pdf)|
+|Tracker Implementation Guide|[HTML](../../full/implement/dhis2-tracker-implementation-guide.html)|[PDF](../../full/implement/dhis2-tracker-implementation-guide.pdf)|
+|Android Implementation Guide|[HTML](../../full/implement/dhis2-android-implementation-guide.html)|[PDF](../../full/implement/dhis2-android-implementation-guide.pdf)|
+|Android Configuration Guide|[HTML](../../full/implement/dhis2-android-configuration-guide.html)|[PDF](../../full/implement/dhis2-android-configuration-guide.pdf)|
+|Mobile Device Management Guidelines|[HTML](../../full/implement/mobile-device-management-guidelines.html)|[PDF](../../full/implement/mobile-device-management-guidelines.pdf)|
 
 ## Developer
 
 |Document|Version|||
 |:---------|---|---|---|
 |Developer Manual|master|[HTML](../../full/develop/dhis-core-version-master/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-master/developer-manual.pdf)|
-|Developer Manual|2.36|[HTML](../../full/develop/dhis-core-version-236/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-236/developer-manual.pdf)|
-|Developer Manual|2.35|[HTML](../../full/develop/dhis-core-version-235/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-235/developer-manual.pdf)|
-|Developer Manual|2.34|[HTML](../../full/develop/dhis-core-version-234/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-234/developer-manual.pdf)|
+|Developer Manual|2.40|[HTML](../../full/develop/dhis-core-version-240/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-240/developer-manual.pdf)|
+|Developer Manual|2.39|[HTML](../../full/develop/dhis-core-version-239/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-239/developer-manual.pdf)|
+|Developer Manual|2.38|[HTML](../../full/develop/dhis-core-version-238/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-238/developer-manual.pdf)|
+|Developer Manual|2.37|[HTML](../../full/develop/dhis-core-version-237/developer-manual.html)|[PDF](../../full/develop/dhis-core-version-237/developer-manual.pdf)|
 
 ## System Manager
 
 |Document|Version|||
 |:---------|---|---|---|
 |System Administration Guide|master|[HTML](../../full/manage/dhis-core-version-master/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-master/system-administration-guide.pdf)|
-|System Administration Guide|2.36|[HTML](../../full/manage/dhis-core-version-236/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-236/system-administration-guide.pdf)|
-|System Administration Guide|2.35|[HTML](../../full/manage/dhis-core-version-235/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-235/system-administration-guide.pdf)|
-|System Administration Guide|2.34|[HTML](../../full/manage/dhis-core-version-234/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-234/system-administration-guide.pdf)|
+|System Administration Guide|2.40|[HTML](../../full/manage/dhis-core-version-240/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-240/system-administration-guide.pdf)|
+|System Administration Guide|2.39|[HTML](../../full/manage/dhis-core-version-239/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-239/system-administration-guide.pdf)|
+|System Administration Guide|2.38|[HTML](../../full/manage/dhis-core-version-238/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-238/system-administration-guide.pdf)|
+|System Administration Guide|2.37|[HTML](../../full/manage/dhis-core-version-237/system-administration-guide.html)|[PDF](../../full/manage/dhis-core-version-237/system-administration-guide.pdf)|
