@@ -986,6 +986,12 @@ caption {
   background-color: var(--text-muted);
 }
 
+.md-search-result__context {
+  font-size: smaller;
+  margin-top: 1em;
+  margin-bottom: -0.6em;
+}
+
 .md-search__overlay {
   background: rgba(33, 43, 54, 0.6);
 }
