@@ -24,7 +24,7 @@ markdown-captions==2
 MarkupSafe==2.1.1
 mergedeep==1.3.4
 mkdocs==1.4.2
-mkdocs-material @ https://github.com/Philip-Larsen-Donnelly/mkdocs-material/archive/refs/tags/d2mm-9.0.8.6.zip
+mkdocs-material @ https://github.com/Philip-Larsen-Donnelly/mkdocs-material/archive/refs/tags/d2mm-9.0.8.7.zip
 mkdocs-minify-plugin==0.6.2
 packaging==23.0
 pdfrw==0.4
