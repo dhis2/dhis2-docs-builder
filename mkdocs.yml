@@ -1154,3 +1154,30 @@ nav:
               - Custom Apps:
                 - Trainer&apos;s Guide to Custom Apps: '@github(dhis2/training-docs, content/tracker_use/tg_custom_apps.md, main)'
                 - Learner&apos;s Guide to Event Reports: '@github(dhis2/training-docs, content/tracker_use/lg_custom_apps.md, main)'
+          - Tracker Configuration Academy:
+              - Conceptual Design of a Tracker Program:
+                - Trainer&apos;s Guide to Conceptual Design: '@github(dhis2/training-docs, content/tracker_config/tg_conceptualdesignoftrackerprogram.md, main)'
+              - Creating a Tracker Program:
+                - Trainer&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/tg_creatingtrackerprog.md, main)'
+                - Learner&apos;s Guide to Creating a Tracker Program: '@github(dhis2/training-docs, content/tracker_config/lg_creatingtracker.md, main)'
+              - User Roles:
+                - Trainer&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/tracker_config/tg_userroles.md, main)'
+                - Learner&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/tracker_config/lg_userroles.md, main)'
+              - Sharing Part 1 (Demonstration of Sharing Concepts):
+                - Trainer&apos;s Guide to Sharing Part 1: '@github(dhis2/training-docs, content/tracker_config/tg_sharingpart1.md, main)'
+                - Learner&apos;s Guide to Sharing Part 1: '@github(dhis2/training-docs, content/tracker_config/lg_sharingpart1.md, main)'
+              - Sharing Part 2 (Configuring Sharing):
+                - Trainer&apos;s Guide to Sharing Part 2: '@github(dhis2/training-docs, content/tracker_config/tg_sharingpart2.md, main)'
+                - Learner&apos;s Guide to Sharing Part 2: '@github(dhis2/training-docs, content/tracker_config/lg_sharingpart2.md, main)'
+              - Program Rules:
+                - Trainer&apos;s Guide to Program Rules: '@github(dhis2/training-docs, content/tracker_config/tg_programrules.md, main)'
+                - Learner&apos;s Guide to Program Rules: '@github(dhis2/training-docs, content/tracker_config/tg_programrules.md, main)'
+              - Program Indicators:
+                - Trainer&apos;s Guide to Program Indicators: '@github(dhis2/training-docs, content/tracker_config/tg_programindicators.md, main)'
+                - Learner&apos;s Guide to Program Indicators: '@github(dhis2/training-docs, content/tracker_config/lg_programindicator.md, main)'
+              - Program Notifications:
+                - Trainer&apos;s Guide to Program Notifications: '@github(dhis2/training-docs, content/tracker_config/tg_programnotification.md, main)'
+                - Learner&apos;s Guide to Program Notifications: '@github(dhis2/training-docs, content/tracker_config/lg_programnotification.md, main)'
+              - Breaking the Glass and Program Access Levels:
+                - Trainer&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/tg_programaccess.md, main)'
+                - Learner&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/lg_programaccess.md, main)'
