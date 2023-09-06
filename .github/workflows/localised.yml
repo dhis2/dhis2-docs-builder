@@ -43,7 +43,7 @@ jobs:
       fail-fast: false
 
     # Updated if condition to handle workflow_dispatch
-    if: (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && (github.event.inputs.Locale == 'ALL' || vars.matrix.id == github.event.inputs.Locale))
+    if: (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && (github.event.inputs.Locale == 'ALL' || ${{ matrix.id }} == github.event.inputs.Locale))
 
     steps:
     - uses: actions/checkout@v2
