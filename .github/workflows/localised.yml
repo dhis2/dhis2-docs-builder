@@ -8,19 +8,19 @@ on:
       Locale:
         description: 'Locale to build'     
         required: true
-        default: 'French'
+        default: 'fr'
         type: choice
         options:
-          - French
-          - Spanish
-          - Portuguese
-          - Czech
-          - Chinese
-          - Arabic
+          - fr
+          - es_419
+          - pt
+          - cs
+          - zh
+          - ar
           - ALL
 
 jobs:
-  build:
+  build-matrix:
 
     runs-on: ubuntu-20.04
 
@@ -43,7 +43,7 @@ jobs:
       fail-fast: false
 
     # Updated if condition to handle workflow_dispatch
-    if: (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && (github.event.inputs.Locale == 'ALL' || ${{ matrix.id }} == github.event.inputs.Locale))
+    if: (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && github.event.inputs.Locale == 'ALL')
 
     steps:
     - uses: actions/checkout@v2
@@ -61,4 +61,23 @@ jobs:
         SOURCE_DIR: 'target/${{ matrix.locale }}/.'
         DEST_DIR: '${{ matrix.locale }}/'
 
+  build-single:
 
+    runs-on: ubuntu-20.04
+
+    # Updated if condition to handle workflow_dispatch
+    if: (github.event_name == 'workflow_dispatch' && github.event.inputs.Locale != 'ALL')
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Test variables with simple bash script
+      shell: bash
+      run: |
+        echo "DHI2_DOCS_LANGUAGE: ${{ env.DHIS2_DOCS_LANGUAGE }}"
+        echo "SOURCE_DIR: ${{ env.SOURCE_DIR }}"
+        echo "DEST_DIR: ${{ env.DEST_DIR }}"
+      env:
+        DHIS2_DOCS_LANGUAGE: '${{ github.event.inputs.Locale }}'
+        SOURCE_DIR: 'target/${{ github.event.inputs.Locale }}/.'
+        DEST_DIR: '${{ github.event.inputs.Locale }}/'
