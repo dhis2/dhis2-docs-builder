@@ -18,6 +18,7 @@ extra:
     pt: 'Português'
     cs: 'čeština'
     zh: '中文'
+    ar: 'العربية'
   social:
     - icon: fontawesome/brands/github
       link: https://www.github.com/dhis2
@@ -311,7 +312,7 @@ nav:
               - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,2.38)'
             Exchanging data:
               - Import/Export: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,2.38)'
-              - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.38)'            
+              - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.38)'
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.38)'
               - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
@@ -1077,7 +1078,7 @@ nav:
               - Architecture: '@github(dhis2/dhis2-docs, src/stories/tanzania-integrated-health-information-architecture_B.md, master)'
           - DHIS2 - a Management Information System at PSI: '@github(dhis2/dhis2-docs, src/stories/dhis2-a-management-information-system-at-psi.md, master)'
           - Zambia WASH Mobile surveillance using DHIS2: '@github(dhis2/dhis2-docs, src/stories/zambia-wash-mobile-surveillance-using-dhis2.md, master)'
-      - alt__Complete Manuals: 
+      - alt__Complete Manuals:
           - User Manuals: '@file(special_pages/single_page_user.md)'
           - Optional Apps Manuals: '@file(special_pages/single_page_optional.md)'
           - Developer Manuals: '@file(special_pages/single_page_developer.md)'
