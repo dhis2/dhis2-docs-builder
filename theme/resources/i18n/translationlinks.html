@@ -15,7 +15,7 @@
                  {%- set act = ' active' %} 
                  {%- set cd = ' caret-down' %} 
              {%- endif %}
-             {%- set perc = value['<translated>']/value['<total>'] %}
+             {%- set perc = 0 if value['<total>'] == 0 else value['<translated>']/value['<total>'] %}
              {%- if perc < 0.25 %}
                 {% set pbg = "upto-25" %}
              {%- elif perc < 0.50 %}
@@ -35,7 +35,7 @@
             </li>
          {%- else  %}
             {%-for v in value %}
-            {%- set perc = v.translated/v.total %}
+            {%- set perc = 0 if v.total == 0 else v.translated/v.total %}
             {%- if perc < 0.25 %}
                {% set pbg = "upto-25" %}
             {%- elif perc < 0.50 %}
