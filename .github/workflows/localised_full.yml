@@ -1,8 +1,8 @@
-name: Localised Docs
+name: Localised Docs - Single Page
 
 on:
   schedule:
-    - cron: '31 0 * * 0'
+    - cron: '31 2 * * 0'
   workflow_dispatch:
     inputs:
       Locale:
@@ -85,23 +85,24 @@ jobs:
 
     - name: Build the docs
       run: |
-        mkdocs build
+        mkdocs build --config-file mkdocs_single_page.yml
       env:
-        DHIS2_DOCS_LANGUAGE: '${{ matrix.locale }}'
+        DHIS2_DOCS_LANGUAGE: 'fr'
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
-      with:
-       args: --delete --exclude 'full*'
+      #with:
+      #  args: --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
+        SOURCE_DIR: 'target/${{ matrix.locale }}/full/.'
+        DEST_DIR: '${{ matrix.locale }}/full/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
-        SOURCE_DIR: 'target/${{ matrix.locale }}/.'
-        DEST_DIR: '${{ matrix.locale }}/'
+
 
 
   build-single-locale:
@@ -151,20 +152,20 @@ jobs:
 
     - name: Build the docs
       run: |
-        mkdocs build
+        mkdocs build --config-file mkdocs_single_page.yml
       env:
         DHIS2_DOCS_LANGUAGE: '${{ github.event.inputs.Locale }}'
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
-      with:
-       args: --delete --exclude 'full*'
+      #with:
+      #  args: --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
+        SOURCE_DIR: 'target/${{ github.event.inputs.Locale }}/full/.'
+        DEST_DIR: '${{ github.event.inputs.Locale }}/full/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
-        SOURCE_DIR: 'target/${{ github.event.inputs.Locale }}/.'
-        DEST_DIR: '${{ github.event.inputs.Locale }}/'

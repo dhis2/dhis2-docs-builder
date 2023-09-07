@@ -55,9 +55,9 @@ jobs:
         cp tools/python/tables.py ${pythonLocation}/lib/python3.8/site-packages/markdown/extensions/
 
     - name: Install node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '16'
 
     - name: install prettier
       run: npm install -g prettier
