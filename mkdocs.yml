@@ -238,7 +238,7 @@ nav:
             Analysing data:
               - Dashboards: '@github(dhis2/dhis2-docs, src/user/managing-dashboards.md,2.39)'
               - Data Visualizer: '@github(dhis2/dhis2-docs, src/user/data-visualizer.md,2.39)'
-              - Line Listing: '@github(dhis2/line-listing-app, docs/line_list.md, dev)'
+              - Line Listing: '@github(dhis2/line-listing-app, docs/line_list.md, master)'
               - Maps: '@github(dhis2/dhis2-docs, src/user/using-the-maps-app.md,2.39)'
               - Event Reports: '@github(dhis2/dhis2-docs, src/user/using-the-event-reports-app.md,2.39)'
               - Event Visualizer: '@github(dhis2/dhis2-docs, src/user/using-the-event-visualizer-app.md,2.39)'
@@ -292,7 +292,7 @@ nav:
             Analysing data:
               - Dashboards: '@github(dhis2/dhis2-docs, src/user/managing-dashboards.md,2.38)'
               - Data Visualizer: '@github(dhis2/dhis2-docs, src/user/data-visualizer.md,2.38)'
-              - Line Listing: '@github(dhis2/line-listing-app, docs/line_list.md, dev)'
+              - Line Listing: '@github(dhis2/line-listing-app, docs/line_list.md, master)'
               - Maps: '@github(dhis2/dhis2-docs, src/user/using-the-maps-app.md,2.38)'
               - Event Reports: '@github(dhis2/dhis2-docs, src/user/using-the-event-reports-app.md,2.38)'
               - Event Visualizer: '@github(dhis2/dhis2-docs, src/user/using-the-event-visualizer-app.md,2.38)'
