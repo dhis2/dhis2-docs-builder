@@ -807,7 +807,7 @@ nav:
               - Design: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-design.md, master)'
               - Installation: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-installation.md, master)'
           Entomology and Vector Control:
-            - Entomology General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento_vc-design.md, master)'
+            - General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento_vc-design.md, master)'
             - Breeding Sites Monitoring:
               - Larviciding:
                 - OVERVIEW: '@github(dhis2-metadata/ENTO_BSM, docs/overview.md, master)'
@@ -820,12 +820,22 @@ nav:
                 - Release Note: '@github(dhis2-metadata/ENTO_IRS, docs/release_note.md, master)'
                 - Design: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-design.md, master)'
                 - Installation: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-installation.md, master)'
+              - Campaign:
+                - OVERVIEW: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/overview.md, master)'
+                - Release Note: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/release_note.md, master)'
+                - Design: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/vc_irs_campaign-design.md, master)'
+                - Installation: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/vc_irs_campaign-installation.md, master)'
             - Insecticide-treated Nets:
               - Bioefficacy:
                 - OVERVIEW: '@github(dhis2-metadata/ENTO_ITN, docs/overview.md, master)'
                 - Release Note: '@github(dhis2-metadata/ENTO_ITN, docs/release_note.md, master)'
                 - Design: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-design.md, master)'
                 - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
+              - Mass Distribution Campaign:
+                - OVERVIEW: '@github(dhis2-metadata/VC_ITN_MC, docs/overview.md, master)'
+                - Release Note: '@github(dhis2-metadata/VC_ITN_MC, docs/release_note.md, master)'
+                - Design: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-design.md, master)'
+                - Installation: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-installation.md, master)'
           HIV:
             - HIV HMIS:
               - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
