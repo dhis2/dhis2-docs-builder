@@ -39,6 +39,11 @@ extra:
     provider: google
     property: G-N3FZVSJ4Z4
 
+validation:
+  omitted_files: ignore
+  absolute_links: ignore
+  unrecognized_links: ignore
+
 theme:
   name: material
   logo: 'resources/images/logo.svg'

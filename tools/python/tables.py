@@ -19,7 +19,7 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 from . import Extension
 from ..blockprocessors import BlockProcessor
-from ..util import etree
+import xml.etree.ElementTree as etree
 import re
 PIPE_NONE = 0
 PIPE_LEFT = 1

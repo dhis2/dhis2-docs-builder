@@ -38,6 +38,11 @@ extra:
     provider: google
     property: UA-157707339-2
 
+validation:
+  omitted_files: ignore
+  absolute_links: ignore
+  unrecognized_links: ignore
+
 theme:
   name: material
   logo: 'resources/images/logo.svg'
