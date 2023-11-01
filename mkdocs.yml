@@ -1013,6 +1013,7 @@ nav:
           - Fundamentals Courses:
               - Introduction to DHIS2: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Introduction-to-DHIS2/course-textbook/Introduction-to-dhis2_textbook.md, master)'
               - Aggregate Customization Fundamentals: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Customization/course-textbook/Customization_course_textbook.md, master)'
+              - Aggregate Data Analysis Fundamentals: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Data-analysis/course-textbook/Data_Analysis_textbook.md, master)'
           - Analytics Tools Academy:
               - Using Validation Rules:
                 - Trainer&apos;s Guide to Validation Rules (Use): '@github(dhis2/training-docs, content/analytic_tools/tg_validationrule.md, main)'
