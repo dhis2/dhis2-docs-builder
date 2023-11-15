@@ -1126,8 +1126,8 @@ nav:
                 - Trainer&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/tg_users.md, main)'
                 - Learner&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/lg_users.md, main)'
               - Sharing and User Groups:
-                - Trainer&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/design_for_data_use/tg_sharing.md, main)'
-                - Learner&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/design_for_data_use/lg_sharing.md, main)'
+                - Trainer&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_sharing.md, main)'
+                - Learner&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_sharing.md, main)'
               - Dashboards:
-                - Trainer&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/design_for_data_use/tg_dashboards.md, main)'
-                - Learner&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/design_for_data_use/lg_dashboards.md, main)'
+                - Trainer&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/tg_dashboards.md, main)'
+                - Learner&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/lg_dashboards.md, main)'
