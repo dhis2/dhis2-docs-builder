@@ -1102,3 +1102,33 @@ nav:
               - Breaking the Glass and Program Access Levels:
                 - Trainer&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/tg_programaccess.md, main)'
                 - Learner&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/lg_programaccess.md, main)'
+          - Design for Data Use Academy:
+              - Data Element Groups:
+                - Trainer&apos;s Guide to Data Element Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_DEGs.md, main)'
+                - Learner&apos;s Guide to Data Element Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_DEGs.md, main)'
+              - Organisation Unit Groups:
+                - Trainer&apos;s Guide to Organisation Unit Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_OUGs.md, main)'
+                - Learner&apos;s Guide to Organisation Unit Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_OUGs.md, main)'
+              - Categories:
+                - Trainer&apos;s Guide to Working with Categories: '@github(dhis2/training-docs, content/design_for_data_use/tg_categories.md, main)'
+                - Learner&apos;s Guide to Working with Categories: '@github(dhis2/training-docs, content/design_for_data_use/lg_categories.md, main)'
+              - Data Set Design:
+                - Trainer&apos;s Guide to Data Set Design: '@github(dhis2/training-docs, content/design_for_data_use/tg_data_set_design.md, main)'
+              - Data Set Attributes:
+                - Trainer&apos;s Guide to Data Set Attributes: '@github(dhis2/training-docs, content/design_for_data_use/tg_attributes.md, main)'
+                - Learner&apos;s Guide to Data Set Attributes: '@github(dhis2/training-docs, content/design_for_data_use/lg_attributes.md, main)'
+              - Indicators:
+                - Trainer&apos;s Guide to Indicators: '@github(dhis2/training-docs, content/design_for_data_use/tg_indicators.md, main)'
+                - Learner&apos;s Guide to Indicators: '@github(dhis2/training-docs, content/design_for_data_use/lg_indicators.md, main)'
+              - Legends:
+                - Trainer&apos;s Guide to Legends: '@github(dhis2/training-docs, content/design_for_data_use/tg_legends.md, main)'
+                - Learner&apos;s Guide to Legends: '@github(dhis2/training-docs, content/design_for_data_use/lg_legends.md, main)'
+              - User Roles:
+                - Trainer&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/tg_users.md, main)'
+                - Learner&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/lg_users.md, main)'
+              - Sharing and User Groups:
+                - Trainer&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_sharing.md, main)'
+                - Learner&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_sharing.md, main)'
+              - Dashboards:
+                - Trainer&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/tg_dashboards.md, main)'
+                - Learner&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/lg_dashboards.md, main)'
