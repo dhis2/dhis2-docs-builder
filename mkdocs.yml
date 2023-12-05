@@ -842,6 +842,7 @@ nav:
                 - Design: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-design.md, master)'
                 - Installation: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-installation.md, master)'
           HIV:
+            - OVERVIEW: '@github(dhis2-metadata/GEN_DOCS, docs/test_overview.md, master)'
             - HIV HMIS:
               - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
               - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
