@@ -521,7 +521,7 @@ nav:
               - Installation and configuration: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-config.md, master)'
               - Usage and interpretation: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-use.md, master)'
     - Implement:
-        '@github(dhis2/dhis2-docs-implementation, implementation_section_index.yml, data-quality-toolkit)'
+        '@github(dhis2/dhis2-docs-implementation, implementation_section_index.yml, master)'
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
         Using the API:
