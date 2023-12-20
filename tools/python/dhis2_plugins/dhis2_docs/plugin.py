@@ -43,6 +43,8 @@ class Dhis2DocsPlugin(BasePlugin):
 
         fetcher = dhis2_utils.fetcher(config,self.config['tx_project_slug'],self.config['template'])
         if lang != 'en':
+            # clone the cache repo
+            fetcher.clone_git('dhis2/transifex-docs-cache', 'main')
             fetcher.pull_translations(lang,'nav')
         # fetcher.say_hello()
         print("Fetching documents...")
@@ -108,7 +110,7 @@ class Dhis2DocsPlugin(BasePlugin):
         md = dhis2_utils.re.sub(r'<!-- DHIS2-EDIT:[^>]*?-->','',markdown)
 
         # find any links referring to anchor tags, and resolve the path
-        q = dhis2_utils.re.compile('(\[[^\]]*])(\(#[^) ]* *\))')
+        q = dhis2_utils.re.compile(r'(\[[^\]]*])(\(#[^) ]* *\))')
         md2 = q.sub(self.linkfixer,md)
 
         return md2
