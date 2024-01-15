@@ -38,6 +38,7 @@ class tx:
         # uz@Cyrl --> uz
         # uz@Latn --> uz_UZ
         self.langmap={'fa_AF': 'prs', 'uz@Cyrl':'uz','uz@Latn':'uz_UZ'}
+        self.docs_cache = "tmp/github/dhis2/transifex-docs-cache/main/projects/"
 
 
 
@@ -64,6 +65,14 @@ class tx:
 
 
     def pull(self,path_to_file,resource_slug,language_code):
+
+        # Before we pull, check if the file exists in the transifex cache repository
+        # print("Checking cache for",resource_slug)
+        cached_file = self.docs_cache+self.project_slug+"/" +language_code+'/'+resource_slug
+        if os.path.exists(cached_file):
+            print("Copying",path_to_file,"from cache...")
+            os.system('cp '+cached_file+' '+path_to_file)
+            return
 
         print("Pulling",path_to_file,"from transifex...")
 
