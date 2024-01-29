@@ -87,7 +87,7 @@ jobs:
       run: |
         mkdocs build --config-file mkdocs_single_page.yml
       env:
-        DHIS2_DOCS_LANGUAGE: 'fr'
+        DHIS2_DOCS_LANGUAGE: '${{ matrix.locale }}'
         DHIS2_DOCS_TX_TOKEN: ${{ secrets.DHIS2_DOCS_TX_TOKEN }}
 
     - name: Sync docs to S3
