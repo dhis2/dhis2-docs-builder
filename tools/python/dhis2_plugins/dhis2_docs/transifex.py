@@ -72,20 +72,18 @@ class tx:
         if os.path.exists(cached_file):
             print("Copying",path_to_file,"from cache...")
             os.system('cp '+cached_file+' '+path_to_file)
-            return
+            
+        else:
+            print("Pulling",path_to_file,"from transifex...")
 
-        print("Pulling",path_to_file,"from transifex...")
-
-        # We need to map language codes that DHIS2 doesn't support natively
-        # uz@Cyrl --> uz
-        # uz@Latn --> uz_UZ
-        # mapped_language_code = language_code.replace("@Latn","_UZ").replace("@Cyrl","")
-        mapped_language_code = language_code
-        if language_code in self.langmap.keys():
-            mapped_language_code = self.langmap[language_code]
-
-
-        self.tx.project(self.project_slug).resource(resource_slug).pull(language_code,path_to_file)
+            # We need to map language codes that DHIS2 doesn't support natively
+            # uz@Cyrl --> uz
+            # uz@Latn --> uz_UZ
+            # mapped_language_code = language_code.replace("@Latn","_UZ").replace("@Cyrl","")
+            mapped_language_code = language_code
+            if language_code in self.langmap.keys():
+                mapped_language_code = self.langmap[language_code]
+                self.tx.project(self.project_slug).resource(resource_slug).pull(language_code,path_to_file)
 
         # set the appropriate edit url to transifex resource
         translate_path = self.tx_edit_root+self.project_slug+'/translate/#'+language_code+'/'+resource_slug
