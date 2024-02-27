@@ -451,10 +451,9 @@ nav:
               - Standalone Action Tracker App Demo:
                 - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-introduction.md, master)'
                 - Architecture And Installation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture-and-installation.md, master)'
-                - Configuration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-configuration.md, master)'
                 - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-browsing.md, master)'
-              - Standalone Action Tracker Administration:
-                - Administration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-administration.md, master)'
+              - Standalone Action Tracker Configuration:
+                - Configuration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-configuration.md, master)'
               - Maintenance and Support:
                 - Maintenance: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-maintenance.md, master)'
           Action Tracker App:
