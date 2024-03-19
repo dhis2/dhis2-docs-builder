@@ -643,9 +643,10 @@ class fetcher:
                 # this is an "alternate" - keep track of it
                 tmp_v = v_tmp + [no_pref]
                 # print("alternate", k , tmp_v)
-            else:
-                # this is not an alternate - add to translation source
-                self.nav_strings[k] = { "string": k , "context": path }
+            else:                
+                # this is not an alternate - add to translation source unless the string is "OVERVIEW" keyword
+                if k != "OVERVIEW":
+                    self.nav_strings[k] = { "string": k , "context": path }
 
                 # but for the top-level items, we keep track of like an alternate
                 if path == '':
