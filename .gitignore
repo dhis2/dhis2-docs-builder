@@ -3,9 +3,11 @@ target/
 tmp/
 venv/
 mkdocs_gen.yml
+mkdocs_preview.yml
 **/__pycache__/**
 **/*.backup
 .idea/
 .DS_Store
 src/commonmark/en/content/submodules/
 .vscode/
+tools/
