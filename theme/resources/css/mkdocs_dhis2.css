@@ -203,11 +203,11 @@ body {
 }
 
 .md-typeset {
-  font-size: 0.67rem;
+  font-size: 0.66rem;
 }
 
 .md-typeset p {
-  font-size: 0.67rem;
+  font-size: 0.66rem;
   padding-top: 0.1em;
   padding-bottom: 0.1em;
 }
@@ -557,7 +557,7 @@ a.md-nav__link:hover{
   border-bottom: 1px solid var(--fill-bg-300);
   height: 40px;
   color: var(--md-default-fg-color);
-  font-size: 0.67rem;
+  font-size: 0.66rem;
   padding: 0.5em;
 }
 
@@ -848,7 +848,7 @@ caption {
 }
 
 .md-typeset table:not([class]) {
-  font-size: 0.67rem;
+  font-size: 0.66rem;
   box-shadow: none;
   border-radius: 0px;
   padding: 0 0;
