@@ -17,8 +17,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/en/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/en/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/en/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/en/2.36/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/en/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/en/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/en/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/en/2.36/user/dhis2_end_user_manual.pdf)|
         |End User Manual|2.35|[HTML](/archive/en/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/en/2.35/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.34|[HTML](/archive/en/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/en/2.34/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.33|[HTML](/archive/en/2.33/user/dhis2-end-user-manual.html)|[PDF](/archive/en/2.33/user/dhis2-end-user-manual.pdf)|
@@ -38,8 +38,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/fr/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/fr/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/fr/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/fr/2.36/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/fr/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/fr/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/fr/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/fr/2.36/user/dhis2_end_user_manual.pdf)|
         |End User Manual|2.35|[HTML](/archive/fr/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/fr/2.35/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.34|[HTML](/archive/fr/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/fr/2.34/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.33|[HTML](/archive/fr/2.33/end-user/dhis2-end-user-manual.html)|[PDF](/archive/fr/2.33/end-user/dhis2-end-user-manual.pdf)|
@@ -53,8 +53,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/es_419/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/es_419/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/es_419/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/es_419/2.36/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/es_419/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/es_419/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/es_419/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/es_419/2.36/user/dhis2_end_user_manual.pdf)|
         |End User Manual|2.35|[HTML](/archive/es_419/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/es_419/2.35/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.34|[HTML](/archive/es_419/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/es_419/2.34/user/dhis2-end-user-manual.pdf)|
 
@@ -62,17 +62,17 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/pt/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/pt/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/pt/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/pt/2.36/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.35|[HTML](/archive/pt/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/pt/2.35/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.34|[HTML](/archive/pt/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/pt/2.34/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/pt/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/pt/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/pt/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/pt/2.36/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.35|[HTML](/archive/pt/2.35/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/pt/2.35/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.34|[HTML](/archive/pt/2.34/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/pt/2.34/user/dhis2_end_user_manual.pdf)|
 
     === "čeština"
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/cs/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/cs/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/cs/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/cs/2.36/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/cs/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/cs/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/cs/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/cs/2.36/user/dhis2_end_user_manual.pdf)|
         |End User Manual|2.35|[HTML](/archive/cs/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/cs/2.35/user/dhis2-end-user-manual.pdf)|
         |End User Manual|2.34|[HTML](/archive/cs/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/cs/2.34/user/dhis2-end-user-manual.pdf)|
 
@@ -80,9 +80,9 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |End User Manual|2.37|[HTML](/archive/zh/2.37/user/dhis2-end-user-manual.html)|[PDF](/archive/zh/2.37/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.36|[HTML](/archive/zh/2.36/user/dhis2-end-user-manual.html)|[PDF](/archive/zh/2.36/user/dhis2-end-user-manual.pdf)|
-        |End User Manual|2.35|[HTML](/archive/zh/2.35/user/dhis2-end-user-manual.html)|[PDF](/archive/zh/2.35/user/dhis2-end-user-manual.pdf)|
+        |End User Manual|2.37|[HTML](/archive/zh/2.37/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/zh/2.37/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.36|[HTML](/archive/zh/2.36/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/zh/2.36/user/dhis2_end_user_manual.pdf)|
+        |End User Manual|2.35|[HTML](/archive/zh/2.35/user/html/dhis2_end_user_manual_full.html)|[PDF](/archive/zh/2.35/user/dhis2_end_user_manual.pdf)|
         |End User Manual|2.34|[HTML](/archive/zh/2.34/user/dhis2-end-user-manual.html)|[PDF](/archive/zh/2.34/user/dhis2-end-user-manual.pdf)|
 
 
@@ -103,8 +103,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/en/2.37/user/dhis2-user-manual.html)|[PDF](/archive/en/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/en/2.36/user/dhis2-user-manual.html)|[PDF](/archive/en/2.36/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/en/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/en/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/en/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/en/2.36/user/dhis2_user_manual.pdf)|
         |User Manual|2.35|[HTML](/archive/en/2.35/user/dhis2-user-manual.html)|[PDF](/archive/en/2.35/user/dhis2-user-manual.pdf)|
         |User Manual|2.34|[HTML](/archive/en/2.34/user/dhis2-user-manual.html)|[PDF](/archive/en/2.34/user/dhis2-user-manual.pdf)|
         |User Manual|2.33|[HTML](/archive/en/2.33/user/dhis2-user-manual.html)|[PDF](/archive/en/2.33/user/dhis2-user-manual.pdf)|
@@ -124,8 +124,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/fr/2.37/user/dhis2-user-manual.html)|[PDF](/archive/fr/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/fr/2.36/user/dhis2-user-manual.html)|[PDF](/archive/fr/2.36/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/fr/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/fr/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/fr/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/fr/2.36/user/dhis2_user_manual.pdf)|
         |User Manual|2.35|[HTML](/archive/fr/2.35/user/dhis2-user-manual.html)|[PDF](/archive/fr/2.35/user/dhis2-user-manual.pdf)|
         |User Manual|2.34|[HTML](/archive/fr/2.34/user/dhis2-user-manual.html)|[PDF](/archive/fr/2.34/user/dhis2-user-manual.pdf)|
 
@@ -134,8 +134,8 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/es_419/2.37/user/dhis2-user-manual.html)|[PDF](/archive/es_419/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/es_419/2.36/user/dhis2-user-manual.html)|[PDF](/archive/es_419/2.36/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/es_419/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/es_419/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/es_419/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/es_419/2.36/user/dhis2_user_manual.pdf)|
         |User Manual|2.35|[HTML](/archive/es_419/2.35/user/dhis2-user-manual.html)|[PDF](/archive/es_419/2.35/user/dhis2-user-manual.pdf)|
         |User Manual|2.34|[HTML](/archive/es_419/2.34/user/dhis2-user-manual.html)|[PDF](/archive/es_419/2.34/user/dhis2-user-manual.pdf)|
 
@@ -143,17 +143,17 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/pt/2.37/user/dhis2-user-manual.html)|[PDF](/archive/pt/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/pt/2.36/user/dhis2-user-manual.html)|[PDF](/archive/pt/2.36/user/dhis2-user-manual.pdf)|
-        |User Manual|2.35|[HTML](/archive/pt/2.35/user/dhis2-user-manual.html)|[PDF](/archive/pt/2.35/user/dhis2-user-manual.pdf)|
-        |User Manual|2.34|[HTML](/archive/pt/2.34/user/dhis2-user-manual.html)|[PDF](/archive/pt/2.34/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/pt/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/pt/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/pt/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/pt/2.36/user/dhis2_user_manual.pdf)|
+        |User Manual|2.35|[HTML](/archive/pt/2.35/user/html/dhis2_user_manual_full.html)|[PDF](/archive/pt/2.35/user/dhis2_user_manual.pdf)|
+        |User Manual|2.34|[HTML](/archive/pt/2.34/user/html/dhis2_user_manual_full.html)|[PDF](/archive/pt/2.34/user/dhis2_user_manual.pdf)|
 
     === "čeština"
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/cs/2.37/user/dhis2-user-manual.html)|[PDF](/archive/cs/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/cs/2.36/user/dhis2-user-manual.html)|[PDF](/archive/cs/2.36/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/cs/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/cs/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/cs/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/cs/2.36/user/dhis2_user_manual.pdf)|
         |User Manual|2.35|[HTML](/archive/cs/2.35/user/dhis2-user-manual.html)|[PDF](/archive/cs/2.35/user/dhis2-user-manual.pdf)|
         |User Manual|2.34|[HTML](/archive/cs/2.34/user/dhis2-user-manual.html)|[PDF](/archive/cs/2.34/user/dhis2-user-manual.pdf)|
 
@@ -161,9 +161,9 @@
 
         |Document|Version|||
         |:---|---|---|---|
-        |User Manual|2.37|[HTML](/archive/zh/2.37/user/dhis2-user-manual.html)|[PDF](/archive/zh/2.37/user/dhis2-user-manual.pdf)|
-        |User Manual|2.36|[HTML](/archive/zh/2.36/user/dhis2-user-manual.html)|[PDF](/archive/zh/2.36/user/dhis2-user-manual.pdf)|
-        |User Manual|2.35|[HTML](/archive/zh/2.35/user/dhis2-user-manual.html)|[PDF](/archive/zh/2.35/user/dhis2-user-manual.pdf)|
+        |User Manual|2.37|[HTML](/archive/zh/2.37/user/html/dhis2_user_manual_full.html)|[PDF](/archive/zh/2.37/user/dhis2_user_manual.pdf)|
+        |User Manual|2.36|[HTML](/archive/zh/2.36/user/html/dhis2_user_manual_full.html)|[PDF](/archive/zh/2.36/user/dhis2_user_manual.pdf)|
+        |User Manual|2.35|[HTML](/archive/zh/2.35/user/html/dhis2_user_manual_full.html)|[PDF](/archive/zh/2.35/user/dhis2_user_manual.pdf)|
         |User Manual|2.34|[HTML](/archive/zh/2.34/user/dhis2-user-manual.html)|[PDF](/archive/zh/2.34/user/dhis2-user-manual.pdf)|
 
 ## Android
