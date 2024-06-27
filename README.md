@@ -30,7 +30,7 @@ A small script has been added to this repository to support this, simply pass th
 ./preview.sh <path/to/your/markdown/file.md>
 ```
 
-This will utilise the `serve` feature of mkdocs to built your document to server the document on a local URL (usually http://127.0.0.1:8000/en/) that you can view in your browser. Simply go to the serve URL and click on the Preview tab at the top to see your document fully rendered.
+This will utilise the `serve` feature of mkdocs to serve the document on a local URL (usually http://127.0.0.1:8000/en/) that you can view in your browser. Simply go to the serve URL and click on the Preview tab at the top to see your document fully rendered.
 
 While the preview process is running, as you save changes to the markdown, the document will be re-built and the page updated.
 
