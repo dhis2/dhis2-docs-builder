@@ -45,7 +45,7 @@ smmap==3.0.5
 tinycss2==1.0.0
 translayer @ https://github.com/Philip-Larsen-Donnelly/translayer/archive/refs/tags/v0.0.5.zip
 Unidecode==1.0.23
-urllib3==1.26.18
+urllib3==1.26.19
 watchdog==2.2.1
 weasyprint==53.4
 webencodings==0.5.1
