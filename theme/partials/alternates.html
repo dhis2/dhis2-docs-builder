@@ -10,20 +10,20 @@
 
         {% for sibling in nav_item.parent.children %}
           {% if not sibling.active  %}
-          <!-- alternative selection -->
+          {# alternative selection #}
             {% set ns = namespace(ss=sibling) %}
 
             {% set nic = nav_item.children %}
-            <!-- recursively compare the page nav_item with the alternative to find the alternative url -->
-            <!-- Ideally the alternative nav should be exaclty the same with the exception of the current nav_item -->
-            <!-- If we don't find a match, fall back to the first page under the alternative nav_item -->
+            {# recursively compare the page nav_item with the alternative to find the alternative url #}
+            {# Ideally the alternative nav should be exaclty the same with the exception of the current nav_item #}
+            {# If we don't find a match, fall back to the first page under the alternative nav_item #}
             {% for nav_sub in nic recursive %}
               {% set inner_loop = loop %}
               {% if nav_sub.active %}
                 {% for sib_sub in ns.ss.children if sib_sub.title == nav_sub.title %}
-                    <!--  -->
+                    {#  #}
                     {% if sib_sub.is_page %}
-                      <!--  -->
+                      {#  #}
                       <option value="{{ sib_sub.url|url }}"><p>{{ sibling.title|replace("alt__","") }}</option>
                     {% else %}
                       {% if not nav_sub.is_page %}

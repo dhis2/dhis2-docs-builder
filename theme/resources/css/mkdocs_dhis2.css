@@ -1158,7 +1158,7 @@ d_card-container {
   border: 1px solid var(--fill-bg-200);
   box-shadow: 0 2px 4px 0 var(--md-card-shadow);
   min-width:400px;
-  flex:1 1 23vw;
+  flex:1 1 13vw;
   padding:1rem;
   margin:0px 32px 32px 0px;
   font-size: 1rem;
