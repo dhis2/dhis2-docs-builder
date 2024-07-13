@@ -1342,3 +1342,22 @@ li ul .tabnavp:after {
   font-size:smaller;
   color: var(--tab-menu-folder);
 }
+
+@media (max-width: 600px) {
+  /* make the Kapa ai widget smaller on mobile devices */
+  #kapa-widget-container button {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0px !important;
+    font-size: smaller !important;
+  }
+  #kapa-widget-container .mantine-Image-root img {
+    width: 1.2rem !important; 
+    height: 1.2rem !important;
+	margin:auto !important;
+  }
+  #kapa-widget-container .mantine-Text-root {
+    font-size: 12px !important; 
+  }
+}
+
