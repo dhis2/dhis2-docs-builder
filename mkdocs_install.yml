@@ -1052,7 +1052,7 @@ nav:
                 - Tracker Capture - Exercise: '@github(dhis2/training-docs, content/tracker_use/tracker_capture_ungraded_exercise.md, main)'
                 - Tracker Capture Web - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_tracker_capture_web.md, main)'
               - Tracker Capture (Android):
-                - Trainer&apos;s Guide to Tracker Capture (Android): '@github(dhis2/training-docs, content/tracker_use/tg_tracker_capture_android.md, main)'
+                - Trainer&apos;s Guide to Tracker Capture (Android): '@github(dhis2/training-docs, content/tracker_use/tg_capture_android.md, main)'
                 - Learner&apos;s Guide to Android Capture: '@github(dhis2/training-docs, content/tracker_use/lg_tracker_capture_android.md, main)'
                 - Android Data Capture - Session Summary: '@github(dhis2/training-docs, content/tracker_use/summary_tracker_capture_android.md, main)'
               - Program Indicator Analysis:
