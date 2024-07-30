@@ -9,3 +9,4 @@ mkdocs_gen.yml
 .DS_Store
 src/commonmark/en/content/submodules/
 .vscode/
+**/*.egg-info/**
