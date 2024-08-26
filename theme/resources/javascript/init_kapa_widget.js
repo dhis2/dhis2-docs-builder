@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+  document$.subscribe(() => { 
     var script = document.createElement("script");
     script.src = "https://widget.kapa.ai/kapa-widget.bundle.js";
     script.setAttribute("data-website-id", "27e730a7-0494-4dd9-8c0f-2536f5367212");
@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function () {
     script.setAttribute("data-button-position-bottom", "60px");
     script.async = true;
     document.head.appendChild(script);
-  });
+  })
