@@ -10,3 +10,4 @@ mkdocs_gen.yml
 src/commonmark/en/content/submodules/
 .vscode/
 **/*.egg-info/**
+experiment/**
