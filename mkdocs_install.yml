@@ -3,7 +3,7 @@ site_description: Official documentation of the DHIS2 platform
 site_author: DHIS2 Documentation Team
 # site_url sets the canonical url - we want this to point to the latest version
 site_url: 'https://docs.dhis2.org/en/'
-copyright: 'Copyright &copy; 2008-2023 DHIS2 Team'
+copyright: 'Copyright &copy; 2008-2024 DHIS2 Team'
 # edit_uri: ''
 repo_url: https://github.com/dhis2/dhis2-docs
 repo_name: 'dhis2-docs on GitHub'
@@ -80,10 +80,9 @@ theme:
   filter:
     versions:
       - 'master'
+      - '2.41'
       - '2.40'
       - '2.39'
-      - '2.38'
-      - '2.37'
     categories:
       - Use
       - Implement
@@ -94,7 +93,7 @@ theme:
       - Stories
       - Training
   filter_boost:
-    - '2.40'
+    - '2.41'
 
 # our css
 extra_css:
@@ -172,6 +171,61 @@ nav:
         Use: '@github(dhis2/dhis2-docs, src/user/index.md, master)'
         What is DHIS2?: '@github(dhis2/dhis2-docs, src/user/what-is-dhis2.md,master)'
         User guides:
+          alt__DHIS core version 2.41:
+            Collecting data:
+              - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,2.41)'
+              - Data Entry (beta): '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,2.41)'
+              - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.41)'
+            Tracking individual level data:
+              - '@github(dhis2/capture-app, docs/user/index.yml, master)'
+              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.41)'
+              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.41)'
+            Approving data:
+              - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.41)'
+              - '@github(dhis2/approval-app, docs/user/index.yml, master)'
+            Analysing data:
+              - Dashboards: '@github(dhis2/dashboard-app, docs/dashboards.md, master)'
+              - Data Visualizer: '@github(dhis2/data-visualizer-app, docs/data-visualizer.md, master)'
+              - Line Listing: '@github(dhis2/line-listing-app, docs/line_list.md, master)'
+              - Maps: '@github(dhis2/maps-app, docs/maps.md, master)'
+              - Event Reports: '@github(dhis2/dhis2-docs, src/user/using-the-event-reports-app.md,2.41)'
+              - Event Visualizer: '@github(dhis2/dhis2-docs, src/user/using-the-event-visualizer-app.md,2.41)'
+              - Reports: '@github(dhis2/dhis2-docs, src/user/using-reporting-functionality.md,2.41)'
+            Working with your account:
+              - Messaging: '@github(dhis2/dhis2-docs, src/user/messaging.md,2.41)'
+              - '@github(dhis2/user-profile-app, docs/user/index.yml, master)'
+              - Personal access tokens: '@github(dhis2/dhis2-docs, src/user/personal-access-tokens.md,2.41)'
+            Configuring the system:
+              - Metadata: '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,2.41)'
+              - Programs: '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-maintenance-app.md,2.41)'
+              - Users, Roles and Groups: '@github(dhis2/dhis2-docs, src/user/manage-users-user-roles-and-user-groups.md,2.41)'
+              - User authorities: '@github(dhis2/dhis2-docs, src/user/user-authorities.md,2.41)'
+              - About sharing of objects: '@github(dhis2/dhis2-docs, src/user/about-sharing-of-objects.md,2.41)'
+              - Maps: '@github(dhis2/dhis2-docs, src/user/configure-the-gis-app.md,2.41)'
+              - Report: '@github(dhis2/dhis2-docs, src/user/configure-report-functionality.md,2.41)'
+              - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,2.41)'
+            Exchanging data:
+              - Import/Export: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,2.41)'
+              - Data Exchange: '@github(dhis2/dhis2-docs, src/user/data-exchange.md,2.41)'
+              - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.41)'
+            Maintaining the system:
+              - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.41)'
+              - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
+              - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,2.41)'
+              - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,2.41)'
+              - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.41)'
+              - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.41)'
+              - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
+            Understanding the data model:
+              - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.41)'
+              - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.41)'
+              - Relationship model: '@github(dhis2/dhis2-docs, src/user/relationship-model.md,2.41)'
+            Additional information:
+              - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/user/dhis2-glossary.md,2.41)'
+              - Demo server, live package and database design: '@github(dhis2/dhis2-docs, src/user/about-demo-server-live-package-and-database-design.md,2.41)'
+              - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/user/dhis2-tutorials.md,2.41)'
+              - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,2.41)'
+              - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,2.41)'
           alt__DHIS core version 2.40:
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,2.40)'
@@ -335,58 +389,6 @@ nav:
               - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/user/dhis2-tutorials.md,master)'
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,master)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,master)'
-          alt__DHIS core version 2.37:
-            Collecting data:
-              - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,2.37)'
-              - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.37)'
-            Tracking individual level data:
-              - Capture: '@github(dhis2/dhis2-docs, src/user/using-the-capture-app.md,2.37)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.37)'
-              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.37)'
-            Approving data:
-              - Understanding Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.37)'
-              - '@github(dhis2/approval-app, docs/user/index.yml, master)'
-            Analysing data:
-              - Dashboards: '@github(dhis2/dhis2-docs, src/user/managing-dashboards.md,2.37)'
-              - Data Visualizer: '@github(dhis2/dhis2-docs, src/user/data-visualizer.md,2.37)'
-              - Maps: '@github(dhis2/dhis2-docs, src/user/using-the-maps-app.md,2.37)'
-              - Event Reports: '@github(dhis2/dhis2-docs, src/user/using-the-event-reports-app.md,2.37)'
-              - Event Visualizer: '@github(dhis2/dhis2-docs, src/user/using-the-event-visualizer-app.md,2.37)'
-              - Reports: '@github(dhis2/dhis2-docs, src/user/using-reporting-functionality.md,2.37)'
-            Working with your account:
-              - Messaging: '@github(dhis2/dhis2-docs, src/user/messaging.md,2.37)'
-              - '@github(dhis2/user-profile-app, docs/user/index.yml, master)'
-              - Personal access tokens: '@github(dhis2/dhis2-docs, src/user/personal-access-tokens.md,master)'
-            Configuring the system:
-              - Metadata: '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,2.37)'
-              - Programs: '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-maintenance-app.md,2.37)'
-              - Users, Roles and Groups: '@github(dhis2/dhis2-docs, src/user/manage-users-user-roles-and-user-groups.md,2.37)'
-              - User authorities: '@github(dhis2/dhis2-docs, src/user/user-authorities.md,2.37)'
-              - About sharing of objects: '@github(dhis2/dhis2-docs, src/user/about-sharing-of-objects.md,2.37)'
-              - Maps: '@github(dhis2/dhis2-docs, src/user/configure-the-gis-app.md,2.37)'
-              - Report: '@github(dhis2/dhis2-docs, src/user/configure-report-functionality.md,2.37)'
-              - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,2.37)'
-            Exchanging data:
-              - Import/Export: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,2.37)'
-              - Metadata Synchronization: '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,2.37)'
-            Maintaining the system:
-              - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.37)'
-              - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
-              - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,2.37)'
-              - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,2.37)'
-              - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.37)'
-              - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.37)'
-              - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
-            Understanding the data model:
-              - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.37)'
-              - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.37)'
-              - Relationship model: '@github(dhis2/dhis2-docs, src/user/relationship-model.md,2.37)'
-            Additional information:
-              - DHIS2 Glossary: '@github(dhis2/dhis2-docs, src/user/dhis2-glossary.md,2.37)'
-              - Demo server, live package and database design: '@github(dhis2/dhis2-docs, src/user/about-demo-server-live-package-and-database-design.md,2.37)'
-              - DHIS2 Tutorials: '@github(dhis2/dhis2-docs, src/user/dhis2-tutorials.md,2.37)'
-              - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,2.37)'
-              - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,2.37)'
           alt__DHIS core version master:
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
@@ -446,13 +448,13 @@ nav:
           - '@github(dhis2/dhis2-android-docs,DHIS2_Android_App_INDEX.yml, main)' #Android uses external INDEX files
         Optional Apps:
           Standalone Action Tracker App:
-            alt__App version 1.0:
+            alt__App version 2.0:
               - Standalone Action Tracker App Demo:
                 - Introduction: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-introduction.md, master)'
-                - Architecture: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture.md, master)'
+                - Architecture And Installation: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-architecture-and-installation.md, master)'
                 - Browsing: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-browsing.md, master)'
-              - Standalone Action Tracker Administration:
-                - Administration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-administration.md, master)'
+              - Standalone Action Tracker Configuration:
+                - Configuration: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-configuration.md, master)'
               - Maintenance and Support:
                 - Maintenance: '@github(hisptz/unicef-apps-docs,src/commonmark/en/content/standalone_action_tracker/sat-app-maintenance.md, master)'
           Action Tracker App:
@@ -520,10 +522,40 @@ nav:
               - Installation and configuration: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-config.md, master)'
               - Usage and interpretation: '@github(pamod-dev/dhis2-doc-support,docs/en/dq-use.md, master)'
     - Implement:
-        '@github(dhis2/dhis2-docs-implementation, implementation_section_index.yml, data-quality-toolkit)'
+        '@github(dhis2/dhis2-docs-implementation, implementation_section_index.yml, master)'
     - Develop:
         Develop: '@github(dhis2/dhis2-docs, src/developer/index.md, master)'
         Using the API:
+          alt__DHIS core version 2.41:
+            - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.41)'
+            - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, 2.41)'
+            - Metadata Gist: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata-gist.md, 2.41)'
+            - Data: '@github(dhis2/dhis2-docs, src/developer/web-api/data.md, 2.41)'
+            - Data Validation: '@github(dhis2/dhis2-docs, src/developer/web-api/data-validation.md, 2.41)'
+            - Data Approval: '@github(dhis2/dhis2-docs, src/developer/web-api/data-approval.md, 2.41)'
+            - Sharing: '@github(dhis2/dhis2-docs, src/developer/web-api/sharing.md, 2.41)'
+            - Scheduling: '@github(dhis2/dhis2-docs, src/developer/web-api/scheduling.md, 2.41)'
+            - Synchronization: '@github(dhis2/dhis2-docs, src/developer/web-api/synchronization.md, 2.41)'
+            - Audit: '@github(dhis2/dhis2-docs, src/developer/web-api/audit.md, 2.41)'
+            - Messaging: '@github(dhis2/dhis2-docs, src/developer/web-api/messaging.md, 2.41)'
+            - Visualizations: '@github(dhis2/dhis2-docs, src/developer/web-api/visualizations.md, 2.41)'
+            - Analytics: '@github(dhis2/dhis2-docs, src/developer/web-api/analytics.md, 2.41)'
+            - Maintenance: '@github(dhis2/dhis2-docs, src/developer/web-api/maintenance.md, 2.41)'
+            - Data Exchange: '@github(dhis2/dhis2-docs, src/developer/web-api/data-exchange.md, 2.41)'
+            - I18n: '@github(dhis2/dhis2-docs, src/developer/web-api/i18n.md, 2.41)'
+            - SMS: '@github(dhis2/dhis2-docs, src/developer/web-api/sms.md, 2.41)'
+            - Users: '@github(dhis2/dhis2-docs, src/developer/web-api/users.md, 2.41)'
+            - Settings and configuration: '@github(dhis2/dhis2-docs, src/developer/web-api/settings-and-configuration.md, 2.41)'
+            - Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/tracker.md, 2.41)'
+            - Tracker (deprecated): '@github(dhis2/dhis2-docs, src/developer/web-api/tracker-old.md, 2.41)'
+            - Email: '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, 2.41)'
+            - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, 2.41)'
+            - Data Entry: '@github(dhis2/dhis2-docs, src/developer/web-api/data-entry.md, 2.41)'
+            - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, 2.41)'
+            - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, 2.41)'
+            - Event Hooks: '@github(dhis2/dhis2-docs, src/developer/web-api/event-hooks.md, 2.41)'
+            - Route: '@github(dhis2/dhis2-docs, src/developer/web-api/route.md, 2.41)'
+            - Query Alias: '@github(dhis2/dhis2-docs, src/developer/web-api/query-alias.md, 2.41)'
           alt__DHIS core version 2.40:
             - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.40)'
             - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, 2.40)'
@@ -605,30 +637,6 @@ nav:
             - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, 2.38)'
             - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, 2.38)'
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, 2.38)'
-          alt__DHIS core version 2.37:
-            - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, 2.37)'
-            - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, 2.37)'
-            - Metadata Gist: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata-gist.md, 2.37)'
-            - Data: '@github(dhis2/dhis2-docs, src/developer/web-api/data.md, 2.37)'
-            - Data Validation: '@github(dhis2/dhis2-docs, src/developer/web-api/data-validation.md, 2.37)'
-            - Data Approval: '@github(dhis2/dhis2-docs, src/developer/web-api/data-approval.md, 2.37)'
-            - Sharing: '@github(dhis2/dhis2-docs, src/developer/web-api/sharing.md, 2.37)'
-            - Scheduling: '@github(dhis2/dhis2-docs, src/developer/web-api/scheduling.md, 2.37)'
-            - Audit: '@github(dhis2/dhis2-docs, src/developer/web-api/audit.md, 2.37)'
-            - Messaging: '@github(dhis2/dhis2-docs, src/developer/web-api/messaging.md, 2.37)'
-            - Visualizations: '@github(dhis2/dhis2-docs, src/developer/web-api/visualizations.md, 2.37)'
-            - Analytics: '@github(dhis2/dhis2-docs, src/developer/web-api/analytics.md, 2.37)'
-            - Maintenance: '@github(dhis2/dhis2-docs, src/developer/web-api/maintenance.md, 2.37)'
-            - I18n: '@github(dhis2/dhis2-docs, src/developer/web-api/i18n.md, 2.37)'
-            - SMS: '@github(dhis2/dhis2-docs, src/developer/web-api/sms.md, 2.37)'
-            - Users: '@github(dhis2/dhis2-docs, src/developer/web-api/users.md, 2.37)'
-            - Settings and configuration: '@github(dhis2/dhis2-docs, src/developer/web-api/settings-and-configuration.md, 2.37)'
-            - Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/tracker.md, 2.37)'
-            - New Tracker: '@github(dhis2/dhis2-docs, src/developer/web-api/new-tracker.md, 2.37)'
-            - Email: '@github(dhis2/dhis2-docs, src/developer/web-api/email.md, 2.37)'
-            - Data Store: '@github(dhis2/dhis2-docs, src/developer/web-api/data-store.md, 2.37)'
-            - Org unit profile: '@github(dhis2/dhis2-docs, src/developer/web-api/organisation-unit-profile.md, 2.37)'
-            - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, 2.37)'
           alt__DHIS core version master:
             - Introduction: '@github(dhis2/dhis2-docs, src/developer/web-api/overview.md, master)'
             - Metadata: '@github(dhis2/dhis2-docs, src/developer/web-api/metadata.md, master)'
@@ -657,12 +665,12 @@ nav:
             - Apps: '@github(dhis2/dhis2-docs, src/developer/web-api/apps.md, master)'
             - Event Hooks: '@github(dhis2/dhis2-docs, src/developer/web-api/event-hooks.md, master)'
             - Route: '@github(dhis2/dhis2-docs, src/developer/web-api/route.md, master)'
+            - Query Alias: '@github(dhis2/dhis2-docs, src/developer/web-api/query-alias.md, master)'
         Core OpenAPI Specification: '@github(dhis2/dhis2-docs, src/developer/web-api/openapi.md, master)'
         Core Javadocs:
+          - DHIS 2.40 Javadocs: https://docs.dhis2.org/javadoc/2.36/
           - DHIS 2.39 Javadocs: https://docs.dhis2.org/javadoc/2.39/
           - DHIS 2.38 Javadocs: https://docs.dhis2.org/javadoc/2.38/
-          - DHIS 2.37 Javadocs: https://docs.dhis2.org/javadoc/2.37/
-          - DHIS 2.36 Javadocs: https://docs.dhis2.org/javadoc/2.36/
           - DHIS master Javadocs: https://docs.dhis2.org/javadoc/master/
         Integrating with R: '@github(dhis2/dhis2-docs, src/developer/dhis2-and-r-integration.md, master)'
         Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
@@ -695,273 +703,6 @@ nav:
           - What are DHIS2 releases, patch releases, hotfixes: '@github(dhis2/dhis2-docs, src/sysadmin/concepts/releases.md, new_install_docs)'
           - What are the dependencies of DHIS2: '@github(dhis2/dhis2-docs, src/sysadmin/concepts/dependencies.md, new_install_docs)'
     - Topics:
-      - alt__Metadata:
-          DHIS2 WHO Digital Health Data Toolkit:
-            - About the WHO Digital Health Data Toolkit: '@github(dhis2/dhis2-docs, src/metadata/about-metadata.md, master)'
-            - General Design Principles for WHO Metadata Packages: '@github(dhis2/dhis2-docs, src/metadata/metadata-design-principles.md, master)'
-            - Common Metadata Library:
-              - Design: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GEN_LIB, docs/gen_lib-installation.md, master)'
-            - Naming Conventions: '@github(dhis2/dhis2-docs, src/metadata/metadata-naming-conventions.md, master)'
-          CHIS Community Health Information System:
-            - OVERVIEW: '@github(dhis2-metadata/CHIS_AGG, docs/overview.md, master'
-            - Release Note: '@github(dhis2-metadata/CHIS_AGG, docs/release_note.md, master'
-            - Design:
-              - CHIS General Design: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-design.md, master'
-              - Adolescant Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ah-design.md, master'
-              - Child Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ch-design.md, master'
-              - Child Protection and Interpersonal Violence: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_cpiv-design.md, master'
-              - Civil Registration and Vital Statistics: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_crvs-design.md, master'
-              - Clean Energy: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ene-design.md, master'
-              - Community Based Surveillance: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_cbs-design.md, master'
-              - HIV: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_hiv-design.md, master'
-              - Immunization: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_epi-design.md, master'
-              - Integrated Community Case Management: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_iccm-design.md, master'
-              - Malaria: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_mal-design.md, master'
-              - Maternal Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_mat-design.md, master'
-              - Mental Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_men-design.md, master'
-              - Neglected Tropical Diseases: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ntd-design.md, master'
-              - Newborn Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_nbh-design.md, master'
-              - Non-communicable Diseases: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_ncd-design.md, master'
-              - Nutrition: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_nut-design.md, master'
-              - People-centered Services: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_pcs-design.md, master'
-              - Population Composition: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_pop-design.md, master'
-              - Sexual and Reproductive Health: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_srh-design.md, master'
-              - Tuberculosis: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_tb-design.md, master'
-              - Water, Sanitation and Hygiene: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg_wash-design.md, master'
-            - Installation: '@github(dhis2-metadata/CHIS_AGG, docs/chis_agg-installation.md, master'
-          COVID-19 Surveillance:
-            - OVERVIEW: '@github(dhis2-metadata/C19_CS, docs/c19_surveillance-digital_data_package-2022.md, master)'
-            - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
-            - COVID-19 Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/C19_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/C19_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/C19_AGG, docs/c19_agg-installation.md, master)'
-            - COVID-19 Case Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/C19_CS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/C19_CS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/C19_CS, docs/c19_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/C19_CS, docs/c19_cs-installation.md, master)'
-            - COVID-19 Points of Entry[Discontinued]:
-              - OVERVIEW: '@github(dhis2-metadata/C19_POE, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/C19_POE, docs/c19_poe-design.md, master)'
-            - COVID-19 Surveillance Events [Discontinued]:
-              - OVERVIEW: '@github(dhis2-metadata/C19_EVT, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/C19_EVT, docs/c19_evt-design.md, master)'
-          COVID-19 Vaccine Delivery:
-            - COVAC Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/CVC_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/CVC_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-installation.md, master)'
-            - COVID-19 Electronic Immunization Registry:
-              - OVERVIEW: '@github(dhis2-metadata/CVC_EIR, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/CVC_EIR, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-design.md, master)'
-              - Installation: '@github(dhis2-metadata/CVC_EIR, docs/cvc_eir-installation.md, master)'
-              - Training materials:
-                - Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_user_guide.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_data_entry_exercises.md, master)'
-                - Android Trainer's Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_trainers_guide.md, master)'
-                - Android User Guide: '@github(dhis2-metadata/CVC_EIR, training/covac_android_user_guide.md, master)'
-                - Android Data Entry Exercises: '@github(dhis2-metadata/CVC_EIR, training/covac_android_data_entry_exercises.md, master)'
-            - COVID-19 Vaccine Budgeting Guide: '@github(dhis2-metadata/CVC_AGG, docs/cvc_agg-budget_guide.md, master)'
-          CRVS & Mortality:
-            - Cause of Death:
-              - OVERVIEW: '@github(dhis2-metadata/CRVS_COD, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_COD, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-design.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_COD, docs/crvs_cod-installation.md, master)'
-            - Rapid Mortality Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/CRVS_RMSE, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-design.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_RMSE, docs/crvs_rmse-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_RMSE, docs/release_note.md, master)'
-            - Vital Events:
-              - OVERVIEW: '@github(dhis2-metadata/CRVS_VE, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/CRVS_VE, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-design.md, master)'
-              - Installation: '@github(dhis2-metadata/CRVS_VE, docs/crvs_ve-installation.md, master)'
-          Disease Surveillance:
-            - IDS Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/IDS_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/IDS_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/IDS_AGG, docs/ids_agg-installation.md, master)'
-            - VPD Case Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/VPD_CS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/VPD_CS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/VPD_CS, docs/vpd_cs-installation.md, master)'
-            - Acute Febrile Illness:
-              - OVERVIEW: '@github(dhis2-metadata/IDS_AFI, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/IDS_AFI, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-design.md, master)'
-              - Installation: '@github(dhis2-metadata/IDS_AFI, docs/ids_afi-installation.md, master)'
-          Entomology and Vector Control:
-            - General Design: '@github(dhis2-metadata/GEN_DOCS, ENTO_VC/ento_vc-design.md, master)'
-            - Breeding Sites Monitoring:
-              - Larviciding:
-                - OVERVIEW: '@github(dhis2-metadata/ENTO_BSM, docs/overview.md, master)'
-                - Release Note: '@github(dhis2-metadata/ENTO_BSM, docs/release_note.md, master)'
-                - Design: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-design.md, master)'
-                - Installation: '@github(dhis2-metadata/ENTO_BSM, docs/ento_bsm_larv-installation.md, master)'
-            - Indoor Residual Spraying:
-              - Residual Efficacy Monitoring:
-                - OVERVIEW: '@github(dhis2-metadata/ENTO_IRS, docs/overview.md, master)'
-                - Release Note: '@github(dhis2-metadata/ENTO_IRS, docs/release_note.md, master)'
-                - Design: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-design.md, master)'
-                - Installation: '@github(dhis2-metadata/ENTO_IRS, docs/ento_irs_rem-installation.md, master)'
-              - Campaign:
-                - OVERVIEW: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/overview.md, master)'
-                - Release Note: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/release_note.md, master)'
-                - Design: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/vc_irs_campaign-design.md, master)'
-                - Installation: '@github(dhis2-metadata/VC_IRS_CAMPAIGN, docs/vc_irs_campaign-installation.md, master)'
-            - Insecticide-treated Nets:
-              - Bioefficacy:
-                - OVERVIEW: '@github(dhis2-metadata/ENTO_ITN, docs/overview.md, master)'
-                - Release Note: '@github(dhis2-metadata/ENTO_ITN, docs/release_note.md, master)'
-                - Design: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-design.md, master)'
-                - Installation: '@github(dhis2-metadata/ENTO_ITN, docs/ento_itn_bio-installation.md, master)'
-              - Mass Distribution Campaign:
-                - OVERVIEW: '@github(dhis2-metadata/VC_ITN_MC, docs/overview.md, master)'
-                - Release Note: '@github(dhis2-metadata/VC_ITN_MC, docs/release_note.md, master)'
-                - Design: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-design.md, master)'
-                - Installation: '@github(dhis2-metadata/VC_ITN_MC, docs/vc_itn_mc-installation.md, master)'
-          HIV:
-            - HIV HMIS:
-              - OVERVIEW: '@github(dhis2-metadata/HIV_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/HIV_AGG, docs/release_note.md, master)'
-              - Design:
-                 - HIV Surveillance: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-design.md, master)'
-                 - LMIS: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
-                 - HIV Logistics: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/HIV_AGG, docs/hiv_agg-installation.md, master)'
-            - HIV Case Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/HIV_CS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/HIV_CS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/HIV_CS, docs/hiv_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/HIV_CS, docs/hiv_cs-installation.md, master)'
-          Immunization:
-            - Expanded Programme on Immunization (EPI) Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/IMM_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/IMM_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg-installation.md, master)'
-            - Immunization Triangulation Dashboard:
-              - OVERVIEW: '@github(dhis2-metadata/IMM_TRI, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/IMM_TRI, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-design.md, master)'
-              - Installation: '@github(dhis2-metadata/IMM_TRI, docs/imm_tri-installation.md, master)'
-            - EIR Immunization eRegistry:
-              - OVERVIEW: '@github(dhis2-metadata/IMM_EIR, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-design.md, master'
-              - Installation: '@github(dhis2-metadata/IMM_EIR, docs/imm_eir-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/IMM_EIR, docs/release_note.md, master'
-            - Vaccination Campaigns:
-              - OVERVIEW: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/overview.md, master)'
-              - Use: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/use.md, master)'
-              - Design: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/design.md, master)'
-              - Implement: '@github(dhis2-metadata/GEN_DOCS, IMM_VC/implement.md, master)'
-            - EPI Logistics:
-              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
-              - EPI Logistics Design: '@github(dhis2-metadata/IMM_AGG, docs/imm_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
-            - Adverse Events Following Immunization (AEFI):
-              - OVERVIEW: '@github(dhis2-metadata/IMM_AEFI, docs/overview.md, master)'
-              - Design: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-design.md, master)'
-              - Installation: '@github(dhis2-metadata/IMM_AEFI, docs/imm_aefi-installation.md, master)'
-              - Training Materials:
-                - Trainer's Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_trainers_guide.md, master)'
-                - Data Entry User Guide: '@github(dhis2-metadata/IMM_AEFI, training/aefi_complete_data_entry.md, master)'
-                - Data Entry Exercises: '@github(dhis2-metadata/IMM_AEFI, training/aefi_data_entry_exercises.md, master)'
-                - Navigating Through Dashboards: '@github(dhis2-metadata/IMM_AEFI, training/aefi_dashboard_navigation.md, master)'
-            - Immunization Analysis App:
-               alt__App version 1.0.3:
-               - User Manual: '@github(dhis2-metadata/IMM_AEFI, docs/immunisation_analysis_app_user_manual.md, master)'
-          Malaria:
-            - Malaria HMIS:
-              - OVERVIEW: '@github(dhis2-metadata/MAL_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/MAL_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
-            - Malaria Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/MAL_CS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/MAL_CS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_CS, docs/mal_cs-installation.md, master)'
-            - Malaria Logistics:
-              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
-              - Malaria Logistics Design: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/MAL_AGG, docs/mal_agg-installation.md, master)'
-          Non-Communicable Diseases:
-            - Hypertension Control:
-              - OVERVIEW: '@github(dhis2-metadata/NCD_HTN, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/NCD_HTN, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-design.md, master)'
-              - Installation: '@github(dhis2-metadata/NCD_HTN, docs/ncd_htn-installation.md, master)'
-            - Sensory Function - Eye and Ear Care:
-              - OVERVIEW: '@github(dhis2-metadata/NCD_SF, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/NCD_SF, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/NCD_SF, docs/ncd_sf-design.md, master)'
-              - Installation: '@github(dhis2-metadata/NCD_SF, docs/ncd_sf-installation.md, master)'
-          Nutrition:
-            - Nutrition Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/NUTR_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/NUTR_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/NUTR_AGG, docs/nutr_agg-installation.md, master)'
-          Rehabilitation:
-              - OVERVIEW: '@github(dhis2-metadata/REHAB_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/REHAB_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/REHAB_AGG, docs/rehab_agg-installation.md, master)'
-          RMNCAH:
-            - RMNCAH Aggregate:
-              - OVERVIEW: '@github(dhis2-metadata/RMNCAH_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/RMNCAH_AGG, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/RMNCAH_AGG, docs/rmncah_agg-design.md, master)'
-              - Installation: '@github(dhis2-metadata/GEN_DOCS, docs/agg-installation.md, master)'
-            - RMNCAH Antenatal Care Registry:
-              - OVERVIEW: '@github(dhis2-metadata/RMNCAH_ANC, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/RMNCAH_ANC, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/RMNCAH_ANC, docs/rmncah_anc-design.md, master)'
-              - Installation: '@github(dhis2-metadata/RMNCAH_ANC, docs/rmncah_anc-installation.md, master)'
-          Tuberculosis:
-            - TB HMIS:
-              - OVERVIEW: '@github(dhis2-metadata/TB_AGG, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/TB_AGG, docs/release_note.md, master)'
-              - Design:
-                - TB Notifications and Outcomes: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_no-design.md, master)'
-                - TB Laboratory: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_lab-design.md, master)'
-                - TB Household Contacts: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_hh-design.md, master)'
-                - TB Data Quality: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_dq-design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
-            - TB Logistics:
-              - LMIS Design: '@github(dhis2-metadata/GEN_DOCS, docs/lmis_agg-design.md, master)'
-              - TB Logistics Design: '@github(dhis2-metadata/TB_AGG, docs/tb_agg_stk-design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_AGG, docs/tb_agg-installation.md, master)'
-            - TB Case Surveillance:
-              - OVERVIEW: '@github(dhis2-metadata/TB_CS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/TB_CS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/TB_CS, docs/tb_cs-design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_CS, docs/tb_cs-installation.md, master)'
-            - Anti-Tuberculosis Drug Resistance Survey (DRS):
-              - OVERVIEW: '@github(dhis2-metadata/TB_DRS, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/TB_DRS, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/TB_DRS, docs/tb_drs-design.md, master'
-              - Installation: '@github(dhis2-metadata/TB_DRS, docs/tb_drs-installation.md, master'
-            - TB - COVID-19 Impact Assessment:
-              - OVERVIEW: '@github(dhis2-metadata/TB_IMPAX, docs/overview.md, master)'
-              - Release Note: '@github(dhis2-metadata/TB_IMPAX, docs/release_note.md, master)'
-              - Design: '@github(dhis2-metadata/TB_IMPAX, docs/tb_impax-design.md, master)'
-              - Installation: '@github(dhis2-metadata/TB_IMPAX, docs/tb_impax-installation.md, master)'
-              - Release Note: '@github(dhis2-metadata/TB_IMPAX, docs/release_note.md, master)'
-          Downloads Section:
-            - WHO Metadata Packages: https://dhis2.org/who-package-downloads/
       - alt__Tutorials:
           - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
           - '@github(dhis2/cache-cleaner-app, docs/tutorials/index.yml, master)'
@@ -1003,6 +744,7 @@ nav:
           - Fundamentals Courses:
               - Introduction to DHIS2: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Introduction-to-DHIS2/course-textbook/Introduction-to-dhis2_textbook.md, master)'
               - Aggregate Customization Fundamentals: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Customization/course-textbook/Customization_course_textbook.md, master)'
+              - Aggregate Data Analysis Fundamentals: '@github(dhis2/academy-dhis2-fundamentals, Fundamentals-v2.0/Data-analysis/course-textbook/Data_Analysis_textbook.md, master)'
           - Analytics Tools Academy:
               - Using Validation Rules:
                 - Trainer&apos;s Guide to Validation Rules (Use): '@github(dhis2/training-docs, content/analytic_tools/tg_validationrule.md, main)'
@@ -1091,3 +833,33 @@ nav:
               - Breaking the Glass and Program Access Levels:
                 - Trainer&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/tg_programaccess.md, main)'
                 - Learner&apos;s Guide to Program Access Levels: '@github(dhis2/training-docs, content/tracker_config/lg_programaccess.md, main)'
+          - Design for Data Use Academy:
+              - Data Element Groups:
+                - Trainer&apos;s Guide to Data Element Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_DEGs.md, main)'
+                - Learner&apos;s Guide to Data Element Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_DEGs.md, main)'
+              - Organisation Unit Groups:
+                - Trainer&apos;s Guide to Organisation Unit Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_OUGs.md, main)'
+                - Learner&apos;s Guide to Organisation Unit Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_OUGs.md, main)'
+              - Categories:
+                - Trainer&apos;s Guide to Working with Categories: '@github(dhis2/training-docs, content/design_for_data_use/tg_categories.md, main)'
+                - Learner&apos;s Guide to Working with Categories: '@github(dhis2/training-docs, content/design_for_data_use/lg_categories.md, main)'
+              - Data Set Design:
+                - Trainer&apos;s Guide to Data Set Design: '@github(dhis2/training-docs, content/design_for_data_use/tg_data_set_design.md, main)'
+              - Data Set Attributes:
+                - Trainer&apos;s Guide to Data Set Attributes: '@github(dhis2/training-docs, content/design_for_data_use/tg_attributes.md, main)'
+                - Learner&apos;s Guide to Data Set Attributes: '@github(dhis2/training-docs, content/design_for_data_use/lg_attributes.md, main)'
+              - Indicators:
+                - Trainer&apos;s Guide to Indicators: '@github(dhis2/training-docs, content/design_for_data_use/tg_indicators.md, main)'
+                - Learner&apos;s Guide to Indicators: '@github(dhis2/training-docs, content/design_for_data_use/lg_indicators.md, main)'
+              - Legends:
+                - Trainer&apos;s Guide to Legends: '@github(dhis2/training-docs, content/design_for_data_use/tg_legends.md, main)'
+                - Learner&apos;s Guide to Legends: '@github(dhis2/training-docs, content/design_for_data_use/lg_legends.md, main)'
+              - User Roles:
+                - Trainer&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/tg_users.md, main)'
+                - Learner&apos;s Guide to User Roles: '@github(dhis2/training-docs, content/design_for_data_use/lg_users.md, main)'
+              - Sharing and User Groups:
+                - Trainer&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/tg_sharing.md, main)'
+                - Learner&apos;s Guide to Sharing and User Groups: '@github(dhis2/training-docs, content/design_for_data_use/lg_sharing.md, main)'
+              - Dashboards:
+                - Trainer&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/tg_dashboards.md, main)'
+                - Learner&apos;s Guide to Dashboards: '@github(dhis2/training-docs, content/design_for_data_use/lg_dashboards.md, main)'
