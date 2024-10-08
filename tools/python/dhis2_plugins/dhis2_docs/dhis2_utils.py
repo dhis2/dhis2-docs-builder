@@ -179,13 +179,17 @@ class fetcher:
 
         tmpRoot = self.root + '/' + github_repo + '/' + branch
         repo = Repo(tmpRoot)
-        rev_d = repo.git.log('--pretty=%as','-1',file_path)
+        try:
+            rev_d = repo.git.log('--pretty=%as','-1',file_path)
+            
+            if self.appendcount:
+                self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d, tags=tags)
+            else:
+                self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d, tags=tags)
 
-
-        if self.appendcount:
-            self.include_file(tmpRoot + "/" + file_path, local_path,rev_date=rev_d, tags=tags)
-        else:
-            self.include_file(tmpRoot + "/" + file_path, local_path, edit_url=github_repo+'/blob/'+branch+'/'+file_path,rev_date=rev_d, tags=tags)
+        except:
+            print("File not found - REPO:", github_repo, "BRANCH:", branch, "PATH:",file_path)
+            pass
 
 
 
@@ -623,7 +627,28 @@ class fetcher:
                         nav_item = self.fetch_file(nav_item,path,v_tmp)
 
             if nav_item not in x:
-                x.append(nav_item)
+                # get the value from the nav_item and check if the path exists
+                # if it does, then we need to append the value to the existing list
+                # if it doesn't, then we skip it and print a warning
+                # (nav_item is a dict with one key/value pair)
+
+
+                if type(nav_item) == dict:
+                    # make a copy of the nav_item
+                    nav_item_tmp = nav_item.copy()
+
+                    for k, v in nav_item_tmp.items():
+                        # check that v is a path in the filesystem
+                        if type(v) == str and '.md' == v[-3:]:
+                            if not os.path.isfile(self.docs_dir + v):
+                                print("WARNING: File not found:",v)  
+                                # remove the item from the original nav_item
+                                nav_item.pop(k)
+
+                # if nav_item is not empty, then append it to the list                   
+                if nav_item:
+                    x.append(nav_item)        
+                
         if self.appendcount:
             self.appendcount = 0
             return nav_item, v_map
