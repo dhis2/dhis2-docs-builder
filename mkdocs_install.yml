@@ -676,7 +676,7 @@ nav:
         Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
         Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.yml, master)'
     - Install:
-        '@github(dhis2/dhis2-docs, src/sysadmin/index.md, new_install_docs)'
+        '@github(dhis2/dhis2-docs, src/sysadmin/sysadmin_section_index.md, new_install_docs)'
     - Topics:
       - alt__Tutorials:
           - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
