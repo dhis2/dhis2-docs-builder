@@ -676,32 +676,7 @@ nav:
         Apps: '@github(dhis2/app-management-app, docs/developer/index.yml,master)'
         Developing with the Android SDK: '@github(dhis2/dhis2-android-sdk,docs/dhis2_android_sdk_developer_guide_INDEX.yml, master)'
     - Install:
-        Install: '@github(dhis2/dhis2-docs, src/sysadmin/index.md, master)'
-        Getting Started:
-          - Quick start, not for production: '@github(dhis2/dhis2-docs, src/sysadmin/getting_started/quick-start.md, new_install_docs)'
-          - Setting up a server with dhis2-tools: '@github(dhis2/dhis2-docs, src/sysadmin/getting_started/dhis2-tools.md, new_install_docs)'
-          - Setting up a server with Docker (?): '@github(dhis2/dhis2-docs, src/sysadmin/getting_started/docker.md, new_install_docs)'
-          - Setting up manually on Linux: '@github(dhis2/dhis2-docs, src/sysadmin/getting_started/manual-installation.md, new_install_docs)'
-          - Setting up manually on Windows: '@github(dhis2/dhis2-docs, src/sysadmin/getting_started/manual-installation-windows.md, new_install_docs)'
-        How-to guides:
-          - How to choose a reverse proxy: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/reverse-proxy.md, new_install_docs)'
-          - How to configure DHIS2 with Azure single-sign-on: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/azure-sso.md, new_install_docs)'
-          - How to perform a backup: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/backup.md, new_install_docs)'
-          - How to upgrade to a new major version of DHIS2: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/upgrade-major.md, new_install_docs)'
-          - How to secure a production instance of DHIS2: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/secure-dhis2.md, new_install_docs)'
-          - How to configure encryption: '@github(dhis2/dhis2-docs, src/sysadmin/how_to/encryption.md, new_install_docs)'
-        Configuration reference:
-          - Dhis.conf reference: '@github(dhis2/dhis2-docs, src/sysadmin/reference/dhis.conf.md, new_install_docs)'
-          - Authentication configuration options: '@github(dhis2/dhis2-docs, src/sysadmin/reference/authentication.md, new_install_docs)'
-          - OAuth configuration options: '@github(dhis2/dhis2-docs, src/sysadmin/reference/oauth.md, new_install_docs)'
-          - Personal Access Tokens: '@github(dhis2/dhis2-docs, src/sysadmin/reference/personal-access-tokens.md, new_install_docs)'
-          - Database connection configuration options: '@github(dhis2/dhis2-docs, src/sysadmin/reference/database.md, new_install_docs)'
-          - File storage configuration options: '@github(dhis2/dhis2-docs, src/sysadmin/reference/file-storage.md, new_install_docs)'
-          - Experimental feature options: '@github(dhis2/dhis2-docs, src/sysadmin/reference/experimental.md, new_install_docs)'
-        Concepts:
-          - DHIS2 architecture - internal and external: '@github(dhis2/dhis2-docs, src/sysadmin/concepts/architecture.md, new_install_docs)'
-          - What are DHIS2 releases, patch releases, hotfixes: '@github(dhis2/dhis2-docs, src/sysadmin/concepts/releases.md, new_install_docs)'
-          - What are the dependencies of DHIS2: '@github(dhis2/dhis2-docs, src/sysadmin/concepts/dependencies.md, new_install_docs)'
+        '@github(dhis2/dhis2-docs, src/sysadmin/index.md, new_install_docs)'
     - Topics:
       - alt__Tutorials:
           - Tutorials: '@github(dhis2/dhis2-docs, src/tutorials/index.md, master)'
