@@ -52,7 +52,6 @@ theme:
     - navigation.menutabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.instant
     - navigation.indexes
     - toc.integration
     - content.action.edit
