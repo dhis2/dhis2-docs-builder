@@ -277,8 +277,8 @@ class CodeBlockProcessor(BlockProcessor):
 
 class BlockQuoteProcessor(BlockProcessor):
 
-    RE = re.compile(r'(^|\n)[ ]{0,3}>[ ]?(.*)')
-    BQ_CLASS = re.compile(r'(^|\n)[ ]{0,4}>(([^\n{]*){[ ]*\.(.*)[ ]*}|[ ]+\*\*(.*)\*\*)')
+    RE = re.compile(r'(^|\n)[ ]{0,4}>[ ]*(.*)')
+    BQ_CLASS = re.compile(r'(^|\n)[ ]{0,4}>(([^\n{]*){[ ]*\.(.*)[ ]*}|[ ]+\*\*([^ ]*)\*\*)')
 
     def test(self, parent, block):
         return bool(self.RE.search(block))
@@ -290,7 +290,7 @@ class BlockQuoteProcessor(BlockProcessor):
             bqc_orig = self.BQ_CLASS.match(block)
 
             before = block[:m.start()]  # Lines before blockquote
-            # Pass lines before blockquote in recursively for parsing forst.
+            # Pass lines before blockquote in recursively for parsing first.
             self.parser.parseBlocks(parent, [before])
             # Remove ``> `` from beginning of each line.
             block = '\n'.join(
@@ -308,12 +308,19 @@ class BlockQuoteProcessor(BlockProcessor):
                     bqc = bqc_orig.group(4)
                     title_old = bqc_orig.group(2).strip()
                     title_new = bqc_orig.group(3).strip()
-                    block = block.replace(title_old,title_new)
+                    block = block.replace(title_old, title_new)
                 else:
-                    bqc = bqc_orig.group(5).replace(' ','_').lower()
-                    bqc_spaces = bqc.replace('_',' ')
-                    block = block.replace(bqc,bqc_spaces)
-                quote.set('class',bqc)
+                    bqc = bqc_orig.group(5).replace(' ', '_').lower()
+                    bqc_spaces = bqc.replace('_', ' ')
+                    block = block.replace(bqc, bqc_spaces)
+                quote.set('class', bqc)
+
+            # if parent.tag == 'blockquote' whole hierarchy gets nested class
+            if parent.tag == 'blockquote':
+                parent.attrib.pop('class', None)
+                quote.attrib.pop('class', None)
+                parent.set('class', 'nested')
+                quote.set('class', 'nested')
             # Recursively parse block with blockquote as parent.
             # change parser state so blockquotes embedded in lists use p tags
             self.parser.state.set('blockquote')
@@ -329,7 +336,6 @@ class BlockQuoteProcessor(BlockProcessor):
             return m.group(2)
         else:
             return line
-
 
 class OListProcessor(BlockProcessor):
     """ Process ordered list blocks. """

@@ -1361,3 +1361,12 @@ li ul .tabnavp:after {
   }
 }
 
+blockquote.nested {
+  background-color: transparent !important;
+  border: none !important;
+  border-left: 2px solid #aab8c6 !important;
+  margin: 0px !important;
+  padding-left: 10px !important;
+  color: var(--grey900);
+  border-radius: 8px !important;
+}
