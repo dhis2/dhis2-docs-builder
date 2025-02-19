@@ -668,7 +668,7 @@ nav:
             - Query Alias: '@github(dhis2/dhis2-docs, src/developer/web-api/query-alias.md, master)'
         Core OpenAPI Specification: '@github(dhis2/dhis2-docs, src/developer/web-api/openapi.md, master)'
         Core Javadocs:
-          - DHIS 2.40 Javadocs: https://docs.dhis2.org/javadoc/2.36/
+          - DHIS 2.40 Javadocs: https://docs.dhis2.org/javadoc/2.40/
           - DHIS 2.39 Javadocs: https://docs.dhis2.org/javadoc/2.39/
           - DHIS 2.38 Javadocs: https://docs.dhis2.org/javadoc/2.38/
           - DHIS master Javadocs: https://docs.dhis2.org/javadoc/master/
