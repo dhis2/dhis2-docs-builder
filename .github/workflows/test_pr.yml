@@ -12,7 +12,7 @@ jobs:
       # Set up docs preview only for PRs from the upstream repository, not from forks.
       DOCS_PR_PREVIEW: ${{ github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork }}
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
