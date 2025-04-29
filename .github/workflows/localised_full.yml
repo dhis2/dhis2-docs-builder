@@ -22,7 +22,7 @@ on:
 jobs:
   build-all-locales:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       max-parallel: 1
@@ -107,7 +107,7 @@ jobs:
 
   build-single-locale:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     # Updated if condition to handle workflow_dispatch
     if: (github.event_name == 'workflow_dispatch' && github.event.inputs.Locale != 'ALL')
