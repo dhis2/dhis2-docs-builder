@@ -211,7 +211,7 @@ nav:
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,2.42)'
               - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
-              - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,2.42)'
+              - Datastore Management: '@github(dhis2/dhis2-docs, src/user/datastore-management.md,2.42)'
               - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,2.42)'
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.42)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.42)'
@@ -431,7 +431,7 @@ nav:
             Maintaining the system:
               - Data Administration: '@github(dhis2/dhis2-docs, src/user/data-administration.md,master)'
               - '@github(dhis2/usage-analytics-app, docs/user/index.yml, master)'
-              - Datastore Manager: '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,master)'
+              - Datastore Management: '@github(dhis2/dhis2-docs, src/user/datastore-management.md,master)'
               - Scheduling: '@github(dhis2/dhis2-docs, src/user/scheduling.md,master)'
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,master)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,master)'
