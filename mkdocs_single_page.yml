@@ -150,7 +150,7 @@ nav:
               - '@github(dhis2/dhis2-docs, src/user/data-exchange.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/data-administration.md,master)'
               - '@github(dhis2/usage-analytics-app, docs/user/visualize-usage-statistics.md,master)'
-              - '@github(dhis2/dhis2-docs, src/user/datastore-manager.md,master)'
+              - '@github(dhis2/dhis2-docs, src/user/datastore-management.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/scheduling.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/importexport-app.md,master)'
               - '@github(dhis2/dhis2-docs, src/user/configure-metadata-synchronizing.md,master)'
