@@ -216,6 +216,7 @@ nav:
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.42)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.42)'
               - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
+              - '@github(dhis2/route-manager-app, docs/user/index.yml,main)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.42)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.42)'
@@ -271,6 +272,7 @@ nav:
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.41)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.41)'
               - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
+              - '@github(dhis2/route-manager-app, docs/user/index.yml,main)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.41)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.41)'
@@ -326,6 +328,7 @@ nav:
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,2.40)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,2.40)'
               - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
+              - '@github(dhis2/route-manager-app, docs/user/index.yml,main)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,2.40)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,2.40)'
@@ -436,6 +439,7 @@ nav:
               - Mobile: '@github(dhis2/dhis2-docs, src/user/mobile.md,master)'
               - Configure SMS: '@github(dhis2/dhis2-docs, src/user/sms-configuration.md,master)'
               - '@github(dhis2/app-management-app, docs/user/index.yml,master)'
+              - '@github(dhis2/route-manager-app, docs/user/index.yml,main)'
             Understanding the data model:
               - About data dimensions: '@github(dhis2/dhis2-docs, src/user/about-data-dimensions.md,master)'
               - Additional data dimensions: '@github(dhis2/dhis2-docs, src/user/additional-data-dimensions.md,master)'
