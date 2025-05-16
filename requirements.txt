@@ -16,7 +16,7 @@ GitPython==3.1.41
 html5lib==1.1
 htmlmin==0.1.12
 idna==3.7
-Jinja2==3.1.4
+Jinja2==3.1.6
 jsmin==3.0.1
 lxml==4.9.2
 Markdown==3.5
