@@ -281,6 +281,8 @@ nav:
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,2.40)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,2.40)'
           alt__DHIS core version master:
+            Navigating the DHIS2 system:
+              - New App Menu Command Palette: '@github(dhis2/dhis2-docs, src/user/command-palette.md,master)' 
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
               - Data Entry (beta): '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,master)'

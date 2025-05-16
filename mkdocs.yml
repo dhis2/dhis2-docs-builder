@@ -173,6 +173,8 @@ nav:
         What is DHIS2?: '@github(dhis2/dhis2-docs, src/user/what-is-dhis2.md,master)'
         User guides:
           alt__DHIS core version 2.42:
+            Navigating the DHIS2 system:
+              - New App Menu Command Palette: '@github(dhis2/dhis2-docs, src/user/command-palette.md,2.42)' 
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,2.42)'
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.42)'
@@ -395,6 +397,8 @@ nav:
               - DHIS2 Frequently Asked Questions: '@github(dhis2/dhis2-docs, src/user/dhis2-frequently-asked-questions.md,2.39)'
               - Release and upgrade notes: '@github(dhis2/dhis2-docs, src/user/release-and-upgrade-notes.md,2.39)'
           alt__DHIS core version master:
+            Navigating the DHIS2 system:
+              - New App Menu Command Palette: '@github(dhis2/dhis2-docs, src/user/command-palette.md,master)'
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-data-entry-app.md,master)'
               - Data Entry (beta): '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,master)'
