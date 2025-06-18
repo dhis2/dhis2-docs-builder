@@ -43,7 +43,7 @@ six==1.11.0
 smmap==3.0.5
 translayer @ https://github.com/Philip-Larsen-Donnelly/translayer/archive/refs/tags/v0.0.5.zip
 Unidecode==1.0.23
-urllib3==1.26.19
+urllib3==2.5.0
 watchdog==2.2.1
 weasyprint==62.2
 webencodings==0.5.1
