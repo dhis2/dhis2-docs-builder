@@ -5,8 +5,6 @@ from urllib.parse import urljoin
 from jinja2 import Environment, FileSystemLoader
 from slugify import slugify as slugify_unicode
 import logging
-#import pdfkit
-#from pytube import YouTube
 import time
 import asyncio
 from playwright.async_api import async_playwright
