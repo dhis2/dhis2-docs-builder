@@ -28,7 +28,6 @@ class ImageMaxWidthProcessor(Treeprocessor):
                 try:
                     if self.is_url(src):
                         print(f"Processing URL: {src}.")
-                        return None
                         img_data = self.download_image(src)
                         if img_data:
                             self.set_image_max_width(img, img_data)

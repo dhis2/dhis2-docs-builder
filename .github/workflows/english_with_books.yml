@@ -81,7 +81,7 @@ jobs:
         pip install playwright
         playwright install-deps
         playwright install chromium
-        brew install imagemagick
+        sudo apt-get update && sudo apt-get install -y imagemagick
 
     - name: Build the books
       run: |

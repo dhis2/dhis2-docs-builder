@@ -105,7 +105,6 @@ class PreRenderHandler extends Paged.Handler {
         const label = labels[index];
         if (label) {
           const heading = document.createElement('h5');
-          label.textContent = label.textContent;
           label.classList.add('tabbed-labels-print');
           container.appendChild(label);
         }

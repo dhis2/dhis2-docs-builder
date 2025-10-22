@@ -27,7 +27,7 @@
 
 @page :right {
   @bottom-right-corner {
-    content: "RBRCR";
+    content: "";
     height: 18px;
     margin: 5mm 0;
     padding-left: .5em;
@@ -38,10 +38,10 @@
 /* Special handling for frontmatter pages */
 @page frontmatter {
   @bottom-left {
-    content: "FMBL";
+    content: "";
   }
   @bottom-right {
-    content: "FMBR";
+    content: "";
   }
 }
 
