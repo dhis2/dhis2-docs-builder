@@ -1,0 +1,49 @@
+- title: DHIS2 Implementer Guide
+  link: implement/implementing-dhis2/overview.html
+  base_path: implement/
+  exclude_paths:
+    - implement/health
+    - implement/logistics
+  cover: /resources/book-covers/04_DHIS2_Implementer_Guide.jpg
+  top_level: Implement
+
+- title: DHIS2 for Health
+  link: implement/health/dhis2-health-data-toolkit/about-the-dhis2-health-data-toolkit.html
+  base_path: implement/health/
+  cover: /resources/book-covers/02_DHIS2_for_Health.jpg
+  top_level: Health
+
+- title: DHIS2 for Logistics
+  link: implement/logistics/real-time-stock-rts.html
+  base_path: implement/logistics/
+  cover: /resources/book-covers/03_DHIS2_for_Logistics.jpg
+  top_level: Logistics
+  chapterise: true
+
+- title: DHIS2 for System Administrators
+  link: manage/manage.html
+  base_path: manage/
+  cover: /resources/book-covers/01_DHIS2_for_System_Administrators.jpg
+  top_level: Manage
+
+- title: DHIS2 for Developers
+  link: develop/develop.html
+  base_path: develop/
+  exclude_paths:
+    - develop/developing-with-the-android-sdk/
+  cover: /resources/book-covers/07_Developer_Documentation.jpg
+  top_level: Develop
+
+- title: Android SDK
+  link: develop/developing-with-the-android-sdk/overview.html
+  base_path: develop/developing-with-the-android-sdk/
+  cover: /resources/book-covers/06_Android_User_Guide.jpg
+  top_level: Android SDK
+
+- title: DHIS2 Education Toolkit User Guide
+  link: implement/education/user-guide.html
+  base_path: implement/education/
+  cover: /resources/book-covers/education.jpg
+  top_level: EMIS
+  chapterise: true
+  

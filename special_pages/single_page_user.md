@@ -171,4 +171,3 @@
 |Document|Version|||
 |:---------|---|---|---|
 |Android Configuration|master|[HTML](../../full/use/dhis2-android-app.html)|[PDF](../../full/use/dhis2-android-app.pdf)|
-

@@ -1,0 +1,135 @@
+
+
+
+.pdf-category-section {
+  margin-bottom: 3rem;
+}
+
+
+.pdf-books-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .pdf-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pdf-books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pdf-book-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.pdf-book-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-card-header {
+  padding: 0rem 1rem;
+}
+
+.pdf-thumbnail-container {
+  width: 80%;
+  margin: 1.5rem auto 0rem;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+}
+
+img.pdf-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pdf-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+h3.pdf-book-title {
+  font-weight: 600;
+  color: #111827;
+}
+
+.pdf-version-badge {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pdf-card-content {
+  padding: 0 1rem 1rem;
+}
+
+.pdf-metadata-row {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+div.pdf-button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button.pdf-download-btn, a.pdf-open-btn {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 0.3rem 1rem;
+  border-radius: 0.375rem;
+  /* font-size: 0.875rem; */
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+button.pdf-download-btn {
+  background-color: #374151;
+  color: white;
+}
+
+button.pdf-download-btn:hover {
+  background-color: #4b5563;
+}
+
+a.pdf-open-btn {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+a.pdf-open-btn:hover {
+    background-color: #e5e7eb;
+}
+
+svg.pdf-download-icon, svg.pdf-open-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+}

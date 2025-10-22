@@ -11,3 +11,4 @@ src/commonmark/en/content/submodules/
 .vscode/
 **/*.egg-info/**
 experiment/**
+nav*

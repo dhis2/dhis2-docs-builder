@@ -1,0 +1,10 @@
+
+    {% macro render_toc(nav, level=0) %}{%- if level == 0 -%}
+    <ul id="list-toc-generated">
+      <h4 class="pre-section" style="display: none;">{{ nav[0]['title'] }}</h4>
+  {%- endif -%}{%- for link in nav -%}{%- if 'toc_id' in link -%}
+      <li class="toc-element toc-element-level-{{ level }}">
+        <a href="#{{ link['toc_id'] }}">{{ link['title'] }}</a>
+      </li>
+    {%- endif -%}{%- if 'children' in link -%}{{- render_toc(link['children'], level + 1) -}}{%- endif -%}{%- endfor -%}{%- if level == 0 -%}
+    </ul>{%- endif -%}{% endmacro %}

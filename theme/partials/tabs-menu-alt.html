@@ -1,0 +1,6 @@
+
+{% set alt_prefix = config.theme.alternates.alt_prefix | default('alt__') %}
+{% set first = nav_item.children | first %}
+{% if ((first.title|replace(alt_prefix,"")) != first.title) and menu_level > 1 %}
+ {% set nav_item = first %}
+{% endif %}
