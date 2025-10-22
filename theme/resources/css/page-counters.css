@@ -1,0 +1,57 @@
+/* Page counter setup */
+.pagedjs_pages {
+  counter-reset: page;
+}
+
+.pagedjs_page_content {
+  counter-increment: page;
+}
+
+/* Skip page numbers on special pages */
+.cover .pagedjs_page_content,
+.copyright_page .pagedjs_page_content,
+.blank .pagedjs_page_content,
+.frontmatter .pagedjs_page_content {
+  counter-increment: none;
+}
+
+/* Debug text for all bottom positions */
+@page :left {
+  @bottom-left-corner {
+    height: 18px;
+    margin: 5mm 0;
+    padding-right: .5em;
+    text-align: right
+  }
+}
+
+@page :right {
+  @bottom-right-corner {
+    content: "RBRCR";
+    height: 18px;
+    margin: 5mm 0;
+    padding-left: .5em;
+    text-align: left
+  }
+}
+
+/* Special handling for frontmatter pages */
+@page frontmatter {
+  @bottom-left {
+    content: "FMBL";
+  }
+  @bottom-right {
+    content: "FMBR";
+  }
+}
+
+/* Special handling for blank pages */
+@page :blank {
+  @bottom-left {
+    content: "";
+  }
+  @bottom-right {
+    content: "";
+  }
+}
+

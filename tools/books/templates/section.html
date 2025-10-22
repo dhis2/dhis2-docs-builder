@@ -1,0 +1,12 @@
+<div class="start-left"></div>
+<section class="section{{ level }} component-body part" id="{{ unique_id }}" 
+    <header>
+        {% if level == 1 %}<h4 style="display: none;">{{ title }}</h4>{% endif %}
+        <div class="accent-top"></div>
+        <h1 class="component-title">
+            <strong>{{ parent }}</strong>
+            <span>{{ title }}</span>
+        </h1>
+    </header>
+    {{ article | safe }}
+</section>
