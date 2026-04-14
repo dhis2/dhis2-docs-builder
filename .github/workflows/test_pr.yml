@@ -63,10 +63,13 @@ jobs:
         mkdocs build
 
     - name: Save PR metadata
+      env:
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
       run: |
         mkdir -p /tmp/prmeta
-        echo "${{ github.event.pull_request.number }}" > /tmp/prmeta/pr_number
-        echo "${{ github.event.pull_request.head.ref }}" > /tmp/prmeta/pr_head_ref
+        echo "${PR_NUMBER}" > /tmp/prmeta/pr_number
+        echo "${PR_HEAD_REF}" > /tmp/prmeta/pr_head_ref
 
     - name: Upload built site artifact
       uses: actions/upload-artifact@v4
