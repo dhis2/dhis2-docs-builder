@@ -1,0 +1,62 @@
+name: Deploy PR Preview
+
+on:
+  workflow_run:
+    workflows:
+      - "English - Test Build"
+    types:
+      - completed
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download mkdocs-site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mkdocs-site
+          path: site/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download prmeta artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: prmeta
+          path: prmeta/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        run: |
+          PR_NUMBER=$(cat prmeta/pr_number | tr -d '[:space:]')
+          if ! [[ "${PR_NUMBER}" =~ ^[0-9]+$ ]]; then
+            echo "Invalid PR number: ${PR_NUMBER}"
+            exit 1
+          fi
+          echo "number=${PR_NUMBER}" >> "$GITHUB_OUTPUT"
+
+      - name: Sync docs to S3 for PR preview
+        uses: dhis2/s3-sync-action@master
+        env:
+          AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+          AWS_REGION: 'eu-west-1'
+          SOURCE_DIR: 'site/.'
+          DEST_DIR: "temp/PR/${{ steps.pr.outputs.number }}/en/"
+
+      - name: Add comment with preview link
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+        with:
+          issue-number: ${{ steps.pr.outputs.number }}
+          body: |
+            CI Preview: https://docs.dhis2.org/temp/PR/${{ steps.pr.outputs.number }}/en/home.html
