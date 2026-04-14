@@ -174,7 +174,7 @@ nav:
         User guides:
           alt__DHIS core version 2.42:
             Navigating the DHIS2 system:
-              - New App Menu Command Palette: '@github(dhis2/dhis2-docs, src/user/command-palette.md,2.42)' 
+              - New App Menu Command Palette: '@github(dhis2/dhis2-docs, src/user/command-palette.md,master)' 
             Collecting data:
               - Data Entry: '@github(dhis2/dhis2-docs, src/user/using-the-aggregate-data-entry-app.md,2.42)'
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.42)'
