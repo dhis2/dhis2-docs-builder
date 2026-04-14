@@ -41,7 +41,7 @@ ply==3.11
 pycparser==2.18
 pydyf==0.11.0
 pyee==13.0.0
-Pygments==2.18.0
+Pygments==2.20.0
 pymdown-extensions==10.7.1
 Pyphen==0.9.5
 python-dateutil==2.8.2
