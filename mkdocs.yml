@@ -123,8 +123,7 @@ plugins:
 
 
 markdown_extensions:
-  - codehilite:
-      guess_lang: false
+  - pymdownx.highlight
   - markdown_captions
   - toc:
       permalink: true
