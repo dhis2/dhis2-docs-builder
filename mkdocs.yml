@@ -123,9 +123,7 @@ plugins:
 
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      guess_pygments_lang: false
+  - pymdownx.highlight
   - markdown_captions
   - toc:
       permalink: true
