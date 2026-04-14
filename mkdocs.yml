@@ -123,8 +123,9 @@ plugins:
 
 
 markdown_extensions:
-  - codehilite:
-      guess_lang: false
+  - pymdownx.highlight:
+      anchor_linenums: true
+      guess_pygments_lang: false
   - markdown_captions
   - toc:
       permalink: true
