@@ -172,6 +172,7 @@ nav:
     - Use:
         Use: '@github(dhis2/dhis2-docs, src/user/index.md, master)'
         What is DHIS2?: '@github(dhis2/dhis2-docs, src/user/what-is-dhis2.md,master)'
+        Quick Start Guide: '@github(dhis2/dhis2-docs-implementation, content/Quick_Start/Getting_started_with_DHIS2.md,DavidCKen-patch-7)'
         User guides:
           alt__DHIS core version 2.42:
             Collecting data:
