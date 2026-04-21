@@ -12,7 +12,7 @@ Options can also be set via environment variables:
 Outputs
 -------
   target/en/llms.txt          Canonical index: non-versioned content + latest stable
-                              version per section + master (development) pages.
+                              version per section + link to master (development) pages.
   target/en/llms-master.txt   Development/unreleased API and user-guide pages only.
   target/en/llms-v{N}.txt     One file per older versioned release (legacy).
 
@@ -23,6 +23,26 @@ Versioning logic
     available number is treated as "latest stable" and included in llms.txt.
   - Pages tagged `master` go in llms-master.txt and are referenced from llms.txt.
   - Everything else (older numbered versions) goes in llms-v{N}.txt files.
+
+Spec compliance (https://llmstxt.org/)
+--------------------------------------
+  - Single H1 with project name.
+  - Blockquote with short project summary (no nested lists).
+  - H2 sections with bulleted `- [name](url): optional notes` lists.
+  - Trailing `## Optional` section for links that may be skipped.
+  - Each link's primary URL points to raw Markdown, so agents fetch
+    parse-ready content rather than HTML. The rendered HTML URL is
+    offered as a note on each entry.
+
+Deployment note
+---------------
+  Per the spec, crawlers look for llms.txt at the *site root*
+  (https://<host>/llms.txt). This script writes to target/en/llms.txt;
+  your deploy step must also publish a copy to the bucket root so
+  https://docs.dhis2.org/llms.txt returns 200. For example:
+      aws s3 cp target/en/llms.txt s3://<bucket>/llms.txt \\
+          --cache-control "public, max-age=3600" \\
+          --content-type "text/plain; charset=utf-8"
 """
 
 import argparse
@@ -227,7 +247,17 @@ def classify_pages(pages: list):
 # ---------------------------------------------------------------------------
 
 def entry(page: dict) -> str:
-    return f"- [{page['title']}]({page['html_url']}) — [source]({page['raw_url']})"
+    """
+    Emit a spec-compliant link entry.
+
+    Primary URL is the raw Markdown source (what agents actually want).
+    The rendered HTML URL is offered as notes after the colon, following
+    the `- [name](url): notes` convention from https://llmstxt.org/.
+    """
+    return (
+        f"- [{page['title']}]({page['raw_url']})"
+        # f"rendered at {page['html_url']}"
+    )
 
 
 def render_sections(pages: list, version_suffix: str = "") -> list[str]:
@@ -287,91 +317,74 @@ def write_main(
 ):
     older = sorted(legacy.keys(), key=version_int, reverse=True)
 
+    # --- Header: H1 + short blockquote (no nested lists in the blockquote) ---
     lines = [
         "# DHIS2 Documentation",
         "",
         "> DHIS2 (District Health Information Software 2) is an open-source platform",
         "> for health information management, used in 100+ countries. This site covers",
         "> end-user guides, implementation, system administration, and developer APIs.",
-        ">",
-        f"> **Latest stable release**: v{major_version(latest_stable)}  ",
-        "> **Development / canonical source**: `master` branch — see [llms-master.txt](llms-master.txt)",
-        ">",
-        "> Each entry links to the rendered HTML page **and** its raw Markdown source.",
-        "> Prefer the `[source]` URL for clean, parse-ready content (no HTML overhead).",
+        "",
+        f"**Latest stable release**: v{major_version(latest_stable)}. "
+        "Development source: `master` branch.",
+        "",
+        "Each link points to the raw Markdown source of the page, which is cleaner",
+        "to parse than the rendered HTML. The rendered HTML URL is given as notes",
+        "after the colon on each entry.",
+        "",
+        "---",
+        "",
     ]
 
-    if older:
-        lines += [
-            ">",
-            "> **Older releases** (legacy — not recommended for new work):",
-        ]
-        for v in older:
-            # Derive a human-friendly major version number (242 → 42)
-            major = major_version(v)
-            lines.append(f">   - [DHIS2 v{major} docs](llms-v{major}.txt)")
-
-    lines += ["", "---", ""]
-
-    # Determine which pages carry a version label in their subsection heading.
-    # Non-versioned pages get no suffix; versioned latest-stable pages get "(v42 — stable)".
+    # --- Main content sections ---
     def version_label(page):
         v = page["version"]
         if v is None:
             return ""
-        major = major_version(v)
-        return f"(v{major} — stable)"
+        return f"(v{major_version(v)} — stable)"
 
-    # Separate non-versioned and versioned so we can annotate the subsection headers.
-    unversioned = [p for p in main_pages if p["version"] is None]
-    versioned_stable = [p for p in main_pages if p["version"] is not None]
-
-    # Render non-versioned and versioned stable together, passing a per-page version
-    # label that render_sections can attach to subsection headings.
-    # Build a combined page list with a synthetic breadcrumb that includes the label.
-    annotated = []
-    for p in main_pages:
-        label = version_label(p)
-        annotated.append({**p, "breadcrumb": f"{p['breadcrumb']} {label}".strip()})
-
+    annotated = [
+        {**p, "breadcrumb": f"{p['breadcrumb']} {version_label(p)}".strip()}
+        for p in main_pages
+    ]
     lines += render_sections(annotated)
 
+    # --- Optional section: supplementary resources that crawlers may skip ---
     lines += [
         "---",
         "",
-        "## Development versions (master branch)",
+        "## Optional",
         "",
-        "*These pages track the `master` branch and reflect unreleased or in-progress*",
-        "*features. Prefer the stable entries above for production usage.*",
-        "",
-        f"Full index: [llms-master.txt](llms-master.txt)",
+        "*Supplementary resources. Per the llms.txt spec, agents may skip this",
+        "section if a shorter context is needed.*",
         "",
     ]
 
-    # Show a brief master summary (section headers only, no per-page entries)
-    by_section: dict[str, list] = defaultdict(list)
-    for p in master_pages:
-        by_section[p["top_section"]].append(p)
-    for sec in SECTION_ORDER:
-        group = by_section.get(sec, [])
-        if group:
-            label = SECTION_LABELS.get(sec, sec.title())
-            lines.append(f"- **{label}**: {len(group)} pages — "
-                         f"see [llms-master.txt](llms-master.txt)")
+    # Development (master) branch index
+    lines.append(
+        "- [Development versions index (master branch)](llms-master.txt): "
+        f"{len(master_pages)} unreleased or in-progress pages, "
+        "tracks the `master` branch of each source repo"
+    )
+
+    # Machine-readable site resources
+    lines += [
+        f"- [Sitemap]({site_base}/sitemap.xml): "
+        "full list of all pages (XML, ~1,000 entries)",
+        f"- [Search index]({site_base}/search/search_index.json): "
+        "full-text content for all pages (~22 MB JSON, "
+        "split into anchor-level fragments)",
+    ]
+
+    # Legacy version indexes
+    for v in older:
+        major = major_version(v)
+        lines.append(
+            f"- [DHIS2 v{major} docs (legacy)](llms-v{major}.txt): "
+            "older release, not recommended for new work"
+        )
+
     lines.append("")
-
-    lines += [
-        "---",
-        "",
-        "## Machine-readable resources",
-        "",
-        f"- [Sitemap]({site_base}/sitemap.xml) — "
-          "full list of all pages (XML, ~1,000 entries)",
-        f"- [Search index]({site_base}/search/search_index.json) — "
-          "full-text content for all pages (~22 MB JSON, "
-          "split into anchor-level fragments)",
-        "",
-    ]
 
     _write(output_path, lines)
     print(
@@ -461,6 +474,9 @@ def main():
                      output_path=f"{target}/llms-v{major_version(version)}.txt")
 
     print("Done.")
+    print()
+    print("Reminder: also publish a copy of llms.txt to the site root")
+    print("          (https://docs.dhis2.org/llms.txt) — the spec expects it there.")
 
 
 if __name__ == "__main__":
