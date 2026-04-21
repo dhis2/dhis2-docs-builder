@@ -65,7 +65,7 @@ jobs:
 
     - name: Generate LLM references
       run: |
-        python tools/python/generate_llm_references.py
+        python3 ./tools/python/generate_llm_references.py
 
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
