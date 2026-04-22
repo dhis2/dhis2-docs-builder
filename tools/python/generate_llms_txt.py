@@ -250,14 +250,24 @@ def entry(page: dict) -> str:
     """
     Emit a spec-compliant link entry.
 
-    Primary URL is the raw Markdown source (what agents actually want).
-    The rendered HTML URL is offered as notes after the colon, following
-    the `- [name](url): notes` convention from https://llmstxt.org/.
+    Primary URL is the .md file served alongside the HTML on the docs site.
+    The rendered HTML URL is offered as a note after the colon.
     """
-    return (
-        f"- [{page['title']}]({page['raw_url']})"
-        # f"rendered at {page['html_url']}"
-    )
+    md_url = page['html_url'].replace('.html', '.md')
+    return f"- [{page['title']}]({md_url}): {page['html_url']}"
+
+
+def _annotate_versions(pages: list) -> list:
+    """Add version label to breadcrumb for latest-stable pages."""
+    def version_label(page):
+        v = page["version"]
+        if v is None:
+            return ""
+        return f"(v{major_version(v)} — stable)"
+    return [
+        {**p, "breadcrumb": f"{p['breadcrumb']} {version_label(p)}".strip()}
+        for p in pages
+    ]
 
 
 def render_sections(pages: list, version_suffix: str = "") -> list[str]:
@@ -315,9 +325,9 @@ def write_main(
     output_path: str,
     site_base: str = DEFAULT_SITE_BASE,
 ):
+    """Write the compact top-level index that links to per-section files."""
     older = sorted(legacy.keys(), key=version_int, reverse=True)
 
-    # --- Header: H1 + short blockquote (no nested lists in the blockquote) ---
     lines = [
         "# DHIS2 Documentation",
         "",
@@ -328,29 +338,28 @@ def write_main(
         f"**Latest stable release**: v{major_version(latest_stable)}. "
         "Development source: `master` branch.",
         "",
-        "Each link points to the raw Markdown source of the page, which is cleaner",
-        "to parse than the rendered HTML. The rendered HTML URL is given as notes",
-        "after the colon on each entry.",
+        "Each section below links to a dedicated file listing all pages in that",
+        "category. Each page entry gives the raw Markdown source URL (primary) and",
+        "the rendered HTML URL (after the colon).",
         "",
         "---",
         "",
+        "## Documentation",
+        "",
     ]
 
-    # --- Main content sections ---
-    def version_label(page):
-        v = page["version"]
-        if v is None:
-            return ""
-        return f"(v{major_version(v)} — stable)"
+    for sec in SECTION_ORDER:
+        sec_pages = [p for p in main_pages if p["top_section"] == sec]
+        if not sec_pages:
+            continue
+        label = SECTION_LABELS.get(sec, sec.title())
+        desc = SECTION_DESCRIPTIONS.get(sec, "")
+        lines.append(
+            f"- [{label}](llms-{sec}.txt): {desc} ({len(sec_pages)} pages)"
+        )
 
-    annotated = [
-        {**p, "breadcrumb": f"{p['breadcrumb']} {version_label(p)}".strip()}
-        for p in main_pages
-    ]
-    lines += render_sections(annotated)
-
-    # --- Optional section: supplementary resources that crawlers may skip ---
     lines += [
+        "",
         "---",
         "",
         "## Optional",
@@ -360,23 +369,19 @@ def write_main(
         "",
     ]
 
-    # Development (master) branch index
-    lines.append(
-        "- [Development versions index (master branch)](llms-master.txt): "
-        f"{len(master_pages)} unreleased or in-progress pages, "
-        "tracks the `master` branch of each source repo"
-    )
+    if master_pages:
+        lines.append(
+            "- [Development versions index (master branch)](llms-master.txt): "
+            f"{len(master_pages)} unreleased or in-progress pages, "
+            "tracks the `master` branch of each source repo"
+        )
 
-    # Machine-readable site resources
     lines += [
-        f"- [Sitemap]({site_base}/sitemap.xml): "
-        "full list of all pages (XML, ~1,000 entries)",
+        f"- [Sitemap]({site_base}/sitemap.xml): full list of all pages (XML)",
         f"- [Search index]({site_base}/search/search_index.json): "
-        "full-text content for all pages (~22 MB JSON, "
-        "split into anchor-level fragments)",
+        "full-text search index for all pages (large JSON file)",
     ]
 
-    # Legacy version indexes
     for v in older:
         major = major_version(v)
         lines.append(
@@ -385,11 +390,10 @@ def write_main(
         )
 
     lines.append("")
-
     _write(output_path, lines)
     print(
-        f"  llms.txt          {len(main_pages):4d} pages  "
-        f"(+{len(master_pages)} master referenced separately)"
+        f"  llms.txt          {len(main_pages):4d} total pages "
+        f"(compact index → {len(SECTION_ORDER)} section files)"
     )
 
 
@@ -407,6 +411,34 @@ def write_master(master_pages: list, output_path: str):
     lines += render_sections(master_pages, version_suffix="(master — development)")
     _write(output_path, lines)
     print(f"  llms-master.txt   {len(master_pages):4d} pages")
+
+
+def write_section(
+    main_pages: list,
+    section: str,
+    output_path: str,
+):
+    """Write a per-section llms file (llms-use.txt, llms-develop.txt, etc.)."""
+    section_pages = [p for p in main_pages if p["top_section"] == section]
+    if not section_pages:
+        return
+
+    label = SECTION_LABELS.get(section, section.title())
+    desc = SECTION_DESCRIPTIONS.get(section, "")
+
+    lines = [
+        f"# DHIS2 Documentation — {label}",
+        "",
+        f"> {desc}",
+        "",
+        "> Return to the [main index](llms.txt).",
+        "",
+        "---",
+        "",
+    ]
+    lines += render_sections(_annotate_versions(section_pages))
+    _write(output_path, lines)
+    print(f"  llms-{section}.txt{'':<12}{len(section_pages):4d} pages")
 
 
 def write_legacy(pages: list, version: str, output_path: str):
@@ -469,6 +501,9 @@ def main():
                output_path=f"{target}/llms.txt", site_base=site_base)
     write_master(master_pages,
                  output_path=f"{target}/llms-master.txt")
+    for sec in SECTION_ORDER:
+        write_section(main_pages, sec,
+                      output_path=f"{target}/llms-{sec}.txt")
     for version, vpages in sorted(legacy.items(), key=lambda kv: version_int(kv[0])):
         write_legacy(vpages, version,
                      output_path=f"{target}/llms-v{major_version(version)}.txt")

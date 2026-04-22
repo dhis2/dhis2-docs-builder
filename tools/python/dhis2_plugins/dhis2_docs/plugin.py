@@ -183,6 +183,20 @@ class Dhis2DocsPlugin(BasePlugin):
                         self.html(html_file).write_pdf(pdf_file)
                         print("Converting to PDF: Done.")
 
+        # Copy markdown source files alongside HTML so .md URLs are served from S3
+        # Only for English — translated builds use the same source files and
+        # the canonical markdown is English.
+        if (dhis2_utils.os.getenv('DHIS2_DOCS_LANGUAGE') or 'en') == 'en':
+            docs_dir = config['docs_dir']
+            site_dir = config['site_dir']
+            for dirpath, dirnames, filenames in dhis2_utils.os.walk(docs_dir):
+                for filename in [f for f in filenames if f.endswith('.md')]:
+                    src = dhis2_utils.os.path.join(dirpath, filename)
+                    rel = dhis2_utils.os.path.relpath(src, docs_dir)
+                    dst = dhis2_utils.os.path.join(site_dir, rel)
+                    dhis2_utils.os.makedirs(dhis2_utils.os.path.dirname(dst), exist_ok=True)
+                    dhis2_utils.shutil.copy2(src, dst)
+
         if self.translation_links != "":
             with open(config['site_dir']+"/translate.html", 'w') as tran:
                 tran.write(self.translation_links)
