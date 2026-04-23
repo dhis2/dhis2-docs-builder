@@ -168,6 +168,8 @@ site_dir: ./target/en/
 
 nav:
     - Home: '@github(dhis2/dhis2-docs, src/home.md, master)'
+    - "403": '@file(special_pages/403.md)'
+    - "404": '@file(special_pages/404.md)'
     - Terms of use: '@github(dhis2/dhis2-docs, src/termsofuse.md, master)'
     - Use:
         Use: '@github(dhis2/dhis2-docs, src/user/index.md, master)'

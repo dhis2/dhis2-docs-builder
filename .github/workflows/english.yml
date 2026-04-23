@@ -79,3 +79,18 @@ jobs:
         SOURCE_DIR: 'target/en/.'
         DEST_DIR: 'en/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
+
+    - name: Set content-type for markdown files
+      run: |
+        aws s3 cp s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/en/ \
+          s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/en/ \
+          --recursive \
+          --exclude '*' \
+          --include '*.md' \
+          --content-type 'text/markdown; charset=utf-8' \
+          --metadata-directive REPLACE \
+          --cache-control 'public, max-age=3600' \
+          --region eu-west-1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}

@@ -250,11 +250,11 @@ def entry(page: dict) -> str:
     """
     Emit a spec-compliant link entry.
 
-    Primary URL is the .md file served alongside the HTML on the docs site.
-    The rendered HTML URL is offered as a note after the colon.
+    Primary URL is the HTML page. Agents that send Accept: text/markdown
+    receive the markdown source via CloudFront content negotiation.
+    The equivalent .md URL is also served directly if preferred.
     """
-    md_url = page['html_url'].replace('.html', '.md')
-    return f"- [{page['title']}]({md_url}): {page['html_url']}"
+    return f"- [{page['title']}]({page['html_url']})"
 
 
 def _annotate_versions(pages: list) -> list:
@@ -325,7 +325,7 @@ def write_main(
     output_path: str,
     site_base: str = DEFAULT_SITE_BASE,
 ):
-    """Write the compact top-level index that links to per-section files."""
+    """Write the canonical index with all page entries and links to per-section files."""
     older = sorted(legacy.keys(), key=version_int, reverse=True)
 
     lines = [
@@ -338,14 +338,8 @@ def write_main(
         f"**Latest stable release**: v{major_version(latest_stable)}. "
         "Development source: `master` branch.",
         "",
-        "Each section below links to a dedicated file listing all pages in that",
-        "category. Each page entry gives the raw Markdown source URL (primary) and",
-        "the rendered HTML URL (after the colon).",
-        "",
-        "---",
-        "",
-        "## Documentation",
-        "",
+        "Each link points to the hosted Markdown source of the page.",
+        "Per-section indexes with more detail are also available:",
     ]
 
     for sec in SECTION_ORDER:
@@ -353,13 +347,17 @@ def write_main(
         if not sec_pages:
             continue
         label = SECTION_LABELS.get(sec, sec.title())
-        desc = SECTION_DESCRIPTIONS.get(sec, "")
-        lines.append(
-            f"- [{label}](llms-{sec}.txt): {desc} ({len(sec_pages)} pages)"
-        )
+        lines.append(f"[{label}](llms-{sec}.txt) ({len(sec_pages)} pages)")
 
     lines += [
         "",
+        "---",
+        "",
+    ]
+
+    lines += render_sections(_annotate_versions(main_pages))
+
+    lines += [
         "---",
         "",
         "## Optional",
@@ -378,8 +376,6 @@ def write_main(
 
     lines += [
         f"- [Sitemap]({site_base}/sitemap.xml): full list of all pages (XML)",
-        f"- [Search index]({site_base}/search/search_index.json): "
-        "full-text search index for all pages (large JSON file)",
     ]
 
     for v in older:
@@ -392,8 +388,8 @@ def write_main(
     lines.append("")
     _write(output_path, lines)
     print(
-        f"  llms.txt          {len(main_pages):4d} total pages "
-        f"(compact index → {len(SECTION_ORDER)} section files)"
+        f"  llms.txt          {len(main_pages):4d} pages "
+        f"(full listing + {len(SECTION_ORDER)} section file links)"
     )
 
 
