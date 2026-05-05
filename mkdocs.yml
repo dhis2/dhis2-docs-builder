@@ -437,6 +437,7 @@ nav:
               - Maps: '@github(dhis2/dhis2-docs, src/user/configure-the-gis-app.md,master)'
               - Report: '@github(dhis2/dhis2-docs, src/user/configure-report-functionality.md,master)'
               - System settings: '@github(dhis2/dhis2-docs, src/user/system-settings.md,master)'
+              - Set custom theme color: '@github(dhis2/dhis2-docs, src/user/custom-colors.md,master)'
             Exchanging data:
               - Import/Export: '@github(dhis2/dhis2-docs, src/user/importexport-app.md,master)'
               - Data Exchange: '@github(dhis2/dhis2-docs, src/user/data-exchange.md,master)'
