@@ -1,4 +1,4 @@
-  document$.subscribe(() => { 
+  document$.subscribe(() => {
     var script = document.createElement("script");
     script.src = "https://widget.kapa.ai/kapa-widget.bundle.js";
     script.setAttribute("data-website-id", "27e730a7-0494-4dd9-8c0f-2536f5367212");
@@ -8,6 +8,8 @@
     script.setAttribute("data-modal-disclaimer", "Answers are AI generated based on the DHIS2 Documentation. Be aware it might not be 100% accurate or up-to-date, check the sources to know for sure. Please note that all conversations are recorded by kapa.ai for quality and training purposes.");
     script.setAttribute("data-project-logo", "/images/dhis2-icon-rgb-positive.png");
     script.setAttribute("data-button-position-bottom", "60px");
+    script.setAttribute("data-mcp-enabled", "true");
+    script.setAttribute("data-mcp-server-url", "https://dhis2docs.mcp.kapa.ai");
     script.async = true;
     document.head.appendChild(script);
   })
