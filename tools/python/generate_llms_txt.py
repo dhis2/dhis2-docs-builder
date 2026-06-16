@@ -95,6 +95,10 @@ SECTION_DESCRIPTIONS = {
 
 VERSION_RE = re.compile(r"dhis-core-version-(\d+|master(?:configuring)?)")
 
+# Third-party MCP server (hosted by kapa.ai) offering conversational /
+# semantic search over the docs. Advertised in the Tools section of llms.txt.
+MCP_ENDPOINT = "https://dhis2docs.mcp.kapa.ai"
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -366,6 +370,16 @@ def write_main(
     lines += render_sections(_annotate_versions(main_pages))
 
     lines += [
+        "## Tools",
+        "",
+        "*Interactive services for querying this documentation. These are tool",
+        "endpoints, not fetchable Markdown pages.*",
+        "",
+        f"- [DHIS2 Docs MCP server]({MCP_ENDPOINT}): Model Context Protocol "
+        "endpoint (streamable HTTP, OAuth `openid`) for conversational and "
+        "semantic search over this documentation, hosted by kapa.ai. "
+        "For MCP-capable agents.",
+        "",
         "---",
         "",
         "## Optional",
