@@ -30,9 +30,11 @@ Spec compliance (https://llmstxt.org/)
   - Blockquote with short project summary (no nested lists).
   - H2 sections with bulleted `- [name](url): optional notes` lists.
   - Trailing `## Optional` section for links that may be skipped.
-  - Each link's primary URL points to raw Markdown, so agents fetch
-    parse-ready content rather than HTML. The rendered HTML URL is
-    offered as a note on each entry.
+  - Each link points to the page's `.md` URL, so agents fetch
+    parse-ready Markdown rather than HTML. (The site also serves
+    Markdown for the `.html` URL via `Accept: text/markdown` content
+    negotiation, but a plain GET on `.html` returns HTML, so the
+    explicit `.md` URL is used here.)
 
 Deployment note
 ---------------
@@ -93,18 +95,18 @@ SECTION_DESCRIPTIONS = {
 
 VERSION_RE = re.compile(r"dhis-core-version-(\d+|master(?:configuring)?)")
 
+# Third-party MCP server (hosted by kapa.ai) offering conversational /
+# semantic search over the docs. Advertised in the Tools section of llms.txt.
+MCP_ENDPOINT = "https://dhis2docs.mcp.kapa.ai"
+
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
-def blob_to_raw(url: str) -> str:
-    """Convert a GitHub blob URL to a raw.githubusercontent.com URL."""
-    return re.sub(
-        r"https://github\.com/([^/]+)/([^/]+)/blob/([^/]+)/(.*)",
-        r"https://raw.githubusercontent.com/\1/\2/\3/\4",
-        url,
-    )
+def html_to_md(url: str) -> str:
+    """Convert a rendered .html page URL to its .md source URL."""
+    return re.sub(r"\.html$", ".md", url)
 
 
 def version_int(v: str) -> int:
@@ -153,14 +155,13 @@ def parse_pages(target_dir: str, site_base: str) -> list:
         with open(html_path, "r", errors="ignore") as fh:
             content = fh.read()
 
+        # The "Edit this page" GitHub link is how we detect a real content
+        # page (vs. nav/redirect stubs); the link target itself is not used.
         edit_m = re.search(
             r'<a href=(https://github[^\s>]+) title="Edit this page"', content
         )
         if not edit_m:
             continue
-
-        blob_url = edit_m.group(1)
-        raw_url = blob_to_raw(blob_url)
 
         title_m = re.search(r"<title>([^<]+)</title>", content)
         title = (
@@ -171,6 +172,7 @@ def parse_pages(target_dir: str, site_base: str) -> list:
 
         rel = html_path.replace(f"{target_dir}/", "")
         html_url = f"{site_base}/{rel}"
+        md_url = html_to_md(html_url)
 
         parts = rel.split("/")
         top_section = parts[0]
@@ -183,7 +185,7 @@ def parse_pages(target_dir: str, site_base: str) -> list:
             {
                 "title": title,
                 "html_url": html_url,
-                "raw_url": raw_url,
+                "md_url": md_url,
                 "rel": rel,
                 "top_section": top_section,
                 "sub_path": sub_path,
@@ -248,13 +250,10 @@ def classify_pages(pages: list):
 
 def entry(page: dict) -> str:
     """
-    Emit a spec-compliant link entry.
-
-    Primary URL is the HTML page. Agents that send Accept: text/markdown
-    receive the markdown source via CloudFront content negotiation.
-    The equivalent .md URL is also served directly if preferred.
+    Emit a spec-compliant link entry pointing at the page's `.md` source,
+    so agents fetch parse-ready Markdown rather than rendered HTML.
     """
-    return f"- [{page['title']}]({page['html_url']})"
+    return f"- [{page['title']}]({page['md_url']})"
 
 
 def _annotate_versions(pages: list) -> list:
@@ -317,6 +316,17 @@ def render_sections(pages: list, version_suffix: str = "") -> list[str]:
 # Writers
 # ---------------------------------------------------------------------------
 
+def llms_url(site_base: str, name: str) -> str:
+    """Absolute URL of a sibling llms-*.txt index file.
+
+    These links are deliberately absolute: llms.txt is published both at the
+    site root (https://docs.dhis2.org/llms.txt) and under /en/, so a relative
+    link like `llms-develop.txt` would resolve to the root and 404 for the
+    root copy. An absolute URL is correct regardless of where the file is served.
+    """
+    return f"{site_base}/{name}"
+
+
 def write_main(
     main_pages: list,
     master_pages: list,
@@ -340,6 +350,7 @@ def write_main(
         "",
         "Each link points to the hosted Markdown source of the page.",
         "Per-section indexes with more detail are also available:",
+        "",
     ]
 
     for sec in SECTION_ORDER:
@@ -347,7 +358,8 @@ def write_main(
         if not sec_pages:
             continue
         label = SECTION_LABELS.get(sec, sec.title())
-        lines.append(f"[{label}](llms-{sec}.txt) ({len(sec_pages)} pages)")
+        url = llms_url(site_base, f"llms-{sec}.txt")
+        lines.append(f"- [{label}]({url}) ({len(sec_pages)} pages)")
 
     lines += [
         "",
@@ -358,6 +370,16 @@ def write_main(
     lines += render_sections(_annotate_versions(main_pages))
 
     lines += [
+        "## Tools",
+        "",
+        "*Interactive services for querying this documentation. These are tool",
+        "endpoints, not fetchable Markdown pages.*",
+        "",
+        f"- [DHIS2 Docs MCP server]({MCP_ENDPOINT}): Model Context Protocol "
+        "endpoint (streamable HTTP, OAuth `openid`) for conversational and "
+        "semantic search over this documentation, hosted by kapa.ai. "
+        "For MCP-capable agents.",
+        "",
         "---",
         "",
         "## Optional",
@@ -368,8 +390,9 @@ def write_main(
     ]
 
     if master_pages:
+        master_url = llms_url(site_base, "llms-master.txt")
         lines.append(
-            "- [Development versions index (master branch)](llms-master.txt): "
+            f"- [Development versions index (master branch)]({master_url}): "
             f"{len(master_pages)} unreleased or in-progress pages, "
             "tracks the `master` branch of each source repo"
         )
@@ -380,8 +403,9 @@ def write_main(
 
     for v in older:
         major = major_version(v)
+        legacy_url = llms_url(site_base, f"llms-v{major}.txt")
         lines.append(
-            f"- [DHIS2 v{major} docs (legacy)](llms-v{major}.txt): "
+            f"- [DHIS2 v{major} docs (legacy)]({legacy_url}): "
             "older release, not recommended for new work"
         )
 
@@ -393,13 +417,15 @@ def write_main(
     )
 
 
-def write_master(master_pages: list, output_path: str):
+def write_master(master_pages: list, output_path: str,
+                 site_base: str = DEFAULT_SITE_BASE):
+    main_url = llms_url(site_base, "llms.txt")
     lines = [
         "# DHIS2 Documentation — master (development)",
         "",
         "> These pages are built from the `master`/`main` branch of each source",
         "> repository and reflect features that are in active development or not",
-        "> yet released. For the latest stable release see [llms.txt](llms.txt).",
+        f"> yet released. For the latest stable release see [llms.txt]({main_url}).",
         "",
         "---",
         "",
@@ -413,6 +439,7 @@ def write_section(
     main_pages: list,
     section: str,
     output_path: str,
+    site_base: str = DEFAULT_SITE_BASE,
 ):
     """Write a per-section llms file (llms-use.txt, llms-develop.txt, etc.)."""
     section_pages = [p for p in main_pages if p["top_section"] == section]
@@ -421,13 +448,14 @@ def write_section(
 
     label = SECTION_LABELS.get(section, section.title())
     desc = SECTION_DESCRIPTIONS.get(section, "")
+    main_url = llms_url(site_base, "llms.txt")
 
     lines = [
         f"# DHIS2 Documentation — {label}",
         "",
         f"> {desc}",
         "",
-        "> Return to the [main index](llms.txt).",
+        f"> Return to the [main index]({main_url}).",
         "",
         "---",
         "",
@@ -437,13 +465,15 @@ def write_section(
     print(f"  llms-{section}.txt{'':<12}{len(section_pages):4d} pages")
 
 
-def write_legacy(pages: list, version: str, output_path: str):
+def write_legacy(pages: list, version: str, output_path: str,
+                 site_base: str = DEFAULT_SITE_BASE):
     major = int(version) - 200 if len(version) == 3 and version.startswith("2") else int(version)
+    main_url = llms_url(site_base, "llms.txt")
     lines = [
         f"# DHIS2 Documentation — v{major} (legacy)",
         "",
         f"> This file indexes documentation for DHIS2 version {major}.",
-        f"> It is provided for reference only. For current documentation see [llms.txt](llms.txt).",
+        f"> It is provided for reference only. For current documentation see [llms.txt]({main_url}).",
         "",
         "---",
         "",
@@ -496,13 +526,14 @@ def main():
     write_main(main_pages, master_pages, legacy, latest_stable,
                output_path=f"{target}/llms.txt", site_base=site_base)
     write_master(master_pages,
-                 output_path=f"{target}/llms-master.txt")
+                 output_path=f"{target}/llms-master.txt", site_base=site_base)
     for sec in SECTION_ORDER:
         write_section(main_pages, sec,
-                      output_path=f"{target}/llms-{sec}.txt")
+                      output_path=f"{target}/llms-{sec}.txt", site_base=site_base)
     for version, vpages in sorted(legacy.items(), key=lambda kv: version_int(kv[0])):
         write_legacy(vpages, version,
-                     output_path=f"{target}/llms-v{major_version(version)}.txt")
+                     output_path=f"{target}/llms-v{major_version(version)}.txt",
+                     site_base=site_base)
 
     print("Done.")
     print()
