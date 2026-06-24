@@ -17,7 +17,7 @@ GitPython==3.1.41
 greenlet==3.2.4
 html5lib==1.1
 htmlmin==0.1.12
-idna==3.7
+idna==3.15
 importlib_metadata==8.5.0
 Jinja2==3.1.6
 jsmin==3.0.1
