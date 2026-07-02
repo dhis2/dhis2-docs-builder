@@ -15,8 +15,8 @@ from functools import partial
 import datetime
 import shutil
 
-logging.basicConfig(level=logging.DEBUG)
 import os
+import argparse
 import subprocess
 import tempfile
 import yaml
@@ -36,9 +36,9 @@ def convert_mermaid_to_png(mermaid_string, output_file):
     
     try:
         subprocess.run(command, check=True)
-        print(f"Successfully created {output_file}")
+        logging.info(f"Successfully created {output_file}")
     except subprocess.CalledProcessError as e:
-        print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
     finally:
         temp_input.close()
 
@@ -53,7 +53,7 @@ def download_thumbnail(thumbnail_url, save_path='thumbnail.jpg'):
         with open(save_path, 'wb') as file:
             file.write(response.content)
     else:
-        print("Failed to retrieve thumbnail")
+        logging.error("Failed to retrieve thumbnail")
 
 
 baseUrl = os.getenv('DOC_BASE_URL', './target/en/')
@@ -62,15 +62,26 @@ relBase = baseUrl.replace('./','')
 
 docs_yml_path = os.path.join(script_dir, 'docs.yml')
 with open(docs_yml_path, 'r') as f:
-    docs = yaml.safe_load(f)
+    config = yaml.safe_load(f)
+
+categories = config['categories']
+docs = config['books']
+# Position in docs.yml is the within-category display order.
+for order, doc in enumerate(docs):
+    doc['order'] = order
+    # YAML reads an unquoted version like 2.43 as a float; keep it a string so it
+    # works as a path segment and matches the archive's version folder names.
+    if doc.get('version') is not None:
+        doc['version'] = str(doc['version'])
 
 
 
 class navReader:
 
-    def __init__(self, remote=True, base=''):
+    def __init__(self, remote=True, base='', categories=None):
         self.remote = remote
         self.base = base
+        self.categories = categories or []
         self.docs = []
         # Only keep truly global state as instance attributes
 
@@ -91,10 +102,10 @@ class navReader:
             if doc['base_path']:
                 doc['state']['currentDocBase'] = urljoin(self.base, doc['base_path'])
                 doc['state']['levelOffset'] = doc['base_path'].count('/')-1
-                print(f"base_path: {doc['base_path']}")
+                logging.debug(f"base_path: {doc['base_path']}")
             else:
                 doc['state']['currentDocBase'] = '/'.join(docUrl.split('/')[:-2])
-            print(f"levelOffset: {doc['state']['levelOffset']}")
+            logging.debug(f"levelOffset: {doc['state']['levelOffset']}")
             if self.remote:
                 response = requests.get(docUrl)
                 file_content = response.content
@@ -221,21 +232,17 @@ class navReader:
                     if 'children' in link:
                         full += append_nav(link['children'], state, level+1)
                 else:
-                    print("here")
                     full += f'\n'
                     # create a unique id from title and timestamp
                     unique_id = slugify_unicode(link['title']) + str(int(time.time()))[-4:]
                     link['toc_id'] = unique_id
                     if 'children' in link:
-                        print("here2")
                         state['parentSections'][str(level)] = link['title']
                         parent = state['parentSections'].get(str(level-1), '')
                         article = ''
                         if 'link' in link:
-                            print("here3")
                             article = fetch_content(link['link'])
                         full += render_section(level, unique_id, parent, link['title'], article)
-                        print("here4")
                         full += append_nav(link['children'], state, level+1)
                         del state['parentSections'][str(level)]
                     else:
@@ -247,7 +254,7 @@ class navReader:
                             if not state['parentSections'].get(str(level-1)):
                                 parentClass = 'noparent'
                             # if chapterise attribute exists and is true, add a section before each article
-                            print("parentClass:", parentClass)
+                            logging.debug(f"parentClass: {parentClass}")
                             if 'chapterise' in doc and doc['chapterise'] or parentClass == 'noparent':
                                 parent = state['parentSections'].get(str(level-1), '')
                                 full += render_section(level, unique_id, parent, link['title'], "")
@@ -259,11 +266,11 @@ class navReader:
             template = env.get_template('templates/toc.html')
             return template.module.render_toc(nav)
         def render_section(level, unique_id, parent, title, article):
-            print("section", level, unique_id, parent, title)
+            logging.debug(f"section {level} {unique_id} {parent} {title}")
             template = env.get_template('templates/section.html')
             return template.render(level=level, unique_id=unique_id, parent=parent, title=title, article=article)
         def render_article(unique_id, article, parent):
-            print("article", unique_id, parent)
+            logging.debug(f"article {unique_id} {parent}")
             template = env.get_template('templates/article.html')
             return template.render(unique_id=unique_id, article=article, parent=parent)
         def render_html(doc):
@@ -271,34 +278,34 @@ class navReader:
             title = doc['title']
             cover = doc['cover']
             for i in range(doc['state']['levelOffset']):
-                print("here ", doc['state']['levelOffset'])
                 doc['nav'] = doc['nav'][0]['children']
             with open('nav'+ doc['title'] + '.json', 'w') as f:
                 f.write(json.dumps(doc['nav'], indent=2))
             inner_html = append_nav(doc['nav'], doc['state'])
             toc_section = render_toc(doc['nav'])
-            return book.render(title=title, cover=cover, toc_section=toc_section, inner_html=inner_html, currentDocIntro=doc['intro'])
+            now = datetime.datetime.now()
+            return book.render(title=title, cover=cover, toc_section=toc_section, inner_html=inner_html, currentDocIntro=doc['intro'], month=now.strftime('%B'), year=now.year)
         for doc in self.docs:
-            print(f"concatenating {doc['title']}")
+            logging.info(f"concatenating {doc['title']}")
             htmlfile = baseUrl + '/' + slugify_unicode(doc['title']) + '.html'
             with open(htmlfile, 'w', encoding="utf-8") as f:
                 rendered_html = render_html(doc)
                 f.write(rendered_html)
 
-    def update_book_manifest(self, pdf_dir, data):
+    def update_book_manifest(self, pdf_dir, book_entry):
         manifest_path = os.path.join(pdf_dir, 'books.json')
-        manifest_data = {}
+        books = {}
         if os.path.exists(manifest_path):
             with open(manifest_path, 'r') as f:
                 try:
-                    manifest_data = json.load(f)
+                    books = json.load(f).get('books', {})
                 except json.JSONDecodeError:
                     pass # Overwrite if invalid JSON
-        
-        manifest_data.update(data)
+
+        books.update(book_entry)
 
         with open(manifest_path, 'w') as f:
-            json.dump(manifest_data, f, indent=4)
+            json.dump({'categories': self.categories, 'books': books}, f, indent=4)
 
     def create_static_viewer_files(self, pdf_dir):
         # paths relative to script dir
@@ -315,11 +322,11 @@ class navReader:
             shutil.copy(viewer_html_src, viewer_html_dest)
             shutil.copy(viewer_css_src, viewer_css_dest)
             shutil.copy(viewer_js_src, viewer_js_dest)
-            print("PDF viewer files created successfully.")
+            logging.info("PDF viewer files created successfully.")
         except FileNotFoundError as e:
-            print(f"Error copying viewer files: {e}. Make sure html, css, and js source files exist.")
+            logging.error(f"Error copying viewer files: {e}. Make sure html, css, and js source files exist.")
         except Exception as e:
-            print(f"An unexpected error occurred while copying viewer files: {e}")
+            logging.error(f"An unexpected error occurred while copying viewer files: {e}")
 
     async def print_to_pdf(self):
         PORT = 8000
@@ -330,22 +337,26 @@ class navReader:
             server_thread = threading.Thread(target=httpd.serve_forever)
             server_thread.daemon = True
             server_thread.start()
-            print(f"Serving on port {PORT} from {server_directory}")
+            logging.info(f"Serving on port {PORT} from {server_directory}")
 
             async with async_playwright() as p:
                 browser = await p.chromium.launch()
 
                 def on_console(msg):
-                    print(f'Browser console: {msg.text}')
+                    logging.debug(f'Browser console: {msg.text}')
 
                 for doc in self.docs:
                     title = slugify_unicode(doc['title'])
+                    version = doc.get('version')
                     html_url = f'http://localhost:{PORT}/{title}.html'
-                    pdf_dir = os.path.abspath(os.path.join(baseUrl, 'pdf'))
-                    pdf_file = os.path.abspath(os.path.join(pdf_dir, f'{title}.pdf'))
+                    archive_dir = os.path.abspath(os.path.join(baseUrl, 'archive'))
+                    # Versioned books live in a per-version subfolder so they don't
+                    # overwrite the latest (unversioned) build.
+                    book_dir = os.path.join(archive_dir, version) if version else archive_dir
+                    pdf_file = os.path.abspath(os.path.join(book_dir, f'{title}.pdf'))
 
-                    # make sure the pdf directory exists
-                    os.makedirs(pdf_dir, exist_ok=True)
+                    # make sure the output directory exists
+                    os.makedirs(book_dir, exist_ok=True)
 
 
                     page = await browser.new_page()
@@ -359,14 +370,14 @@ class navReader:
                     try:
                         await page.wait_for_function('window.PAGED_RENDER_COMPLETE === true', timeout=600000)
                     except Exception as e:
-                        print(f"Timeout or error waiting for rendering to complete for {html_url}: {e}")
-                    
-                    print(f"Printing {html_url} to {pdf_file}")
+                        logging.warning(f"Timeout or error waiting for rendering to complete for {html_url}: {e}")
+
+                    logging.info(f"Printing {html_url} to {pdf_file}")
                     await page.pdf(path=pdf_file, format='A4', print_background=True)
 
                     # Generate thumbnail
-                    jpg_file = os.path.abspath(os.path.join(pdf_dir, f'{title}.jpg'))
-                    print(f"Generating thumbnail: {jpg_file}")
+                    jpg_file = os.path.abspath(os.path.join(book_dir, f'{title}.jpg'))
+                    logging.info(f"Generating thumbnail: {jpg_file}")
                     try:
                         subprocess.run([
                             'convert',
@@ -378,35 +389,49 @@ class navReader:
                             jpg_file
                         ], check=True)
 
-                        # Update JSON manifest
-                        pdf_filename = os.path.basename(pdf_file)
-                        jpg_filename = os.path.basename(jpg_file)
-                        category = doc.get('base_path', 'general/').split('/')[0]
+                        # Update JSON manifest. Keys and thumbnail paths are relative
+                        # to archive_dir, so versioned books are addressed by their subfolder.
+                        pdf_key = os.path.relpath(pdf_file, archive_dir)
+                        jpg_path = os.path.relpath(jpg_file, archive_dir)
 
-                        book_data = {
-                            os.path.join(pdf_filename): {
-                                "creation_time": datetime.datetime.fromtimestamp(os.path.getmtime(pdf_file)).isoformat(),
-                                "thumbnail": jpg_filename,
-                                "size": round(os.path.getsize(pdf_file) / (1024 * 1024), 2),
-                                "category": category,
-                                "title": doc['title']
-                            }
+                        entry = {
+                            "creation_time": datetime.datetime.fromtimestamp(os.path.getmtime(pdf_file)).isoformat(),
+                            "thumbnail": jpg_path,
+                            "size": round(os.path.getsize(pdf_file) / (1024 * 1024), 2),
+                            "category": doc['category'],
+                            "order": doc['order'],
+                            "title": doc['title']
                         }
-                        self.update_book_manifest(pdf_dir, book_data)
+                        if version:
+                            entry["version"] = version
+                        self.update_book_manifest(archive_dir, {pdf_key: entry})
 
                     except subprocess.CalledProcessError as e:
-                        print(f"ImageMagick `convert` command failed: {e}")
+                        logging.error(f"ImageMagick `convert` command failed: {e}")
                     except FileNotFoundError:
-                        print("ImageMagick `convert` command not found. Please install ImageMagick.")
+                        logging.error("ImageMagick `convert` command not found. Please install ImageMagick.")
 
                     await page.close()
                 await browser.close()
             
-            self.create_static_viewer_files(os.path.abspath(os.path.join(baseUrl, 'pdf')))
+            self.create_static_viewer_files(os.path.abspath(os.path.join(baseUrl, 'archive')))
             httpd.shutdown()
 
 def main():
-    reader = navReader(remote=False, base=baseUrl)
+    parser = argparse.ArgumentParser(description="Build PDF books from the rendered docs site.")
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help="Show detailed debug output instead of just progress.")
+    args = parser.parse_args()
+
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format='%(levelname)s: %(message)s',
+    )
+    # Keep noisy third-party debug logging out of our verbose output.
+    for noisy in ('urllib3', 'asyncio', 'PIL'):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
+
+    reader = navReader(remote=False, base=baseUrl, categories=categories)
     reader.get_nav(docs)
     reader.concatenate_docs()
     asyncio.run(reader.print_to_pdf())

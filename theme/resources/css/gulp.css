@@ -1318,12 +1318,11 @@ figcaption {
     list-style: none;
     padding: 0;
     margin: 0;
-    counter-reset: a;
-    overflow-x: hidden
+    counter-reset: a
 }
 
 #list-toc-generated .toc-element {
-    break-inside: avoid
+    break-inside: auto
 }
 
 #list-toc-generated .toc-element a:after {
@@ -1380,14 +1379,15 @@ figcaption {
 
 #list-toc-generated .toc-element:after {
     content: ".............................................." ".............................................." ".............................................." "........";
-    float: left;
-    width: 0;
     padding-left: 5px;
     letter-spacing: 2px
 }
 
 #list-toc-generated .toc-element {
-    display: flex
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden
 }
 
 #list-toc-generated .toc-element a {
