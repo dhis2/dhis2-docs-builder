@@ -123,6 +123,12 @@ Local sources (kept in **this** repo) are referenced with `@file(...)` or read d
   colours) consumed by `book_builder.py`.
 - `theme/` — the site theme, styles and scripts (including `books.js` / `books.css`).
 
+## Editing the sources
+
+To find the source for a specific page for editing, click the edit icon at the top of the English page; this takes the user directly to the source file on github.
+
+To find a specific page on Transifex, for translating, click the edit icon at the top of the page in the target language; this takes the use directly to the translation UI on transifex for that page (a transifex account is required).
+
 ## Localised builds
 
 Localised builds ([`localised_with_books.yml`](.github/workflows/localised_with_books.yml)) follow the same
