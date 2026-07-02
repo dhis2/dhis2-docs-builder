@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Landing page for the generated documentation PDFs. -->
+<!-- Renders the books.json manifest as category shelves of book covers. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +9,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>DHIS2 Documentation Books</h1>
-        <div id="books-container" class="books-grid">
-            <!-- Books will be loaded here by JavaScript -->
+    <header class="masthead">
+        <div class="masthead-inner">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <div class="brand-text">
+                <h1>DHIS2 Documentation Library</h1>
+                <p id="summary" class="summary"></p>
+            </div>
         </div>
-    </div>
-    <script src="pdf_viewer.js"></script>
+    </header>
+    <main id="books-container" class="stage">
+        <!-- Shelves are loaded here by script.js -->
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,135 +1,120 @@
+/* Styles the in-site documentation book lists as category shelves. */
+/* Markup is produced by resources/javascript/books.js. */
 
-
-
-.pdf-category-section {
-  margin-bottom: 3rem;
+.pdf-books {
+    --cat-fallback: #0a6eb4;
 }
 
-
-.pdf-books-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+/* Previous Versions: a prominent selector picks one version; its shelves show below */
+.pdf-books .version-controls {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 2px solid #16242f;
 }
 
-@media (min-width: 768px) {
-  .pdf-books-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.pdf-books .version-label {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
-@media (min-width: 1024px) {
-  .pdf-books-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.pdf-books .version-select {
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--cat-fallback);
+    border-radius: 5px;
+    background: #fff;
+    color: var(--cat-fallback);
+    cursor: pointer;
 }
 
-.pdf-book-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease;
+.pdf-books .shelf-section {
+    margin-bottom: 2.4rem;
 }
 
-.pdf-book-card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.pdf-books .shelf-head {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 1.1rem;
 }
 
-.pdf-card-header {
-  padding: 0rem 1rem;
+.pdf-books .shelf-head h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
-.pdf-thumbnail-container {
-  width: 80%;
-  margin: 1.5rem auto 0rem;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: 0.25rem;
-  background-color: #f3f4f6;
-  border: 1px solid #e5e7eb;
+.pdf-books .cat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cat, var(--cat-fallback));
+    flex: none;
 }
 
-img.pdf-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.pdf-books .cat-count {
+    font-size: 0.8rem;
+    color: #5d6e7b;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
-.pdf-title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.5rem;
+.pdf-books .shelf-row {
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 0 1.4rem;
+    border-bottom: 3px solid var(--cat, var(--cat-fallback));
 }
 
-h3.pdf-book-title {
-  font-weight: 600;
-  color: #111827;
+.pdf-books .spine {
+    width: 200px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.16s ease;
 }
 
-.pdf-version-badge {
-  background-color: #f3f4f6;
-  color: #374151;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  white-space: nowrap;
+.pdf-books .spine:hover {
+    transform: translateY(-5px);
 }
 
-.pdf-card-content {
-  padding: 0 1rem 1rem;
+.pdf-books .spine:focus-visible {
+    outline: 2px solid var(--cat, var(--cat-fallback));
+    outline-offset: 3px;
 }
 
-.pdf-metadata-row {
-  display: flex;
-  justify-content: space-between;
-  color: #6b7280;
-  margin-bottom: 0.75rem;
+.pdf-books .spine-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1px 3px 3px 1px;
+    box-shadow: -2px 3px 0 rgba(16, 36, 47, .10), 0 7px 16px rgba(16, 36, 47, .22);
 }
 
-div.pdf-button-group {
-  display: flex;
-  gap: 0.5rem;
+.pdf-books .spine-cap {
+    margin-top: 0.7rem;
 }
 
-button.pdf-download-btn, a.pdf-open-btn {
-  width: 100%;
-  border: 1px solid transparent;
-  padding: 0.3rem 1rem;
-  border-radius: 0.375rem;
-  /* font-size: 0.875rem; */
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  text-decoration: none;
+.pdf-books .spine-cap h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.25;
 }
 
-button.pdf-download-btn {
-  background-color: #374151;
-  color: white;
+.pdf-books .spine-cap span {
+    font-size: 0.74rem;
+    color: #5d6e7b;
+    font-variant-numeric: tabular-nums;
 }
 
-button.pdf-download-btn:hover {
-  background-color: #4b5563;
-}
-
-a.pdf-open-btn {
-    background-color: #f3f4f6;
-    color: #374151;
-    border: 1px solid #d1d5db;
-}
-
-a.pdf-open-btn:hover {
-    background-color: #e5e7eb;
-}
-
-svg.pdf-download-icon, svg.pdf-open-icon {
-  width: 0.8rem;
-  height: 0.8rem;
+@media (prefers-reduced-motion: reduce) {
+    .pdf-books .spine {
+        transition: none;
+    }
 }

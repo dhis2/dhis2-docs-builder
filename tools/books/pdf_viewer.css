@@ -1,65 +1,165 @@
+/* Styles for the documentation library landing page. */
+/* Lays out books as category shelves of clickable covers. */
+
+:root {
+    --ground: #eef2f6;
+    --surface: #ffffff;
+    --ink: #16242f;
+    --muted: #5d6e7b;
+    --line: #dbe3ea;
+    --accent: #0a6eb4;
+    --accent-deep: #084c7d;
+    --shadow: 0 1px 2px rgba(16, 36, 47, .06), 0 6px 18px rgba(16, 36, 47, .06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
+    background-color: var(--ground);
+    color: var(--ink);
     margin: 0;
-    padding: 2rem;
+    padding-bottom: 4rem;
+    -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    max-width: 1200px;
+/* Per-category accent (--cat) is set inline from the manifest's colour;
+   the var() fallbacks below apply when a category has no configured colour. */
+
+/* ---------- masthead ---------- */
+.masthead {
+    background: linear-gradient(180deg, #0c3a5e, #0a2c48);
+    color: #fff;
+    border-bottom: 3px solid var(--accent);
+}
+
+.masthead-inner {
+    max-width: 1180px;
     margin: 0 auto;
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-h1 {
-    text-align: center;
-    color: #005a9e;
-    margin-bottom: 2rem;
+.brand-mark {
+    width: 38px;
+    height: 46px;
+    border-radius: 3px 6px 6px 3px;
+    flex: none;
+    background: linear-gradient(135deg, #1d8fd6, #0a6eb4);
+    box-shadow: inset 4px 0 0 rgba(255, 255, 255, .35), var(--shadow);
 }
 
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+.brand-text h1 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -.01em;
 }
 
-.book-card {
-    background-color: #fff;
-    overflow: hidden;
+.summary {
+    margin: .35rem 0 0;
+    font-size: .85rem;
+    color: #bcd4e6;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---------- stage ---------- */
+.stage {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 0;
+}
+
+/* ---------- shelves ---------- */
+.shelf-section {
+    margin-bottom: 2.4rem;
+}
+
+.shelf-head {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    margin-bottom: 1.1rem;
+}
+
+.shelf-head h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cat, var(--accent));
+    flex: none;
+}
+
+.cat-count {
+    font-size: .8rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.shelf-row {
+    display: flex;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 0 1.4rem;
+    border-bottom: 3px solid var(--cat, var(--accent));
+    background: linear-gradient(180deg, transparent 70%, rgba(16, 36, 47, .03));
+}
+
+.spine {
+    width: 150px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease;
+    transition: transform .16s ease;
 }
 
-.book-card:hover .book-thumbnail {
+.spine:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.book-thumbnail {
+.spine:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.spine-cover img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1px 3px 3px 1px;
+    box-shadow: -2px 3px 0 rgba(16, 36, 47, .10), 0 7px 16px rgba(16, 36, 47, .22);
 }
 
-.book-info {
-    padding: 1rem;
+.spine-cap {
+    margin-top: .7rem;
 }
 
-.book-title {
-    font-size: 1.1rem;
+.spine-cap h3 {
+    margin: 0;
+    font-size: .85rem;
     font-weight: 600;
-    margin: 0 0 0.5rem 0;
+    line-height: 1.25;
 }
 
-.book-meta {
-    font-size: 0.85rem;
-    color: #666;
+.spine-cap span {
+    font-size: .74rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
 }
 
-.book-meta p {
-    margin: 0.25rem 0;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
 }

@@ -1,9 +1,9 @@
 name: English with books
 
 on:
-  # schedule:
-  #   # * is a special character in YAML so you have to quote this string
-  #   - cron:  '11 0 * * *'
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '11 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -66,14 +66,14 @@ jobs:
     - name: Sync docs to S3
       uses: dhis2/s3-sync-action@master
       with:
-       args: --delete --exclude 'full*' --exclude 'pdf*'
+       args: --delete --exclude 'full*' --exclude 'archive*'
       env:
         AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
         SOURCE_DIR: 'target/en/.'
-        DEST_DIR: 'booktest/en/'
+        DEST_DIR: 'en/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}
 
     - name: Install dependencies for books (playwright and imagemagick)
@@ -83,18 +83,30 @@ jobs:
         playwright install chromium
         sudo apt-get update && sudo apt-get install -y imagemagick
 
+    - name: Seed existing book catalogue
+      # Pull the published manifest so the build merges into it (keeping older
+      # versions) rather than starting from an empty catalogue.
+      run: |
+        mkdir -p target/en/archive
+        aws s3 cp s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/archive/en/books.json \
+          target/en/archive/books.json --region eu-west-1 || echo "No existing catalogue; starting fresh"
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+
     - name: Build the books
       run: |
         cd tools/books
-        python3 book_builder.py
+        python3 book_builder.py -v
 
     - name: Sync books to S3
+      # No --delete: older versioned PDFs in the catalogue must persist.
       uses: dhis2/s3-sync-action@master
       env:
         AWS_S3_BUCKET: ${{ secrets.DHIS2_S3_DOCS_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
         AWS_REGION: 'eu-west-1'
-        SOURCE_DIR: 'target/en/pdf/.'
-        DEST_DIR: 'booktest/en/pdf/'
+        SOURCE_DIR: 'target/en/archive/.'
+        DEST_DIR: 'archive/en/'
         AWS_CF_DISTRIBUTION_ID: ${{ secrets.DHIS2_S3_DOCS_CF_ID }}

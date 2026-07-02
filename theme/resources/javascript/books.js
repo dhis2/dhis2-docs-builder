@@ -1,166 +1,197 @@
-// Document categories data
-async function fetchBooksData() {
+// Renders the documentation PDFs as category shelves on in-site pages.
+// Reads the books.json manifest (categories + books) produced by book_builder.py.
+
+// Books are deployed to <root>/archive/<lang>/, a sibling of the <lang>/ site tree, so
+// they survive per-language site syncs. This script is served from
+// <lang>/resources/javascript/, so derive the archive root (and language) from its own
+// URL — robust under previews too.
+const { MANIFEST_URL, ARCHIVE_ROOT } = (() => {
+    const src = document.currentScript && document.currentScript.src;
+    if (!src) return { MANIFEST_URL: "books.json", ARCHIVE_ROOT: "" };
+    const siteLangRoot = src.replace(/resources\/javascript\/books\.js.*$/, "");
+    const lang = siteLangRoot.replace(/\/$/, "").split("/").pop();
+    const archiveRoot = new URL("../archive/" + lang + "/", siteLangRoot).href;
+    return { MANIFEST_URL: archiveRoot + "books.json", ARCHIVE_ROOT: archiveRoot };
+})();
+
+// Shown when a book has no thumbnail (e.g. catalogued archive PDFs) or its cover fails
+// to load. A neutral document cover, inlined so it needs no network request.
+const PLACEHOLDER_COVER =
+    "data:image/svg+xml," +
+    encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">' +
+            '<rect width="300" height="400" fill="#eceff1"/>' +
+            '<rect x="1" y="1" width="298" height="398" fill="none" stroke="#cfd8dc" stroke-width="2"/>' +
+            '<g fill="#b0bec5"><rect x="60" y="120" width="180" height="14" rx="3"/>' +
+            '<rect x="60" y="150" width="180" height="14" rx="3"/>' +
+            '<rect x="60" y="180" width="120" height="14" rx="3"/></g>' +
+            '<text x="150" y="300" font-family="sans-serif" font-size="40" font-weight="bold" ' +
+            'fill="#90a4ae" text-anchor="middle">PDF</text></svg>'
+    );
+
+const fmtSize = (mb) => (mb >= 1 ? mb.toFixed(1) + " MB" : Math.round(mb * 1024) + " KB");
+const titleCase = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Newest version first. Compares dotted numeric versions (2.41 > 2.40 > 2.9 handled
+// numerically); falls back to reverse string order for anything non-numeric.
+function compareVersionsDesc(a, b) {
+    const pa = a.split(".").map(Number);
+    const pb = b.split(".").map(Number);
+    if (pa.concat(pb).some(Number.isNaN)) return b.localeCompare(a);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+        const diff = (pb[i] || 0) - (pa[i] || 0);
+        if (diff) return diff;
+    }
+    return 0;
+}
+
+// Build ordered shelves from the configured categories, appending any
+// category referenced by a book but missing from the config.
+function buildShelves(categories, books) {
+    const meta = new Map(categories.map((c) => [c.key, c]));
+    const order = categories.map((c) => c.key);
+    const shelves = new Map(order.map((key) => [key, []]));
+
+    for (const book of books) {
+        if (!shelves.has(book.category)) {
+            shelves.set(book.category, []);
+            order.push(book.category);
+        }
+        shelves.get(book.category).push(book);
+    }
+
+    return order
+        .map((key) => ({
+            key,
+            label: (meta.get(key) || {}).label || titleCase(key),
+            colour: (meta.get(key) || {}).colour || "",
+            books: shelves.get(key).sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
+        }))
+        .filter((shelf) => shelf.books.length);
+}
+
+function el(tag, cls, html) {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (html != null) node.innerHTML = html;
+    return node;
+}
+
+function coverImg(book) {
+    const img = el("img");
+    img.src = book.thumbnail ? ARCHIVE_ROOT + book.thumbnail : PLACEHOLDER_COVER;
+    img.alt = "Cover of " + book.title;
+    img.loading = "lazy";
+    img.onerror = () => {
+        img.onerror = null;
+        img.src = PLACEHOLDER_COVER;
+    };
+    return img;
+}
+
+function renderShelf(shelf) {
+    const section = el("section", "shelf-section");
+    section.dataset.cat = shelf.key;
+    if (shelf.colour) section.style.setProperty("--cat", shelf.colour);
+    section.appendChild(
+        el(
+            "div",
+            "shelf-head",
+            `<span class="cat-dot"></span><h2>${shelf.label}</h2>` +
+                `<span class="cat-count">${shelf.books.length} title${shelf.books.length > 1 ? "s" : ""}</span>`
+        )
+    );
+
+    const row = el("div", "shelf-row");
+    for (const book of shelf.books) {
+        const spine = el("a", "spine");
+        spine.href = ARCHIVE_ROOT + book.file;
+        spine.target = "_blank";
+        const cover = el("div", "spine-cover");
+        cover.appendChild(coverImg(book));
+        spine.appendChild(cover);
+        spine.appendChild(el("div", "spine-cap", `<h3>${book.title}</h3><span>${fmtSize(book.size)}</span>`));
+        row.appendChild(spine);
+    }
+    section.appendChild(row);
+    return section;
+}
+
+function renderShelvesInto(parent, categories, books) {
+    for (const shelf of buildShelves(categories, books)) {
+        parent.appendChild(renderShelf(shelf));
+    }
+}
+
+// Complete Manuals: the latest (unversioned) books, as category shelves.
+function renderComplete(container, manifest, books) {
+    const latest = books.filter((book) => !book.version);
+    if (!latest.length) {
+        container.textContent = "No manuals available.";
+        return;
+    }
+    renderShelvesInto(container, manifest.categories || [], latest);
+}
+
+// Previous Versions: versioned books, one version shown at a time, chosen from a
+// selector at the top (defaults to the newest version).
+function renderPrevious(container, manifest, books) {
+    const versioned = books.filter((book) => book.version);
+    if (!versioned.length) {
+        container.textContent = "No previous versions available.";
+        return;
+    }
+    const versions = [...new Set(versioned.map((b) => b.version))].sort(compareVersionsDesc);
+
+    const controls = el("div", "version-controls");
+    const label = el("label", "version-label", "Version");
+    label.setAttribute("for", "version-select");
+    const select = el("select", "version-select");
+    select.id = "version-select";
+    for (const version of versions) {
+        const option = el("option");
+        option.value = version;
+        option.textContent = version;
+        select.appendChild(option);
+    }
+    controls.appendChild(label);
+    controls.appendChild(select);
+    container.appendChild(controls);
+
+    const body = el("div", "version-body");
+    container.appendChild(body);
+
+    const show = (version) => {
+        body.innerHTML = "";
+        renderShelvesInto(body, manifest.categories || [], versioned.filter((b) => b.version === version));
+    };
+    select.addEventListener("change", () => show(select.value));
+    show(versions[0]);
+}
+
+async function init() {
+    const completeContainer = document.getElementById("pdf-books-container");
+    const previousContainer = document.getElementById("pdf-books-previous-container");
+    if (!completeContainer && !previousContainer) return;
+
+    let manifest;
     try {
-        const response = await fetch("books.json");
+        const response = await fetch(MANIFEST_URL);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return await response.json();
+        manifest = await response.json();
     } catch (error) {
         console.error("Could not fetch or parse books data:", error);
-        return {}; // Return empty object on error
-    }
-}
-
-function transformDataToCategories(booksData) {
-  const categoryMap = {
-    implement: "Implementation Guides",
-    manage: "System Management",
-    develop: "Developer Resources",
-  }
-
-  const categories = {}
-
-  Object.entries(booksData).forEach(([filename, book]) => {
-    const categoryKey = book.category
-    const categoryName = categoryMap[categoryKey] || categoryKey
-
-    if (!categories[categoryKey]) {
-      categories[categoryKey] = {
-        id: categoryKey,
-        name: categoryName,
-        books: [],
-      }
+        const message = "Could not load book information.";
+        if (completeContainer) completeContainer.textContent = message;
+        if (previousContainer) previousContainer.textContent = message;
+        return;
     }
 
-    // Format date from ISO string
-    const date = new Date(book.creation_time).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })
-
-    categories[categoryKey].books.push({
-      id: filename.replace(".pdf", ""),
-      title: book.title,
-      thumbnail: book.thumbnail,
-      size: `${book.size} MB`,
-      date: date,
-      filename: filename,
-    })
-  })
-
-  return Object.values(categories)
+    const books = Object.entries(manifest.books || {}).map(([file, book]) => ({ ...book, file }));
+    if (completeContainer) renderComplete(completeContainer, manifest, books);
+    if (previousContainer) renderPrevious(previousContainer, manifest, books);
 }
 
-// Create download icon SVG
-function createDownloadIcon() {
-  return `<svg class="pdf-download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-  </svg>`
-}
-
-// Create open icon SVG
-function createOpenIcon() {
-    return `<svg class="pdf-open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
-    </svg>`
-}
-
-// Create book card HTML
-function createBookCard(book) {
-  return `
-    <div class="pdf-book-card">
-      <div class="pdf-card-header">
-        <div class="pdf-thumbnail-container">
-          <img src="${book.thumbnail || "/placeholder.svg"}" alt="${book.title} thumbnail" class="pdf-thumbnail">
-        </div>
-        <div class="pdf-title-row">
-          <h3 class="pdf-book-title">${book.title}</h3>
-        </div>
-      </div>
-      <div class="pdf-card-content">
-        <div class="pdf-metadata-row">
-          <span>${book.size}</span>
-          <span>${book.date}</span>
-        </div>
-        <div class="pdf-button-group">
-            <button class="pdf-download-btn" onclick="downloadBook('${book.id}')">
-              ${createDownloadIcon()}
-              Download
-            </button>
-            <a href="${book.filename.trim()}" target="_blank" class="pdf-open-btn">
-                ${createOpenIcon()}
-                Open
-            </a>
-        </div>
-      </div>
-    </div>
-  `
-}
-
-// Create category section HTML
-function createCategorySection(category) {
-  const booksHTML = category.books.map((book) => createBookCard(book)).join("")
-
-  return `
-    <section class="pdf-category-section">
-      <h2 class="pdf-category-title">${category.name}</h2>
-      <div class="pdf-books-grid">
-        ${booksHTML}
-      </div>
-    </section>
-  `
-}
-
-// Download book function
-function downloadBook(bookId, booksData) {
-  const filename = bookId + ".pdf"
-  const book = booksData[filename]
-
-  if (book) {
-    const link = document.createElement('a');
-    link.href = filename.trim();
-    link.download = filename.trim();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-}
-
-// Initialize the page
-async function init() {
-  const booksData = await fetchBooksData();
-  if (Object.keys(booksData).length === 0) {
-      console.log("No book data available to display.");
-      return;
-  }
-
-  const documentCategories = transformDataToCategories(booksData)
-  const container = document.getElementById("categories-container")
-  
-  const categoriesHTML = documentCategories.map((category) => {
-      const booksHTML = category.books.map((book) => createBookCard(book)).join("");
-      return `
-        <section class="pdf-category-section">
-          <h2 class="pdf-category-title">${category.name}</h2>
-          <div class="pdf-books-grid">
-            ${booksHTML}
-          </div>
-        </section>
-      `;
-  }).join("");
-
-  container.innerHTML = categoriesHTML;
-
-  // Re-bind download events if necessary, or pass data down.
-  // A simple way is to make booksData available globally or pass it.
-  // Let's re-bind.
-  container.querySelectorAll('.pdf-download-btn').forEach(btn => {
-      const bookId = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
-      btn.onclick = () => downloadBook(bookId, booksData);
-  });
-}
-
-// Run when DOM is loaded
-document.addEventListener("DOMContentLoaded", init)
+document.addEventListener("DOMContentLoaded", init);
