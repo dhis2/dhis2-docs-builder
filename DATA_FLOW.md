@@ -49,7 +49,7 @@ flowchart TD
     resolve -. "english build: push .md sources" .-> tx
     tx -. "nightly sync<br/>of fully translated pages" .-> txcache
     txcache -. "localised build: pull cached translations" .-> resolve
-    tx -. "fallback: pull direct if not cached" .-> resolve
+    tx -. "localised fallback: pull direct if not cached" .-> resolve
     resolve --> render --> site
     site --> s3site
     s3pdf -. "seed existing books.json (merge)" .-> manifest
