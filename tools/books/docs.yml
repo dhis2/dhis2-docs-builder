@@ -37,96 +37,112 @@ books:
     cover: /resources/book-covers/05_User_Guide_end-user.jpg
     top_level: Use
 
-  # - title: DHIS2 User Guide
-  #   category: use
-  #   link: use/user-guides/dhis-core-version-243/collecting-data/data-entry.html
-  #   base_path: use/
-  #   exclude_paths:
-  #     - use/user-guides/dhis-core-version-master
-  #     - use/user-guides/dhis-core-version-242
-  #     - use/user-guides/dhis-core-version-241
-  #     - use/user-guides/dhis-core-version-240
-  #     - use/user-guides/dhis-core-version-23
-  #     - use/android-app
-  #     - use/optional-apps
-  #   cover: /resources/book-covers/05_User_Guide_end-user.jpg
-  #   top_level: Use
-  #   version: "2.43"
+  - title: DHIS2 v43 User Guide
+    category: use
+    link: use/user-guides/dhis-core-version-243/collecting-data/data-entry.html
+    base_path: use/
+    exclude_paths:
+      - use/user-guides/dhis-core-version-master
+      - use/user-guides/dhis-core-version-242
+      - use/user-guides/dhis-core-version-241
+      - use/user-guides/dhis-core-version-240
+      - use/user-guides/dhis-core-version-23
+      - use/android-app
+      - use/optional-apps
+    cover: /resources/book-covers/05_User_Guide_end-user.jpg
+    top_level: Use
+    version: "2.43"
 
-  # - title: DHIS2 User Guide
-  #   category: use
-  #   link: use/user-guides/dhis-core-version-242/collecting-data/data-entry.html
-  #   base_path: use/
-  #   exclude_paths:
-  #     - use/user-guides/dhis-core-version-master
-  #     - use/user-guides/dhis-core-version-243
-  #     - use/user-guides/dhis-core-version-241
-  #     - use/user-guides/dhis-core-version-240
-  #     - use/user-guides/dhis-core-version-23
-  #     - use/android-app
-  #     - use/optional-apps
-  #   cover: /resources/book-covers/05_User_Guide_end-user.jpg
-  #   top_level: Use
-  #   version: "2.42"
+  - title: DHIS2 v42 User Guide
+    category: use
+    link: use/user-guides/dhis-core-version-242/collecting-data/data-entry.html
+    base_path: use/
+    exclude_paths:
+      - use/user-guides/dhis-core-version-master
+      - use/user-guides/dhis-core-version-243
+      - use/user-guides/dhis-core-version-241
+      - use/user-guides/dhis-core-version-240
+      - use/user-guides/dhis-core-version-23
+      - use/android-app
+      - use/optional-apps
+    cover: /resources/book-covers/05_User_Guide_end-user.jpg
+    top_level: Use
+    version: "2.42"
 
-  # - title: DHIS2 User Guide
-  #   category: use
-  #   link: use/user-guides/dhis-core-version-241/collecting-data/data-entry.html
-  #   base_path: use/
-  #   exclude_paths:
-  #     - use/user-guides/dhis-core-version-master
-  #     - use/user-guides/dhis-core-version-243
-  #     - use/user-guides/dhis-core-version-242
-  #     - use/user-guides/dhis-core-version-240
-  #     - use/user-guides/dhis-core-version-23
-  #     - use/android-app
-  #     - use/optional-apps
-  #   cover: /resources/book-covers/05_User_Guide_end-user.jpg
-  #   top_level: Use
-  #   version: "2.41"
+  - title: DHIS2 v41 User Guide
+    category: use
+    link: use/user-guides/dhis-core-version-241/collecting-data/data-entry.html
+    base_path: use/
+    exclude_paths:
+      - use/user-guides/dhis-core-version-master
+      - use/user-guides/dhis-core-version-243
+      - use/user-guides/dhis-core-version-242
+      - use/user-guides/dhis-core-version-240
+      - use/user-guides/dhis-core-version-23
+      - use/android-app
+      - use/optional-apps
+    cover: /resources/book-covers/05_User_Guide_end-user.jpg
+    top_level: Use
+    version: "2.41"
 
-  # - title: DHIS2 Implementer Guide
-  #   category: implement
-  #   link: implement/implementing-dhis2/overview.html
-  #   base_path: implement/
-  #   exclude_paths:
-  #     - implement/health
-  #     - implement/logistics
-  #   cover: /resources/book-covers/04_DHIS2_Implementer_Guide.jpg
-  #   top_level: Implement
+  - title: DHIS2 v40 User Guide
+    category: use
+    link: use/user-guides/dhis-core-version-241/collecting-data/data-entry.html
+    base_path: use/
+    exclude_paths:
+      - use/user-guides/dhis-core-version-master
+      - use/user-guides/dhis-core-version-243
+      - use/user-guides/dhis-core-version-242
+      - use/user-guides/dhis-core-version-241
+      - use/user-guides/dhis-core-version-23
+      - use/android-app
+      - use/optional-apps
+    cover: /resources/book-covers/05_User_Guide_end-user.jpg
+    top_level: Use
+    version: "2.40"
 
-  # - title: DHIS2 for Health
-  #   category: implement
-  #   link: implement/health/dhis2-health-data-toolkit/about-the-dhis2-health-data-toolkit.html
-  #   base_path: implement/health/
-  #   cover: /resources/book-covers/02_DHIS2_for_Health.jpg
-  #   top_level: Health
+  - title: DHIS2 Implementer Guide
+    category: implement
+    link: implement/implementing-dhis2/overview.html
+    base_path: implement/
+    exclude_paths:
+      - implement/health
+      - implement/logistics
+    cover: /resources/book-covers/04_DHIS2_Implementer_Guide.jpg
+    top_level: Implement
 
-  # - title: DHIS2 for Logistics
-  #   category: implement
-  #   link: implement/logistics/real-time-stock-rts.html
-  #   base_path: implement/logistics/
-  #   cover: /resources/book-covers/03_DHIS2_for_Logistics.jpg
-  #   top_level: Logistics
-  #   chapterise: true
+  - title: DHIS2 for Health
+    category: implement
+    link: implement/health/dhis2-health-data-toolkit/about-the-dhis2-health-data-toolkit.html
+    base_path: implement/health/
+    cover: /resources/book-covers/02_DHIS2_for_Health.jpg
+    top_level: Health
 
-  # - title: DHIS2 for System Administrators
-  #   category: manage
-  #   link: manage/manage.html
-  #   base_path: manage/
-  #   cover: /resources/book-covers/01_DHIS2_for_System_Administrators.jpg
-  #   top_level: Manage
+  - title: DHIS2 for Logistics
+    category: implement
+    link: implement/logistics/real-time-stock-rts.html
+    base_path: implement/logistics/
+    cover: /resources/book-covers/03_DHIS2_for_Logistics.jpg
+    top_level: Logistics
+    chapterise: true
 
-  # - title: DHIS2 for Developers
-  #   category: develop
-  #   link: develop/develop.html
-  #   base_path: develop/
-  #   exclude_paths:
-  #     - develop/developing-with-the-android-sdk/
-  #   cover: /resources/book-covers/07_Developer_Documentation.jpg
-  #   top_level: Develop
+  - title: DHIS2 for System Administrators
+    category: manage
+    link: manage/manage.html
+    base_path: manage/
+    cover: /resources/book-covers/01_DHIS2_for_System_Administrators.jpg
+    top_level: Manage
 
   - title: DHIS2 for Developers
+    category: develop
+    link: develop/develop.html
+    base_path: develop/
+    exclude_paths:
+      - develop/developing-with-the-android-sdk/
+    cover: /resources/book-covers/07_Developer_Documentation.jpg
+    top_level: Develop
+
+  - title: DHIS2 v43 for Developers
     category: develop
     link: develop/develop.html
     base_path: develop/
@@ -140,17 +156,59 @@ books:
     top_level: Develop
     version: "2.43"
 
-  # - title: Android SDK
-  #   category: develop
-  #   link: develop/developing-with-the-android-sdk/overview.html
-  #   base_path: develop/developing-with-the-android-sdk/
-  #   cover: /resources/book-covers/06_Android_User_Guide.jpg
-  #   top_level: Android SDK
+  - title: DHIS2 v42 for Developers
+    category: develop
+    link: develop/develop.html
+    base_path: develop/
+    exclude_paths:
+      - develop/developing-with-the-android-sdk/
+      - develop/using-the-api/dhis-core-version-243
+      - develop/using-the-api/dhis-core-version-241
+      - develop/using-the-api/dhis-core-version-240
+      - develop/using-the-api/dhis-core-version-master
+    cover: /resources/book-covers/07_Developer_Documentation.jpg
+    top_level: Develop
+    version: "2.42"
 
-  # - title: DHIS2 Education Toolkit
-  #   category: implement
-  #   link: implement/education/semis/user-guide.html
-  #   base_path: implement/education/
-  #   cover: /resources/book-covers/11_Education.jpg
-  #   top_level: EMIS
-  #   chapterise: true
+  - title: DHIS2 v41 for Developers
+    category: develop
+    link: develop/develop.html
+    base_path: develop/
+    exclude_paths:
+      - develop/developing-with-the-android-sdk/
+      - develop/using-the-api/dhis-core-version-243
+      - develop/using-the-api/dhis-core-version-242
+      - develop/using-the-api/dhis-core-version-240
+      - develop/using-the-api/dhis-core-version-master
+    cover: /resources/book-covers/07_Developer_Documentation.jpg
+    top_level: Develop
+    version: "2.41"
+
+  - title: DHIS2 v40 for Developers
+    category: develop
+    link: develop/develop.html
+    base_path: develop/
+    exclude_paths:
+      - develop/developing-with-the-android-sdk/
+      - develop/using-the-api/dhis-core-version-243
+      - develop/using-the-api/dhis-core-version-242
+      - develop/using-the-api/dhis-core-version-241
+      - develop/using-the-api/dhis-core-version-master
+    cover: /resources/book-covers/07_Developer_Documentation.jpg
+    top_level: Develop
+    version: "2.40"
+
+  - title: Android SDK
+    category: develop
+    link: develop/developing-with-the-android-sdk/overview.html
+    base_path: develop/developing-with-the-android-sdk/
+    cover: /resources/book-covers/06_Android_User_Guide.jpg
+    top_level: Android SDK
+
+  - title: DHIS2 Education Toolkit
+    category: implement
+    link: implement/education/semis/user-guide.html
+    base_path: implement/education/
+    cover: /resources/book-covers/11_Education.jpg
+    top_level: EMIS
+    chapterise: true
