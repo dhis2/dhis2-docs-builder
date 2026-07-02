@@ -97,7 +97,9 @@ jobs:
     - name: Build the books
       run: |
         cd tools/books
-        python3 book_builder.py -v
+        python3 book_builder.py -
+      env:
+        DOC_BASE_URL: '${{ github.workspace }}/target/en/'
 
     - name: Sync books to S3
       # No --delete: older versioned PDFs in the catalogue must persist.
