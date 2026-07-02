@@ -8,7 +8,7 @@ with notes on how localised builds differ.
 > **Note**
 > Here "Books" is simply a reference to complete (PDF) versions of entire sections of the documentation. These are available for `master` versions and are the preferred way to maintain archives of old versions (we have moved away from maintaining all of the html content for deprecated versions.)
 
-## English with books
+## Gathering sources and building the docs
 
 ```mermaid
 flowchart TD
