@@ -1,0 +1,51 @@
+name: Debug book catalogue download
+
+on:
+  workflow_dispatch:
+    inputs:
+      Locale:
+        description: 'Locale whose books.json to fetch'
+        required: true
+        default: 'en'
+        type: choice
+        options:
+          - en
+          - fr
+          - es_419
+          - pt
+          - cs
+          - zh
+          - ar
+
+jobs:
+  seed-download:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Who am I (verify credentials)
+      run: aws sts get-caller-identity --region eu-west-1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+
+    - name: List the catalogue object (distinguishes missing from forbidden)
+      run: aws s3 ls s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/archive/${{ github.event.inputs.Locale }}/books.json --region eu-west-1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+
+    - name: Download the catalogue
+      run: |
+        mkdir -p target/${{ github.event.inputs.Locale }}/archive
+        aws s3 cp s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/archive/${{ github.event.inputs.Locale }}/books.json \
+          target/${{ github.event.inputs.Locale }}/archive/books.json --region eu-west-1
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
+
+    - name: Show what was downloaded
+      run: |
+        ls -l target/${{ github.event.inputs.Locale }}/archive/
+        head -c 400 target/${{ github.event.inputs.Locale }}/archive/books.json
+        echo

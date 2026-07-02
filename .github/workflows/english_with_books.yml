@@ -85,11 +85,13 @@ jobs:
 
     - name: Seed existing book catalogue
       # Pull the published manifest so the build merges into it (keeping older
-      # versions) rather than starting from an empty catalogue.
+      # versions) rather than starting from an empty catalogue. A failed download
+      # aborts the run: continuing would overwrite the published catalogue with a
+      # manifest holding only the latest books, de-listing the historical versions.
       run: |
         mkdir -p target/en/archive
         aws s3 cp s3://${{ secrets.DHIS2_S3_DOCS_BUCKET }}/archive/en/books.json \
-          target/en/archive/books.json --region eu-west-1 || echo "No existing catalogue; starting fresh"
+          target/en/archive/books.json --region eu-west-1
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.DHIS2_S3_DOCS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DHIS2_S3_DOCS_ACCESS_KEY }}
@@ -97,7 +99,7 @@ jobs:
     - name: Build the books
       run: |
         cd tools/books
-        python3 book_builder.py -
+        python3 book_builder.py -v
       env:
         DOC_BASE_URL: '${{ github.workspace }}/target/en/'
 
