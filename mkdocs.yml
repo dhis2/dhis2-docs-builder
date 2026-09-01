@@ -183,7 +183,6 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.43)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.43)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.43)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.43)'
@@ -241,7 +240,6 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.42)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.42)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.42)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.42)'
@@ -298,7 +296,6 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.41)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.41)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.41)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.41)'
@@ -355,7 +352,6 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.40)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,2.40)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.40)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.40)'
@@ -414,7 +410,6 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,master)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Event Capture: '@github(dhis2/dhis2-docs, src/user/using-the-event-capture-app.md,master)'
               - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,master)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,master)'
