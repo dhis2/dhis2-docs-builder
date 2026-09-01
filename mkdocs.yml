@@ -183,7 +183,7 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.43)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.43)'
+              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,master)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.43)'
               - '@github(dhis2/approval-app, docs/user/index.yml, master)'
@@ -240,7 +240,7 @@ nav:
               - Data Quality: '@github(dhis2/dhis2-docs, src/user/control-data-quality.md,2.42)'
             Tracking individual level data:
               - '@github(dhis2/capture-app, docs/user/index.yml, master)'
-              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,2.42)'
+              - Tracker Capture: '@github(dhis2/dhis2-docs, src/user/using-the-tracker-capture-app.md,master)'
             Approving data:
               - Data Approval: '@github(dhis2/dhis2-docs, src/user/data-approval.md,2.42)'
               - '@github(dhis2/approval-app, docs/user/index.yml, master)'
