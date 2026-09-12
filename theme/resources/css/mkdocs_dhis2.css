@@ -650,10 +650,6 @@ a.md-nav__link:hover{
   background: var(--fill-bg);
 }
 
-.md-typeset img {
-  margin: 0;
-}
-
 .md-typeset blockquote,
 .md-typeset q {
   quotes: none;
