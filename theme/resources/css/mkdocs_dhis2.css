@@ -1370,3 +1370,47 @@ blockquote.nested {
   color: var(--grey900);
   border-radius: 8px !important;
 }
+
+/*  */
+/* Survey announcement banner (dismissible) */
+/*  */
+
+.survey-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #1976d2;
+  padding: 10px 40px;
+  position: relative;
+  text-align: center;
+}
+
+.survey-banner-text a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.survey-banner-text a:hover {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.survey-banner-close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.survey-banner-close:hover {
+  opacity: 0.75;
+}

@@ -31,6 +31,38 @@
     >Developers</a
   >
 </div>
+<div class="survey-banner" id="survey-banner" data-banner-id="docs-survey-2026-09">
+  <span class="survey-banner-text">
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdO4JpzoY93gJ2OsSqn3Pe1SRocqpSqlRNMGEaYnUrhdnKA1w/viewform?usp=publish-editor"
+      target="_blank"
+      rel="noopener"
+      >&#128203; Help us improve this DHIS2 documentation site by taking our short survey</a
+    >
+  </span>
+  <button type="button" class="survey-banner-close" aria-label="Dismiss">&times;</button>
+</div>
+<script>
+  (function () {
+    var banner = document.getElementById('survey-banner');
+    if (!banner) return;
+    var key = 'dhis2-docs-banner-dismissed-' + banner.getAttribute('data-banner-id');
+    try {
+      if (localStorage.getItem(key)) {
+        banner.style.display = 'none';
+      }
+    } catch (e) {}
+    var closeBtn = banner.querySelector('.survey-banner-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        banner.style.display = 'none';
+        try {
+          localStorage.setItem(key, '1');
+        } catch (e) {}
+      });
+    }
+  })();
+</script>
 {% endblock %} {% block content %}
 <blockquote style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
   For the complete DHIS2 documentation index, see <a href="/llms.txt">llms.txt</a>.
