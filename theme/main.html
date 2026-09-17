@@ -46,7 +46,7 @@
   (function () {
     var banner = document.getElementById('survey-banner');
     if (!banner) return;
-    var key = 'dhis2-docs-banner-dismissed-' + banner.getAttribute('data-banner-id');
+    var key = 'dhis2-docs-banner-dismissed-' + banner.dataset.bannerId;
     try {
       if (localStorage.getItem(key)) {
         banner.style.display = 'none';
