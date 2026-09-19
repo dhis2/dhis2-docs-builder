@@ -21,7 +21,7 @@ idna==3.7
 importlib_metadata==8.5.0
 Jinja2==3.1.6
 jsmin==3.0.1
-lxml==4.9.2
+lxml==6.1.0
 Markdown==3.5
 markdown-captions==2.1.2
 MarkupSafe==2.1.1
