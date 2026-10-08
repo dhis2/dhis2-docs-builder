@@ -31,20 +31,26 @@
     >Developers</a
   >
 </div>
-<div class="survey-banner" id="survey-banner" data-banner-id="docs-survey-2026-09">
-  <span class="survey-banner-text">
+{% set banner = config.extra.announcement_banner %}
+{% if banner and banner.enabled %}
+<div class="announcement-banner" id="announcement-banner" data-banner-id="{{ banner.id | e }}">
+  <span class="announcement-banner-text">
+    {% if banner.url %}
     <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdO4JpzoY93gJ2OsSqn3Pe1SRocqpSqlRNMGEaYnUrhdnKA1w/viewform?usp=publish-editor"
+      href="{{ banner.url | e }}"
       target="_blank"
       rel="noopener"
-      >&#128203; Help us improve this DHIS2 documentation site by taking our short survey</a
+      >{{ banner.text | e }}</a
     >
+    {% else %}
+    {{ banner.text | e }}
+    {% endif %}
   </span>
-  <button type="button" class="survey-banner-close" aria-label="Dismiss">&times;</button>
+  <button type="button" class="announcement-banner-close" aria-label="Dismiss">&times;</button>
 </div>
 <script>
   (function () {
-    var banner = document.getElementById('survey-banner');
+    var banner = document.getElementById('announcement-banner');
     if (!banner) return;
     var key = 'dhis2-docs-banner-dismissed-' + banner.dataset.bannerId;
     try {
@@ -52,7 +58,7 @@
         banner.style.display = 'none';
       }
     } catch (e) {}
-    var closeBtn = banner.querySelector('.survey-banner-close');
+    var closeBtn = banner.querySelector('.announcement-banner-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', function () {
         banner.style.display = 'none';
@@ -63,6 +69,7 @@
     }
   })();
 </script>
+{% endif %}
 {% endblock %} {% block content %}
 <blockquote style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
   For the complete DHIS2 documentation index, see <a href="/llms.txt">llms.txt</a>.
