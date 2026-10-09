@@ -21,6 +21,8 @@ import subprocess
 import tempfile
 import yaml
 
+from book_locale import BookLocale
+
 # Increase the file descriptor limit
 os.system("ulimit -n 4096")
 
@@ -57,7 +59,13 @@ def download_thumbnail(thumbnail_url, save_path='thumbnail.jpg'):
 
 
 baseUrl = os.getenv('DOC_BASE_URL', './target/en/')
+book_locale = BookLocale(os.getenv('DOC_LOCALE', 'en'))
 relBase = baseUrl.replace('./','')
+
+# Top-level site sections whose overview page becomes the book intro, by directory.
+SITE_SECTIONS = ['use', 'implement', 'develop', 'manage']
+# Site pages that never belong in a book, relative to the site root.
+NON_BOOK_PAGES = ['home.html', 'terms-of-use.html']
 
 
 docs_yml_path = os.path.join(script_dir, 'docs.yml')
@@ -84,6 +92,25 @@ class navReader:
         self.categories = categories or []
         self.docs = []
         # Only keep truly global state as instance attributes
+
+    def nav_links(self, link):
+        """All page links in a nav entry and its descendants."""
+        links = [link['link']] if 'link' in link else []
+        for child in link.get('children', []):
+            links += self.nav_links(child)
+        return links
+
+    def is_site_section(self, link):
+        """True if a nav entry is a top-level site section (Use, Implement, ...).
+
+        Matched on the directory holding its pages, since the title is translated
+        on localised sites.
+        """
+        page_dirs = [os.path.dirname(l) for l in self.nav_links(link)]
+        if not page_dirs:
+            return False
+        site_root = os.path.dirname(urljoin(self.base, 'index.html'))
+        return os.path.relpath(os.path.commonpath(page_dirs), site_root) in SITE_SECTIONS
 
     def get_nav(self, docs):
         for doc in docs:
@@ -168,7 +195,8 @@ class navReader:
                         nav_out.append(link)
 
                 # remove Home and Terms-of-use from the nav
-                nav_out = [link for link in nav_out if link['title'] not in ['Home', 'Terms of use']]
+                non_book_links = [urljoin(self.base, page) for page in NON_BOOK_PAGES]
+                nav_out = [link for link in nav_out if link.get('link') not in non_book_links]
                 return nav_out
             ul = soup.find('nav',{'class':'md-nav md-nav--primary','aria-label':'Navigation'}).find('ul',{'class':'md-nav__list'})
             nav0 = extract_links(ul,True)
@@ -225,7 +253,7 @@ class navReader:
         def append_nav(nav, state, level=0):
             full = ''
             for link in nav:
-                if link['title'] in ['Use', 'Implement', 'Develop', 'Manage'] and level == 0:
+                if level == 0 and self.is_site_section(link):
                     if 'link' in link and not state['currentDocIntro']:
                         state['currentDocIntro'] = fetch_content(link['link'])
                         doc['intro'] = state['currentDocIntro']
@@ -284,7 +312,9 @@ class navReader:
             inner_html = append_nav(doc['nav'], doc['state'])
             toc_section = render_toc(doc['nav'])
             now = datetime.datetime.now()
-            return book.render(title=title, cover=cover, toc_section=toc_section, inner_html=inner_html, currentDocIntro=doc['intro'], month=now.strftime('%B'), year=now.year)
+            return book.render(title=book_locale.title(title), cover=cover, toc_section=toc_section, inner_html=inner_html, currentDocIntro=doc['intro'],
+                               month_year=book_locale.month_year(now), year=now.year,
+                               lang=book_locale.lang, direction=book_locale.direction, t=book_locale.t)
         for doc in self.docs:
             logging.info(f"concatenating {doc['title']}")
             htmlfile = baseUrl + '/' + slugify_unicode(doc['title']) + '.html'
@@ -400,7 +430,7 @@ class navReader:
                             "size": round(os.path.getsize(pdf_file) / (1024 * 1024), 2),
                             "category": doc['category'],
                             "order": doc['order'],
-                            "title": doc['title']
+                            "title": book_locale.title(doc['title'])
                         }
                         if version:
                             entry["version"] = version

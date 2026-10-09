@@ -1,0 +1,18 @@
+{
+  "cover.author": {
+    "string": "DHIS2 documentation team",
+    "context": "Book cover: author line, shown above the publication month and year"
+  },
+  "copyright.holder": {
+    "string": "DHIS2 Core Team",
+    "context": "Book copyright page: name of the copyright holder"
+  },
+  "copyright.warranty_label": {
+    "string": "Warranty:",
+    "context": "Book copyright page: label before the warranty disclaimer, which stays in English"
+  },
+  "copyright.license_label": {
+    "string": "License:",
+    "context": "Book copyright page: label before the license statement, which stays in English"
+  }
+}

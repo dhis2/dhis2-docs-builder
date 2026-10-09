@@ -46,6 +46,7 @@ class Dhis2DocsPlugin(BasePlugin):
             # clone the cache repo
             fetcher.clone_git('dhis2/transifex-docs-cache', 'main')
             fetcher.pull_translations(lang,'nav')
+            fetcher.pull_translations(lang,'books')
         # fetcher.say_hello()
         print("Fetching documents...")
         version_map = {}
