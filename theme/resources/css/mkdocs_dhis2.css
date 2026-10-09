@@ -1372,10 +1372,10 @@ blockquote.nested {
 }
 
 /*  */
-/* Survey announcement banner (dismissible) */
+/* Announcement banner (dismissible) */
 /*  */
 
-.survey-banner {
+.announcement-banner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1386,18 +1386,18 @@ blockquote.nested {
   text-align: center;
 }
 
-.survey-banner-text a {
+.announcement-banner-text a {
   color: #fff;
   font-size: 18px;
   text-decoration: underline;
 }
 
-.survey-banner-text a:hover {
+.announcement-banner-text a:hover {
   color: #fff;
   opacity: 0.85;
 }
 
-.survey-banner-close {
+.announcement-banner-close {
   position: absolute;
   right: 16px;
   top: 50%;
@@ -1411,6 +1411,6 @@ blockquote.nested {
   padding: 4px;
 }
 
-.survey-banner-close:hover {
+.announcement-banner-close:hover {
   opacity: 0.75;
 }

@@ -11,6 +11,15 @@ use_directory_urls: false
 # docs_dir:
 
 extra:
+  # Site-wide dismissible banner, shown below the domain link bar (theme/main.html).
+  # To announce something: set enabled: true and edit text/url.
+  # Change `id` for each new announcement so people who dismissed the last one see it.
+  # Omit `url` for a plain-text banner.
+  announcement_banner:
+    enabled: false
+    id: docs-survey-2026-09
+    text: "Help us improve this DHIS2 documentation site by taking our short survey"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdO4JpzoY93gJ2OsSqn3Pe1SRocqpSqlRNMGEaYnUrhdnKA1w/viewform?usp=publish-editor"
   dhis2_languages:
     en: 'English'
     fr: 'Français'
