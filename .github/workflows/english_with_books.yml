@@ -121,6 +121,7 @@ jobs:
         python3 book_builder.py -v
       env:
         DOC_BASE_URL: '${{ github.workspace }}/target/en/'
+        DOC_LOCALE: 'en'
 
     - name: Sync books to S3
       # No --delete: older versioned PDFs in the catalogue must persist.

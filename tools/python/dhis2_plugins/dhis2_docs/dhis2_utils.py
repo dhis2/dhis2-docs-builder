@@ -144,6 +144,10 @@ class fetcher:
         self.theme_dir = config['theme'].dirs[0]
         self.local_nav_source = 'i18n/navigation_en.json'
         self.local_nav = 'i18n/navigation_'
+        self.book_strings = 'tools/books/i18n/strings.json'
+        self.book_titles = 'tools/books/docs.yml'
+        self.local_books_source = 'tools/books/i18n/books_en.json'
+        self.local_books = 'tools/books/i18n/books_'
         self.tx = transifex.tx(tx_slug)
 
         self.nav_trans_strings = {}
@@ -719,6 +723,15 @@ class fetcher:
         nav_local.write(json.dumps(self.nav_strings,indent=2))
         nav_local.close()
 
+        # The book strings source is the template UI strings plus the book titles, keyed by their English text
+        with open(self.book_strings, 'r', encoding='utf-8') as f:
+            book_strings = json.load(f)
+        with open(self.book_titles, 'r', encoding='utf-8') as f:
+            for book in yaml.safe_load(f)['books']:
+                book_strings[book['title']] = { "string": book['title'], "context": "PDF book title" }
+        with open(self.local_books_source, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(book_strings, indent=2, ensure_ascii=False))
+
 
     def push_translations(self):
 
@@ -726,6 +739,7 @@ class fetcher:
         # can only push translations if the token was provided in env
         if self.tx.tx_token:
             self.tx.push(self.local_nav_source,'0__Navigation-Menu',['MENU'],'STRUCTURED_JSON')
+            self.tx.push(self.local_books_source,'0__Book-Strings',['BOOKS'],'STRUCTURED_JSON')
 
             with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
                 for t in self.tx_config:
@@ -753,6 +767,14 @@ class fetcher:
                 lstats = self.tx.get_stats('0__Navigation-Menu',language_code)
                 helpers().attach(local_nav.replace('i18n','menu'), self.trans_dict, translate_path, lstats)
 
+
+            if set == 'books':
+
+                # Books fall back to English strings, so a missing resource must not fail the site build
+                try:
+                    self.tx.pull(self.local_books + language_code + '.json','0__Book-Strings',language_code)
+                except Exception as e:
+                    print("Could not pull book strings from transifex:", e)
 
             if set == 'docs':
 
