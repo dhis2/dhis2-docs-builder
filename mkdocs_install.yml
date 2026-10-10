@@ -304,8 +304,10 @@ nav:
               - '@github(dhis2/user-profile-app, docs/user/index.yml, master)'
               - Personal access tokens: '@github(dhis2/dhis2-docs, src/user/personal-access-tokens.md,master)'
             Configuring the system:
-              - Metadata: '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,master)'
-              - Programs: '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-maintenance-app.md,master)'
+              - Metadata (Maintenance app): '@github(dhis2/dhis2-docs, src/user/configure-metadata.md,master)'
+              - Metadata (Metadata Management app): '@github(dhis2/dhis2-docs, src/user/configure-metadata-management.md,master)'
+              - Programs (Maintenance app): '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-maintenance-app.md,master)'
+              - Programs (Metadata Management app): '@github(dhis2/dhis2-docs, src/user/configure-programs-in-the-metadata-management-app.md,master)'
               - Users, Roles and Groups: '@github(dhis2/dhis2-docs, src/user/manage-users-user-roles-and-user-groups.md,master)'
               - User authorities: '@github(dhis2/dhis2-docs, src/user/user-authorities.md,master)'
               - About sharing of objects: '@github(dhis2/dhis2-docs, src/user/about-sharing-of-objects.md,master)'
