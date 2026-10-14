@@ -61,6 +61,17 @@ def test_non_book_pages_are_removed_whatever_their_title(localised_site):
     assert titles(doc['nav'][0]['children']) == ['Collecte des données']
 
 
+@pytest.mark.parametrize('nav_label', ['Navigation', 'Navegação', 'Navigace', '导航栏', 'تصفح'])
+def test_nav_is_found_whatever_the_theme_language(localised_site, nav_label):
+    """The theme translates the primary nav's aria-label into the site language."""
+    (localised_site / 'use' / 'collecting-data.html').write_text(
+        NAV_PAGE.replace('aria-label="Navigation"', f'aria-label="{nav_label}"'), encoding='utf-8')
+    reader = navReader(remote=False, base=BASE)
+    doc = book('')
+    reader.get_nav([doc])
+    assert titles(doc['nav']) == ['Utilisation']
+
+
 def test_site_section_intro_is_found_whatever_its_title(localised_site):
     reader = navReader(remote=False, base=BASE)
     doc = book('use/')
