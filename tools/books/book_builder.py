@@ -198,7 +198,8 @@ class navReader:
                 non_book_links = [urljoin(self.base, page) for page in NON_BOOK_PAGES]
                 nav_out = [link for link in nav_out if link.get('link') not in non_book_links]
                 return nav_out
-            ul = soup.find('nav',{'class':'md-nav md-nav--primary','aria-label':'Navigation'}).find('ul',{'class':'md-nav__list'})
+            # matched by class alone: the theme translates the nav's aria-label into the site language
+            ul = soup.find('nav',{'class':'md-nav md-nav--primary'}).find('ul',{'class':'md-nav__list'})
             nav0 = extract_links(ul,True)
             with open('nav0.json', 'w') as f:
                 f.write(json.dumps(nav0, indent=2))
