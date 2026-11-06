@@ -20,7 +20,7 @@ on:
 jobs:
   seed-download:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
     - name: Who am I (verify credentials)
