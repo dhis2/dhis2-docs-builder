@@ -22,7 +22,7 @@ on:
 jobs:
   build-all-locales:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     strategy:
       max-parallel: 1
